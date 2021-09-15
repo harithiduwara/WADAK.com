@@ -62,7 +62,7 @@ nav ul li a:hover{
     height: 650px;
     left: 450px;
     top: 70px;
-    background: white;
+    background:#abe2b7;
 }
 
 .inputContainer1{
@@ -131,7 +131,7 @@ form{
     position: relative;
     margin-bottom: 20px;
     margin-top: 20px;
-    background: #abe2b7;
+    background: white;
     width: 60%;
     height: 35px ;
     outline: none;
