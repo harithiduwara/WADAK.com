@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 28, 2021 at 07:25 PM
+-- Generation Time: Sep 29, 2021 at 11:03 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.33
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `wadak_`
+-- Database: `wadak_db`
 --
 
 -- --------------------------------------------------------
@@ -220,7 +220,7 @@ ALTER TABLE `admin`
 ALTER TABLE `advertisement`
   ADD PRIMARY KEY (`Ad_no`),
   ADD KEY `Co-Admin_ID` (`Co-Admin_ID`),
-  ADD KEY `advertisement_ibfk_1` (`HP_ID`),
+  ADD KEY `HP_ID` (`HP_ID`),
   ADD KEY `SP_ID` (`SP_ID`);
 
 --
@@ -284,7 +284,8 @@ ALTER TABLE `news`
 -- Indexes for table `reports`
 --
 ALTER TABLE `reports`
-  ADD PRIMARY KEY (`HP_ID`,`SP_ID`);
+  ADD PRIMARY KEY (`HP_ID`,`SP_ID`),
+  ADD KEY `Admin_ID` (`Admin_ID`);
 
 --
 -- Indexes for table `service_provider`
@@ -346,7 +347,8 @@ ALTER TABLE `service_provider`
 -- Constraints for table `advertisement`
 --
 ALTER TABLE `advertisement`
-  ADD CONSTRAINT `advertisement_ibfk_1` FOREIGN KEY (`SP_ID`) REFERENCES `service_provider` (`SP_ID`);
+  ADD CONSTRAINT `advertisement_ibfk_1` FOREIGN KEY (`HP_ID`) REFERENCES `hire_person` (`HP_ID`),
+  ADD CONSTRAINT `advertisement_ibfk_2` FOREIGN KEY (`SP_ID`) REFERENCES `service_provider` (`SP_ID`);
 
 --
 -- Constraints for table `categories`
@@ -365,7 +367,8 @@ ALTER TABLE `co-admin`
 -- Constraints for table `invitation`
 --
 ALTER TABLE `invitation`
-  ADD CONSTRAINT `invitation_ibfk_1` FOREIGN KEY (`SP_ID`) REFERENCES `service_provider` (`SP_ID`);
+  ADD CONSTRAINT `invitation_ibfk_1` FOREIGN KEY (`HP_ID`) REFERENCES `hire_person` (`HP_ID`),
+  ADD CONSTRAINT `invitation_ibfk_2` FOREIGN KEY (`SP_ID`) REFERENCES `service_provider` (`SP_ID`);
 
 --
 -- Constraints for table `news`
