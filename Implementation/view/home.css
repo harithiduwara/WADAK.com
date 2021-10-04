@@ -1,0 +1,11 @@
+h1 {
+    color: #3F9A3D;
+    text-align: center;
+}
+
+img.wadak {
+    width: 10%;
+    border-radius: 50px;
+    float: left;
+    margin: 2.5%;
+}
