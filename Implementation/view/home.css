@@ -1,11 +1,39 @@
-h1 {
-    color: #3F9A3D;
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+* {
+    background-color: #c4c4c4;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-img.wadak {
-    width: 10%;
-    border-radius: 50px;
+li, a, button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000000;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.wadaklogo {
+    cursor: pointer;
+    width: 5%;
+    border-radius: 80px;
     float: left;
     margin: 2.5%;
+}
+
+.navbar {
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+    /*padding-inline-end: 10px;*/
 }
