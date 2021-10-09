@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+* {
+    /* background-color: #c4c4c4; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li, a, button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 1px solid;
+    color: black;
+}
+
+.nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 30px 15%;
+    background-color: #c4c4c4;
+    height: 150px;
+    /* margin: 30px 15% */
+}
+
+#navbar {
+    list-style: none;
+    right: 50px;
+    padding: 1rem 1rem;
+    border-radius: 25px;
+    right: 10px;
+    display: flex;
+    padding-inline-end: 10px;
+    background-color: white;
+}
+
+#navbar li a {
+    padding: 1rem;
+}
+
+#navbar i:hover {
+    color: #3f850d;
+    cursor: pointer;
+}
+
+#navbar li img:hover {
+    background-color: #599F68;
+}
+
+#navbar li a {
+    transition: all 0.3s ease 0s;
+}
+
+#navbar li a:hover {
+    color: #599F68;
+}
+
+/* -----------------------------------review---------------------------------- */
+
+.boxreview {
+    margin-top: 10rem;
+    width: 40%;
+    height: 35vh;
+    justify-content: center;
+    background-color: #c4c4c4;
+    position: relative;
+    left: 30%;
+}
+
+.box1 h1 {
+    background-color: #3f850d !important;
+    text-align: center;
+}
+
+.box1 {
+    text-align: center;
+}
+
+#reviewing #stars {
+    padding: 1rem;
+    justify-content: center;
+}
+
+#stars ul {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#stars li {
+    list-style: none;
+    margin: 1rem;
+}
+
+#reviewing #stars li {
+    color: white;
+}
+
+#reviewing #stars {
+    display: flex;
+}
+
+#reviewing #stars li:hover {
+    cursor: pointer;
+    color: green;
+}
+
+#review {
+    height: 100px;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#yourcomplement {
+    margin-bottom: 1rem;
+    align-items: center;
+    margin-left: 35%;
+}
+
+#submit {
+    padding: 10px 25px;
+    margin-left: 38%;
+    margin-top: 1rem;
+    background-color: #3F9A3D;
+    border-radius: 85px;
+    float: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* -----------------x-----------------review-------------------x-------------- */
