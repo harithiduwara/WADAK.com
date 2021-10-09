@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +17,7 @@
     <body>
 
 
-    <!----------------------------------Navigation-------------------------------------->
+        <!----------------------------------Navigation-------------------------------------->
         <header>
             <img class="wadaklogo" src="wadak.gif" alt="wadak gif" style="float:left width:5% height:5%">
             <nav>
@@ -31,52 +32,88 @@
             </nav>
         </header>
 
-        
 
-    <!-----------------x----------------Navigation-------------------x------------------>
 
-    <!----------------------------------section1--------------------------------------->
+        <!-----------------x----------------Navigation-------------------x------------------>
 
-        <div class="container1">        
-            <div class="sectionheading1">
-                <!--<h1 class="">Popular Services</h1>-->
-                
-                <!--<a href="#"><button id="postbutton1">Post Job</button></a>-->
+        <!----------------------------------section1--------------------------------------->
+        <div class="slider">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="1.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
             </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="2.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="3.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
 
-    <!------------------x--------------section1----------------------x---------------->
+        <!------------------x--------------section1----------------------x---------------->
 
-    <!----------------------------------section2--------------------------------------->
 
-        <div class="container2">        
+        <!----------------------------------Slider------------------------------------------>
+
+
+
+
+
+
+        <!----------------------------------Slider------------------------------------------>
+
+
+
+        <!----------------------------------section2--------------------------------------->
+
+        <div class="container2">
             <div class="sectionheading2">
                 <h1 class="">Popular Services</h1>
-                
-                <a href="#"><button  id="postbutton2">Post Job</button></a>
+
+                <a href="#"><button id="postbutton2">Post Job</button></a>
             </div>
         </div>
 
-    <!------------------x--------------section2----------------------x---------------->
+        <!------------------x--------------section2----------------------x---------------->
 
-    <!----------------------------------section3--------------------------------------->
-    
-        <div class="container3">        
+        <!----------------------------------section3--------------------------------------->
+
+        <div class="container3">
             <div class="sectionheading3">
                 <h1 class="">TOP SERVICE PROVIDERS</h1>
-                
+
                 <a href="#"><button id="postbutton3">Register Now</button></a>
             </div>
         </div>
 
-    <!------------------x--------------section3----------------------x---------------->
+        <!------------------x--------------section3----------------------x---------------->
 
-    <!----------------------------------footer--------------------------------------->
-    
+        <!----------------------------------footer--------------------------------------->
+
         <footer>
             <div class="container">
                 <div class="col1">
-                <a href="#""><img class="wadaklogo" src="wadak.gif" alt="wadak gif"></a>
+                    <a href="#""><img class=" wadaklogo" src="wadak.gif" alt="wadak gif"></a>
                     <ul>
                         <li>Terms & Condition</li>
                         <li>Privacy Policy</li>
@@ -99,31 +136,32 @@
                     <h1>Stay Connected!</h1>
                     <p>Subscribe for the news letter</p>
 
-                <form action="#" class="formnews">
-                    <label for="email">Email</label><br>
-                    <input type="email" id="email" name="email"><br>
-                    <label for="fname">First Name</label><br>
-                    <input type="text" id="fname" name="fname"><br>
-                    <label for="lname">Last Name</label><br>
-                    <input type="text" id="lname" name="lname"><br>
-                    <input id="submitnews" type="submit" value="Submit">
-                </form>
+                    <form action="#" class="formnews">
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="email"><br>
+                        <label for="fname">First Name</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="lname">Last Name</label><br>
+                        <input type="text" id="lname" name="lname"><br>
+                        <input id="submitnews" type="submit" value="Submit">
+                    </form>
                 </div>
 
             </div>
         </footer>
-    <!------------------x--------------footer----------------------x---------------->
+        <!------------------x--------------footer----------------------x---------------->
 
         <div class="copyrights">
-                <p><a href="#" target="_blank">Powered by Group18</a></p>
+            <p><a href="#" target="_blank">Powered by Group18</a></p>
         </div>
 
-    
 
 
-    
+
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="home.js"></script>
-        
+
     </body>
+
 </html>
