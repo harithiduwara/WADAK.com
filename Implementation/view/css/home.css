@@ -249,20 +249,32 @@ main #postbutton2 {}
 /* <--------------------------Section2------------------------------ */
 
 #section2 {
-    height: 40vh;
+    height: 50vh;
     background: #00F260;
     background: -webkit-linear-gradient(to right, #0575E6, #00F260);
     background: linear-gradient(to right, #0575E6, #00F260);
 }
 
-#button2 {
+#button4 {
     margin: 0;
     position: relative;
-    margin-top: 4rem;
+    margin-top: 5rem;
     top: 60%;
     margin-left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    background-color: aliceblue;
+}
+
+#button4:hover {
+    margin: 0;
+    position: relative;
+    margin-top: 5rem;
+    top: 60%;
+    margin-left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgb(211, 213, 216);
 }
 
 /* <--------------------------Section3------------------------------ */
