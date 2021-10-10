@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import 'owl.carousel/dist/assets/owl.carousel.css';
+@import 'owl.carousel';
 * {
-    /* background-color: #c4c4c4; */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -243,23 +244,21 @@ img {vertical-align: middle;}
     padding-top: 2rem;
 }
 
+main #postbutton2 {}
+
 /* <--------------------------Section2------------------------------ */
 
-.container2 .sectionheading2 {
-    background-color: #c4c4c4;
-    height: 90vh;
+#section2 {
+    height: 40vh;
+    background-image: url("../Abract01.png");
 }
 
-.sectionheading2 h1 {
-    padding-top: 2rem;
-}
-
-#postbutton2 {
+#button2 {
     margin: 0;
     position: relative;
     margin-top: 4rem;
     top: 60%;
-    left: 50%;
+    margin-left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -268,7 +267,7 @@ img {vertical-align: middle;}
 
 .container3 .sectionheading3 {
     background-color: white;
-    height: 80vh;
+    height: 50vh;
 }
 
 .sectionheading3 h1 {
@@ -281,7 +280,7 @@ img {vertical-align: middle;}
     position: relative;
     margin-top: 4rem;
     top: 60%;
-    left: 50%;
+    margin-left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
