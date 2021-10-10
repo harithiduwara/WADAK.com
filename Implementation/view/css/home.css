@@ -250,7 +250,9 @@ main #postbutton2 {}
 
 #section2 {
     height: 40vh;
-    background-image: url("../Abract01.png");
+    background: #00F260;
+    background: -webkit-linear-gradient(to right, #0575E6, #00F260);
+    background: linear-gradient(to right, #0575E6, #00F260);
 }
 
 #button2 {
