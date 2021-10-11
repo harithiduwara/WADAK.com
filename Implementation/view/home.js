@@ -20,7 +20,11 @@ function showSlides() {
 
 // ----------------------owl carousel------------------------
 
-$('.owl-carousel').owlcarousel()
+// $(document).ready(function () {
+//     $('.owl-carousel').owlCarousel();
+// });
+
+$('.owl-carousel').owlCarousel();
 
 
 // -----------x----------owl carousel--------------x---------

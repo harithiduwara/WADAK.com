@@ -277,6 +277,15 @@ main #postbutton2 {}
     background-color: rgb(211, 213, 216);
 }
 
+#section2 #servicecarousel {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    padding: 1px solid;
+    padding-top: 1rem;
+    font-size: xx-large;
+}
+
 /* <--------------------------Section3------------------------------ */
 
 .container3 .sectionheading3 {
