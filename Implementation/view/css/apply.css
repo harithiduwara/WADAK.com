@@ -141,6 +141,11 @@ form .button input:hover {
     background: -webkit-linear-gradient(left, #58c083, #36a336);
 }
 
+form .input-box #des {
+    width: -webkit-fill-available;
+    height: 5rem;
+}
+
 /*navigation bar*/
 
 nav {
