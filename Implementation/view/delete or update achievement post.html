@@ -1,10 +1,11 @@
 <!Doctype HTML>
 <html>
 <head>
-    <title>Delete/Update News</title>
+    <title>Delete/ update achievement post </title>
     <style>a {text-decoration: none;}</style>
-    <link rel="stylesheet" href="./css/delete news.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/delete or update achievement post.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
 </head>
 
 <body>
@@ -22,58 +23,48 @@
         <a href="#"class="icon-a">&nbsp;&nbsp;Notification</a>
     </div>
     
-    <div id="main">
-        <div class="head">
-            <div class="col-div-6">
-                <p class="nav"> News</p>
-            </div>
-            <div class="col-div-6">
-                <i class="fa fa-search search-icon"></i>
-                <i class="fa fa-bell noti-icon"></i>
-                <div class="notification-div">
-                    <p class="noti-head">Notification </p>
-                    <hr class="hr" />
-                    <p>You have new report
-                        <span>alert </span>
-                    </p>
-                </div>
-    
-                <div class="profile">
-                    <!--<img src="images/user.png" class="pro-img" /> -->
-                    <p>Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
-                    <div class="profile-div">
-                        <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="#">Profile</a></p>
-                        <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Dashboard</a> </p>
-                        <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;Log Out</p>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    
-        <div class="clearfix"></div>
-        <br/>
-        <br/> 
-    </div>
-    
+  
+    <nav>
+        <label class="logo">WADAK</label>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Post Job</a> </li>
+            <li><a href="#">Jobs</a> </li>
+            <li><a href="#">Services</a> </li>
+            <li><a href="#">Messages</a> </li>
+            <li><a href="#">Login</a> </li>
+            <div class="animation "></div>
+        </ul>
+    </nav>
 
     <div class="container">
         <div class="wrapper">
-          <div class="title"></div>
+          <div class="title"> Post Job</div>
           <form>
             <div class="row"> 
-                <span> News ID</span><br><br>
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Enter news ID" >
-              <br><br><span> Date</span><br><br>
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Enter the date" >
-              <br><br><span> Discription</span><br><br>
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Discription" >
-            </div> <br><br><br><br><br><br><br><br>
+              <span> Title</span><br><br>
+              <i class="fa fa-edit"></i>
+              <input type="text" placeholder="Your job title" >
+              <br><br><span> Description</span><br><br>
+              <i class="fa fa-edit"></i>
+              <input type="text" placeholder="Description" >
+              <br><br><span> Category</span><br><br>
+              <i class="fa fa-edit"></i>
+              <input type="text" placeholder="Enter Category" >
+
+             
+
+            </div>
+           <br><br><br><br><br><br><br><br><br>
+           <h5 align= "center"> Upload new image if need (Max file size 5MB)</h5><br>
+            <img src="upload.png" alt="file" width="70" height="70" class="center">
+             <input type="file" id="image" name="image" class="file">
+             <br><br><br>
+
             <button class="button button1">Update</button>
             <button class="button button2">Delete</button>
+
+            
           </form>
         </div>
       </div>
