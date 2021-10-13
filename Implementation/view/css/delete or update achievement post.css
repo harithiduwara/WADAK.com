@@ -126,12 +126,12 @@ nav ul li a:hover{
     padding: 0 20px;
     margin: 50px auto;
     margin-left: 500px; 
-    margin-top: 100px;
+    margin-top: 40px;
   }
   
   .wrapper{
     width: 100%;
-    height: 400px;
+    height: 670px;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
@@ -174,7 +174,7 @@ nav ul li a:hover{
     position: absolute;
     width: 47px;
     height: 100%;
-    color: #fff;
+    color: rgb(8, 8, 8);
     font-size: 18px;
     background: #23dd42;
     border: 1px solid #21eb42;
@@ -197,7 +197,7 @@ nav ul li a:hover{
     background: rgb(33, 189, 33);
     margin-right: 0px;
     border-radius: 5px;
-    margin-top: 50px;
+    margin-top: 0px;
   
 }
 
@@ -206,6 +206,25 @@ background-color: #83e783;
 color: white;
 }
 
+.button2:hover {
+    background-color: #cf440d;
+    color: white;
+    }
+
+.container .wrapper form .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }    
+
+.container .wrapper form .file {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;  
+        margin-top: 20px;  
+}    
+    
 
 
 
