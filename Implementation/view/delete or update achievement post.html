@@ -3,8 +3,9 @@
 <head>
     <title>Delete/ update achievement post </title>
     <style>a {text-decoration: none;}</style>
-    <link rel="stylesheet" href="delete or update achievement post.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/delete or update achievement post.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
 </head>
 
 <body>
@@ -41,18 +42,29 @@
           <div class="title"> Post Job</div>
           <form>
             <div class="row"> 
-                <span> Title</span><br><br>
-              <i class="fas fa-user"></i>
+              <span> Title</span><br><br>
+              <i class="fa fa-edit"></i>
               <input type="text" placeholder="Your job title" >
               <br><br><span> Description</span><br><br>
-              <i class="fas fa-user"></i>
+              <i class="fa fa-edit"></i>
               <input type="text" placeholder="Description" >
-              <span> Category</span><br><br>
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Category" >
-          
-            </div> <br><br><br>
+              <br><br><span> Category</span><br><br>
+              <i class="fa fa-edit"></i>
+              <input type="text" placeholder="Enter Category" >
+
+             
+
+            </div>
+           <br><br><br><br><br><br><br><br><br>
+           <h5 align= "center"> Upload new image if need (Max file size 5MB)</h5><br>
+            <img src="upload.png" alt="file" width="70" height="70" class="center">
+             <input type="file" id="image" name="image" class="file">
+             <br><br><br>
+
             <button class="button button1">Update</button>
+            <button class="button button2">Delete</button>
+
+            
           </form>
         </div>
       </div>
