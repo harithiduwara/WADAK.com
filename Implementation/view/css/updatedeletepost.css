@@ -137,6 +137,10 @@ form .button input:hover {
     background-color: rgb(245, 93, 93);
 }
 
+#red1 {
+    background-color: rgba(8, 0, 0, 0.363);
+}
+
 #green {
     background: -webkit-linear-gradient(left, #58c083, #36a336);
 }
