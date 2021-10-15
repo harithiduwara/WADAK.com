@@ -16,6 +16,14 @@ li, a, button {
     color: black;
 }
 
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 1px solid;
+    color: green
+}
+
 /* ---------------------------------searchbar------------------------------------- */
 
 /* ------------------------------------Toggle Switch------------------------------------ */
@@ -161,6 +169,31 @@ input:checked+.slider:before {
     width: 31.1vw;
     object-fit: cover;
     padding: 0 0 1rem 1rem;
+}
+
+.boxcontainer .griditem .username {
+    display: flex;
+    justify-content: end;
+    padding: 0 1rem 1rem 0;
+}
+
+.boxcontainer .griditem .jobtitle {
+    text-align: center;
+    color: green;
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+.boxcontainer .griditem .pricebar {
+    text-align: center;
+    color: rgb(73, 72, 72);
+    background-color: rgb(211, 209, 209);
+    padding: 0rem 1rem 1rem 1rem;
+    bottom: 0;
+}
+
+.pricebar h3 {
+    padding-top: 1rem;
+    margin-bottom: 0rem;
 }
 
 /* -----------------x------------------boxes------------------------x------------------ */
