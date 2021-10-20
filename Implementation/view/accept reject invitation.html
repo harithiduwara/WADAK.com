@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/accept reject invitation.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
+    
   </head>
 
   <body>
@@ -46,13 +47,38 @@
           </div>
 
           <div class="buttons">
-            <br> <button class="button button1">Accept</button>
-            <button class="button button2">Reject</button>
+            <br> <button class="button button1" onclick="myFunction()">Accept</button>
+            <button class="button button2" onclick="myFunction2()">Reject</button>
           </div>
+          <p id="demo" style="color: forestgreen;"></p>
       </div>
       </form>
     </div>
     </div>
+
+    
+    <script>
+      function myFunction() {
+        var txt;
+        if (confirm("Are you sure?")) {
+          txt ="You accepted the invitation!";
+        } else {
+          txt = "You pressed Cancel!";
+        }
+        document.getElementById("demo").innerHTML = txt;
+      }
+
+
+      function myFunction2() {
+        var txt;
+        if (confirm("Are you sure?")) {
+          txt ="You rejected the invitation!";
+        } else {
+          txt = "You pressed Cancel!";
+        }
+        document.getElementById("demo").innerHTML = txt;
+      }
+      </script>
 
   </body>
 

@@ -157,13 +157,13 @@ nav ul li a:hover {
 }
 
 .button2:hover {
-  background-color: #cf440d;
+  background-color: #da4303;
   color: white;
 }
 
 .buttons {
   display: flex;
-  justify-content: center;
+  justify-content: right;
 }
 
 /*image*/
