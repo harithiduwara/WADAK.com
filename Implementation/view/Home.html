@@ -122,7 +122,7 @@
             <div class="sectionheading3">
                 <h1 class="">TOP SERVICE PROVIDERS</h1>
 
-                <a href="#"><button id="postbutton3">Register Now</button></a>
+                <a href="registration.html"><button id="postbutton3">Register Now</button></a>
             </div>
         </div>
 
@@ -133,7 +133,7 @@
         <footer>
             <div class="container">
                 <div class="col1">
-                    <a href="#""><img class=" wadaklogo" src="wadak.gif" alt="wadak gif"></a>
+                    <a href="#"><img class=" wadaklogo" src="wadak.gif" alt="wadak gif"></a>
                     <ul>
                         <li>Terms & Condition</li>
                         <li>Privacy Policy</li>
