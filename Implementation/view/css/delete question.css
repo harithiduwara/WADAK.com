@@ -186,7 +186,7 @@ form .row input::placeholder{
 }
 
 
-.wrapper form .button1 input{
+.wrapper form .button1 {
   color: #fff;
   font-size: 15px;
   font-weight: 500;
@@ -197,9 +197,16 @@ form .row input::placeholder{
   width:20%;
   height: 40px;
   border-radius: 5px;
+  
 }
 
-form .button1 input:hover{
+.button1:active {
+    background-color: #14f31b;
+    box-shadow: 0 5px rgb(10, 236, 40);
+    transform: translateY(4px);
+  }
+
+form .button1 :hover{
     background: #88eb8e;
     border: #599F68;
   }
@@ -207,6 +214,12 @@ form .button1 input:hover{
 h4{
     text-decoration: none;
     font-weight: 400;
+}
+ 
+
+a{
+    color:black;
+    text-decoration: none;
 }
 
 
