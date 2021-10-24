@@ -101,6 +101,11 @@ input[type =submit]:hover {
     color: white;
   }
 
+  .button3:hover {
+    background-color: #cf440d;
+    color: white;
+  }
+
 
   /*navigation bar*/
 

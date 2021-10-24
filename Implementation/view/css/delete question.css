@@ -200,11 +200,7 @@ form .row input::placeholder{
   
 }
 
-.button1:active {
-    background-color: #14f31b;
-    box-shadow: 0 5px rgb(10, 236, 40);
-    transform: translateY(4px);
-  }
+
 
 form .button1 :hover{
     background: #88eb8e;
