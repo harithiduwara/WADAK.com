@@ -186,7 +186,7 @@ form .row input::placeholder{
   color: #999;
 }
 
-.wrapper form .button1 input{
+.wrapper form .button1{
   color: #fff;
   font-size: 15px;
   font-weight: 500;
@@ -199,9 +199,13 @@ form .row input::placeholder{
   border-radius: 5px;
 }
 
-form .button1 input:hover{
+form .button1 :hover{
     background: #88eb8e;
     border: #599F68;
+  }
+
+  .button1 a{
+      color:black;
   }
 
 
