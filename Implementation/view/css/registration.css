@@ -207,3 +207,7 @@ nav ul li a:hover {
 #btn {
     margin-top: 2rem;
 }
+
+.error{
+    color:red;
+}

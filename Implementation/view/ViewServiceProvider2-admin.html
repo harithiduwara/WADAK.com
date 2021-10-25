@@ -19,10 +19,10 @@
     <a href="ViewCoAdmin.html"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Co-Admin</a>
     <a href="ServiceProviderUI-admin.html"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service Provider</a>
     <a href="#"class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
-    <a href="#"class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
+    <a href="View Report.html"class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
     <a href="PaymentUI.html"class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
     <a href="#"class="icon-a"><i class="fa fa-object-group icons"></i> &nbsp;&nbsp;Request</a>
-    <a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>
+    <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
 </div>
 
 <div id="main">
@@ -148,7 +148,7 @@
 
         </div>
         <div class="box1">
-            <a href="#">Delete</a>
+            <a href="#" onclick="myfunction1()">Delete</a>
         </div>
         <div class="box2">
             <a href="ServiceProviderUI-admin.html">Cancel</a>
@@ -199,5 +199,18 @@
         });
     });
 </script>
+
+<script>
+    function myfunction1() {
+      var txt;
+      if (confirm("Are you sure?")) {
+        txt ="Successfully deleted!";
+      } else {
+        txt = "You pressed Cancel!";
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+</script>
+
 </body>
 </html>

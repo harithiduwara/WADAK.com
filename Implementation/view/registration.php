@@ -30,47 +30,48 @@
                 <h4>Registration</h4>
             </div><br>
 
-            <form action="../controller/registration.php" method="post">
+            <form action="../controller/registration.php" method="post" >
                 <div class="user-details">
 
                     <div class="input-box">
                         <span class="details">Name</span>
                         <input type="text" name="name" placeholder="Enter your first name" required>
+                        <!-- <span class="error">*<?php echo $nameErr; ?></span> -->
                     </div>
 
                     <div class="input-box">
                         <span class="details">Username</span>
-                        <input type="text" name="username" placeholder="Enter your last name">
+                        <input type="text" name="username" placeholder="Enter your last name" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">Date of Birth</span>
-                        <input type="date" name="birth" placeholder="Date of birth">
+                        <input type="date" name="birth" placeholder="Date of birth" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">Address</span>
-                        <input type="text" name="address" placeholder="Enter your address">
+                        <input type="text" name="address" placeholder="Enter your address" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">Email Address</span>
-                        <input type="email" name="email" placeholder="Enter your email">
+                        <input type="email" name="email" placeholder="Enter your email" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">Contact No</span>
-                        <input type="tel" name="contactno" placeholder="Enter your phone number">
+                        <input type="tel" name="contactno" placeholder="Enter your phone number" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">Password</span>
-                        <input type="password" name="password" placeholder="Enter your password">
+                        <input type="password" name="password" placeholder="Enter your password" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">Repeat Password</span>
-                        <input type="password" name="password1" placeholder="Re-enter your password">
+                        <input type="password" name="password1" placeholder="Re-enter your password" required>
                     </div>
 
                 </div>
