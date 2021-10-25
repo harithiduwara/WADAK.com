@@ -30,7 +30,7 @@
                 <h4>Registration</h4>
             </div><br>
 
-            <form action="register.php" method="post">
+            <form action="../controller/registration.php" method="post">
                 <div class="user-details">
 
                     <div class="input-box">
@@ -40,43 +40,39 @@
 
                     <div class="input-box">
                         <span class="details">Username</span>
-                        <input type="text" name="username" placeholder="Enter your last name" required>
+                        <input type="text" name="username" placeholder="Enter your last name">
                     </div>
 
                     <div class="input-box">
                         <span class="details">Date of Birth</span>
-                        <input type="date" name="birth" placeholder="Date of birth" required>
+                        <input type="date" name="birth" placeholder="Date of birth">
                     </div>
 
                     <div class="input-box">
                         <span class="details">Address</span>
-                        <input type="text" name="address" placeholder="Enter your address" required>
+                        <input type="text" name="address" placeholder="Enter your address">
                     </div>
 
                     <div class="input-box">
                         <span class="details">Email Address</span>
-                        <input type="email" placeholder="Enter your email" required>
+                        <input type="email" name="email" placeholder="Enter your email">
                     </div>
 
                     <div class="input-box">
                         <span class="details">Contact No</span>
-                        <input type="tel" name="contactno" placeholder="Enter your phone number" required>
+                        <input type="tel" name="contactno" placeholder="Enter your phone number">
                     </div>
 
                     <div class="input-box">
                         <span class="details">Password</span>
-                        <input type="password" name="password" placeholder="Enter your password" required>
+                        <input type="password" name="password" placeholder="Enter your password">
                     </div>
 
                     <div class="input-box">
                         <span class="details">Repeat Password</span>
-                        <input type="password" name="password1" placeholder="Re-enter your password" required>
+                        <input type="password" name="password1" placeholder="Re-enter your password">
                     </div>
 
-                    <!-- <div class="input-box">
-                        <span class="details">Discription</span>
-                        <input type="textarea" placeholder="Enter discription">
-                    </div> -->
                 </div>
 
 
@@ -86,12 +82,10 @@
                     <span class="type-title">Register As</span>
                     <div class="category"><br>
                         <label for="">
-
                             <input type="radio" name="type" id="dot-1">
                             <span class="type">&nbsp; Service provider</span>
                         </label>
                         <label for="">
-
                             <input type="radio" name="type" id="dot-2">
                             <span class="type"> &nbsp; Hire person</span>
                         </label>
@@ -105,7 +99,7 @@
                 Conditions agreement. <br>
 
                 <div class="ifhaveaccount">
-                    <span>Already have an account? <a href="./login.html" id="ifhaveaccount">Login</a></span>
+                    <span>Already have an account? <a href="./login.php" id="ifhaveaccount">Login</a></span>
                 </div>
 
                 <div class="button" id="btn">
