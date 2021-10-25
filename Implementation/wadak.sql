@@ -313,3 +313,14 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE `register` (
+  `name` varchar(255) NOT NULL,
+  `username` varchar(12) NOT NULL,
+  `birthday` date NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `contactno` varchar(10) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `userrole` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -30,18 +30,20 @@
         <div class="loginContainer">
             <div class="inputContainer" id="loginbox">
                 <div class="form">
-                    <form action="../controller/validation.php" method="post">
+                    
+                    <form action="/WADAK.com/Implementation/controller/validation.php" method="post">
                         <div class="inputbox">
-                            <input type="text" placeholder="Enter Username">
+                            <input type="text" name="username" placeholder="Enter Username" required>
                         </div>
                         <div class="inputbox">
-                            <input type="password" placeholder="Enter Password">
+                            <input type="password" name= "password" placeholder="Enter Password" required>
                         </div>
                         <label class="remember"><input type="checkbox">Remember Me</label>
                         <div class="inputbox">
                             <input type="submit" value="Login">
                         </div>
                     </form>
+
                     <p><a href="forgot%20password.html">Forgotten your Username or Password?</a></p>
                     <p><a href="./registration.php">Create an Account</a></p>
                 </div>
