@@ -21,7 +21,7 @@
   <a href="Q&A.html"class="icon-a"><i class="fa fa-question-circle icons"></i> &nbsp;&nbsp;Q & A Session</a>
   <a href="chat.html"class="icon-a"><i class="fa fa-comment icons"></i> &nbsp;&nbsp;Chat</a>
   <a href="#"class="icon-a"><i class="fa fa-newspaper-o icons"></i> &nbsp;&nbsp;News</a>
-  <a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>
+  <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
 </div>
 
 <div id="main">
@@ -147,7 +147,7 @@
 
     </div>
     <div class="box1">
-      <a href="#">Delete</a>
+      <a href="#" onclick="myfunction1()">Delete</a>
     </div>
     <div class="box2">
       <a href="#">Cancel</a>
@@ -197,6 +197,17 @@
       $(".notification-div").toggle();
     });
   });
+</script>
+<script>
+  function myfunction1() {
+    var txt;
+    if (confirm("Are you sure?")) {
+      txt ="Successfully deleted!";
+    } else {
+      txt = "You pressed Cancel!";
+    }
+    document.getElementById("demo").innerHTML = txt;
+  }
 </script>
 </body>
 </html>
