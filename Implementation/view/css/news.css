@@ -319,8 +319,10 @@ body{
     color: rgb(5, 5, 5);
   }
 
-
-
+/*table*/
+.container .wrapper .table{
+    width:100%;
+}
 
 
 

@@ -1,12 +1,10 @@
 <!Doctype HTML>
 <html>
 <head>
-    <title>Add News</title>
+    <title>News</title>
     <style>a {text-decoration: none;}</style>
-    <link rel="stylesheet" href="./css/add news.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/news.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-
 </head>
 
 <body>
@@ -27,7 +25,7 @@
     <div id="main">
         <div class="head">
             <div class="col-div-6">
-                <p class="nav"> Add News</p>
+                <p class="nav"> News</p>
             </div>
             <div class="col-div-6">
                 <i class="fa fa-search search-icon"></i>
@@ -42,7 +40,7 @@
     
                 <div class="profile">
                     <!--<img src="images/user.png" class="pro-img" /> -->
-                    <p>Co-Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
+                    <p>Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                     <div class="profile-div">
                         <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="#">Profile</a></p>
                         <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Dashboard</a> </p>
@@ -61,29 +59,64 @@
 
     <div class="container">
         <div class="wrapper">
-          <div class="title"></div>
-          <form method="POST" action="add_news.php">
-            <div class="row"> 
-                <span> News ID</span><br><br>
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Enter news ID" name="newsid" >
-              <br><br><span> Date</span><br><br>
-              <i class="fas fa-user"></i>
-              <input type="date" placeholder="Enter the date" name="date"  >
-              <br><br><span> Discription</span><br><br>
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Description"  name="description">
-            </div> <br><br><br><br><br><br><br><br>
-            <input type="submit" class =" button button1" value="Save" name="save" >
-            <button class="button button2">Cancel</button>
-          </form>
+          <div class="title"><span>Recent site announcements</span></div>
+
+          <table>
+          <tr>
+          <th>News Id</th>
+          <th>Date Published</th>
+          <th>News</th>
+          </tr>
+
+          <!--php code-->
+          <?
+             include "newsconfig.php";
+             $result = mysqli_query($conn,"SELECT News_ID,date,description  FROM news"); 
+          ?>
+
+         <?php
+           if (mysqli_num_rows($result) > 0) {
+         ?>
+         <table>
+  
+          <tr>
+           <td>News Id</td>
+           <td>Date</td>
+           <td>description</td>
+          </tr>
+         <?php
+           $i=0;
+           while($row = mysqli_fetch_array($result)) {
+         ?>
+        <tr>
+         <td><?php echo $row["News_ID"]; ?></td>
+         <td><?php echo $row["date"]; ?></td>
+         <td><?php echo $row["description"]; ?></td>
+       </tr>
+        <?php
+           $i++;
+         }
+         ?>
+       </table>
+ <?php
+}
+else{
+    echo "No result found";
+}
+?>
+
+           
+            <form method="POST" action="">
+
+            <a href="news.html"><input type="button" class="button" value="View news" name="view"></a>
+            <a href="add news.html"><input type="button" class="button1" value="Add news" name="add"></a>
+            <a href="delete news.html"><input type="button" class="button2" value="Update" name="delete"></a>
+           </form>
         </div>
       </div>
+
     
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
-
     <script>
     
         $(".menu").click(function(){
@@ -123,13 +156,7 @@
                 $(".notification-div").toggle();
             });
         });
-
-
-
-       
     </script>
-
-
     </body>
     </html>
     
