@@ -39,7 +39,7 @@
         <div id="main">
             <div class="head">
                 <div class="col-div-1">
-                    <p class="nav">Category</p>
+                    <p class="nav">Applied Services</p>
 
                 </div>
 
@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="profile">
-                        <p>Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
+                        <p>Username<i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
                             <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="AdminProfile.html">Profile</a></p>
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Admin-dashboard.html">Dashboard</a>
@@ -72,70 +72,68 @@
             <br />
 
             <div class="col-div-2">
-                <div class="box">
-                    <p class="head-1">Category - Details</p>
-                    <br />
-                    <table>
-                        <tr>
-                            <th>Name</th>
-                            <th>Category ID</th>
-                        </tr>
-                    </table>
+                <div class="col-div-2">
+                    <div class="box">
+                        <p class="head-1">Order History</p>
+                        <br />
+                        <table>
+                            <tr>
+                                <th>Date</th>
+                                <th>Job Title</th>
+                                <th>Job Description</th>
+                            <tr>
+                                <th>
+                                    
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
+
             </div>
-            <div class="col-div-2">
-                <div class="box1">
-                    <a href="AddCategory.html">Add</a>
-                </div>
-                <div class="box2">
-                    <a href="DeleteCategory.html">Delete</a>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
 
-            $(".menu").click(function () {
-                $("#mySidenav").css('width', '70px');
-                $("#main").css('margin-left', '70px');
-                $(".logo").css('display', 'none');
-                $(".logo1").css('display', 'block');
-                $(".logo span").css('visibility', 'visible');
-                $(".logo span").css('margin-left', '-10px');
-                $(".icon-a").css('visibility', 'hidden');
-                $(".icon-a").css('height', '25px');
-                $(".icons").css('visibility', 'visible');
-                $(".icons").css('margin-left', '-8px');
-                $(".menu1").css('display', 'block');
-                $(".menu").css('display', 'none');
-            });
-
-            $(".menu1").click(function () {
-                $("#mySidenav").css('width', '300px');
-                $("#main").css('margin-left', '300px');
-                $(".logo").css('visibility', 'visible');
-                $(".logo").css('display', 'block');
-                $(".icon-a").css('visibility', 'visible');
-                $(".icons").css('visibility', 'visible');
-                $(".menu").css('display', 'block');
-                $(".menu1").css('display', 'none');
-            });
-
-        </script>
-        <script>
-            $(document).ready(function () {
-                $(".profile p").click(function () {
-                    $(".profile-div").toggle();
-
+                $(".menu").click(function () {
+                    $("#mySidenav").css('width', '70px');
+                    $("#main").css('margin-left', '70px');
+                    $(".logo").css('display', 'none');
+                    $(".logo1").css('display', 'block');
+                    $(".logo span").css('visibility', 'visible');
+                    $(".logo span").css('margin-left', '-10px');
+                    $(".icon-a").css('visibility', 'hidden');
+                    $(".icon-a").css('height', '25px');
+                    $(".icons").css('visibility', 'visible');
+                    $(".icons").css('margin-left', '-8px');
+                    $(".menu1").css('display', 'block');
+                    $(".menu").css('display', 'none');
                 });
-                $(".noti-icon").click(function () {
-                    $(".notification-div").toggle();
+
+                $(".menu1").click(function () {
+                    $("#mySidenav").css('width', '300px');
+                    $("#main").css('margin-left', '300px');
+                    $(".logo").css('visibility', 'visible');
+                    $(".logo").css('display', 'block');
+                    $(".icon-a").css('visibility', 'visible');
+                    $(".icons").css('visibility', 'visible');
+                    $(".menu").css('display', 'block');
+                    $(".menu1").css('display', 'none');
                 });
-            });
-        </script>
+
+            </script>
+            <script>
+                $(document).ready(function () {
+                    $(".profile p").click(function () {
+                        $(".profile-div").toggle();
+
+                    });
+                    $(".noti-icon").click(function () {
+                        $(".notification-div").toggle();
+                    });
+                });
+            </script>
 
     </body>
 
