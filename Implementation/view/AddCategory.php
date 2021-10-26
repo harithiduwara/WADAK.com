@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +16,15 @@
     <p class="logo">WADAK <span class="menu">&#9776;</span></p>
     <p class="logo1"> <span class="menu1">&#9776;</span></p>
     <a href="#"class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
-    <a href="Admin-dashboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
-    <a href="CategoryUI.html"class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
-    <a href="ViewCoAdmin.html"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Co-Admin</a>
+    <a href="AdminPanel.html" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+    <a href="CategoryUI.php"class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
+    <a href="#"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Co-Admin</a>
     <a href="ServiceProviderUI-admin.html"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service Provider</a>
     <a href="#"class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
-    <a href="View Report.html"class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
-    <a href="PaymentUI.html"class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
+    <a href="#"class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
+    <a href="#"class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
     <a href="#"class="icon-a"><i class="fa fa-object-group icons"></i> &nbsp;&nbsp;Request</a>
-    <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
+    <a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>
 </div>
 
 <div id="main">
@@ -44,8 +48,8 @@
             <div class="profile">
                 <p>Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                 <div class="profile-div">
-                    <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="AdminProfile.html">Profile</a></p>
-                    <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Admin-dashboard.html">Dashboard</a> </p>
+                    <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="#">Profile</a></p>
+                    <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Dashboard</a> </p>
                     <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;Log Out</p>
                 </div>
             </div>
@@ -55,18 +59,28 @@
 
     <div class="clearfix"></div>
     <br>
-    <div class="inputContainer">
-        <div class="form">
-            <form>
+
+
+    <div class="inputContainer" style="margin:auto;width: 50%;">
+        <div class="form" style="position: relative;">
+            <form action="backend/addCategoryHandle.php" method="POST">
                 <div class="inputbox">
-                    <input type="text" placeholder="Category Name">
+                    <input type="text" name="categoryName" required="true" placeholder="Category Name">
                 </div>
-                <div class="inputbox">
+                <!-- <div class="inputbox">
                     <input type="value" placeholder="Category ID">
-                </div>
+                </div> -->
                 <div class="inputbox">
-                    <a href="CategoryUI.html">Add</a>
-                    <a href="CategoryUI.html">Cancel</a>
+                    <table style="width:50%;">
+                        <tr>
+                            <td><input type="submit" name="add" value="Add" style="width: 200px !important;"></td>
+                            <td><input type="reset" name="reset" style="width: 200px !important;" value="reset"></td>
+                        </tr>
+                    </table>
+                    
+                    
+                    <!-- <a href="CategoryUI.html">Add</a>
+                    <a href="CategoryUI.html">Cancel</a> -->
                 </div>
             </form>
         </div>
@@ -75,7 +89,13 @@
     </br>
 
 </div>
-
+<?php
+if(isset($_GET['messege'])){
+    if($_GET['messege']==1){
+        echo "<script> alert('Item Added.')</script>";
+    }
+}
+?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 

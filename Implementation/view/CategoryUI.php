@@ -1,34 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<!Doctype HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Delete Category</title>
+    <title>Categories</title>
     <style>a {text-decoration: none;}</style>
-    <link rel="stylesheet" href="./css/DeleteCategory.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/CategoryUI.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
+
 <body>
+
 <div id="mySidenav" class="sidenav">
     <p class="logo">WADAK <span class="menu">&#9776;</span></p>
-            <p class="logo1"> <span class="menu1">&#9776;</span></p>
-            <a href="#" class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
-            <a href="Admin-dashboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i>
-                &nbsp;&nbsp;Dashboard</a>
-            <a href="CategoryUI.html" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
-            <a href="ViewCoAdmin.html" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Co-Admin</a>
-            <a href="ServiceProviderUI-admin.html" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service
-                Provider</a>
-            <a href="#" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
-            <a href="View Report.html" class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
-            <a href="PaymentUI.html" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
-            <a href="#" class="icon-a"><i class="fa fa-object-group icons"></i> &nbsp;&nbsp;Request</a>
-            <!--<a href="#" class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
+    <p class="logo1"> <span class="menu1">&#9776;</span></p>
+    <a href="#"class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
+    <a href="Admin-dashboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+    <a href="CategoryUI.html"class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
+    <a href="#"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Co-Admin</a>
+    <a href="ServiceProviderUI-admin.html"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service Provider</a>
+    <a href="#"class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
+    <a href="#"class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
+    <a href="#"class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
+    <a href="#"class="icon-a"><i class="fa fa-object-group icons"></i> &nbsp;&nbsp;Request</a>
+    <a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>
 </div>
 
 <div id="main">
     <div class="head">
         <div class="col-div-1">
-            <p class="nav">Delete Category</p>
+            <p class="nav">Category</p>
+
         </div>
 
         <div class="col-div-1">
@@ -46,8 +47,8 @@
             <div class="profile">
                 <p>Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                 <div class="profile-div">
-                    <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="AdminProfile.html">Profile</a></p>
-                    <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Admin-dashboard.html">Dashboard</a> </p>
+                    <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="#">Profile</a></p>
+                    <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Dashboard</a> </p>
                     <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;Log Out</p>
                 </div>
             </div>
@@ -56,27 +57,42 @@
     </div>
 
     <div class="clearfix"></div>
-    <br>
-    <div class="inputContainer">
-        <div class="form">
-            <form>
-                <div class="inputbox">
-                    <input type="text" placeholder="Category Name">
-                </div>
-                <div class="inputbox">
-                    <input type="value" placeholder="Category ID">
-                </div>
-                <div class="inputbox">
-                    <a href="CategoryUI.html">Delete</a>
-                    <a href="CategoryUI.html">Cancel</a>
-                </div>
-            </form>
+    <br/>
+
+    <div class="col-div-2">
+        <div class="box">
+            <p class="head-1">Category - Details</p>
+            <br/>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Category ID</th>
+                    <th></th>
+                </tr>
+                <?php
+                require_once("backend/dbconfig.php");
+                $sql ="SELECT C_ID,Name FROM categories";
+                $result = mysqli_query($connection,$sql);
+                $out = "";
+                while($data=$result->fetch_assoc()){
+                    $out .= "<tr><td>".$data['Name']."</td><td>".$data['C_ID']."</td><td><a href='backend/deleteCategory.php?id=".$data['C_ID']."'>Delete</a></tr>";
+                }
+                echo $out;
+                ?>
+            </table>
         </div>
     </div>
-
-    </br>
-
+    <div class="col-div-2">
+        <div class="box1">
+            <a href="AddCategory.php">Add</a>
+        </div>
+        <div class="box2">
+            <a href="DeleteCategory.php">Delete</a>
+        </div>
+    </div>
+    <div class="clearfix"></div>
 </div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
@@ -119,6 +135,5 @@
         });
     });
 </script>
-
 </body>
 </html>
