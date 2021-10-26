@@ -41,7 +41,8 @@
                     <?php if(!isset($_SESSION["user"]["userrole"])){?>
                     <li><a href="./login.php">Login</a></li>
                     <?php }else {?>
-                    <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.html">Profile</a></li>
+                    <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.html"><i
+                                class="fas fa-user"></i></a></li>
                     <?php } ?>
 
 
@@ -173,10 +174,21 @@
                 <div class="col1">
                     <a href="#"><img class=" wadaklogo" src="wadak.gif" alt="wadak gif"></a>
                     <ul>
-                        <li>Terms & Condition</li>
-                        <li>Privacy Policy</li>
-                        <li>About us</li>
-                        <li>Terms & Condition</li>
+                        <a href="#">
+                            <li>Terms & Condition</li>
+                        </a>
+                        <a href="#">
+                            <li>Privacy Policy</li>
+                        </a>
+                        <a href="#">
+                            <li>About us</li>
+                        </a>
+                        <a href="#">
+                            <li>Terms & Condition</li>
+                        </a>
+                        <a href="#">
+                            <li>Add Advertisement</li>
+                        </a>
                     </ul>
                 </div>
 
