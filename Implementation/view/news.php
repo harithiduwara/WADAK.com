@@ -69,49 +69,21 @@
           </tr>
 
           <!--php code-->
-          <?
-             include "newsconfig.php";
-             $result = mysqli_query($conn,"SELECT News_ID,date,description  FROM news"); 
-          ?>
-
-         <?php
-           if (mysqli_num_rows($result) > 0) {
-         ?>
-         <table>
-  
-          <tr>
-           <td>News Id</td>
-           <td>Date</td>
-           <td>description</td>
-          </tr>
-         <?php
-           $i=0;
-           while($row = mysqli_fetch_array($result)) {
-         ?>
-        <tr>
-         <td><?php echo $row["News_ID"]; ?></td>
-         <td><?php echo $row["date"]; ?></td>
-         <td><?php echo $row["description"]; ?></td>
-       </tr>
-        <?php
-           $i++;
-         }
-         ?>
+          <?php
+                require_once("newsconfig.php");
+                $sql ="SELECT News_ID,date,description FROM news";
+                $result = mysqli_query($conn,$sql);
+                $out = "";
+                while($data=$result->fetch_assoc()){
+                    $out .= "<tr><td>".$data['News_ID']."</td><td>".$data['date']."</td><td> " .$data ['description']. "</td><td>";
+                }
+                echo $out;
+                ?>
        </table>
- <?php
-}
-else{
-    echo "No result found";
-}
-?>
 
-           
-            <form method="POST" action="">
-
-            <a href="news.html"><input type="button" class="button" value="View news" name="view"></a>
             <a href="add news.html"><input type="button" class="button1" value="Add news" name="add"></a>
             <a href="delete news.html"><input type="button" class="button2" value="Update" name="delete"></a>
-           </form>
+           
         </div>
       </div>
 
