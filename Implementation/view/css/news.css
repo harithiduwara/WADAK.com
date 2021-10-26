@@ -241,8 +241,9 @@ body{
   background: white;
   border-radius: 5px;
   box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
-  height: 800px;
+  height: 700px;
 }
+
 .wrapper .title{
   height: 50px;
   background: #1fe629;
@@ -268,7 +269,7 @@ body{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    margin-top: 300px;
+    margin-top: 0%;
     
   }
 
@@ -322,7 +323,7 @@ body{
 .container table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 80px;
     color: #799c79;
     margin-left: 100px;
 }

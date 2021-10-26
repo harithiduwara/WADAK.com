@@ -11,9 +11,9 @@
     <div id="mySidenav" class="sidenav">
         <p class="logo">WADAK <span class="menu">&#9776;</span></p>
         <p class="logo1"> <span class="menu1">&#9776;</span></p>
-        <a href="#"class="icon-a"> &nbsp;&nbsp;Home</a>
-        <a href="#" class="icon-a"></i> &nbsp;&nbsp;Dashboard</a>
-        <a href="#"class="icon-a"> &nbsp;&nbsp;Service Provider</a>
+        <a href="Home.php"class="icon-a"> &nbsp;&nbsp;Home</a>
+        <a href="Co-admin dashboard.html" class="icon-a"></i> &nbsp;&nbsp;Dashboard</a>
+        <a href="ViewServiceProvider-coadmin.html"class="icon-a"> &nbsp;&nbsp;Service Provider</a>
         <a href="#"class="icon-a"> &nbsp;&nbsp;Post</a>
         <a href="#"class="icon-a"> &nbsp;&nbsp;Advertisements</a>
         <a href="#"class="icon-a"> &nbsp;&nbsp;Q&A Session</a>
@@ -61,7 +61,7 @@
         <div class="wrapper">
           <div class="title"><span>Recent site announcements</span></div>
 
-          <table>
+          <table style="width:835px; margin-left:10px">
           <tr>
           <th>News Id</th>
           <th>Date Published</th>
@@ -75,7 +75,7 @@
                 $result = mysqli_query($conn,$sql);
                 $out = "";
                 while($data=$result->fetch_assoc()){
-                    $out .= "<tr><td>".$data['News_ID']."</td><td>".$data['date']."</td><td> " .$data ['description']. "</td><td>";
+                    $out .= "<tr><td>".$data['News_ID']."</td><td>".$data['date']."</td><td> " .$data ['description']. "</td><td> <a href='deletenews.php?id=".$data['News_ID']."'>Delete</a></tr>";
                 }
                 echo $out;
                 ?>
