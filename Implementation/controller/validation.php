@@ -11,30 +11,43 @@ $password = $_POST['password'];
 
 $s = "select * from register where username='$username' AND password='$password'";
 
-// echo $username;
-
-// echo $s;
-
 $result = mysqli_query($con, $s);
 
 $num = 0;
 
-// echo $num;
+
 
 $num = mysqli_num_rows($result);
 
-// echo $num+5;
+$us= "select userrole from register where username= '$username";
 
-// echo $result;
+$us=($result->fetch_assoc())["userrole"];
+
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 if($num==1){
-    header('location:/WADAK.com/Implementation/view/home.php');
-    // echo "1";
+    if($us == "user1"){
+        $_SESSION["user"]["userrole"]="user1";
+        header('location:/WADAK.com/Implementation/view/home.php'); 
+    }
+    elseif($us == "admin"){
+        $_SESSION["user"]["userrole"]="admin";
+        header('location:/WADAK.com/Implementation/view/Admin-dashboard.html'); 
+    }
+    else{
+        $_SESSION["user"]["userrole"]="coadmin";
+        header('location:/WADAK.com/Implementation/view/Co-admin dashboard.html');   
+    }
+  
 }
 else{
     header('location:/WADAK.com/Implementation/view/login.php');
-    // echo "2";
+    
 }
+
 
 
 

@@ -244,18 +244,14 @@ img {vertical-align: middle;}
     padding-top: 2rem;
 }
 
-
-
 /* <--------------------------Section2------------------------------ */
 
-#section2 {
-    height: 50vh;
-    background: #00F260;
-    background: -webkit-linear-gradient(to right, #0575E6, #00F260);
-    background: linear-gradient(to right, #0575E6, #00F260);
+#services {
+    height: 40vh;
+    background-color: red;
 }
 
-#button4 {
+*/ #button4 {
     margin: 0;
     position: relative;
     margin-top: 5rem;
@@ -406,3 +402,12 @@ footer .container .col2 li {
     cursor: pointer;
     font-weight: 600;
 }
+
+/* ------------------------------------boxes------------------------------------------- */
+
+.products {
+    display: flex;
+    grid-template-columns: auto auto auto;
+}
+
+/* -----------------x------------------boxes------------------------x------------------ */

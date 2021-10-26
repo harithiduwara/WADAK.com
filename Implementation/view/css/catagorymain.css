@@ -193,7 +193,8 @@ input:checked+.slider:before {
 
 .pricebar h3 {
     padding-top: 1rem;
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* -----------------x------------------boxes------------------------x------------------ */

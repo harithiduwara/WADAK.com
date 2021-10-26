@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import 'owl.carousel/dist/assets/owl.carousel.css';
+@import 'owl.carousel';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li, a, button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 1px solid;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15%;
+    background-color: #c4c4c4;
+    height: 150px;
+    /* margin: 30px 15% */
+}
+
+h1 {
+    font-size: 40px;
+    color: rgb(23, 146, 43);
+    text-align: center;
+    padding: 1.5rem 0 0.5rem 0;
+}
+
+h2 {
+    font-size: 30px;
+    color: rgb(23, 146, 43);
+    text-align: center;
+    padding: 1.5rem 0 0.5rem 0;
+}
+
+h3 {
+    font-size: 25px;
+    color: rgb(23, 146, 43);
+    text-align: center;
+    padding-top: 1rem;
+}
