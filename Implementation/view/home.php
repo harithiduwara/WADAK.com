@@ -161,9 +161,18 @@
             <div class="sectionheading3">
                 <h1 class="">TOP SERVICE PROVIDERS</h1>
 
-                <a href="registration.html"><button id="postbutton3">Register Now</button></a>
+                <?php if(!isset($_SESSION["user"]["userrole"])){?>
+                <a href="/WADAK.com/Implementation/view/registration.php"><button id="postbutton3">Register
+                        Now</button></a>
+                <?php }else {?>
+                <a href="/WADAK.com/Implementation/view/catagorymain.html"><button id="postbutton3">View
+                        Services</button></a>
+                <?php } ?>
             </div>
         </div>
+
+
+
 
         <!------------------x--------------section3----------------------x---------------->
 
