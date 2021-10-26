@@ -1,9 +1,5 @@
 <?php
-
     session_start();
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +37,8 @@
                     <?php if(!isset($_SESSION["user"]["userrole"])){?>
                     <li><a href="./login.php">Login</a></li>
                     <?php }else {?>
-                    <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.html">Profile</a></li>
+                    <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.html"><i
+                                class="fas fa-user"></i></a></li>
                     <?php } ?>
 
 
@@ -160,9 +157,18 @@
             <div class="sectionheading3">
                 <h1 class="">TOP SERVICE PROVIDERS</h1>
 
-                <a href="registration.html"><button id="postbutton3">Register Now</button></a>
+                <?php if(!isset($_SESSION["user"]["userrole"])){?>
+                <a href="/WADAK.com/Implementation/view/registration.php"><button id="postbutton3">Register
+                        Now</button></a>
+                <?php }else {?>
+                <a href="/WADAK.com/Implementation/view/catagorymain.html"><button id="postbutton3">View
+                        Services</button></a>
+                <?php } ?>
             </div>
         </div>
+
+
+
 
         <!------------------x--------------section3----------------------x---------------->
 
@@ -173,10 +179,21 @@
                 <div class="col1">
                     <a href="#"><img class=" wadaklogo" src="wadak.gif" alt="wadak gif"></a>
                     <ul>
-                        <li>Terms & Condition</li>
-                        <li>Privacy Policy</li>
-                        <li>About us</li>
-                        <li>Terms & Condition</li>
+                        <a href="#">
+                            <li>Terms & Condition</li>
+                        </a>
+                        <a href="#">
+                            <li>Privacy Policy</li>
+                        </a>
+                        <a href="#">
+                            <li>About us</li>
+                        </a>
+                        <a href="#">
+                            <li>Terms & Condition</li>
+                        </a>
+                        <a href="#">
+                            <li>Add Advertisement</li>
+                        </a>
                     </ul>
                 </div>
 
