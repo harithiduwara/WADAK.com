@@ -192,6 +192,26 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `wadak`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `register`
+--
+
 CREATE TABLE `register` (
   `name` varchar(255) NOT NULL,
   `username` varchar(12) NOT NULL,
@@ -200,5 +220,31 @@ CREATE TABLE `register` (
   `email` varchar(255) NOT NULL,
   `contactno` varchar(10) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `userrole` text
+  `userrole` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `register`
+--
+
+INSERT INTO `register` (`name`, `username`, `birthday`, `address`, `email`, `contactno`, `password`, `userrole`) VALUES
+('Admin', 'admin', '1998-05-25', '161/1G, Athurugiriya Road, Kottawa', '2019cs060@stu.ucsc.cmb.ac.lk', '0716033886', '123456', 'admin'),
+('CoAdmin', 'coadmin', '1999-07-07', 'kottawa', 'harith@gmail.com', '0716033886', '123456', 'coadmin'),
+('Harith Iduwara', 'coadmin1', '2021-10-02', 'Kottawa', 'harith@gmail.com', '0716033886', '123456', 'coadmin'),
+('Shanthaa', 'Shantha123', '2021-10-15', 'Colombo', 'SHan@gmail.com', '0775678211', '123456', 'user1'),
+('Harith Iduwara', 'test2', '2021-10-08', '161/1G', 'harithiduw2araucsc@gmail.com', '0771254567', '12345678', 'user1');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `register`
+--
+ALTER TABLE `register`
+  ADD PRIMARY KEY (`username`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

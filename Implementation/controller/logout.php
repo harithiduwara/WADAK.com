@@ -1,6 +1,9 @@
 <?php
     session_start();
-    unset($_SESSION["id"]);
-    unset($_SESSION["name"]);
-    header("Location:../view/login.php");
+    
+    unset($_SESSION["username"]);
+
+    session_destroy();
+    
+    header("Location:../view/home.php");
 ?>

@@ -62,6 +62,13 @@
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Admin-dashboard.html">Dashboard</a>
                             </p>
                             <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;Log Out</p>
+
+                            <?php
+                                session_start();
+                                unset($_SESSION["id"]);
+                                unset($_SESSION["name"]);
+                                header("Location:../view/login.php");
+                            ?>
                         </div>
                     </div>
                 </div>
