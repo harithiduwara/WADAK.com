@@ -38,6 +38,13 @@ CREATE TABLE `admin` (
   `DOB` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`Admin_ID`, `Fname`, `Lname`, `Gender`, `Email`, `Mobile`, `Home`, `DOB`) VALUES
+(1, 'Malsha', 'Siriwardhane', 'Female', 'malsha@gmail.com', '0712351458', 'Kamburupitiya', '1998-09-10 23:27:35');
+
 -- --------------------------------------------------------
 
 --
@@ -78,8 +85,17 @@ CREATE TABLE `categories` (
   `C_ID` int(11) NOT NULL,
   `Name` varchar(50) NOT NULL,
   `Admin_ID` int(11) NOT NULL,
-  `Badge_ID` int(11) NOT NULL
+  `Badge_ID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`C_ID`, `Name`, `Admin_ID`, `Badge_ID`) VALUES
+(3, 'test', 1, NULL),
+(4, 'test 2', 1, NULL),
+(5, 'test 3', 1, NULL);
 
 -- --------------------------------------------------------
 
