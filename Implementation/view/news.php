@@ -16,9 +16,9 @@
         <a href="ViewServiceProvider-coadmin.html"class="icon-a"> &nbsp;&nbsp;Service Provider</a>
         <a href="#"class="icon-a"> &nbsp;&nbsp;Post</a>
         <a href="#"class="icon-a"> &nbsp;&nbsp;Advertisements</a>
-        <a href="#"class="icon-a"> &nbsp;&nbsp;Q&A Session</a>
-        <a href="#"class="icon-a"> &nbsp;&nbsp;Chat</a>
-        <a href="#"class="icon-a"> &nbsp;&nbsp;News</a>
+        <a href="Q&A.html"class="icon-a"> &nbsp;&nbsp;Q&A Session</a>
+        <a href="chat.html"class="icon-a"> &nbsp;&nbsp;Chat</a>
+        <a href="News.php"class="icon-a"> &nbsp;&nbsp;News</a>
         <a href="#"class="icon-a">&nbsp;&nbsp;Notification</a>
     </div>
     
