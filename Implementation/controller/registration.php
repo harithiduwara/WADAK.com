@@ -2,7 +2,7 @@
 
 // error_reporting(E_ALL);
 
-echo "Test";
+// echo "Test";
 
 $con = mysqli_connect('localhost', 'toor', 'toor');
 if (!$con) {
@@ -12,12 +12,12 @@ mysqli_select_db($con, 'wadak');
 
 $data = mysqli_query($con, "select * from register");
 
-while($row=mysqli_fetch_assoc($data))
-{
-echo $row['name'];
-}
+// while($row=mysqli_fetch_assoc($data))
+// {
+// echo $row['name'];
+// }
 
-echo mysqli_num_rows($data);
+// echo mysqli_num_rows($data);
 session_start();
 
 //validation
@@ -50,7 +50,7 @@ function test_input($data){
         $validateStatus = 0;
     }
     else{
-        $username = test_input($_POST[$username]);
+        $username = test_input($_POST["username"]);
         // echo "3";
     }
 
@@ -69,7 +69,7 @@ function test_input($data){
         $validateStatus = 0;
     }
     else{
-        $contactno = test_input($_Post["contactno"]);
+        $contactno = test_input($_POST["contactno"]);
         // echo "6";
 
     }
@@ -79,7 +79,7 @@ function test_input($data){
         $validateStatus = 0;
     }
     else{
-        $password = test_input($_Post["password"]);
+        $password = test_input($_POST["password"]);
         // echo "7";
     }
 
@@ -92,13 +92,31 @@ function test_input($data){
         // echo "8";
     }
 
+    if(empty($_POST["address"])){
+        $addressErr = "Address is required"; 
+        $validateStatus = 0;
+    }
+    else{
+        $address = test_input($_POST["address"]);
+        // echo "7";
+    }
 
-//}
+    if(empty($_POST["password"])){
+        $emailErr = "Email is required"; 
+        $validateStatus = 0;
+    }
+    else{
+        $email = test_input($_POST["email"]);
+        // echo "7";
+    }
+
+
+// }
 
 
 
 
-//Validation end
+// Validation end
 
 // $name = $_POST['name'];
 // $username =$_POST['username'];
@@ -108,6 +126,8 @@ function test_input($data){
 // $contactno = $_POST['contactno'];
 // $address = $_POST['address'];
 
+$userrole = "user1";
+
 if($validateStatus==1)
 {
 $s = "select * from register where username='$name'";
@@ -115,22 +135,24 @@ $s = "select * from register where username='$name'";
 $result= mysqli_query($con, $s);
 
 $num= mysqli_num_rows($result);
-echo "Test2";
-echo $num;
+
+// echo "Test2";
+// echo $num;
 
     if($num==1){
     echo "Username already taken!";
+    header('location:/WADAK.com/Implementation/view/registration.php');
     }
     else{
-    $reg= "insert into register(name, username, birthday, address, email, contactno, password) values('$name', '$username',
-    '$birth','$address', '$email', '$contactno', '$password')";
+        $reg= "insert into register(name, username, birthday, address, email, contactno, password, userrole) values('$name', '$username',
+        '$birth','$address', '$email', '$contactno', '$password', '$userrole')";
 
-    echo $reg;
+    // echo $reg;
 
     
     if (mysqli_query($con, $reg)) {
         echo "New record created successfully";
-        header('location:../view/login.php');
+        header('location:/WADAK.com/Implementation/view/login.php');
     } 
     else {
         echo "Error: " . $reg . "<br>" . mysqli_error($con);

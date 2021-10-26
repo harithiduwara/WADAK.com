@@ -30,13 +30,13 @@
                 <h4>Registration</h4>
             </div><br>
 
-            <form action="../controller/registration.php" method="post" >
+            <form action="/WADAK.com/Implementation/controller/registration.php" method="post" >
                 <div class="user-details">
 
                     <div class="input-box">
                         <span class="details">Name</span>
                         <input type="text" name="name" placeholder="Enter your first name" required>
-                        <!-- <span class="error">*<?php echo $nameErr; ?></span> -->
+                        <span class="error">*<?php echo $nameErr; ?></span>
                     </div>
 
                     <div class="input-box">
@@ -79,7 +79,7 @@
 
                 <br><br>
 
-                <div class="type-details">
+                <!-- <div class="type-details">
                     <span class="type-title">Register As</span>
                     <div class="category"><br>
                         <label for="">
@@ -91,7 +91,7 @@
                             <span class="type"> &nbsp; Hire person</span>
                         </label>
                     </div>
-                </div>
+                </div> -->
 
 
                 <br><input type="checkbox"> &nbsp;&nbsp; “I accept the Terms of Service” or “I accept the Privacy

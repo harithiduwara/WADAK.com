@@ -1,3 +1,11 @@
+<?php
+
+    session_start();
+
+
+
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -9,9 +17,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/home.css">
-        <!-- <link rel="stylesheet" href="slider.css"> -->
-        <link rel="stylesheet" href="./css/owl.carousel.min.css">
-        <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+        <link rel="stylesheet" href="/WADAK.com/Implementation/view/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/view/css/owl.theme.default.min.css">
 
         <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
     </head>
@@ -29,7 +37,14 @@
                     <li><a href="#">Services</a></li>
                     <li><i class="far fa-bell"></i></li>
                     <li><a href="#">Messages</a></li>
+
+                    <?php if(!isset($_SESSION["user"]["userrole"])){?>
                     <li><a href="./login.php">Login</a></li>
+                    <?php }else {?>
+                    <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.html">Profile</a></li>
+                    <?php } ?>
+
+
                 </ul>
             </nav>
         </header>
@@ -38,18 +53,13 @@
 
         <!-----------------x----------------Navigation-------------------x------------------>
 
-        <!----------------------------------section1--------------------------------------->
-
-
-        <!------------------x--------------section1----------------------x---------------->
-
 
         <!----------------------------------Slider------------------------------------------>
 
         <div class="slideshow-container">
 
             <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
+                <!-- <div class="numbertext">1 / 3</div> -->
                 <img src="1.jpg" style="width:100%">
                 <div class="text">
                     <h1 style="color:white">Welcome to WADAK Paradise!</h1>
@@ -57,7 +67,7 @@
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
+                <!-- <div class="numbertext">2 / 3</div> -->
                 <img src="2.jpg" style="width:100%">
                 <div class="text">
                     <h1>Save Your Time! Be With Your Family!</h1>
@@ -65,7 +75,7 @@
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
+                <!-- <div class="numbertext">3 / 3</div> -->
                 <img src="3.jpg" style="width:100%">
                 <div class="text">
                     <h1>Enjoy Every Single Moment!</h1>
@@ -88,8 +98,14 @@
 
 
 
+        <!----------------------------------section1--------------------------------------->
+        <!------------------x--------------section1----------------------x---------------->
+
+
+
+
         <!----------------------------------section2--------------------------------------->
-        <section>
+        <!-- <section>
 
             <div id="section2">
                 <h1 id="servicecarousel">Our Services
@@ -97,7 +113,7 @@
                 <div class="container">
                     <div class="owl-carousel owl-theme servicepost">
                         <div class="servicecontent">
-                            <img src="./images/logodesign.jpg" alt="logo design image">
+                            <img src="./" alt="logo design image">
 
                             <div class="servicetitle">
                                 <h3>Logo Design</h3>
@@ -106,12 +122,34 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <a href="#"><button id="button4">Post Job</button></a>
             </div>
 
+
+        </section> -->
+
+        <div class="services">
+            <div class="name">
+                <h1 id="servicecarousel">Our Services
+                </h1>
             </div>
-        </section>
+            <div class="products">
+                <div class="boxes">
+
+                </div>
+            </div>
+            <div class="button">
+                <a href="#"><button id="button4">Post Job</button></a>
+            </div>
+        </div>
+
+
+
+
+
+
 
 
         <!------------------x--------------section2----------------------x---------------->
