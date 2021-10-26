@@ -1,0 +1,122 @@
+/*top navigation bar */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Open Sans', sans-serif;
+  background-color: aliceblue;
+}
+
+.loginContainer {
+  position: relative;
+  width: 1520px;
+  height: 800px;
+  background: #EEEEEE;
+  box-sizing: border-box;
+}
+
+nav {
+  background: white;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  color: #599F68;
+  font-size: 38px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 100px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #599F68;
+  font-size: 16px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+nav ul li a.active, nav ul li a:hover {
+  background: #599F68;
+  color: white;
+  transition: 0.5s;
+}
+
+nav ul li i:hover {
+  background-color: #4EEC54;
+  padding: 1rem 1rem;
+  width: 3rem;
+  transition: 0.5s;
+}
+
+nav ul li i {
+  padding: 1rem 1rem;
+  width: 3rem;
+}
+
+nav ul li a:hover {
+  background-color: #4EEC54;
+  color: white;
+  transition: 0.5s;
+}
+
+.animation {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  border-radius: 8px;
+  transition: all .5s ease 0s;
+}
+
+
+/*container*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+/*table*/
+ table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    color: #0d0e0d;
+    margin-left: 400px;
+    width: 1000px;
+    background-color:aliceblue;
+    border-collapse: collapse;
+    border-collapse:separate;
+    border-spacing:0 35px;
+    
+}
+
+ td {
+    border: 1px solid white;
+    text-align: center;
+    padding: 70px;
+    background-color: white;
+    
+}
+
+
+   
+
