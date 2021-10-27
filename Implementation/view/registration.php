@@ -80,21 +80,6 @@
 
                 <br><br>
 
-                <!-- <div class="type-details">
-                    <span class="type-title">Register As</span>
-                    <div class="category"><br>
-                        <label for="">
-                            <input type="radio" name="type" id="dot-1">
-                            <span class="type">&nbsp; Service provider</span>
-                        </label>
-                        <label for="">
-                            <input type="radio" name="type" id="dot-2">
-                            <span class="type"> &nbsp; Hire person</span>
-                        </label>
-                    </div>
-                </div> -->
-
-
                 <br><input type="checkbox"> &nbsp;&nbsp; “I accept the Terms of Service” or “I accept the Privacy
                 Statement” Click here to indicate that you have
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;read and agree to the terms presented in the Terms and

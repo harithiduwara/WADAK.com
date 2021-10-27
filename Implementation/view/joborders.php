@@ -96,7 +96,9 @@
                                 
                                 $uid = $_SESSION["user"]["uid"];
                                 
-                                $sql = "select * from postjob where uid=$uid";
+                                // $sql = "select * from postjob where uid=$uid";
+
+                                $coadminsql = "select * from register where userrole='coadmin'";
 
                                 // echo $sql;
 
