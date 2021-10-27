@@ -251,16 +251,18 @@ img {vertical-align: middle;}
     background-color: red;
 }
 
-*/ #button4 {
+
+
+#button4 {
     margin: 0;
     position: relative;
-    margin-top: 5rem;
+    margin-top: 0;
     top: 60%;
     margin-left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: aliceblue;
-}
+    background-color: green;
+} 
 
 #button4:hover {
     margin: 0;
@@ -282,6 +284,26 @@ img {vertical-align: middle;}
     font-size: xx-large;
 }
 
+.services{
+    height: 320px;
+    background-color: rgb(188, 201, 188);
+}
+
+.name{
+    width: 25%;
+    float: left;
+}
+
+.box1 {
+    width: 92%;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-left: 12px;
+    box-shadow: 2px 5px 10px #ddd;
+    position: relative;
+}
+
 /* <--------------------------Section3------------------------------ */
 
 .container3 .sectionheading3 {
@@ -297,11 +319,26 @@ img {vertical-align: middle;}
 #postbutton3 {
     margin: 0;
     position: relative;
-    margin-top: 4rem;
-    top: 60%;
+    margin-top: 2rem;
+    top: 10%;
     margin-left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.name2{
+    width: 25%;
+    float: left;
+}
+
+.box2 {
+    width: 92%;
+    height: 200px;
+    background-color: #c4c4c4;
+    margin-top: 30px;
+    margin-left: 12px;
+    box-shadow: 2px 5px 10px #ddd;
+    position: relative;
 }
 
 /* ------------------------------Footer---------------------------------- */
