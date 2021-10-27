@@ -23,13 +23,13 @@
         <nav>
             <label class="logo">WADAK</label>
             <ul style="margin-top: 1rem">
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="/WADAK.com/Implementation/view/home.php" class="active">Home</a></li>
                 <li><a href="#">Post Job</a> </li>
                 <li><a href="#">Jobs</a> </li>
                 <li><a href="#">Services</a> </li>
                 <li><a href="#">Messages</a> </li>
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
-                <li><a href="./login.php">Login</a></li>
+                <li><a href="./login.php"></a></li>
                 <?php }else {?>
                 <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.html"><i class="fas fa-user"></i></a>
                 </li>
@@ -52,20 +52,25 @@
                                 required>
                         </div>
                         <div class="inputbox">
-                            
+                            <span>Category</span>
+                            <select id="cars" name="joblist" form="carform" required>
+                                <option value="webdev">Web Development</option>
+                                <option value="uidev">UI Design</option>
+                                <option value="logo">Logo Design</option>
+                                <option value="graphic">Graphic Design</option>
+                                <option value="app">App Development</option>
+                            </select>
                         </div>
                         <div class="inputbox">
                             <span>Price</span>
                             <input type="number" min="1" step="any" />
                         </div>
-                        <label class="remember"><input type="checkbox">Remember Me</label>
+
                         <div class="inputbox">
-                            <input type="submit" value="Login">
+
+                            <input type="submit" value="POST">
                         </div>
                     </form>
-
-                    <p><a href="forgot%20password.html">Forgotten your Username or Password?</a></p>
-                    <p><a href="./registration.php">Create an Account</a></p>
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@
             <img class="wadaklogo" src="wadak.gif" alt="wadak gif" style="float:left width:5% height:5%">
             <nav>
                 <ul class="navbar">
-                    <li class="navbargreen"><a href="#">Post Jobs</a></li>
+                    <li class="navbargreen"><a href="/WADAK.com/Implementation/view/postjob.html">Post Jobs</a></li>
                     <li class="greenbar"><a href="#">Jobs</a></li>
                     <li><a href="#">Services</a></li>
                     <li><i class="far fa-bell"></i></li>
