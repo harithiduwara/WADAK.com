@@ -217,6 +217,7 @@ input:checked+.slider:before {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 15px;
+    margin-top: 500px;
 }
 
 .footer .container .col1 li {
@@ -326,13 +327,15 @@ input:checked+.slider:before {
     width: 25%;
     padding: 0 10px;
     height: 200px;
+   
     
   }
   
   /* Remove extra left and right margins, due to padding in columns */
   .row {margin: 0 -5px;
-    margin-left: 200px;
+    margin-left: 100px;
     width: 1300px;
+    margin-top: 100px;
     
   }
   
