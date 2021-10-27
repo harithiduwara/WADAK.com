@@ -1,43 +1,6 @@
 <?php
-// Create connection
-
-session_start();
-
-$con = mysqli_connect('localhost', 'toor', 'toor');
-
-mysqli_select_db($con, 'wadak');
-// Check connection
-
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-
-$sql = "SELECT * FROM postjob where uid=";
-
-$result = mysqli_query($con, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-  // output data of each row
-  while($row = mysqli_fetch_assoc($result)) {
-    echo "<tr>
-                <th>".$row["id"]."</th>
-                <th>".$row["firstname"]."</th>
-                <th>".$row["lastname"]."</th>
-         </tr>"
-  }
-
-   <th>Job ID</th>
-                                <th>Job Title</th>
-                                <th>Job Description</th>
-                                <th>Budget</th>
-                                <th>Job Type</th>
-} else {
-  echo "0 results";
-}
-
-mysqli_close($conn);
+    session_start();
 ?>
-
 
 <!Doctype HTML>
 <html>
@@ -121,21 +84,53 @@ mysqli_close($conn);
                     <div class="box">
                         <p class="head-1">Job History</p>
                         <br />
-                        <table>
-                            <tr>
-                                <th>Job ID</th>
-                                <th>Job Title</th>
-                                <th>Job Description</th>
-                                <th>Budget</th>
-                                <th>Job Type</th>
-                                <!-- <tr>
-                                <th>
 
-                                </th>
-                            </tr> -->
+                        <?php
+                            
+                                // Create connection
+                                $con = new mysqli('localhost', 'toor', 'toor', 'wadak');
+                                // Check connection
+                                if ($con->connect_error) {
+                                    die("Connection failed: " . $conn->connect_error);
+                                } 
+                                
+                                $uid = $_SESSION["user"]["uid"];
+                                
+                                $sql = "select * from postjob where uid=$uid";
 
+                                // echo $sql;
 
-                        </table>
+                                $result = $con->query($sql);
+
+                                // echo $uid;
+                                    echo "<table>
+                                            <tr>
+                                                <th>Job ID</th>
+                                                <th>Job Title</th>
+                                                <th>Job Description</th>
+                                                <th>Budget</th>
+                                                <th>Job Type</th>
+                                            </tr>";
+                                    // output data of each row
+
+                                    // echo $result->num_rows;
+                                    
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<tr>
+                                                <td>" . $row["jobid"]. "</td>
+                                                <td>" . $row["title"]. "</td>
+                                                <td>" . $row["description"]. "</td>
+                                                <td>" . $row["budget"]. "</td>
+                                                <td>" . $row["jobtype"]. "</td>
+                                            </tr>";
+                                    }
+                                    echo "</table>";
+
+                                
+
+                                $conn->close();
+                                ?>
+
                     </div>
                 </div>
 
