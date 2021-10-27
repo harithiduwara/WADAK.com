@@ -2,8 +2,6 @@
 
     session_start();
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -145,12 +143,12 @@
             <div class="name">
                 <div class="box1"></div>
             </div>
-            
-            </div>
-           
-            <div class="button">
-                <a href="#"><button id="button4">Post Job</button></a>
-            </div>
+
+        </div>
+
+        <div class="button">
+            <a href="#"><button id="button4">Post Job</button></a>
+        </div>
         </div>
 
 
