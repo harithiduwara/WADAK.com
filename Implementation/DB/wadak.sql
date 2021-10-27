@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Oct 27, 2021 at 01:05 PM
+-- Generation Time: Oct 27, 2021 at 06:55 PM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -195,11 +195,10 @@ CREATE TABLE `postjob` (
 --
 
 INSERT INTO `postjob` (`jobid`, `title`, `description`, `budget`, `jobtype`, `uid`) VALUES
-(1, 'Need a web developer ', 'I need to build a website for my business', 200, 'webdev', 0),
-(6, 'asdfghjkl', 'asdfghjkl', 1234567890, 'webdev', 0),
-(7, 'asdfghjkl', 'asdfghjkl', 1234567890, 'webdev', 0),
-(8, 'asdfghjkldfghjk', 'asdfghjklkjhgfdsa', 2000, 'webdev', 4),
-(9, 'I need a logo designer', 'Need a good quality logo for business!', 29, 'webdev', 7);
+(1, 'Need a web developer ', 'I need to build a website for my business', 200, 'webdev', 4),
+(9, 'I need a logo designer', 'Need a good quality logo for business!', 29, 'webdev', 7),
+(10, 'I want to bulid a web', 'Any professional web devs?', 200, 'webdev', 4),
+(11, 'I need a social media manager', 'I need more reach to my business', 500, 'graphic', 4);
 
 -- --------------------------------------------------------
 
@@ -230,7 +229,8 @@ INSERT INTO `register` (`name`, `username`, `birthday`, `address`, `email`, `con
 ('Shanthaa', 'Shantha123', '2021-10-15', 'Colombo', 'SHan@gmail.com', '0775678211', '123456', 'user1', 4),
 ('Harith Iduwara', 'test2', '2021-10-08', '161/1G', 'harithiduw2araucsc@gmail.com', '0771254567', '12345678', 'user1', 5),
 ('user user', 'user1012', '2021-10-15', 'colombo', 'user123@gmail.com', '0716033886', '123456', 'user1', 6),
-('Kusal Mendis', 'kusal123', '1998-10-14', 'colombo', 'kusal@gmail.com', '071123456', '123456', 'user1', 7);
+('Kusal Mendis', 'kusal123', '1998-10-14', 'colombo', 'kusal@gmail.com', '071123456', '123456', 'user1', 7),
+('hansi', 'hansi', '1998-01-01', 'Kottawa', 'hansi@wadak.com', '0711234567', '123456', 'coadmin', 8);
 
 -- --------------------------------------------------------
 
@@ -406,13 +406,13 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `postjob`
 --
 ALTER TABLE `postjob`
-  MODIFY `jobid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `jobid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `service_provider`
