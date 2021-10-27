@@ -50,7 +50,7 @@ session_start();
                 <div class="profile-div">
                     <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="#">Profile</a></p>
                     <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Dashboard</a> </p>
-                    <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;Log Out</p>
+                    <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a href="/WADAK.com/implementation/controller/logout.php">Log Out</p>
                 </div>
             </div>
         </div>

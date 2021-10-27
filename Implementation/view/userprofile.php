@@ -18,7 +18,7 @@
             <li><a href="#">Services</a> </li>
             <li><a href="#">Leaderboard</a> </li>
             <li><a href="chat.html">Messages</a> </li>
-            <li><a href="#">Login</a> </li>
+            <li><a href="/WADAK.com/implementation/controller/logout.php">Logout</a> </li>
             <div class="animation "></div>
         </ul>
     </nav>
