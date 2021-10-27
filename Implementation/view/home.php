@@ -128,15 +128,22 @@
         </section> -->
 
         <div class="services">
+            <h1 id="servicecarousel">Our Services</h1>
             <div class="name">
-                <h1 id="servicecarousel">Our Services
-                </h1>
+                <div class="box1"></div>
             </div>
-            <div class="products">
-                <div class="boxes">
-
-                </div>
+            <div class="name">
+                <div class="box1"></div>
             </div>
+            <div class="name">
+                <div class="box1"></div>
+            </div>
+            <div class="name">
+                <div class="box1"></div>
+            </div>
+            
+            </div>
+           
             <div class="button">
                 <a href="#"><button id="button4">Post Job</button></a>
             </div>
@@ -154,8 +161,20 @@
         <!----------------------------------section3--------------------------------------->
 
         <div class="container3">
+            <h1 class="">TOP SERVICE PROVIDERS</h1>
             <div class="sectionheading3">
-                <h1 class="">TOP SERVICE PROVIDERS</h1>
+                <div class="name2">
+                    <div class="box2"></div>
+                </div>
+                <div class="name2">
+                    <div class="box2"></div>
+                </div>
+                <div class="name2">
+                    <div class="box2"></div>
+                </div>
+                <div class="name2">
+                    <div class="box2"></div>
+                </div>
 
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
                 <a href="/WADAK.com/Implementation/view/registration.php"><button id="postbutton3">Register
