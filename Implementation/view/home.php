@@ -138,16 +138,16 @@
         <div class="services">
             <h1 id="servicecarousel">Our Services</h1>
             <div class="name">
-                <div class="box1"></div>
+                <div class="box1"><img src="image1.jfif" width="350px" height="200px"></div>
             </div>
             <div class="name">
-                <div class="box1"></div>
+                <div class="box1"><img src="image2.png" width="350px" height="200px"></div>
             </div>
             <div class="name">
-                <div class="box1"></div>
+                <div class="box1"><img src="image3.jfif" width="350px" height="200px"></div>
             </div>
             <div class="name">
-                <div class="box1"></div>
+                <div class="box1"><img src="image4.jpg" width="350px" height="200px"></div>
             </div>
 
         </div>
