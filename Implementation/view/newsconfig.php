@@ -2,7 +2,7 @@
 $servername= "127.0.0.1";
 $username= "root";
 $password= "";
-$dbname= "wadak_db";
+$dbname= "wadak";
 //The connection
 $conn= new mysqli($servername,$username,$password,$dbname);
 //check connection

@@ -3,7 +3,7 @@
 <head>
     <title>User Profile</title>
     <style>a {text-decoration: none;}</style>
-    <link rel="stylesheet" href="./css/user profile.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/userprofile-edit.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -25,14 +25,12 @@
 
 
     
-    <button type="button" class="button"><i class="fa fa-user" > </i>     Become Premium</button>
+    
 
      <div class="container">
     <div class="wrapper">
       <div class="title"><span>Profile Settings</span></div>
       <form>
-        
-        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <div id="profile-container">
         <image id="profileImage" src="add user.png" class="center" style="  width:100px ; height: 100px; align-items:center;">
