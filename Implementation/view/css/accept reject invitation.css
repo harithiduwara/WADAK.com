@@ -174,3 +174,58 @@ nav ul li a:hover {
   margin-right: 0px;
   width: 50%;
 }
+
+/*side nav*/
+.logo{
+  margin: 0px;
+  margin-left: 45px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px;
+}
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: green;
+  overflow: hidden;
+  padding-top: 30px;
+  transition: ease-in-out 0.3s;
+}
+.menu{
+  float: right;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.logo1{
+  margin: 0px;
+  margin-left: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 50px;
+  display: none;
+  cursor: pointer;
+}
+.menu1{
+  float: left;
+  display: none;
+}
+.sidenav a {
+  padding: 15px 8px 15px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #d8d8d8;
+  display: block;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+  background-color: #05ac05;
+}
+.sidenav{
+  top: 0;
+  right: 25px;
+  font-size: 30px;
+}
