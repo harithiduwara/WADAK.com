@@ -18,25 +18,25 @@
         <nav>
             <label class="logo">WADAK</label>
             <ul style="margin-top: 1rem">
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="/WADAK.com/Implementation/view/home.php" class="active">Home</a></li>
                 <li><a href="#">Post Job</a> </li>
                 <li><a href="#">Jobs</a> </li>
                 <li><a href="#">Services</a> </li>
                 <li><a href="#">Messages</a> </li>
-                <li><a href="#">Login</a> </li>
+                <li><a href="/WADAK.com/Implementation/view/registration.php">Register</a> </li>
                 <div class="animation "></div>
             </ul>
         </nav>
         <div class="loginContainer">
             <div class="inputContainer" id="loginbox">
                 <div class="form">
-                    
+
                     <form action="/WADAK.com/Implementation/controller/validation.php" method="post">
                         <div class="inputbox">
                             <input type="text" name="username" placeholder="Enter Username" required>
                         </div>
                         <div class="inputbox">
-                            <input type="password" name= "password" placeholder="Enter Password" required>
+                            <input type="password" name="password" placeholder="Enter Password" required>
                         </div>
                         <label class="remember"><input type="checkbox">Remember Me</label>
                         <div class="inputbox">
