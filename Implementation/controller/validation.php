@@ -19,17 +19,29 @@ $num = 0;
 
 $num = mysqli_num_rows($result);
 
-$us= "select userrole from register where username= '$username";
+$us= "select userrole, uid from register where username= '$username";
 
-$us=($result->fetch_assoc())["userrole"];
+$fetchass= ($result->fetch_assoc());
+
+$us=($fetchass)["userrole"];
+$usid=($fetchass)["uid"];
+
 
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+$_SESSION["user"]["uid"]=$usid;
+
+
+echo $usid;
+
+
+
 if($num==1){
-    if($us == "user1"){
+    
+    if($us == "user1" ){
         $_SESSION["user"]["userrole"]="user1";
         header('location:/WADAK.com/Implementation/view/home.php'); 
     }

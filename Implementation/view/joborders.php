@@ -1,12 +1,18 @@
+<?php
+
+
+?>
+
+
 <!Doctype HTML>
 <html>
 
     <head>
         <title>Categories</title>
         <style>
-            a {
-                text-decoration: none;
-            }
+        a {
+            text-decoration: none;
+        }
 
         </style>
         <link rel="stylesheet" href="./css/CategoryUI.css" type="text/css" />
@@ -26,6 +32,9 @@
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
             <a href="/WADAK.com/Implementation/view/previousordershireperson.html" class="icon-a"><i
+                    class="fa fa-tasks icons"></i>
+                &nbsp;&nbsp;Job Posts</a>
+            <a href="/WADAK.com/Implementation/view/previousordershireperson.html" class="icon-a"><i
                     class="fa fa-tasks icons"></i> &nbsp;&nbsp;Previous Orders</a>
             <a href="/WADAK.com/Implementation/view/appliedservices.html" class="icon-a"><i
                     class="fa fa-tasks icons"></i>
@@ -39,7 +48,7 @@
         <div id="main">
             <div class="head">
                 <div class="col-div-1">
-                    <p class="nav">Applied Services</p>
+                    <p class="nav">Job Posts</p>
 
                 </div>
 
@@ -74,18 +83,22 @@
             <div class="col-div-2">
                 <div class="col-div-2">
                     <div class="box">
-                        <p class="head-1">Order History</p>
+                        <p class="head-1">Job History</p>
                         <br />
                         <table>
                             <tr>
-                                <th>Date</th>
+                                <th>Job ID</th>
                                 <th>Job Title</th>
                                 <th>Job Description</th>
-                            <tr>
+                                <th>Budget</th>
+                                <th>Job Type</th>
+                                <!-- <tr>
                                 <th>
-                                    
+
                                 </th>
-                            </tr>
+                            </tr> -->
+
+
                         </table>
                     </div>
                 </div>
@@ -95,44 +108,42 @@
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script>
+            $(".menu").click(function() {
+                $("#mySidenav").css('width', '70px');
+                $("#main").css('margin-left', '70px');
+                $(".logo").css('display', 'none');
+                $(".logo1").css('display', 'block');
+                $(".logo span").css('visibility', 'visible');
+                $(".logo span").css('margin-left', '-10px');
+                $(".icon-a").css('visibility', 'hidden');
+                $(".icon-a").css('height', '25px');
+                $(".icons").css('visibility', 'visible');
+                $(".icons").css('margin-left', '-8px');
+                $(".menu1").css('display', 'block');
+                $(".menu").css('display', 'none');
+            });
 
-                $(".menu").click(function () {
-                    $("#mySidenav").css('width', '70px');
-                    $("#main").css('margin-left', '70px');
-                    $(".logo").css('display', 'none');
-                    $(".logo1").css('display', 'block');
-                    $(".logo span").css('visibility', 'visible');
-                    $(".logo span").css('margin-left', '-10px');
-                    $(".icon-a").css('visibility', 'hidden');
-                    $(".icon-a").css('height', '25px');
-                    $(".icons").css('visibility', 'visible');
-                    $(".icons").css('margin-left', '-8px');
-                    $(".menu1").css('display', 'block');
-                    $(".menu").css('display', 'none');
-                });
-
-                $(".menu1").click(function () {
-                    $("#mySidenav").css('width', '300px');
-                    $("#main").css('margin-left', '300px');
-                    $(".logo").css('visibility', 'visible');
-                    $(".logo").css('display', 'block');
-                    $(".icon-a").css('visibility', 'visible');
-                    $(".icons").css('visibility', 'visible');
-                    $(".menu").css('display', 'block');
-                    $(".menu1").css('display', 'none');
-                });
-
+            $(".menu1").click(function() {
+                $("#mySidenav").css('width', '300px');
+                $("#main").css('margin-left', '300px');
+                $(".logo").css('visibility', 'visible');
+                $(".logo").css('display', 'block');
+                $(".icon-a").css('visibility', 'visible');
+                $(".icons").css('visibility', 'visible');
+                $(".menu").css('display', 'block');
+                $(".menu1").css('display', 'none');
+            });
             </script>
             <script>
-                $(document).ready(function () {
-                    $(".profile p").click(function () {
-                        $(".profile-div").toggle();
+            $(document).ready(function() {
+                $(".profile p").click(function() {
+                    $(".profile-div").toggle();
 
-                    });
-                    $(".noti-icon").click(function () {
-                        $(".notification-div").toggle();
-                    });
                 });
+                $(".noti-icon").click(function() {
+                    $(".notification-div").toggle();
+                });
+            });
             </script>
 
     </body>
