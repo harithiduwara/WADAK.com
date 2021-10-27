@@ -15,8 +15,8 @@
         <li><a href="Add achievement post - Service provider.html">Post Job</a> </li>
         <li><a href="#">Jobs</a> </li>
         <li><a href="catagorymain.html">Services</a> </li>
-        <li><a href="#">Leaderboard</a></li>
-        <li><i class="far fa-bell"></i></li>
+       <!-- <li><a href="#">Leaderboard</a></li>-->
+        <!--<li><i class="far fa-bell"></i></li>-->
         <li><a href="#">Messages</a> </li>
         <li><a href="#">Logout</a> </li>
 
@@ -29,10 +29,7 @@
 <!-- news containers -->
 
           <h1 style="margin-top:12px; margin-left:100px; color:#6c7293;"> News</h1>
-
             <table>
-                
-               
                   <!--php code-->
           <?php
                 require_once("newsconfig.php");
@@ -44,7 +41,5 @@
                 }
                 echo $out;
           ?>
-
-
 </body>
 </html>

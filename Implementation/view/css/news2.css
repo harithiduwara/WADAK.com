@@ -4,7 +4,7 @@ body {
   padding: 0%;
   margin: 0%;
   font-family: 'Open Sans', sans-serif;
-  background-color: aliceblue;
+  background-color: #efeff5;
 }
 
 .loginContainer {
@@ -99,13 +99,16 @@ nav ul li a:hover {
  table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    color: #0d0e0d;
-    margin-left: 400px;
+    color: #111311;
+    margin-left:300px;
     width: 1000px;
-    background-color:aliceblue;
+    background-color:#efeff5;
     border-collapse: collapse;
     border-collapse:separate;
     border-spacing:0 35px;
+    margin-top: 0%;
+    text-decoration: bold;
+    
     
 }
 
