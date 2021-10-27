@@ -1,6 +1,41 @@
 <?php
+// Create connection
 
+session_start();
 
+$con = mysqli_connect('localhost', 'toor', 'toor');
+
+mysqli_select_db($con, 'wadak');
+// Check connection
+
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT * FROM postjob where uid=";
+
+$result = mysqli_query($con, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "<tr>
+                <th>".$row["id"]."</th>
+                <th>".$row["firstname"]."</th>
+                <th>".$row["lastname"]."</th>
+         </tr>"
+  }
+
+   <th>Job ID</th>
+                                <th>Job Title</th>
+                                <th>Job Description</th>
+                                <th>Budget</th>
+                                <th>Job Type</th>
+} else {
+  echo "0 results";
+}
+
+mysqli_close($conn);
 ?>
 
 
@@ -70,7 +105,8 @@
                             <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="AdminProfile.html">Profile</a></p>
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Admin-dashboard.html">Dashboard</a>
                             </p>
-                            <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;Log Out</p>
+                            <p><a href="/WADAK.com/Implementation/controller/logout.php"><i
+                                        class=" fa fa-power-off"></i> &nbsp;&nbsp;Log Out</a></p>
                         </div>
                     </div>
                 </div>

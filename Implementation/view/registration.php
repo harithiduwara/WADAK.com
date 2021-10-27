@@ -12,13 +12,14 @@
         <nav>
             <label class="logo">WADAK</label>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="/WADAK.com/Implementation/view/home.php" class="active">Home</a></li>
+                <!-- <li><a href="/WADAK.com/Implementation/view/postjob.html">POST JOB</a> </li> -->
                 <li><a href="#">Jobs</a> </li>
-                <li><a href="Add achievement post - Service provider.html">POST JOB</a> </li>
+
                 <li><a href="#">Services</a> </li>
-                <li><a href="#">Leaderboard</a> </li>
-                <li><a href="chat.html">MESSAGES</a> </li>
-                <li><a href="#">Login</a> </li>
+                <li><a href="/WADAK.com/Implementation/view/leaderboard.html">Leaderboard</a> </li>
+                <!-- <li><a href="chat.html">MESSAGES</a> </li> -->
+                <li><a href="/WADAK.com/Implementation/view/login.php">Login</a> </li>
                 <div class="animation "></div>
             </ul>
         </nav>
@@ -30,7 +31,7 @@
                 <h4>Registration</h4>
             </div><br>
 
-            <form action="/WADAK.com/Implementation/controller/registration.php" method="post" >
+            <form action="/WADAK.com/Implementation/controller/registration.php" method="post">
                 <div class="user-details">
 
                     <div class="input-box">

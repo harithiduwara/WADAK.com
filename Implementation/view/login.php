@@ -19,10 +19,10 @@
             <label class="logo">WADAK</label>
             <ul style="margin-top: 1rem">
                 <li><a href="/WADAK.com/Implementation/view/home.php" class="active">Home</a></li>
-                <li><a href="#">Post Job</a> </li>
+                <!-- <li><a href="#">Post Job</a> </li> -->
                 <li><a href="#">Jobs</a> </li>
                 <li><a href="#">Services</a> </li>
-                <li><a href="#">Messages</a> </li>
+                <!-- <li><a href="#">Messages</a> </li> -->
                 <li><a href="/WADAK.com/Implementation/view/registration.php">Register</a> </li>
                 <div class="animation "></div>
             </ul>
