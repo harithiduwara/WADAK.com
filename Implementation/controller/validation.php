@@ -35,7 +35,7 @@ if (session_status() === PHP_SESSION_NONE) {
 $_SESSION["user"]["uid"]=$usid;
 
 
-echo $usid;
+// echo $usid;
 
 
 

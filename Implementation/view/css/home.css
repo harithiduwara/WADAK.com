@@ -251,8 +251,6 @@ img {vertical-align: middle;}
     background-color: red;
 }
 
-
-
 #button4 {
     margin: 0;
     position: relative;
@@ -262,7 +260,7 @@ img {vertical-align: middle;}
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-color: green;
-} 
+}
 
 #button4:hover {
     margin: 0;
@@ -284,12 +282,12 @@ img {vertical-align: middle;}
     font-size: xx-large;
 }
 
-.services{
+.services {
     height: 320px;
     background-color: rgb(188, 201, 188);
 }
 
-.name{
+.name {
     width: 25%;
     float: left;
 }
@@ -303,6 +301,7 @@ img {vertical-align: middle;}
     box-shadow: 2px 5px 10px #ddd;
     position: relative;
 }
+
 /* <--------------------------Section3------------------------------ */
 
 .container3 .sectionheading3 {
@@ -325,7 +324,7 @@ img {vertical-align: middle;}
     transform: translate(-50%, -50%);
 }
 
-.name2{
+.name2 {
     width: 25%;
     float: left;
 }

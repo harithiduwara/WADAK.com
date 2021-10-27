@@ -30,15 +30,21 @@
             <img class="wadaklogo" src="wadak.gif" alt="wadak gif" style="float:left width:5% height:5%">
             <nav>
                 <ul class="navbar">
-                    <li class="navbargreen"><a href="#">Post Jobs</a></li>
-                    <li class="greenbar"><a href="#">Jobs</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><i class="far fa-bell"></i></li>
-                    <li><a href="#">Messages</a></li>
+                    <?php
+                        if(isset($_SESSION["user"]["userrole"])){?>
+                    <li class="navbargreen"><a href="/WADAK.com/Implementation/view/postjob.html">Post Jobs</a></li>
+                    <?php
+                    }
+                    ?>
+                    <li class="greenbar"><a href="jobs.html">Jobs</a></li>
+                    <li><a href="/WADAK.com/Implementation/view/services.html">Services</a></li>
 
                     <?php if(!isset($_SESSION["user"]["userrole"])){?>
+
                     <li><a href="./login.php">Login</a></li>
                     <?php }else {?>
+                    <li><i class="far fa-bell"></i></li>
+                    <li><a href="/WADAK.com/Implementation/view/messages.html">Messages</a></li>
                     <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.html"><i
                                 class="fas fa-user"></i></a></li>
                     <?php } ?>
@@ -147,7 +153,7 @@
         </div>
 
         <div class="button">
-            <a href="#"><button id="button4">Post Job</button></a>
+            <a href="/WADAK.com/Implementation/view/postjob.html"><button id="button4">Post Job</button></a>
         </div>
         </div>
 
@@ -200,19 +206,19 @@
                 <div class="col1">
                     <a href="#"><img class=" wadaklogo" src="wadak.gif" alt="wadak gif"></a>
                     <ul>
-                        <a href="#">
+                        <a href="/WADAK.com/Implementation/view/terms&conditions.html">
                             <li>Terms & Condition</li>
                         </a>
-                        <a href="#">
+                        <a href="/WADAK.com/Implementation/view/privacy.html">
                             <li>Privacy Policy</li>
                         </a>
-                        <a href="#">
+                        <a href="/WADAK.com/Implementation/view/aboutus.html">
                             <li>About us</li>
                         </a>
-                        <a href="#">
+                        <!-- <a href="#">
                             <li>Terms & Condition</li>
-                        </a>
-                        <a href="#">
+                        </a> -->
+                        <a href="/WADAK.com/Implementation/view/ask for ad.html">
                             <li>Add Advertisement</li>
                         </a>
                     </ul>
