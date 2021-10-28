@@ -217,12 +217,12 @@ body{
     float: left;
 }
 .box{
-    width: 750px;
+    width: 650px;
     height: 500px;
     background-color: #ffffff;
     margin-left: 10px;
     margin-top: 40px;
-    padding:10px;
+    padding:30px;
     box-shadow: 2px 5px 10px #ddd;
     position: relative;
 }
@@ -295,3 +295,43 @@ td input{
 }
 
 
+.input-box .details{
+    padding-bottom: 20px;
+}
+.input-box{
+    width: 100%;
+    height: 55px;
+    /* background-color: #05ac05; */
+    display: flex;
+    
+}
+.input_label{
+    width: 30%;
+    font-size: 18px;
+    font-weight: 500;
+}
+.input_data{
+    width: 70%;
+}
+.input_data input{
+    width: 250px;
+    height: 25px;
+    font-size: 17px;
+}
+
+.button input{
+    width: 150px;
+    height: 40px;
+    float: right;
+    background-color: #cfcfcf;
+    margin-right: 100px;
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.button input:hover{
+    cursor: pointer;
+    background-color: #b0ddac;
+}
