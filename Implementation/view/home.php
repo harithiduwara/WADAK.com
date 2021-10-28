@@ -221,6 +221,11 @@
                         <a href="/WADAK.com/Implementation/view/askforad.php">
                             <li>Add Advertisement</li>
                         </a>
+                        <a href="/WADAK.com/Implementation/view/Q&A.php">
+                            <li>Q&A</li>
+                        </a>
+
+
                     </ul>
                 </div>
 
