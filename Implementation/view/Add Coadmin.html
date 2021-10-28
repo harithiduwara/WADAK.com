@@ -8,6 +8,55 @@
         text-decoration: none;
       }
 
+      .input_data input {
+        padding: 0.3em 0.5em;
+        width: 50%;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        background: transparent;
+        border-radius: 4px;
+        font-family: inherit;
+        margin-bottom: 0.8rem;
+      }
+
+      .input_data input :focus {
+        box-shadow: 0px 0px 0px 1px #16c79a;
+        border-color: #16c79a;
+      }
+
+      #btn {
+        transition: opacity 0.2s ease-in;
+        font: inherit;
+        vertical-align: baseline;
+        box-sizing: border-box;
+        text-shadow: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-weight: 400;
+        outline: none;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 100%;
+        min-width: -webkit-fit-content;
+        min-width: -moz-fit-content;
+        min-width: fit-content;
+        display: inline-flex;
+        padding: 0 0.4em;
+        min-height: 2em;
+        border: 1px solid #16c79a;
+        font-size: 1rem;
+        background: #16c79a;
+        border-radius: 6px;
+        text-decoration: none !important;
+        color: #16c79a;
+        padding: 0 1em;
+      }
+
+      .box {
+        height: 70vh;
+      }
+
     </style>
     <link rel="stylesheet" href="Add%20Coadmin.css" type="text/css" />
 
@@ -72,9 +121,10 @@
       <br />
 
       <div class="col-div-2">
-        <div class="box">
+        <div class="box" style="height:65vh">
 
-          <form action="/WADAK.com/Implementation/controller/addcoadmin.php" method="post">
+          <form action="/WADAK.com/Implementation/controller/addcoadmin.php" method="post"
+            style="text-align:center; color:#0b6403">
             <div class="input-box">
               <div class="input_label">
                 <span class="details">Name</span>
@@ -148,7 +198,7 @@
               </div>
             </div>
             <div class="button" id="btn">
-              <input type="submit" value="Register">
+              <button type="submit" value="Register">Register</button>
             </div>
 
           </form>
