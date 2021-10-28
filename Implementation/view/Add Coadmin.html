@@ -76,44 +76,76 @@
 
           <form action="/WADAK.com/Implementation/controller/addcoadmin.php" method="post">
             <div class="input-box">
-              <span class="details">Name</span>
-              <input type="text" name="name" placeholder="Enter your first name" required>
-              <span class="error">*<?php echo $nameErr; ?></span>
+              <div class="input_label">
+                <span class="details">Name</span>
+              </div>
+              <div class="input_data">
+                <input type="text" name="name" placeholder="Enter your first name" required>
+                <span class="error">*<?php echo $nameErr; ?></span>
+              </div>
             </div>
 
             <div class="input-box">
-              <span class="details">Username</span>
-              <input type="text" name="username" placeholder="Enter your last name" required>
+              <div class="input_label">
+                <span class="details">Username</span>
+              </div>
+              <div class="input_data">
+                <input type="text" name="username" placeholder="Enter your last name" required>
+              </div>
             </div>
 
             <div class="input-box">
-              <span class="details">Date of Birth</span>
-              <input type="date" name="birth" placeholder="Date of birth" required>
+              <div class="input_label">
+                <span class="details">Date of Birth</span>
+              </div>
+              <div class="input_data">
+                <input type="date" name="birth" placeholder="Date of birth" required>
+              </div>
             </div>
 
             <div class="input-box">
-              <span class="details">Address</span>
-              <input type="text" name="address" placeholder="Enter your address" required>
+              <div class="input_label">
+                <span class="details">Address</span>
+              </div>
+              <div class="input_data">
+                <input type="text" name="address" placeholder="Enter your address" required>
+              </div>
             </div>
 
             <div class="input-box">
-              <span class="details">Email Address</span>
-              <input type="email" name="email" placeholder="Enter your email" required>
+              <div class="input_label">
+                <span class="details">Email Address</span>
+              </div>
+              <div class="input_data">
+                <input type="email" name="email" placeholder="Enter your email" required>
+              </div>
             </div>
 
             <div class="input-box">
-              <span class="details">Contact No</span>
-              <input type="tel" name="contactno" placeholder="Enter your phone number" required>
+              <div class="input_label">
+                <span class="details">Contact No</span>
+              </div>
+              <div class="input_data">
+                <input type="tel" name="contactno" placeholder="Enter your phone number" required>
+              </div>
             </div>
 
             <div class="input-box">
-              <span class="details">Password</span>
-              <input type="password" name="password" placeholder="Enter your password" required>
+              <div class="input_label">
+                <span class="details">Password</span>
+              </div>
+              <div class="input_data">
+                <input type="password" name="password" placeholder="Enter your password" required>
+              </div>
             </div>
 
             <div class="input-box">
-              <span class="details">Repeat Password</span>
-              <input type="password" name="password1" placeholder="Re-enter your password" required>
+              <div class="input_label">
+                <span class="details">Repeat Password</span>
+              </div>
+              <div class="input_data">
+                <input type="password" name="password1" placeholder="Re-enter your password" required>
+              </div>
             </div>
             <div class="button" id="btn">
               <input type="submit" value="Register">
