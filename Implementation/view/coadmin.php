@@ -23,7 +23,7 @@
         <div id="mySidenav" class="sidenav">
             <p class="logo">WADAK <span class="menu">&#9776;</span></p>
             <p class="logo1"> <span class="menu1">&#9776;</span></p>
-            <a href="#" class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
+            <a href="home.php" class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
             <a href="Admin-dashboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
             <a href="CategoryUI.html" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
@@ -31,10 +31,10 @@
             <a href="ServiceProviderUI-admin.html" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service
                 Provider</a>
             <a href="#" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
-            <a href="#" class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
-            <a href="#" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
-            <a href="#" class="icon-a"><i class="fa fa-object-group icons"></i> &nbsp;&nbsp;Request</a>
-            <a href="#" class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>
+            <a href="View%20Report.html" class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
+            <a href="PaymentUI.html" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
+            <a href="leaderboard.html" class="icon-a"><i class="fa fa-object-group icons"></i> &nbsp;&nbsp;Leaderboard</a>
+            <!--<a href="#" class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
         </div>
 
         <div id="main">
@@ -59,9 +59,9 @@
                     <div class="profile">
                         <p>Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="#">Profile</a></p>
-                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Dashboard</a> </p>
-                            <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;Log Out</p>
+                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="AdminProfile.html">Profile</a></p>
+                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Admin-dashboard.html</a> </p>
+                            <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a href="/WADAK.com/implementation/controller/logout.php">Logout</a></p>
                         </div>
                     </div>
                 </div>
