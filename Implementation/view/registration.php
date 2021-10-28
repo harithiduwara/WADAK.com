@@ -37,7 +37,7 @@
                     <div class="input-box">
                         <span class="details">Name</span>
                         <input type="text" name="name" placeholder="Enter your first name" required>
-                        <span class="error">*<?php echo $nameErr; ?></span>
+                        
                     </div>
 
                     <div class="input-box">
