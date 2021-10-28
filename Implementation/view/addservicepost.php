@@ -77,11 +77,12 @@
         </div>
 
         <script>
-            const defaultBtn = document.querySelector("#default-btn");
-            const defaultBtn = document.querySelector("#custom-btn");
-            function defaultBtnActive() {
-                defaultBtn.click();
-            }
+        const defaultBtn = document.querySelector("#default-btn");
+        const defaultBtn = document.querySelector("#custom-btn");
+
+        function defaultBtnActive() {
+            defaultBtn.click();
+        }
         </script>
 
     </body>
