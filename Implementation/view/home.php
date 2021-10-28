@@ -36,8 +36,8 @@
                     <?php
                     }
                     ?>
-                    <li class="greenbar"><a href="jobs.html">Jobs</a></li>
-                    <li><a href="/WADAK.com/Implementation/view/services.html">Services</a></li>
+                    <li class="greenbar"><a href="jobs.php">Jobs</a></li>
+                    <li><a href="/WADAK.com/Implementation/view/services.php">Services</a></li>
 
                     <?php if(!isset($_SESSION["user"]["userrole"])){?>
 
