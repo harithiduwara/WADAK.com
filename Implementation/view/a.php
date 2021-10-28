@@ -13,8 +13,8 @@
       <ul>
         <li><a href="home.php" class="active">Home</a></li>
         <li><a href="Add achievement post - Service provider.html">Post Job</a> </li>
-        <li><a href="#">Jobs</a> </li>
-        <li><a href="catagorymain.html">Services</a> </li>
+        <li><a href="jobs.html">Jobs</a> </li>
+        <li><a href="services.html">Services</a> </li>
        <!-- <li><a href="#">Leaderboard</a></li>-->
         <!--<li><i class="far fa-bell"></i></li>-->
         <li><a href="messages.html">Messages</a> </li>
