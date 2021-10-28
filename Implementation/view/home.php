@@ -218,7 +218,7 @@
                         <!-- <a href="#">
                             <li>Terms & Condition</li>
                         </a> -->
-                        <a href="/WADAK.com/Implementation/view/ask for ad.html">
+                        <a href="/WADAK.com/Implementation/view/askforad.php">
                             <li>Add Advertisement</li>
                         </a>
                     </ul>
