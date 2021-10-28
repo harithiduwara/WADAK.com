@@ -1,51 +1,51 @@
 @import url('https:fonts.googleapis.com/css?family=Rubik&display=swap');
-body{
+body {
     background: #f6f6f6;
 }
 
-h4{
+h4 {
     color: rgb(27, 109, 44);
 }
 
-.box{
-    width:800px;
-    margin:100px auto;
+.box {
+    width: 800px;
+    margin: 100px auto;
     background: rgba(255, 255, 255, 0.911);
-    border-radius:7px;
-    box-shadow: 1px 2px 4px rgba(0,0,0,.3);
+    border-radius: 7px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .3);
     margin-top: 100px;
 }
 
-.box .heading{
-    background:-webkit-linear-gradient(left, #58c083, #0aeb0a);
-    border-radius:7px 7px 0px 0px;
-    padding:10px ;
-    color:#fff;
+.box .heading {
+    background: -webkit-linear-gradient(left, #58c083, #0aeb0a);
+    border-radius: 7px 7px 0px 0px;
+    padding: 10px;
+    color: #fff;
     text-align: center;
     font-family: "Rubik";
 }
 
-.qa{
+.qa {
     padding: 10px 20px;
 }
 
-::-webkit-details-marker{
-    float:right;
-    margin-top:3px;
-    
+::-webkit-details-marker {
+    float: right;
+    margin-top: 3px;
 }
-details{
+
+details {
     background: #f6f6f6;
-    padding:10px;
-    border-radius:7px;
-    margin-top:20px;
+    padding: 10px;
+    border-radius: 7px;
+    margin-top: 20px;
     font-family: "Rubik";
     font-size: 14px;
     letter-spacing: 1px;
 }
 
-details summary{
-    outline:none;
+details summary {
+    outline: none;
 }
 
 input[type=text] {
@@ -58,93 +58,96 @@ input[type=text] {
     box-sizing: none;
 }
 
-input[type=submit]{
-        background-color: #5dd661; 
-        border: none;
-        color: rgb(8, 8, 8);
-        text-align: center;
-        font-size: 10px;
-        height: 30px;
-        width:60px;
-        border-radius: 5px;
+input[type=submit] {
+    background-color: #5dd661;
+    border: none;
+    color: rgb(8, 8, 8);
+    text-align: center;
+    font-size: 10px;
+    height: 30px;
+    width: 60px;
+    border-radius: 5px;
 }
 
-input[type =submit]:hover {
+input[type=submit]:hover {
     background-color: #0dcf0d;
     color: white;
-  }
+}
 
-.button{
-        border: none;
-        color: rgb(229, 236, 230);
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        background: rgb(33, 189, 33);
-        margin-right: 0px;
-        border-radius: 5px;
-        margin-top: 100px;
-      
+.button {
+    border: none;
+    color: rgb(229, 236, 230);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background: rgb(33, 189, 33);
+    margin-right: 0px;
+    border-radius: 5px;
+    margin-top: 100px;
 }
 
 .button1:hover {
     background-color: #0dcf0d;
     color: white;
-  }
+}
 
-  .button2:hover {
+.button2:hover {
     background-color: #cf440d;
     color: white;
-  }
+}
 
-  .button3:hover {
+.button3:hover {
     background-color: #cf440d;
     color: white;
-  }
+}
 
+/*navigation bar*/
 
-  /*navigation bar*/
-
-
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-body{
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body {
     padding: 0%;
     margin: 0%;
     font-family: 'Open Sans', sans-serif;
 }
-.loginContainer{
+
+.loginContainer {
     position: relative;
     width: 1520px;
     height: 800px;
     background: #EEEEEE;
     box-sizing: border-box;
 }
-nav{
+
+nav {
     background: white;
     height: 80px;
     width: 100%;
 }
-label.logo{
+
+label.logo {
     color: green;
     font-size: 38px;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
 }
-nav ul{
+
+nav ul {
     float: right;
-    margin-right:100px;
+    margin-right: 100px;
 }
+
 nav ul li {
     display: inline-block;
     line-height: 50px;
     margin: 0 5px;
 }
-nav ul li a{
+
+nav ul li a {
     color: green;
     font-size: 16px;
     padding: 7px 13px;
@@ -154,18 +157,20 @@ nav ul li a{
     text-align: center;
     text-decoration: none;
 }
-nav ul li a.active,
-nav ul li a:hover {
+
+nav ul li a.active, nav ul li a:hover {
     background: green;
     color: white;
     transition: 0.5s;
 }
-nav ul li a:hover{
-    background-color:#4EEC54;
+
+nav ul li a:hover {
+    background-color: #4EEC54;
     color: white;
     transition: 0.5s;
 }
-.animation{
+
+.animation {
     position: absolute;
     height: 100%;
     top: 0;

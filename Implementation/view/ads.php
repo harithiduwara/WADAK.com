@@ -42,7 +42,7 @@
         <div id="main">
             <div class="head">
                 <div class="col-div-1">
-                    <p class="nav">Category</p>
+                    <p class="nav">Advertisements</p>
 
                 </div>
 
@@ -76,13 +76,23 @@
 
             <div class="col-div-2">
                 <div class="box">
-                    <p class="head-1">Category - Details</p>
+                    <p class="head-1">Advertisements - Details</p>
                     <br />
                     <table>
                         <tr>
-                            <th>Name</th>
-                            <th>Category ID</th>
-                            <th></th>
+                            <th>Ad ID</th>
+                            <th>Date</th>
+                            <th>Email</th>
+                            <th>Description</th>
+                            <th>Budget</th>
+                        </tr>
+
+                        <tr>
+                            <th>1234</th>
+                            <th>2021-08-25</th>
+                            <th>Shantha@gamil.com</th>
+                            <th>Cakes by Cakes</th>
+                            <th>200</th>
                         </tr>
                         <?php
                 require_once("backend/dbconfig.php");
