@@ -138,16 +138,20 @@
         <div class="services">
             <h1 id="servicecarousel">Our Services</h1>
             <div class="name">
-                <div class="box1"><img src="image1.jfif" width="350px" height="200px"></div>
+                <div class="box1"><img src="image1.jfif" width="350px" height="200px">
+             <p>Software Development</p></div>
             </div>
             <div class="name">
-                <div class="box1"><img src="image2.png" width="350px" height="200px"></div>
+                <div class="box1"><img src="image2.png" width="350px" height="200px">
+                <p >Graphic Designing</p></div>
             </div>
             <div class="name">
-                <div class="box1"><img src="image3.jfif" width="350px" height="200px"></div>
+                <div class="box1"><img src="image3.jfif" width="350px" height="200px">
+                <p >Data Science</p></div>
             </div>
             <div class="name">
-                <div class="box1"><img src="image4.jpg" width="350px" height="200px"></div>
+                <div class="box1"><img src="image4.jpg" width="350px" height="200px">
+                <p >Data Entry</p></div>
             </div>
 
         </div>
@@ -172,16 +176,23 @@
             <h1 class="">TOP SERVICE PROVIDERS</h1>
             <div class="sectionheading3">
                 <div class="name2">
-                    <div class="box2"></div>
+                    <div class="box2"><img src="graphic.jpg" width="350px" height="200px">
+                <p >@username</p></div>
                 </div>
+
                 <div class="name2">
-                    <div class="box2"></div>
+                    <div class="box2"><img src="data.jpg" width="350px" height="200px">
+                <p >@username</p></div>
                 </div>
+
                 <div class="name2">
-                    <div class="box2"></div>
+                    <div class="box2"><img src="databasegirl.jpg" width="350px" height="200px">
+                <p >@username</p></div>
                 </div>
+
                 <div class="name2">
-                    <div class="box2"></div>
+                    <div class="box2"><img src="it.jpg" width="350px" height="200px">
+                <p >@username</p></div>
                 </div>
 
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>

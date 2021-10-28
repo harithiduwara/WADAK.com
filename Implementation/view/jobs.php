@@ -215,7 +215,7 @@ session_start();
                 <div class="card1"><img src="code.png" alt="service" style="width:100% ; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
-                    <p>I will code program or buld applications in java</p><br>
+                    <p>Need a developer buld applications in java</p><br>
                     <p><button style="background-color:green;"><i class="fa fa-heart"
                                 style="margin-left:200px;"></i></button></p>
                 </div>
@@ -225,7 +225,7 @@ session_start();
                 <div class="card1"><img src="download.jpg" alt="service" style="width:100%; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
-                    <p>I will write code in c or c++ and build applications</p><br>
+                    <p>Need a developer code in c or c++ and build applications</p><br>
                     <p><button style="background-color:green;"><i class="fa fa-heart"
                                 style="margin-left:200px;"></i></button></p>
                 </div>
@@ -235,7 +235,7 @@ session_start();
                 <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
-                    <p>I will create your databases erp CRM or management systems</p><br>
+                    <p>Need a databases erp CRM or management system developer</p><br>
                     <p><button style="background-color:green;"><i class="fa fa-heart"
                                 style="margin-left:200px;"></i></button></p>
                 </div>
@@ -245,7 +245,7 @@ session_start();
                 <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
-                    <p>I will create your databases erp CRM or management systems</p><br>
+                    <p>Need a databases erp CRM or management systems</p><br>
                     <p><button style="background-color:green;"><i class="fa fa-heart"
                                 style="margin-left:200px;"></i></button></p>
                 </div>
@@ -260,7 +260,7 @@ session_start();
                 <div class="card1"><img src="code.png" alt="service" style="width:100% ; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
-                    <p>I will code program or buld applications in java</p><br>
+                    <p>Need a developer buld applications in java</p><br>
                     <p><button style="background-color:green;"><i class="fa fa-heart"
                                 style="margin-left:200px;"></i></button></p>
                 </div>
@@ -270,7 +270,7 @@ session_start();
                 <div class="card1"><img src="download.jpg" alt="service" style="width:100%; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
-                    <p>I will write code in c or c++ and build applications</p><br>
+                    <p>Need a developer code in c or c++ and build applications</p><br>
                     <p><button style="background-color:green;"><i class="fa fa-heart"
                                 style="margin-left:200px;"></i></button></p>
                 </div>
@@ -280,7 +280,7 @@ session_start();
                 <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
-                    <p>I will create your databases erp CRM or management systems</p><br>
+                    <p>Need a databases erp CRM or management system developer</p><br>
                     <p><button style="background-color:green;"><i class="fa fa-heart"
                                 style="margin-left:200px;"></i></button></p>
                 </div>
@@ -290,7 +290,7 @@ session_start();
                 <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
-                    <p>I will create your databases erp CRM or management systems</p><br>
+                    <p>Need a developer buld applications in java</p><br>
                     <p><button style="background-color:green;"><i class="fa fa-heart"
                                 style="margin-left:200px;"></i></button></p>
                 </div>
