@@ -29,19 +29,27 @@
             <a href="/WADAK.com/Implementation/view/hirepersondashboard.html" class="icon-a"><i
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
-            <a href="/WADAK.com/Implementation/view/previousordershireperson.html" class="icon-a"><i
-                    class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/Implementation/view/joborders.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Job Posts</a>
             <a href="/WADAK.com/Implementation/view/previousordershireperson.html" class="icon-a"><i
                     class="fa fa-tasks icons"></i> &nbsp;&nbsp;Previous Orders</a>
-            <a href="/WADAK.com/Implementation/view/appliedservices.html" class="icon-a"><i
+
+            <a href="/WADAK.com/Implementation/view/previousorders.html" class="icon-a"><i
                     class="fa fa-tasks icons"></i>
-                &nbsp;&nbsp;Applied Services</a>
-            <a href="#" class="icon-a"><i class="far fa-envelope-open"></i> &nbsp;&nbsp;News</a>
-            <!-- <a href="View Report.html" class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
-                            <a href="PaymentUI.html" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
-                            <a href="#" class="icon-a"><i class="fa fa-object-group icons"></i> &nbsp;&nbsp;Request</a> -->
-            <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
+                &nbsp;&nbsp;Service Posts</a>
+            <a href="/WADAK.com/Implementation/view/previousorders.html" class="icon-a"><i
+                    class="fa fa-tasks icons"></i> &nbsp;&nbsp;Previous Services</a>
+            <a href="/WADAK.com/Implementation/view/news2.php" class="icon-a"><i class="far fa-envelope-open"></i>
+                &nbsp;&nbsp;News</a>
+            <a href="/WADAK.com/Implementation/view/messages.html" class="icon-a"><i class="fa fa-tasks icons"></i>
+                &nbsp;&nbsp;Messages</a>
+            <a href="/WADAK.com/Implementation/view/a.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
+                &nbsp;&nbsp;Achievements</a>
+            <a href="/WADAK.com/Implementation/view/leaderboard.html" class="icon-a"><i
+                    class="fa fa-dashboard icons"></i>
+                &nbsp;&nbsp;Leaderboard</a>
+            <a href="/WADAK.com/Implementation/view/askforad.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
+                &nbsp;&nbsp;Advertisements</a>
         </div>
         <div id="main">
             <div class="head">
@@ -96,9 +104,9 @@
                                 
                                 $uid = $_SESSION["user"]["uid"];
                                 
-                                // $sql = "select * from postjob where uid=$uid";
+                                $sql = "select * from postjob where uid=$uid";
 
-                                $coadminsql = "select * from register where userrole='coadmin'";
+                                // $coadminsql = "select * from register where userrole='coadmin'";
 
                                 // echo $sql;
 
