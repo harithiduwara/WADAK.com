@@ -105,7 +105,7 @@
                                             <tr>
                                                 <th>Co Admin Name</th>
                                                 <th>Username</th>
-                                                <th>User ID/th>
+                                                <th>User ID</th>
                                                 <th>Email</th>
                                                 <th>Contact No</th>
                                             </tr>";
