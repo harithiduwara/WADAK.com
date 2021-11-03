@@ -1,5 +1,7 @@
 <?php
+
 require_once("dbconfig.php");
+
 if(isset($_POST['add'])){
     $name = $_POST['categoryName'];
     $adminId = 1;
