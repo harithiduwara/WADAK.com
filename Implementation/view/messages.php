@@ -9,9 +9,9 @@
     <head>
         <meta charset="UTF-8">
         <style>
-            a {
-                text-decoration: none;
-            }
+        a {
+            text-decoration: none;
+        }
 
         </style>
         <title>Apply Service</title>
@@ -27,7 +27,6 @@
                 <li><a href="/WADAK.com/Implementation/view/postjob.html">Post Job</a> </li>
                 <li><a href="jobs.php">Jobs</a> </li>
                 <li><a href="services.php">Services</a> </li>
-                <!-- <li><a href="#">Messages</a> </li> -->
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
                 <li><a href="./login.php"></a></li>
                 <?php }else {?>
