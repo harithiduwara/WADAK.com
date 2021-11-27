@@ -14,7 +14,7 @@
         <title>Wadak.com</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/home.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/home.css">
 
         <link rel="stylesheet" href="/WADAK.com/Implementation/view/css/owl.carousel.min.css">
         <link rel="stylesheet" href="/WADAK.com/Implementation/view/css/owl.theme.default.min.css">
@@ -27,7 +27,8 @@
 
         <!----------------------------------Navigation-------------------------------------->
         <header>
-            <img class="wadaklogo" src="wadak.gif" alt="wadak gif" style="float:left width:5% height:5%">
+            <img class="wadaklogo" src="/WADAK.com/Implementation/assets/images/wadak.gif" alt="wadak gif"
+                style="float:left width:5% height:5%">
             <nav>
                 <ul class="navbar">
                     <?php
@@ -65,7 +66,7 @@
 
             <div class="mySlides fade">
                 <!-- <div class="numbertext">1 / 3</div> -->
-                <img src="1.jpg" style="width:100%">
+                <img src="/WADAK.com/Implementation/assets/images/1.jpg" style="width:100%">
                 <div class="text">
                     <h1 style="color:white">Welcome to WADAK Paradise!</h1>
                 </div>
@@ -73,7 +74,7 @@
 
             <div class="mySlides fade">
                 <!-- <div class="numbertext">2 / 3</div> -->
-                <img src="2.jpg" style="width:100%">
+                <img src="/WADAK.com/Implementation/assets/images/2.jpg" style="width:100%">
                 <div class="text">
                     <h1>Save Your Time! Be With Your Family!</h1>
                 </div>
@@ -81,7 +82,7 @@
 
             <div class="mySlides fade">
                 <!-- <div class="numbertext">3 / 3</div> -->
-                <img src="3.jpg" style="width:100%">
+                <img src="/WADAK.com/Implementation/assets/images/3.jpg" style="width:100%">
                 <div class="text">
                     <h1>Enjoy Every Single Moment!</h1>
                 </div>
@@ -139,19 +140,23 @@
             <h1 id="servicecarousel">Our Services</h1>
             <div class="name">
                 <div class="box1"><img src="image1.jfif" width="350px" height="200px">
-             <p>Software Development</p></div>
+                    <p>Software Development</p>
+                </div>
             </div>
             <div class="name">
                 <div class="box1"><img src="image2.png" width="350px" height="200px">
-                <p >Graphic Designing</p></div>
+                    <p>Graphic Designing</p>
+                </div>
             </div>
             <div class="name">
                 <div class="box1"><img src="image3.jfif" width="350px" height="200px">
-                <p >Data Science</p></div>
+                    <p>Data Science</p>
+                </div>
             </div>
             <div class="name">
                 <div class="box1"><img src="image4.jpg" width="350px" height="200px">
-                <p >Data Entry</p></div>
+                    <p>Data Entry</p>
+                </div>
             </div>
 
         </div>
@@ -177,22 +182,26 @@
             <div class="sectionheading3">
                 <div class="name2">
                     <div class="box2"><img src="graphic.jpg" width="350px" height="200px">
-                <p >@username</p></div>
+                        <p>@username</p>
+                    </div>
                 </div>
 
                 <div class="name2">
                     <div class="box2"><img src="data.jpg" width="350px" height="200px">
-                <p >@username</p></div>
+                        <p>@username</p>
+                    </div>
                 </div>
 
                 <div class="name2">
                     <div class="box2"><img src="databasegirl.jpg" width="350px" height="200px">
-                <p >@username</p></div>
+                        <p>@username</p>
+                    </div>
                 </div>
 
                 <div class="name2">
                     <div class="box2"><img src="it.jpg" width="350px" height="200px">
-                <p >@username</p></div>
+                        <p>@username</p>
+                    </div>
                 </div>
 
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
@@ -277,9 +286,9 @@
 
 
 
-        <script src="./js/Jquery3.4.1.min.js"></script>
-        <script src="./js/home.js"></script>
-        <script src="./js/owl.carousel.min.js"></script>
+        <script src="/WADAK.com/Implementation/assets/js/Jquery3.4.1.min.js"></script>
+        <script src="/WADAK.com/Implementation/assets/js/home.js"></script>
+        <script src="/WADAK.com/Implementation/assets/js/owl.carousel.min.js"></script>
 
     </body>
 
