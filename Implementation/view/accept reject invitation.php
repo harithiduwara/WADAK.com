@@ -9,7 +9,7 @@
       }
 
     </style>
-    <link rel="stylesheet" href="./css/accept reject invitation.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/accept reject invitation.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
     
