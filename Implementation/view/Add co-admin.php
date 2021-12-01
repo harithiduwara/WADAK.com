@@ -10,7 +10,7 @@
 
         </style>
         <title>Add CO-Admin</title>
-        <link rel="stylesheet" href="./css/ADD co-admin.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/ADD co-admin.css">
     </head>
 
     <body>

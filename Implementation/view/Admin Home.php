@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <style>a {text-decoration: none;}</style>
     <title>Admin Home</title>
-    <link rel="stylesheet" href="./css/adminhome.css">
+    <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/adminhome.css">
 </head>
 <body>
 <nav>
