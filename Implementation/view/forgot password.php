@@ -10,7 +10,7 @@
 
     </style>
     <title>Forgot password</title>
-    <link rel="stylesheet" href="./css/forgot%20password.css">
+    <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/forgot%20password.css">
   </head>
 
   <body>

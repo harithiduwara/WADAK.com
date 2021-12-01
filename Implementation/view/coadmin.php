@@ -12,7 +12,7 @@
         }
 
         </style>
-        <link rel="stylesheet" href="Co-admin.css" type="text/css" />
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/Co-admin.css" type="text/css" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>

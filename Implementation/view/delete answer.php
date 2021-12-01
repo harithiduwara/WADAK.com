@@ -3,7 +3,7 @@
 <head>
     <title>Delete Answer</title>
     <style>a {text-decoration: none;}</style>
-    <link rel="stylesheet" href="./css/delete answer.css" type="text/css"/>
+    <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/delete answer.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>

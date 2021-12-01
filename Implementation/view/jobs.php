@@ -12,11 +12,11 @@ session_start();
         <title>Wadak.com</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/categorymain.css">
-        <link rel="stylesheet" href="./css/navigationBar.css">
-        <link rel="stylesheet" href="./css/toggle.css">
-        <link rel="stylesheet" href="./css/owl.carousel.min.css">
-        <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/categorymain.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/navigationBar.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/toggle.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/owl.theme.default.min.css">
 
         <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
     </head>

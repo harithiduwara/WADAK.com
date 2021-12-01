@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <style>a {text-decoration: none;}</style>
     <title>Update Co-admin</title>
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/test.css">
 </head>
 <body>
 <nav>

@@ -4,7 +4,7 @@
         <title>
             view service providers-hire person
         </title>
-        <link rel="stylesheet" href="./css/view service providers- hire person.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/view service providers- hire person.css">
     </head>
     <body>
 

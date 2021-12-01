@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <style>a {text-decoration: none;}</style>
     <title>Delete Account</title>
-    <link rel="stylesheet" href="./css/deleteaccount.css">
+    <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/deleteaccount.css">
 </head>
 <body>
 <nav>

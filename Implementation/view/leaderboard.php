@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Add achievement post</title>
-    <link rel="stylesheet" href="./css/leaderboard.css">
+    <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/leaderboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 

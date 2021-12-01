@@ -7,7 +7,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/apply.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/apply.css">
     </head>
 
     <body>

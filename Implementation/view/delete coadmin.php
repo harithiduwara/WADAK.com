@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <style>a {text-decoration: none;}</style>
     <title>Delete Co-admin</title>
-    <link rel="stylesheet" href="./css/deletecoadmin.css">
+    <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/deletecoadmin.css">
 </head>
 <body>
 <nav>

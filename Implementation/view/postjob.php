@@ -14,7 +14,7 @@
 
         </style>
         <title>Apply Service</title>
-        <link rel="stylesheet" href="./css/postjob.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/postjob.css">
     </head>
 
     <body>

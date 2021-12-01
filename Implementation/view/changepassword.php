@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <style>a {text-decoration: none;}</style>
     <title>Change Password</title>
-    <link rel="stylesheet" href="./css/changepassword.css">
+    <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/changepassword.css">
 </head>
 <body>
 <nav>

@@ -16,7 +16,7 @@
         <title>Wadak.com</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/home.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/home.css">
 
         <link rel="stylesheet" href="/WADAK.com/Implementation/view/css/owl.carousel.min.css">
         <link rel="stylesheet" href="/WADAK.com/Implementation/view/css/owl.theme.default.min.css">

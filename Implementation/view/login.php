@@ -10,7 +10,7 @@
 
         </style>
         <title>Login</title>
-        <link rel="stylesheet" href="./css/login.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/login.css">
     </head>
 
     <body>
