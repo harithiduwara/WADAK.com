@@ -60,19 +60,19 @@
     <div class="container">
         <div class="wrapper">
           <div class="title"></div>
-          <form>
+          <form method="POST" action="update_news.php">
             <div class="row"> 
                 <span> News ID</span><br><br>
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Enter news ID" >
+              <input type="text" placeholder="Enter news ID" name="id">
               <br><br><span> Date</span><br><br>
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Enter the date" >
+              <input type="text" placeholder="Enter the date" name="date">
               <br><br><span> Discription</span><br><br>
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Discription" >
+              <input type="text" placeholder="Description" name="description">
             </div> <br><br><br><br><br><br><br><br>
-            <button class="button button1">Update</button>
+            <input type="submit" class =" button button1" value="Update" name="Update" >
             <button class="button button2">Cancel</button>
           </form>
         </div>
