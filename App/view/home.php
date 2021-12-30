@@ -46,8 +46,7 @@
                     <?php }else {?>
                     <li><i class="far fa-bell"></i></li>
                     <li><a href="/WADAK.com/App/view/messages.html">Messages</a></li>
-                    <li><a href="/WADAK.com/App/view/hirepersondashboard.html"><i
-                                class="fas fa-user"></i></a></li>
+                    <li><a href="/WADAK.com/App/view/hirepersondashboard.html"><i class="fas fa-user"></i></a></li>
                     <?php } ?>
 
 
@@ -226,13 +225,13 @@
                 <div class="col1">
                     <a href="#"><img class=" wadaklogo" src="wadak.gif" alt="wadak gif"></a>
                     <ul>
-                        <a href="/WADAK.com/App/view/terms&conditions.html">
+                        <a href="/WADAK.com/App/view/terms&conditions.php">
                             <li>Terms & Condition</li>
                         </a>
-                        <a href="/WADAK.com/App/view/privacy.html">
+                        <a href="/WADAK.com/App/view/privacy.php">
                             <li>Privacy Policy</li>
                         </a>
-                        <a href="/WADAK.com/App/view/aboutus.html">
+                        <a href="/WADAK.com/App/view/aboutus.php">
                             <li>About us</li>
                         </a>
                         <a href="/WADAK.com/App/view/askforad.php">
