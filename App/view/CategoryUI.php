@@ -85,14 +85,14 @@
                             <th></th>
                         </tr>
                         <?php
-                require_once("backend/dbconfig.php");
+               /* require_once("backend/dbconfig.php");
                 $sql ="SELECT C_ID,Name FROM categories";
                 $result = mysqli_query($connection,$sql);
                 $out = "";
                 while($data=$result->fetch_assoc()){
                     $out .= "<tr><td>".$data['Name']."</td><td>".$data['C_ID']."</td><td><a href='backend/deleteCategory.php?id=".$data['C_ID']."'>Delete</a></tr>";
-                }
-                echo $out;
+                } 
+                echo $out; */
                 ?>
                     </table>
                 </div>
