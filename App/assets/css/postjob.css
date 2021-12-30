@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    font-weight: lighter;
+}
+
+body {
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.postcontainer {
+    position: relative;
+    width: 1520px;
+    height: 800px;
+    background: #EEEEEE;
+    box-sizing: border-box;
+}
+
+nav {
+    background: white;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: green;
+    font-size: 38px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 100px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: green;
+    font-size: 16px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background: green;
+    color: white;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    background-color: #4EEC54;
+    color: white;
+    transition: 0.5s;
+}
+
+.animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+
+.postcontainer {
+    width: 100%;
+}
+
+.inputcontainer {
+    align-self: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 550px;
+    height: 508px;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    min-height: 100px;
+    text-align: center;
+}
+
+.inputcontainer .form .inputbox {
+    position: relative;
+    width: 20vw;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.inputcontainer .form .inputbox #des {
+    height: 10rem;
+}
+
+.inputcontainer .form .inputbox input {
+    height: 3rem;
+    width: 100%;
+    outline: none;
+    text-align: center;
+    background-color: #C2EFBE;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+
+/*.remember{
+    display: inline-block;
+    color: green;
+}*/
+
+.inputcontainer .form .inputbox input[type="submit"] {
+    background: red;
+    width: 40%;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.logincontainer {
+    width: 100vw;
+}
+
+.inputcontainer {
+    margin-top: 30%;
+}
+
+#loginbox {
+    margin-left: 34vw;
+    margin-top: 10%;
+}
