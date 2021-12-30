@@ -20,13 +20,13 @@
             <p class="logo">WADAK <span class="menu">&#9776;</span></p>
             <p class="logo1"> <span class="menu1">&#9776;</span></p>
             <a href="home.php" class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
-            <a href="Co-admin dashboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            <a href="Co-admin dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
-            <a href="viewServiceProvider-coadmin.html" class="icon-a"><i class="fa fa-users icons"></i>
+            <a href="viewServiceProvider-coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Service Providers</a>
             
             <a href="Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i> &nbsp;&nbsp;Q & A Session</a>
-            <a href="messages.html" class="icon-a"><i class="fa fa-comment icons"></i> &nbsp;&nbsp;Chat</a>
+            <a href="messages.php" class="icon-a"><i class="fa fa-comment icons"></i> &nbsp;&nbsp;Chat</a>
             <a href="News.php" class="icon-a"><i class="fa fa-newspaper-o icons"></i> &nbsp;&nbsp;News</a>
             <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
         </div>
