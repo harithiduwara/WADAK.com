@@ -5,5 +5,5 @@
 
     session_destroy();
     
-    header("Location:/WADAK.com/Implementation/view/home.php");
+    header("Location:/WADAK.com/App/view/home.php");
 ?>

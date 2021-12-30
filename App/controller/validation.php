@@ -43,20 +43,20 @@ if($num==1){
     
     if($us == "user1" ){
         $_SESSION["user"]["userrole"]="user1";
-        header('location:/WADAK.com/Implementation/view/home.php'); 
+        header('location:/WADAK.com/App/view/home.php'); 
     }
     elseif($us == "admin"){
         $_SESSION["user"]["userrole"]="admin";
-        header('location:/WADAK.com/Implementation/view/Admin-dashboard.php'); 
+        header('location:/WADAK.com/App/view/Admin-dashboard.php'); 
     }
     else{
         $_SESSION["user"]["userrole"]="coadmin";
-        header('location:/WADAK.com/Implementation/view/Co-admin dashboard.php');   
+        header('location:/WADAK.com/App/view/Co-admin dashboard.php');   
     }
   
 }
 else{
-    header('location:/WADAK.com/Implementation/view/login.php');
+    header('location:/WADAK.com/App/view/login.php');
     
 }
 

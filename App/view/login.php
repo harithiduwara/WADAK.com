@@ -10,20 +10,20 @@
 
         </style>
         <title>Login</title>
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/login.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/login.css">
     </head>
 
     <body>
 
         <nav>
-            <a href=" /WADAK.com/Implementation/view/home.php"> <label class=" logo">WADAK</label></a>
+            <a href=" /WADAK.com/App/view/home.php"> <label class=" logo">WADAK</label></a>
             <ul style="margin-top: 1rem">
-                <li><a href="/WADAK.com/Implementation/view/home.php" class="active">Home</a></li>
+                <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
                 <!-- <li><a href="#">Post Job</a> </li> -->
                 <li><a href="jobs.php">Jobs</a> </li>
                 <li><a href="services.php">Services</a> </li>
                 <!-- <li><a href="#">Messages</a> </li> -->
-                <li><a href="/WADAK.com/Implementation/view/registration.php">Register</a> </li>
+                <li><a href="/WADAK.com/App/view/registration.php">Register</a> </li>
                 <div class="animation "></div>
             </ul>
         </nav>
@@ -31,7 +31,7 @@
             <div class="inputContainer" id="loginbox">
                 <div class="form">
 
-                    <form action="/WADAK.com/Implementation/controller/validation.php" method="post">
+                    <form action="/WADAK.com/App/controller/validation.php" method="post">
                         <div class="inputbox">
                             <input type="text" name="username" placeholder="Enter Username" required>
                         </div>

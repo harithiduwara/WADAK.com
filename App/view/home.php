@@ -33,7 +33,7 @@
                 <ul class="navbar">
                     <?php
                         if(isset($_SESSION["user"]["userrole"])){?>
-                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.html">Post Jobs</a></li>
+                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Post Jobs</a></li>
                     <?php
                     }
                     ?>
@@ -45,8 +45,8 @@
                     <li><a href="./login.php">Login</a></li>
                     <?php }else {?>
                     <li><i class="far fa-bell"></i></li>
-                    <li><a href="/WADAK.com/App/view/messages.html">Messages</a></li>
-                    <li><a href="/WADAK.com/App/view/hirepersondashboard.html"><i class="fas fa-user"></i></a></li>
+                    <li><a href="/WADAK.com/App/view/messages.php">Messages</a></li>
+                    <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a></li>
                     <?php } ?>
 
 
