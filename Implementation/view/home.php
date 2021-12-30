@@ -14,10 +14,10 @@
         <title>Wadak.com</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/WADAK.com/App/assets/css/home.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/home.css">
 
-        <link rel="stylesheet" href="/WADAK.com/App/view/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="/WADAK.com/App/view/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/view/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/WADAK.com/Implementation/view/css/owl.theme.default.min.css">
 
         <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
     </head>
@@ -27,26 +27,26 @@
 
         <!----------------------------------Navigation-------------------------------------->
         <header>
-            <img class="wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif" alt="wadak gif"
+            <img class="wadaklogo" src="/WADAK.com/Implementation/assets/images/wadak.gif" alt="wadak gif"
                 style="float:left width:5% height:5%">
             <nav>
                 <ul class="navbar">
                     <?php
                         if(isset($_SESSION["user"]["userrole"])){?>
-                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.html">Post Jobs</a></li>
+                    <li class="navbargreen"><a href="/WADAK.com/Implementation/view/postjob.html">Post Jobs</a></li>
                     <?php
                     }
                     ?>
                     <li class="greenbar"><a href="jobs.php">Jobs</a></li>
-                    <li><a href="/WADAK.com/App/view/services.php">Services</a></li>
+                    <li><a href="/WADAK.com/app/view/services.php">Services</a></li>
 
                     <?php if(!isset($_SESSION["user"]["userrole"])){?>
 
                     <li><a href="./login.php">Login</a></li>
                     <?php }else {?>
                     <li><i class="far fa-bell"></i></li>
-                    <li><a href="/WADAK.com/App/view/messages.html">Messages</a></li>
-                    <li><a href="/WADAK.com/App/view/hirepersondashboard.html"><i
+                    <li><a href="/WADAK.com//view/messages.php">Messages</a></li>
+                    <li><a href="/WADAK.com/apps/view/hirepersondashboard.php"><i
                                 class="fas fa-user"></i></a></li>
                     <?php } ?>
 
@@ -66,7 +66,7 @@
 
             <div class="mySlides fade">
                 <!-- <div class="numbertext">1 / 3</div> -->
-                <img src="/WADAK.com/App/assets/images/1.jpg" style="width:100%">
+                <img src="/WADAK.com/Implementation/assets/images/1.jpg" style="width:100%">
                 <div class="text">
                     <h1 style="color:white">Welcome to WADAK Paradise!</h1>
                 </div>
@@ -74,7 +74,7 @@
 
             <div class="mySlides fade">
                 <!-- <div class="numbertext">2 / 3</div> -->
-                <img src="/WADAK.com/App/assets/images/2.jpg" style="width:100%">
+                <img src="/WADAK.com/Implementation/assets/images/2.jpg" style="width:100%">
                 <div class="text">
                     <h1>Save Your Time! Be With Your Family!</h1>
                 </div>
@@ -82,7 +82,7 @@
 
             <div class="mySlides fade">
                 <!-- <div class="numbertext">3 / 3</div> -->
-                <img src="/WADAK.com/App/assets/images/3.jpg" style="width:100%">
+                <img src="/WADAK.com/Implementation/assets/images/3.jpg" style="width:100%">
                 <div class="text">
                     <h1>Enjoy Every Single Moment!</h1>
                 </div>
@@ -162,7 +162,7 @@
         </div>
 
         <div class="button">
-            <a href="/WADAK.com/App/view/postjob.php"><button id="button4">Post Job</button></a>
+            <a href="/WADAK.com/Implementation/view/postjob.html"><button id="button4">Post Job</button></a>
         </div>
         </div>
 
@@ -226,19 +226,22 @@
                 <div class="col1">
                     <a href="#"><img class=" wadaklogo" src="wadak.gif" alt="wadak gif"></a>
                     <ul>
-                        <a href="/WADAK.com/App/view/terms&conditions.html">
+                        <a href="/WADAK.com/Implementation/view/terms&conditions.html">
                             <li>Terms & Condition</li>
                         </a>
-                        <a href="/WADAK.com/App/view/privacy.html">
+                        <a href="/WADAK.com/Implementation/view/privacy.html">
                             <li>Privacy Policy</li>
                         </a>
-                        <a href="/WADAK.com/App/view/aboutus.html">
+                        <a href="/WADAK.com/Implementation/view/aboutus.html">
                             <li>About us</li>
                         </a>
-                        <a href="/WADAK.com/App/view/askforad.php">
+                        <!-- <a href="#">
+                            <li>Terms & Condition</li>
+                        </a> -->
+                        <a href="/WADAK.com/Implementation/view/askforad.php">
                             <li>Add Advertisement</li>
                         </a>
-                        <a href="/WADAK.com/App/view/Q&A.php">
+                        <a href="/WADAK.com/Implementation/view/Q&A.php">
                             <li>Q&A</li>
                         </a>
 
@@ -283,9 +286,9 @@
 
 
 
-        <script src="/WADAK.com/App/assets/js/Jquery3.4.1.min.js"></script>
-        <script src="/WADAK.com/App/assets/js/home.js"></script>
-        <script src="/WADAK.com/App/assets/js/owl.carousel.min.js"></script>
+        <script src="/WADAK.com/Implementation/assets/js/Jquery3.4.1.min.js"></script>
+        <script src="/WADAK.com/Implementation/assets/js/home.js"></script>
+        <script src="/WADAK.com/Implementation/assets/js/owl.carousel.min.js"></script>
 
     </body>
 
