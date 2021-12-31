@@ -82,6 +82,11 @@
             <br/>
             <table>
                 <tr>
+                    <th>Service provider Name </th>
+                    <td><?php echo $this->content[0]['SP_ID'];?></td>
+
+                </tr>
+                <!--<tr>
                     <th>Service provider Name</th>
                     <th> ID</th>
                     <th>email</th>
@@ -110,7 +115,7 @@
                     <td>0004</td>
                     <td>pr@gmail.com</td>
                     <td>0716894567</td>
-                </tr>
+                </tr> -->
             </table>
                 </div>
             </div>
