@@ -12,11 +12,11 @@ session_start();
         <title>Wadak.com</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/categorymain.css">
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/navigationBar.css">
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/toggle.css">
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/categorymain.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/navigationBar.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/toggle.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/owl.theme.default.min.css">
 
         <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
     </head>
@@ -27,13 +27,13 @@ session_start();
         <!----------------------------------Navigation-------------------------------------->
         <header>
 
-            <a href="home.php"><img class="wadaklogo" src="wadak.gif" alt="wadak gif"
+            <a href="home.php"><img class="wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif" alt="wadak gif"
                     style="float:left ;width:5rem; height:5%;"></a>
             <nav>
                 <ul class="navbar">
                     <?php
                                     if(isset($_SESSION["user"]["userrole"])){?>
-                    <li class="navbargreen"><a href="/WADAK.com/Implementation/view/postjob.html">Post Jobs</a></li>
+                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.html">Post Jobs</a></li>
                     <?php
                                 }
                                 ?>
@@ -45,9 +45,8 @@ session_start();
                     <li><a href="./login.php">Login</a></li>
                     <?php }else {?>
                     <li><i class="far fa-bell"></i></li>
-                    <li><a href="/WADAK.com/Implementation/view/messages.html">Messages</a></li>
-                    <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.html"><i
-                                class="fas fa-user"></i></a></li>
+                    <li><a href="/WADAK.com/App/view/messages.html">Messages</a></li>
+                    <li><a href="/WADAK.com/App/view/hirepersondashboard.html"><i class="fas fa-user"></i></a></li>
                     <?php } ?>
 
 
@@ -305,7 +304,8 @@ session_start();
         <div class="footer">
             <div class="container">
                 <div class="col1">
-                    <a href="#""><img class=" wadaklogo" src="wadak.gif" alt="wadak gif"></a>
+                    <a href="#""><img class=" wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif"
+                        alt="wadak gif"></a>
                     <ul>
                         <li><a href="#">Terms & Condition</a></li>
                         <li><a href="#">Privacy Policy</a></li>

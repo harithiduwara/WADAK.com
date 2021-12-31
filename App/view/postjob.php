@@ -8,13 +8,13 @@
     <head>
         <meta charset="UTF-8">
         <style>
-            a {
-                text-decoration: none;
-            }
+        a {
+            text-decoration: none;
+        }
 
         </style>
-        <title>Apply Service</title>
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/postjob.css">
+        <title>Post A Job</title>
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/postjob.css">
     </head>
 
     <body>
@@ -22,15 +22,14 @@
         <nav>
             <label class="logo">WADAK</label>
             <ul style="margin-top: 1rem">
-                <li><a href="/WADAK.com/Implementation/view/home.php" class="active">Home</a></li>
-                <!-- <li><a href="#">Post Job</a> </li> -->
+                <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
                 <li><a href="jobs.php">Jobs</a> </li>
                 <li><a href="services.php">Services</a> </li>
                 <li><a href="messages.html">Messages</a> </li>
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
                 <li><a href="./login.php"></a></li>
                 <?php }else {?>
-                <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.html"><i class="fas fa-user"></i></a>
+                <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a>
                 </li>
                 <?php } ?>
                 <div class="animation "></div>
@@ -40,7 +39,7 @@
             <div class="inputcontainer" id="loginbox">
                 <div class="form">
 
-                    <form action="/WADAK.com/Implementation/controller/postjob.php" method="post">
+                    <form action="/WADAK.com/App/controller/postjob.php" method="post">
                         <div class="inputbox">
                             <span>Title</span>
                             <input type="text" name="title" placeholder="Enter Your Job Title" required>
@@ -60,6 +59,11 @@
                                 <option value="app">App Development</option>
                             </select>
                         </div>
+
+
+                        <label for="img">Select image: </label>
+                        <input type="file" id="img" name="img" accept="image/*">
+
                         <div class="inputbox">
                             <span>Price</span>
                             <input type="number" name="price" min="5" step="any" />
