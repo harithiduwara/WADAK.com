@@ -82,7 +82,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Category ID</th>
-                            <th></th>
+                            <th>Minimum Value</th>
                         </tr>
                         <?php
                /* require_once("backend/dbconfig.php");

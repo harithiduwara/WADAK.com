@@ -67,20 +67,20 @@ session_start();
                 <div class="inputbox">
                     <input type="text" name="categoryName" required="true" placeholder="Category Name">
                 </div>
-                <!-- <div class="inputbox">
-                    <input type="value" placeholder="Category ID">
-                </div> -->
                 <div class="inputbox">
-                    <table style="width:50%;">
+                    <input type="value" placeholder="Minimum value">
+                </div> 
+                <div class="inputbox">
+                    <!--<table style="width:50%;">
                         <tr>
                             <td><input type="submit" name="add" value="Add" style="width: 200px !important;"></td>
                             <td><input type="reset" name="reset" style="width: 200px !important;" value="reset"></td>
                         </tr>
-                    </table>
+                    </table> -->
                     
                     
-                    <!-- <a href="CategoryUI.html">Add</a>
-                    <a href="CategoryUI.html">Cancel</a> -->
+                    <a href="CategoryUI.html">Add</a>
+                    <a href="CategoryUI.html">Cancel</a> 
                 </div>
             </form>
         </div>
