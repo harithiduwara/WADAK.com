@@ -1,20 +1,20 @@
 <?php
 require 'newsconfig.php';
 
-if(isset($_POST['Update']))
+if(isset($_POST['save']))
 {
-$id=$_POST["id"];
+
 $date=$_POST["date"];
 $description=$_POST["description"];
 
 
 
-$sql = "UPDATE news SET date ='$date',description='$description' WHERE News_ID='$id'";
+$sql = "INSERT INTO news(date,description)VALUES('$date','$description')";
 
     if(mysqli_query($conn,$sql)){
         echo "<script type='text/javascript'>
-        alert('Successfully updated');
-        window.location='News.php';
+        alert('Successfully inserted');
+        window.location='/WADAK.com/App/view/news.php';
         </script>";;
     }
     else{

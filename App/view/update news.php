@@ -60,7 +60,7 @@
     <div class="container">
         <div class="wrapper">
           <div class="title"></div>
-          <form method="POST" action="update_news.php">
+          <form method="POST" action="/WADAK.com/App/model/update_news.php" name="updatenews" onsubmit="return validateForm()" required>
             <div class="row"> 
                 <span> News ID</span><br><br>
               <i class="fas fa-user"></i>
@@ -122,6 +122,31 @@
             });
         });
     </script>
+ 
+ <script>
+         function validateForm() {
+         var x = document.forms["updatenews"]["id"].value;
+         var y = document.forms["updatenews"]["date"].value;
+         var z = document.forms["updatenews"]["description"].value;
+         if (x == "") 
+         {
+          alert("id must be filled out");
+          return false;
+         }
+         else if(y=="")
+         {
+            alert("date must be filled out");
+            return false;
+        }
+        else if(z=="")
+         {
+            alert("description must be filled out");
+            return false;
+        }
+    }
+    </script>
+
+
     </body>
     </html>
     

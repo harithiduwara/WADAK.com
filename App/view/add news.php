@@ -62,7 +62,7 @@
     <div class="container">
         <div class="wrapper">
           <div class="title"></div>
-          <form method="POST" action="add_news.php">
+          <form method="POST" action="/WADAK.com/App/model/add_news.php" name="newsform" onsubmit="return validateForm()" required>
             <div class="row"> 
                
               <span> Date</span><br><br>
@@ -127,6 +127,23 @@
        
     </script>
 
+
+     <script>
+         function validateForm() {
+         var x = document.forms["newsform"]["date"].value;
+         var y = document.forms["newsform"]["description"].value;
+         if (x == "") 
+         {
+          alert("date must be filled out");
+          return false;
+         }
+         else if(y=="")
+         {
+            alert("description must be filled out");
+            return false;
+        }
+    }
+    </script>
 
     </body>
     </html>
