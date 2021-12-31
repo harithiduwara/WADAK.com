@@ -92,8 +92,8 @@
                 </table>
 
                 <div id="buttons" style="text-align:center">
-                    <a href="add news.html"><input type="button" class="button1" value="Add news" name="add"></a>
-                    <a href="delete news.html"><input type="button" class="button2" value="Update" name="delete"></a>
+                    <a href="add news.php"><input type="button" class="button1" value="Add news" name="add"></a>
+                    <a href="update news.php"><input type="button" class="button2" value="Update" name="update"></a>
                 </div>
 
             </div>
