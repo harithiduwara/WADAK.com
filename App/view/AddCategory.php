@@ -1,7 +1,3 @@
-<?php
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +46,7 @@ session_start();
                 <div class="profile-div">
                     <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="#">Profile</a></p>
                     <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Dashboard</a> </p>
-                    <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a href="/WADAK.com/implementation/controller/logout.php">Log Out</p>
+                    <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;Log Out</p>
                 </div>
             </div>
         </div>
@@ -60,28 +56,23 @@ session_start();
     <div class="clearfix"></div>
     <br>
 
-
-    <div class="inputContainer" style="margin:auto;width: 50%;">
-        <div class="form" style="position: relative;">
-            <form action="#" method="POST">
+    <div class="inputContainer">
+        <div class="form">
+            <form method="POST" action="App\model\addCategory.php" name="categoryform" onsubmit="return validateForm()" required>
                 <div class="inputbox">
-                    <input type="text" name="categoryName" required="true" placeholder="Category Name">
+                    <input type="text" placeholder="Category Name" name="name">
                 </div>
                 <div class="inputbox">
-                    <input type="value" placeholder="Minimum value">
-                </div> 
-                <div class="inputbox">
-                    <!--<table style="width:50%;">
-                        <tr>
-                            <td><input type="submit" name="add" value="Add" style="width: 200px !important;"></td>
-                            <td><input type="reset" name="reset" style="width: 200px !important;" value="reset"></td>
-                        </tr>
-                    </table> -->
-                    
-                    
-                    <a href="CategoryUI.html">Add</a>
-                    <a href="CategoryUI.html">Cancel</a> 
+                    <input type="value" placeholder="Minimum value" name="budget">
                 </div>
+                <!--<div class="inputbox">
+                    <a href="App\view\CategoryUI.php">Add</a>
+                    <a href="App\view\CategoryUI.php">Cancel</a>
+                </div> -->
+            
+                <input type="submit" class =" button button1" value="Save" name="save" >
+                <button class="button button2" >Cancel</button>
+                
             </form>
         </div>
     </div>
@@ -89,13 +80,7 @@ session_start();
     </br>
 
 </div>
-<?php
-if(isset($_GET['messege'])){
-    if($_GET['messege']==1){
-        echo "<script> alert('Item Added.')</script>";
-    }
-}
-?>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 
