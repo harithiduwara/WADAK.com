@@ -85,7 +85,7 @@
                 $result = mysqli_query($conn,$sql);
                 $out = "";
                 while($data=$result->fetch_assoc()){
-                    $out .= "<tr><td>".$data['News_ID']."</td><td>".$data['date']."</td><td> " .$data ['description']. "</td><td> <a href='deletenews.php?id=".$data['News_ID']."'>Delete</a></tr>";
+                    $out .= "<tr><td>".$data['News_ID']."</td><td>".$data['date']."</td><td> " .$data ['description']. "</td><td> <a href='/WADAK.com/App/model/deletenews.php?id=".$data['News_ID']."'>Delete</a></tr>";
                 }
                 echo $out;
                 ?>
