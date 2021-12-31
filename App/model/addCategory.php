@@ -9,7 +9,7 @@ $budget=$_POST["budget"];
 
 
 
-$sql = "INSERT INTO categories(Name,Min value)VALUES('$name','$budget')";
+$sql = "INSERT INTO categories(Name,value)VALUES('$name','$budget')";
 
     if(mysqli_query($conn,$sql)){
         echo "<script type='text/javascript'>

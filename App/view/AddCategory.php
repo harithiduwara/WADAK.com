@@ -58,7 +58,7 @@
 
     <div class="inputContainer">
         <div class="form">
-            <form method="POST" action="/WADAK.com/App/model/AddCategory.php" name="categoryform" onsubmit="return validateForm()" required>
+            <form method="POST" action="/WADAK.com/App/model/addCategory.php" name="categoryform" onsubmit="return validateForm()" required>
                 <div class="inputbox">
                     <input type="text" placeholder="Category Name" name="name">
                 </div>
