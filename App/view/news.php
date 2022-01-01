@@ -71,26 +71,36 @@
             <div class="wrapper">
                 <div class="title"><span>Recent site announcements</span></div>
 
-                <table style="width:835px; margin-left:10px">
-                    <tr>
-                        <th>News Id</th>
-                        <th>Date Published</th>
-                        <th>News</th>
-                    </tr>
-
-                    <!--php code-->
-                    <?php
-                require_once("newsconfig.php");
-                $sql ="SELECT News_ID,date,description FROM news";
-                $result = mysqli_query($conn,$sql);
-                $out = "";
-                while($data=$result->fetch_assoc()){
-                    $out .= "<tr><td>".$data['News_ID']."</td><td>".$data['date']."</td><td> " .$data ['description']. "</td><td> <a href='/WADAK.com/App/model/deletenews.php?id=".$data['News_ID']."'>Delete</a></tr>";
-                }
-                echo $out;
+<!--news table delete and view-->
+                <?php
+                include_once 'newsconfig.php';
+                $result = mysqli_query($conn,"SELECT News_ID,date,description FROM news");
                 ?>
-                </table>
 
+               <table style="width:835px; margin-left:10px">
+	               <tr>
+	                <td>News Id</td>
+	                <td>Date</td>
+	                <td>Description</td>
+	                <td></td>
+	               </tr>
+	          <?php
+	             $i=0;
+	             while($row = mysqli_fetch_array($result)) {
+	          ?>
+	           <tr class="<?php if(isset($classname)) echo $classname;?>">
+	           <td><?php echo $row["News_ID"]; ?></td>
+	           <td><?php echo $row["date"]; ?></td>
+	           <td><?php echo $row["description"]; ?></td>
+	           <td><a href="/WADAK.com/App/model/deletenews.php?id=<?php echo $row["News_ID"]; ?>">Delete</a></td>
+	           </tr>
+	           <?php
+	           $i++;
+	           }
+	          ?>
+            </table>
+
+   
                 <div id="buttons" style="text-align:center">
                     <a href="add news.php"><input type="button" class="button1" value="Add news" name="add"></a>
                     <a href="update news.php"><input type="button" class="button2" value="Update" name="update"></a>

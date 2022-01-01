@@ -9,7 +9,7 @@
         }
 
         </style>
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/news2.css" type="text/css" />
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/news2.css" type="text/css" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -41,7 +41,7 @@
                 $result = mysqli_query($conn,$sql);
                 $out = "";
                 while($data=$result->fetch_assoc()){
-                    $out .=  "<tr> <td> <img src='online.png' class='image' style='width:50px;height:50px;''" .  "</td><td>"   .$data['date'].   "</td><td>"  .$data['description']. "</td></tr>";
+                    $out .=  "<tr> <td> <img src='/WADAK.com/App/assets/images/online.png' class='image' style='width:50px;height:50px;''" .  "</td><td>"   .$data['date'].   "</td><td>"  .$data['description']. "</td></tr>";
                 }
                 echo $out;
           ?>
