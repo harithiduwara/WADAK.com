@@ -8,7 +8,7 @@
         <title>
             Q&A
         </title>
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/Q&A.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/Q&A.css">
     </head>
 
     <body>

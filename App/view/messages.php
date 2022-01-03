@@ -15,7 +15,7 @@
 
         </style>
         <title>Apply Service</title>
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/message.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/message.css">
     </head>
 
     <body>
