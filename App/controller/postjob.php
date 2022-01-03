@@ -7,7 +7,6 @@ if(!$con){
     die("Connection failed" . mysqli_connect_error());
 }
 
-
 $uid = $_SESSION["user"]["uid"];
 
 mysqli_select_db($con, 'wadak');
@@ -53,14 +52,26 @@ else{
     $budget = test_input($_POST["price"]);
 }
 
+require '/Applications/MAMP/htdocs/WADAK.com/App/controller/fileupload.php';
+
+$filename= $filenameErr ="";
+
+
+
+if($uploadok == 1){
+     $filename = $target_file;
+ } 
+
+
+
 $s = "select * from postjob where title='$title'";
 
 
-$jobpost = "insert into postjob(title, description, budget, jobtype, uid) values('$title', '$description', '$budget', '$joblist', '$uid')";
+$jobpost = "insert into postjob(title, description, budget, jobtype, uid, filename) values('$title', '$description', '$budget', '$joblist', '$uid', '$filename')";
 
 if (mysqli_query($con, $jobpost)) {
     echo "New Job Has Created Successfully";
-    header('location:/WADAK.com/App/view/home.php');
+    //header('location:/WADAK.com/App/view/home.php');
 } 
 else {
     echo "Error: " . $reg . "<br>" . mysqli_error($con);

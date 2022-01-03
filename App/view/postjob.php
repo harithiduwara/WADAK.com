@@ -39,7 +39,7 @@
             <div class="inputcontainer" id="loginbox">
                 <div class="form">
 
-                    <form action="/WADAK.com/App/controller/postjob.php" method="post">
+                    <form action="/WADAK.com/App/controller/postjob.php" method="post" enctype="multipart/form-data">
                         <div class="inputbox">
                             <span>Title</span>
                             <input type="text" name="title" placeholder="Enter Your Job Title" required>
@@ -57,12 +57,13 @@
                                 <option value="logo">Logo Design</option>
                                 <option value="graphic">Graphic Design</option>
                                 <option value="app">App Development</option>
+                                <option value="app">Other</option>
                             </select>
                         </div>
 
 
                         <label for="img">Select image: </label>
-                        <input type="file" id="img" name="img" accept="image/*">
+                        <input type="file" id="fileToUpload" name="fileToUpload" accept="image/*">
 
                         <div class="inputbox">
                             <span>Price</span>

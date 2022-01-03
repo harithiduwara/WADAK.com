@@ -1,5 +1,16 @@
 <?php 
 session_start();
+
+$con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+if(!$con){
+    die("Connection failed" . mysqli_connect_error());
+}
+
+$data = mysqli_query($con, "select * from postjob , register where register.uid = postjob.uid and (title like '%".$_GET["search"]."%' or description like '%".$_GET["search"]."%')");
+
+// print_r($data);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +44,7 @@ session_start();
                 <ul class="navbar">
                     <?php
                     if(isset($_SESSION["user"]["userrole"])){?>
-                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.html">Post Jobs</a></li>
+                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Post Jobs</a></li>
                     <?php
                                 }
                                 ?>
@@ -45,8 +56,8 @@ session_start();
                     <li><a href="./login.php">Login</a></li>
                     <?php }else {?>
                     <li><i class="far fa-bell"></i></li>
-                    <li><a href="/WADAK.com/App/view/messages.html">Messages</a></li>
-                    <li><a href="/WADAK.com/App/view/hirepersondashboard.html"><i class="fas fa-user"></i></a></li>
+                    <li><a href="/WADAK.com/App/view/messages.php">Messages</a></li>
+                    <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a></li>
                     <?php } ?>
 
 
@@ -73,7 +84,11 @@ session_start();
                 <input type="checkbox">
                 <span class="sliderround"></span>
             </label>
-            <input type="text" placeholder="Find Service..">
+            <form>
+                <input type="text" name="search" placeholder="Find Service..">
+
+                <button style="height:2.5rem"> Search</button>
+            </form>
         </div>
 
 
@@ -81,281 +96,132 @@ session_start();
 
 
 
-        <!-------------------------------------boxes--------------------------------------------->
-
-        <!-- <div class="boxcontainer">
-            <div class="griditem">
-                <a href="#">
-                    <img src="1.jpg">
-                </a>
-
-                <div class="username">
-                    <i class="fas fa-user"></i>
-                    <a href="https://fontawesome.com/v5.15/icons/user?style=solid" target="_blank">Username</a>
-                </div>
-
-                <div class="jobtitle">
-                    <a href="#">
-                        <h2>I will create a professional minimalist logo design
-                        </h2>
-                    </a>
-                    <div class="pricebar">
-                        <h3>Starting Price</h3>
-                    </div>
-                </div>
-
-
-
-            </div>
-            <div class="griditem">
-                <a href="#">
-                    <img src="1.jpg">
-                </a>
-
-                <div class="username">
-                    <i class="fas fa-user"></i>
-                    <a href="https://fontawesome.com/v5.15/icons/user?style=solid" target="_blank">Username</a>
-                </div>
-
-                <div class="jobtitle">
-                    <a href="#">
-                        <h2>I will create a professional minimalist logo design
-                        </h2>
-                    </a>
-                </div>
-
-                <div class="pricebar">
-                    <h3>Starting Price</h3>
-                </div>
-
-            </div>
-            <div class="griditem">
-                <a href="#">
-                    <img src="1.jpg">
-                </a>
-
-                <div class="username">
-                    <i class="fas fa-user"></i>
-                    <a href="https://fontawesome.com/v5.15/icons/user?style=solid" target="_blank">Username</a>
-                </div>
-
-                <div class="jobtitle">
-                    <a href="#">
-                        <h2>I will create a professional minimalist logo design
-                        </h2>
-                    </a>
-                </div>
-
-                <div class="pricebar">
-                    <h3>Starting Price</h3>
-                </div>
-
-            </div>
-            \
-            <div class="griditem">
-                <a href="#">
-                    <img src="1.jpg">
-                </a>
-
-                <div class="username">
-                    <i class="fas fa-user"></i>
-                    <a href="https://fontawesome.com/v5.15/icons/user?style=solid" target="_blank">Username</a>
-                </div>
-
-                <div class="jobtitle">
-                    <a href="#">
-                        <h2>I will create a professional minimalist logo design
-                        </h2>
-                    </a>
-                    <div class="pricebar">
-                        <h3>Starting Price</h3>
-                    </div>
-                </div>
-
-                <div class="pricebar">
-                    <h3>Starting Price</h3>
-                </div>
-
-            </div>
-            <div class="griditem">
-                <a href="#">
-                    <img src="1.jpg">
-                </a>
-
-                <div class="username">
-                    <i class="fas fa-user"></i>
-                    <a href="https://fontawesome.com/v5.15/icons/user?style=solid" target="_blank">Username</a>
-                </div>
-
-                <div class="jobtitle">
-                    <a href="#">
-                        <h2>I will create a professional minimalist logo design
-                        </h2>
-                    </a>
-                </div>
-
-                <div class="pricebar">
-                    <h3>Starting Price</h3>
-                </div>
-
-            </div>
-
-
-        </div> -->
         <!-------------------x------------------boxes------------------------x------------------->
 
         <!----------------------------------footer--------------------------------------->
 
 
-        <!--new code -->
-        <!--first row-->
-        <div class="row">
-            <div class="column">
-                <div class="card1"><img src="code.png" alt="service" style="width:100% ; height:200px">
-                    <h9 style=" margin-right:1000px">@username</h9>
-                    <h3>Title</h3><br>
-                    <p>Need a developer buld applications in java</p><br>
-                    <p><button style="background-color:green;"><i class="fa fa-heart"
-                                style="margin-left:200px;"></i></button></p>
+        <div style="display:grid;grid-template-columns: 1fr 1fr 1fr 1fr;grid-gap:1rem">
+            <?php
+            if (mysqli_num_rows($data) > 0) {
+            // output data of each row
+            while($row = mysqli_fetch_assoc($data)) {
+                // print_r($row);
+            ?>
+            <div>
+                <div class="card1" style="margin:1rem"><img src="
+                    <?php
+                    if($row["filename"]==null){
+                        echo "/WADAK.com/App/uploads/noimage.jpg";
+                    }
+                    else{
+                       echo $row["filename"];
+                    }
+                    ?>
+                
+                
+                " alt="service" style="width:100% ; height:200px">
+                    <h9>
+                        <?=$row["username"]?>
+                    </h9>
+                    <h3><?= $row["title"] ?>
+                    </h3><br>
+                    <p><?=$row["description"]?></p><br>
+                    <p><button style=" background-color:green;"><i class="fa fa-heart"></i></button></p>
                 </div>
             </div>
 
-            <div class="column">
-                <div class="card1"><img src="download.jpg" alt="service" style="width:100%; height:200px">
-                    <h9 style=" margin-right:1000px">@username</h9>
-                    <h3>Title</h3><br>
-                    <p>Need a developer code in c or c++ and build applications</p><br>
-                    <p><button style="background-color:green;"><i class="fa fa-heart"
-                                style="margin-left:200px;"></i></button></p>
+            <?php } } else { echo "0 results" ; } ?>
+
+            <!-- <div class=" column">
+                                <div class="card1"><img src="download.jpg" alt="service"
+                                        style="width:100%; height:200px">
+                                    <h9 style=" margin-right:1000px">@username</h9>
+                                    <h3>Title</h3><br>
+                                    <p>Need a developer code in c or c++ and build applications</p><br>
+                                    <p><button style="background-color:green;"><i class="fa fa-heart"
+                                                style="margin-left:200px;"></i></button></p>
+                                </div>
+                </div>
+
+                <div class="column">
+                    <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
+                        <h9 style=" margin-right:1000px">@username</h9>
+                        <h3>Title</h3><br>
+                        <p>Need a databases erp CRM or management system developer</p><br>
+                        <p><button style="background-color:green;"><i class="fa fa-heart"
+                                    style="margin-left:200px;"></i></button></p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
+                        <h9 style=" margin-right:1000px">@username</h9>
+                        <h3>Title</h3><br>
+                        <p>Need a databases erp CRM or management systems</p><br>
+                        <p><button style="background-color:green;"><i class="fa fa-heart"
+                                    style="margin-left:200px;"></i></button></p>
+                    </div>
                 </div>
             </div>
 
-            <div class="column">
-                <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
-                    <h9 style=" margin-right:1000px">@username</h9>
-                    <h3>Title</h3><br>
-                    <p>Need a databases erp CRM or management system developer</p><br>
-                    <p><button style="background-color:green;"><i class="fa fa-heart"
-                                style="margin-left:200px;"></i></button></p>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
-                    <h9 style=" margin-right:1000px">@username</h9>
-                    <h3>Title</h3><br>
-                    <p>Need a databases erp CRM or management systems</p><br>
-                    <p><button style="background-color:green;"><i class="fa fa-heart"
-                                style="margin-left:200px;"></i></button></p>
-                </div>
-            </div>
-        </div>
 
 
-        <!--second row-->
-        <br><br><br><br><br><br><br><br><br>
-        <div class="row">
-            <div class="column">
-                <div class="card1"><img src="code.png" alt="service" style="width:100% ; height:200px">
-                    <h9 style=" margin-right:1000px">@username</h9>
-                    <h3>Title</h3><br>
-                    <p>Need a developer buld applications in java</p><br>
-                    <p><button style="background-color:green;"><i class="fa fa-heart"
-                                style="margin-left:200px;"></i></button></p>
-                </div>
-            </div>
+            <div class="footer">
+                <div class="container">
+                    <div class="col1">
+                        <a href="#""><img class=" wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif"
+                            alt="wadak gif"></a>
+                        <ul>
+                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                        </ul>
+                    </div>
 
-            <div class="column">
-                <div class="card1"><img src="download.jpg" alt="service" style="width:100%; height:200px">
-                    <h9 style=" margin-right:1000px">@username</h9>
-                    <h3>Title</h3><br>
-                    <p>Need a developer code in c or c++ and build applications</p><br>
-                    <p><button style="background-color:green;"><i class="fa fa-heart"
-                                style="margin-left:200px;"></i></button></p>
-                </div>
-            </div>
+                    <div class="col2">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                            <li><i class="fab fa-instagram-square"></i></li>
+                            <li><i class="fab fa-linkedin"></i></li>
+                            <li><i class="fab fa-twitter-square"></i></li>
+                        </ul>
 
-            <div class="column">
-                <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
-                    <h9 style=" margin-right:1000px">@username</h9>
-                    <h3>Title</h3><br>
-                    <p>Need a databases erp CRM or management system developer</p><br>
-                    <p><button style="background-color:green;"><i class="fa fa-heart"
-                                style="margin-left:200px;"></i></button></p>
-                </div>
-            </div>
+                    </div>
 
-            <div class="column">
-                <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
-                    <h9 style=" margin-right:1000px">@username</h9>
-                    <h3>Title</h3><br>
-                    <p>Need a developer buld applications in java</p><br>
-                    <p><button style="background-color:green;"><i class="fa fa-heart"
-                                style="margin-left:200px;"></i></button></p>
-                </div>
-            </div>
-        </div>
+                    <div class="col3">
+                        <h1>Stay Connected!</h1>
+                        <p>Subscribe for the news letter</p>
 
-
-
-
-
-
-        <div class="footer">
-            <div class="container">
-                <div class="col1">
-                    <a href="#""><img class=" wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif"
-                        alt="wadak gif"></a>
-                    <ul>
-                        <li><a href="#">Terms & Condition</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Terms & Condition</a></li>
-                    </ul>
-                </div>
-
-                <div class="col2">
-                    <ul>
-                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                        <li><i class="fab fa-instagram-square"></i></li>
-                        <li><i class="fab fa-linkedin"></i></li>
-                        <li><i class="fab fa-twitter-square"></i></li>
-                    </ul>
+                        <form action="#" class="formnews">
+                            <label for="email">Email</label><br>
+                            <input type="email" id="email" name="email"><br>
+                            <label for="fname">First Name</label><br>
+                            <input type="text" id="fname" name="fname"><br>
+                            <label for="lname">Last Name</label><br>
+                            <input type="text" id="lname" name="lname"><br>
+                            <input id="submitnews" type="submit" value="Submit">
+                        </form>
+                    </div>
 
                 </div>
-
-                <div class="col3">
-                    <h1>Stay Connected!</h1>
-                    <p>Subscribe for the news letter</p>
-
-                    <form action="#" class="formnews">
-                        <label for="email">Email</label><br>
-                        <input type="email" id="email" name="email"><br>
-                        <label for="fname">First Name</label><br>
-                        <input type="text" id="fname" name="fname"><br>
-                        <label for="lname">Last Name</label><br>
-                        <input type="text" id="lname" name="lname"><br>
-                        <input id="submitnews" type="submit" value="Submit">
-                    </form>
+                <div class="copyrights">
+                    <p><a href="#" target="_blank">Powered by Group18</a></p>
                 </div>
 
             </div>
-            <div class="copyrights">
-                <p><a href="#" target="_blank">Powered by Group18</a></p>
-            </div>
 
-        </div>
-
-        <!------------------x--------------footer----------------------x---------------->
+            <!------------------x--------------footer----------------------x---------------->
 
 
 
 
 
 
-        <script src="./js/Jquery3.4.1.min.js"></script>
-        <script src="./js/home.js"></script>
-        <script src="./js/owl.carousel.min.js"></script>
+            <script src="./js/Jquery3.4.1.min.js"></script>
+            <script src="./js/home.js"></script>
+            <script src="./js/owl.carousel.min.js"></script>
 
     </body>
 
