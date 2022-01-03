@@ -272,7 +272,7 @@ body {
     background: white;
     border-radius: 5px;
     box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
-    height: 1000px;
+    height: 5000px;
 }
 
 .wrapper .title {
@@ -386,6 +386,6 @@ tr:nth-child(even) {
     background: rgb(33, 189, 33);
     margin-right: 0px;
     border-radius: 5px;
-    margin-top: 10px;
+   
 }
 

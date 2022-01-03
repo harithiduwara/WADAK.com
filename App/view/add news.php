@@ -3,7 +3,7 @@
 <head>
     <title>Add News</title>
     <style>a {text-decoration: none;}</style>
-    <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/add news.css" type="text/css"/>
+    <link rel="stylesheet" href="/WADAK.com/App/assets/css/add news.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 
