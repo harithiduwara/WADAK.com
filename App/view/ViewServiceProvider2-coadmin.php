@@ -3,7 +3,7 @@
 <head>
   <title>Service Provider</title>
   <style>a {text-decoration: none;}</style>
-  <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/ViewServiceProvider2-coadmin.css" type="text/css"/>
+  <link rel="stylesheet" href="/WADAK.com/App/assets/css/ViewServiceProvider2-coadmin.css" type="text/css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -46,8 +46,8 @@
       <div class="profile">
         <p>Co-Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
         <div class="profile-div">
-          <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="CoAdmin-profile.html">Profile</a></p>
-          <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Co-admin dashboard.html">Dashboard</a> </p>
+          <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/CoAdmin-profile.php">Profile</a></p>
+          <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/Co-admin dashboard.php">Dashboard</a> </p>
           <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a href="/WADAK.com/implementation/controller/logout.php">Log Out</a></p>
         </div>
       </div>
@@ -142,7 +142,7 @@
   <div class="col-div-2">
     <div class="imgbox">
       <div class="img">
-        <img src="sp.png" width="325" height="380">
+        <img src="/WADAK.com/App/assets/images/sp.png" width="325" height="380">
       </div>
 
     </div>
