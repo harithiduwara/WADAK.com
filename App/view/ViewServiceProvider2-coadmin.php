@@ -62,14 +62,14 @@
     <div class="box">
 
       <form>
-      <?php include 'viewServiceProvider-coadmin.php'; ?>
+      <?php include 'searchsp.php'; ?>
         <table>
           <tr>
             <td>
               First Name :
             </td>
             <td>
-              <input type="text" placeholder=" <?php echo $row['fname']; ?> ">
+              <?php echo $row['Fname']; ?>
             </td>
           </tr>
           <tr>
@@ -77,7 +77,7 @@
               Last Name :
             </td>
             <td>
-              <input type="text" placeholder=" <?php echo $row['fname']; ?> ">
+             <?php echo $row['Lname']; ?>
             </td>
           </tr>
           <tr>
@@ -85,7 +85,7 @@
               Service Provider ID :
             </td>
             <td>
-              <input type="text" placeholder=" <?php echo $row['fname']; ?>">
+              <?php echo $row['SP_ID']; ?>
             </td>
           </tr>
           <tr>
@@ -93,7 +93,7 @@
               Contact :
             </td>
             <td>
-              <input type="phone" placeholder=" <?php echo $row['fname']; ?>">
+               <?php echo $row['contact']; ?>
             </td>
           </tr>
           <tr>
@@ -101,7 +101,7 @@
               Email :
             </td>
             <td>
-              <input type="email" placeholder=" <?php echo $row['fname']; ?>">
+              <?php echo $row['Email']; ?>
             </td>
           </tr>
           <tr>
@@ -109,7 +109,7 @@
               Address:
             </td>
             <td>
-              <input type="text" placeholder="<?php echo $row['fname']; ?> ">
+              <?php echo $row['address']; ?> 
             </td>
           </tr>
           <tr>
@@ -117,7 +117,7 @@
               Gender:
             </td>
             <td>
-              <input type="text" placeholder=" <?php echo $row['fname']; ?>">
+              <?php echo $row['Gender']; ?>
             </td>
           </tr>
           <tr>
@@ -125,7 +125,7 @@
               Date of Birth :
             </td>
             <td>
-              <input type="date">
+              <?php echo $row['DOB']; ?>
             </td>
           </tr>
           <tr>
@@ -133,7 +133,7 @@
               Description :
             </td>
             <td>
-              <input type="text">
+              <?php echo $row['description']; ?>
             </td>
           </tr>
         </table>
