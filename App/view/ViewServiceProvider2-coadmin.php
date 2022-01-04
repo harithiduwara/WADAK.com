@@ -62,13 +62,14 @@
     <div class="box">
 
       <form>
+      <?php include 'viewServiceProvider-coadmin.php'; ?>
         <table>
           <tr>
             <td>
               First Name :
             </td>
             <td>
-              <input type="text" placeholder=" ">
+              <input type="text" placeholder=" <?php echo $row['fname']; ?> ">
             </td>
           </tr>
           <tr>
@@ -76,7 +77,7 @@
               Last Name :
             </td>
             <td>
-              <input type="text" placeholder=" ">
+              <input type="text" placeholder=" <?php echo $row['fname']; ?> ">
             </td>
           </tr>
           <tr>
@@ -84,7 +85,7 @@
               Service Provider ID :
             </td>
             <td>
-              <input type="text" placeholder=" ">
+              <input type="text" placeholder=" <?php echo $row['fname']; ?>">
             </td>
           </tr>
           <tr>
@@ -92,7 +93,7 @@
               Contact :
             </td>
             <td>
-              <input type="phone" placeholder=" ">
+              <input type="phone" placeholder=" <?php echo $row['fname']; ?>">
             </td>
           </tr>
           <tr>
@@ -100,7 +101,7 @@
               Email :
             </td>
             <td>
-              <input type="email" placeholder=" ">
+              <input type="email" placeholder=" <?php echo $row['fname']; ?>">
             </td>
           </tr>
           <tr>
@@ -108,7 +109,7 @@
               Address:
             </td>
             <td>
-              <input type="text" placeholder=" ">
+              <input type="text" placeholder="<?php echo $row['fname']; ?> ">
             </td>
           </tr>
           <tr>
@@ -116,7 +117,7 @@
               Gender:
             </td>
             <td>
-              <input type="text" placeholder=" ">
+              <input type="text" placeholder=" <?php echo $row['fname']; ?>">
             </td>
           </tr>
           <tr>

@@ -56,7 +56,7 @@
     <div class="clearfix"></div>
     <br>
     <div class="inputContainer">
-        <div class="form">
+        <div class="form" action="" method="GET">
             <form>
                 <div class="inputbox">
                     <input type="text" placeholder="Username">
@@ -65,9 +65,19 @@
                     <input type="value" placeholder="User ID">
                 </div>
                 <div class="inputbox">
-                    <a href="ViewServiceProvider2-coadmin.html">View</a>
-                    <a href="ServiceProviderUI-coadmin.html">Cancel</a>
+                    <a href="ViewServiceProvider2-coadmin.php">View</a>
+                    <a href="ServiceProviderUI-coadmin.php">Cancel</a>
                 </div>
+
+                <!--php code-->
+                <?php
+                  include 'newsconfig.php';
+                  $sql="SELECT * FROM service_provider WHERE SP_ID='".$_GET["User ID"] ."'";
+                  $result=mysqli_query($conn,$sql);
+                  $row=mysqli_fetch_assoc($result);
+
+                ?>
+
             </form>
         </div>
     </div>
