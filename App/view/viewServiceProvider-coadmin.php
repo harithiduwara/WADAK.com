@@ -55,33 +55,26 @@
 
     <div class="clearfix"></div>
     <br>
-    <div class="inputContainer">
-        <div class="form" action="searchsp.php" method="GET">
-            <form>
-                <div class="inputbox">
-                    <input type="text" placeholder="Username">
-                </div>
-                <div class="inputbox">
-                    <input type="value" placeholder="User ID">
-                </div>
-                <div class="inputbox">
-                    <a href="ViewServiceProvider2-coadmin.php">View</a>
-                    <a href="ServiceProviderUI-coadmin.php">Cancel</a>
-                </div>
-
-                <!--php code-->
-                <?php
-                  include 'searchsp.php';
-                 
-                ?>
-
-            </form>
-        </div>
-    </div>
-
+    
     </br>
 
 </div>
+
+<form action="" method="POST">
+    <input type ="text" name ="id" placeholder="Enter Id"/>
+    <input type ="submit" name ="search" placeholder="Search">
+</form>
+
+<?php
+include'newsconfig.php';
+if(isset($_POST['search']))
+{
+    $SP_ID= $_POST['id'];
+    $query="SELECT * FROM service_provider WHERE SP_ID = '$id'"
+
+}
+?>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>

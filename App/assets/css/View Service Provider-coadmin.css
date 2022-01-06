@@ -262,3 +262,85 @@ body{
 .inputbox a:hover{
     background-color: #6c7293;
 }
+
+
+/*button*/
+  .inputContainer .form .button {
+    background-color: #37e03d;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 100px;
+    
+}
+
+.inputContainer .form .button:hover {
+    background-color: #7cf07c;
+    color: rgb(5, 5, 5);
+}
+
+.inputContainer .form .button1 {
+    background-color: #37e03d;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
+
+.inputContainer .form .button1:hover {
+    background-color: #7cf07c;
+    color: rgb(5, 5, 5);
+}
+
+.inputContainer .form .button2 {
+    background-color: #37e03d;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
+
+.inputContainer .form .button2:hover {
+    background-color: #f72821;
+    color: rgb(5, 5, 5);
+}
+
+#button {
+    display: flex;
+    padding-left: 7rem;
+    position: relative;
+}
+
+.button {
+    border: none;
+    color: rgb(229, 236, 230);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background: rgb(33, 189, 33);
+    margin-right: 0px;
+    border-radius: 5px;
+   
+}

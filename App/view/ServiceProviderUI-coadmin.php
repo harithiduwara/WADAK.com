@@ -3,7 +3,7 @@
 <head>
     <title>Service Provider</title>
     <style>a {text-decoration: none;}</style>
-    <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/ServiceProviderUI-coadmin.css" type="text/css"/>
+    <link rel="stylesheet" href="/WADAK.com/App/assets/css/ServiceProviderUI-coadmin.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -98,7 +98,7 @@
     </div>
     <div class="col-div-2">
         <div class="box1">
-            <a href="ViewServiceProvider-coadmin.html">View</a>
+            <a href="ViewServiceProvider-coadmin.php">View</a>
         </div>
     </div>
     <div class="clearfix"></div>
