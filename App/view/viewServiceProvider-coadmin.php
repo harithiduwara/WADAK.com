@@ -61,21 +61,102 @@
 </div>
 
 <form action="" method="POST">
-    <input type ="text" name ="id" placeholder="Enter Id"/>
+    <input type ="text" name ="id" placeholder="Enter Id">
     <input type ="submit" name ="search" placeholder="Search">
 </form>
 
-<?php
-include'newsconfig.php';
+<?php 
+include 'newsconfig.php';
 if(isset($_POST['search']))
 {
     $SP_ID= $_POST['id'];
-    $query="SELECT * FROM service_provider WHERE SP_ID = '$id'"
-
+    $query="SELECT * FROM service_provider WHERE SP_ID = '$id'";
+    $query_run=mysqli_query($connection,$query);
+    while($row = mysqli_fetch_array($query_run))
+    {
+        ?>
+         <form action="" method="GET">
+        <table>
+          <tr>
+            <td>
+              First Name :
+            </td>
+            <td>
+              <?php echo $row['Fname']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Last Name :
+            </td>
+            <td>
+             <?php echo $row['Lname']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Service Provider ID :
+            </td>
+            <td>
+              <?php echo $row['SP_ID']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Contact :
+            </td>
+            <td>
+               <?php echo $row['contact']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Email :
+            </td>
+            <td>
+              <?php echo $row['Email']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Address:
+            </td>
+            <td>
+              <?php echo $row['address']; ?> 
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Gender:
+            </td>
+            <td>
+              <?php echo $row['Gender']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Date of Birth :
+            </td>
+            <td>
+              <?php echo $row['DOB']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Description :
+            </td>
+            <td>
+              <?php echo $row['description']; ?>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <?php
+    }
 }
 ?>
 
-
+HI
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 
@@ -119,4 +200,5 @@ if(isset($_POST['search']))
 </script>
 
 </body>
+
 </html>
