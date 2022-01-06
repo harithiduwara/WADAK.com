@@ -213,10 +213,44 @@ body{
     background-color: white;
 }
 
-.form {
+.form-center {
 	display:flex;
 	justify-content: center;
+}
+.form-center input{
+    width:40%;
+    height:5%;
+    border:1px;
+    border-radius: 05px;
+    padding: 8px 15px 8px 15px;
+    margin:1px 1px 2px 1px grey;
 }
 
 
 
+.imgbox{
+    width: 325px;
+    left: 380px;
+    height: 380px;
+    margin-top: 0px;
+    background-color: white ;
+    margin-left: 50px;
+    position: relative;
+    box-shadow: 2px 5px 10px #ddd;
+    border-radius: 5px;
+}
+
+.box{
+    width: 750px;
+    height: 750px;
+    background-color: #ffffff;
+    margin-left: 10px;
+    padding:10px;
+    box-shadow: 2px 5px 10px #ddd;
+    position: relative;
+}
+.box p{
+    color: #6c7293;
+    font-weight: 500;
+    padding-left: 10px;
+}

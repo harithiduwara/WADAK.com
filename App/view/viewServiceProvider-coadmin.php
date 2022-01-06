@@ -60,12 +60,12 @@
 
 </div>
 
-
-<form class="form" action="" method="POST" >
+<div class="form-center">
+<form action="" method="POST">
     <input type ="text" name ="SP_ID" placeholder="Enter Id">
     <input type ="submit" name ="search" placeholder="Search">
 </form>
-
+</div>
 
 <?php 
 $conn= mysqli_connect("localhost","root","");
@@ -78,6 +78,11 @@ if(isset($_POST['search']))
     while($row = mysqli_fetch_array($query_run))
     {
         ?>
+         <div class="clearfix"></div>
+         <br/>
+
+        <div class="col-div-2">
+        <div class="box">
          <form>
         <table>
           <tr>
@@ -154,6 +159,25 @@ if(isset($_POST['search']))
           </tr>
         </table>
       </form>
+      </div>
+  </div>
+  <div class="col-div-2">
+    <div class="imgbox">
+      <div class="img">
+        <img src="/WADAK.com/App/assets/images/sp.png" width="325" height="380">
+      </div>
+
+    </div>
+    <div class="box1">
+      <a href="#" onclick="myfunction1()">Delete</a>
+    </div>
+    <div class="box2">
+      <a href="#">Cancel</a>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
       <?php
     }
 }
