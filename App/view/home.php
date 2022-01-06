@@ -2,6 +2,15 @@
 
     session_start();
 
+
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+    
+    if(!$con){
+        die("Connection failed" . mysqli_connect_error());
+    }
+
+    $data = mysqli_query($con, "select * from postjob , register where register.uid = postjob.uid and (title like '%".$_GET["search"]."%' or description like '%".$_GET["search"]."%')");
+
 ?>
 
 <!DOCTYPE html>
@@ -110,36 +119,14 @@
 
 
         <!----------------------------------section2--------------------------------------->
-        <!-- <section>
 
-            <div id="section2">
-                <h1 id="servicecarousel">Our Services
-                </h1>
-                <div class="container">
-                    <div class="owl-carousel owl-theme servicepost">
-                        <div class="servicecontent">
-                            <img src="./" alt="logo design image">
-
-                            <div class="servicetitle">
-                                <h3>Logo Design</h3>
-                                <p>Meet Logo Professionals</p>
-                                <button class="btn"></button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <a href="#"><button id="button4">Post Job</button></a>
-            </div>
-
-
-        </section> -->
 
         <div class="services">
             <h1 id="servicecarousel">Our Services</h1>
             <div class="name">
                 <div class="box1"><img src="image1.jfif" width="350px" height="200px">
-                    <p>Software Development</p>
+                    <p>
+                        <?=$row ?></p>
                 </div>
             </div>
             <div class="name">
@@ -178,27 +165,18 @@
 
         <div class="container3">
             <h1 class="">TOP SERVICE PROVIDERS</h1>
+
+            <?php
+            if(mysqli_num_rows($data)>0){
+                for($x=0; $x<=3; $x++){
+                    
+                }
+            }
+            ?>
+
             <div class="sectionheading3">
                 <div class="name2">
                     <div class="box2"><img src="graphic.jpg" width="350px" height="200px">
-                        <p>@username</p>
-                    </div>
-                </div>
-
-                <div class="name2">
-                    <div class="box2"><img src="data.jpg" width="350px" height="200px">
-                        <p>@username</p>
-                    </div>
-                </div>
-
-                <div class="name2">
-                    <div class="box2"><img src="databasegirl.jpg" width="350px" height="200px">
-                        <p>@username</p>
-                    </div>
-                </div>
-
-                <div class="name2">
-                    <div class="box2"><img src="it.jpg" width="350px" height="200px">
                         <p>@username</p>
                     </div>
                 </div>
