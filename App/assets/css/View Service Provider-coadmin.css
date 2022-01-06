@@ -213,7 +213,10 @@ body{
     background-color: white;
 }
 
-
+.form {
+	display:flex;
+	justify-content: center;
+}
 
 
 

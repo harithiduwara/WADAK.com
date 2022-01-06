@@ -60,22 +60,25 @@
 
 </div>
 
-<form action="" method="POST">
-    <input type ="text" name ="id" placeholder="Enter Id">
+
+<form class="form" action="" method="POST" >
+    <input type ="text" name ="SP_ID" placeholder="Enter Id">
     <input type ="submit" name ="search" placeholder="Search">
 </form>
 
+
 <?php 
-include 'newsconfig.php';
+$conn= mysqli_connect("localhost","root","");
+$db=mysqli_select_db($conn,'wadak');
 if(isset($_POST['search']))
 {
-    $SP_ID= $_POST['id'];
-    $query="SELECT * FROM service_provider WHERE SP_ID = '$id'";
-    $query_run=mysqli_query($connection,$query);
+    $SP_ID= $_POST['SP_ID'];
+    $query="SELECT SP_ID,Fname,Lname,Gender,Email,address,contact,DOB,description FROM service_provider WHERE SP_ID = '$SP_ID'";
+    $query_run=mysqli_query($conn,$query);
     while($row = mysqli_fetch_array($query_run))
     {
         ?>
-         <form action="" method="GET">
+         <form>
         <table>
           <tr>
             <td>
@@ -156,7 +159,7 @@ if(isset($_POST['search']))
 }
 ?>
 
-HI
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 
