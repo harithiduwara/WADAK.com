@@ -58,11 +58,29 @@
   <div class="clearfix"></div>
   <br/>
 
+
+  <form action="" method="POST">
+    <input type ="text" name ="SP_ID" placeholder="Enter Id">
+    <input type ="submit" name ="search" placeholder="Search">
+   </form>
+
+
+<?php 
+$conn= mysqli_connect("localhost","root","");
+$db=mysqli_select_db($conn,'wadak');
+if(isset($_POST['search']))
+{
+    $SP_ID= $_POST['SP_ID'];
+    $query="SELECT SP_ID,Fname,Lname,Gender,Email,address,contact,DOB,description FROM service_provider WHERE SP_ID = '$SP_ID'";
+    $query_run=mysqli_query($conn,$query);
+    while($row = mysqli_fetch_array($query_run))
+    {
+        ?>
   <div class="col-div-2">
     <div class="box">
 
       <form>
-      <?php include 'searchsp.php'; ?>
+      
         <table>
           <tr>
             <td>
@@ -157,6 +175,10 @@
   <div class="clearfix"></div>
 </div>
 
+<?php
+    }
+}
+?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
