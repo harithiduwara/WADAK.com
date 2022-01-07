@@ -124,7 +124,7 @@
         <div class="services">
             <h1 id="servicecarousel">Our Services</h1>
             <div class="name">
-                <div class="box1"><img src="image1.jfif" width="350px" height="200px">
+                <div class="box1"><img src="/" width="350px" height="200px">
                     <p>
                         <?=$row ?></p>
                 </div>
@@ -166,29 +166,38 @@
         <div class="container3">
             <h1 class="">TOP SERVICE PROVIDERS</h1>
 
-            <?php
-            if(mysqli_num_rows($data)>0){
-                for($x=0; $x<=3; $x++){
-                    
-                }
-            }
-            ?>
-
-            <div class="sectionheading3">
+            <!-- <div class="sectionheading3">
                 <div class="name2">
-                    <div class="box2"><img src="graphic.jpg" width="350px" height="200px">
+                    <div class="box2"><img src="<?=$row["filename"]?>" width="350px" height="200px">
                         <p>@username</p>
                     </div>
                 </div>
+                <div class="name2">
+                    <div class="box2"><img src="<?=$row["filename"]?>" width="350px" height="200px">
+                        <p>@username</p>
+                    </div>
+                </div>
+                <div class="name2">
+                    <div class="box2"><img src="<?=$row["filename"]?>" width="350px" height="200px">
+                        <p>@username</p>
+                    </div>
+                </div>
+                <div class="name2">
+                    <div class="box2"><img src="<?=$row["filename"]?>" width="350px" height="200px">
+                        <p>@username</p>
+                    </div>
+                </div> -->
 
-                <?php if(!isset($_SESSION["user"]["userrole"])){?>
-                <a href="/WADAK.com/Implementation/view/registration.php"><button id="postbutton3">Register
-                        Now</button></a>
-                <?php }else {?>
-                <a href="/WADAK.com/Implementation/view/catagorymain.html"><button id="postbutton3">View
-                        Services</button></a>
-                <?php } ?>
-            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+
+            <?php if(!isset($_SESSION["user"]["userrole"])){?>
+            <a href=" /WADAK.com/Implementation/view/registration.php"><button id="postbutton3">Register
+                    Now</button></a>
+            <?php }else {?>
+            <a href="/WADAK.com/Implementation/view/catagorymain.html"><button id="postbutton3">View
+                    Services</button></a>
+            <?php } ?>
+        </div>
         </div>
 
 
@@ -201,7 +210,8 @@
         <footer>
             <div class="container">
                 <div class="col1">
-                    <a href="#"><img class=" wadaklogo" src="wadak.gif" alt="wadak gif"></a>
+                    <a href="#"><img class=" wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif"
+                            alt="wadak gif"></a>
                     <ul>
                         <a href="/WADAK.com/App/view/terms&conditions.php">
                             <li>Terms & Condition</li>
