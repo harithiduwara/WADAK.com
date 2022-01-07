@@ -106,7 +106,7 @@ $data = mysqli_query($con, "select * from postjob , register where register.uid 
             if (mysqli_num_rows($data) > 0) {
             // output data of each row
             while($row = mysqli_fetch_assoc($data)) {
-                // print_r($row);
+          
             ?>
             <div>
                 <div class="card1" style="margin:1rem"><img src="
@@ -127,7 +127,11 @@ $data = mysqli_query($con, "select * from postjob , register where register.uid 
                     <h3><?= $row["title"] ?>
                     </h3><br>
                     <p><?=$row["description"]?></p><br>
-                    <p><button style=" background-color:green;"><i class="fa fa-heart"></i></button></p>
+                    <div>
+                        <p><?php echo "Price : " . $row["budget"]?></p>
+                        <p><button style=" background-color:green;"><i class="fa fa-heart"></i></button></p>
+                    </div>
+
                 </div>
             </div>
 
