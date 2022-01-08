@@ -121,86 +121,187 @@
         <!----------------------------------section2--------------------------------------->
 
 
-        <div class="services">
-            <h1 id="servicecarousel">Our Services</h1>
-            <div class="name">
-                <div class="box1"><img src="/" width="350px" height="200px">
-                    <p>
-                        <?=$row ?></p>
-                </div>
-            </div>
-            <div class="name">
-                <div class="box1"><img src="image2.png" width="350px" height="200px">
-                    <p>Graphic Designing</p>
-                </div>
-            </div>
-            <div class="name">
-                <div class="box1"><img src="image3.jfif" width="350px" height="200px">
-                    <p>Data Science</p>
-                </div>
-            </div>
-            <div class="name">
-                <div class="box1"><img src="image4.jpg" width="350px" height="200px">
-                    <p>Data Entry</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="button">
-            <a href="/WADAK.com/App/view/postjob.php"><button id="button4">Post Job</button></a>
-        </div>
-        </div>
-
-
-
-
-
-
-
-
-        <!------------------x--------------section2----------------------x---------------->
-
-        <!----------------------------------section3--------------------------------------->
-
         <div class="container3">
             <h1 class="">TOP SERVICE PROVIDERS</h1>
 
-            <!-- <div class="sectionheading3">
-                <div class="name2">
-                    <div class="box2"><img src="<?=$row["filename"]?>" width="350px" height="200px">
-                        <p>@username</p>
-                    </div>
-                </div>
-                <div class="name2">
-                    <div class="box2"><img src="<?=$row["filename"]?>" width="350px" height="200px">
-                        <p>@username</p>
-                    </div>
-                </div>
-                <div class="name2">
-                    <div class="box2"><img src="<?=$row["filename"]?>" width="350px" height="200px">
-                        <p>@username</p>
-                    </div>
-                </div>
-                <div class="name2">
-                    <div class="box2"><img src="<?=$row["filename"]?>" width="350px" height="200px">
-                        <p>@username</p>
-                    </div>
-                </div> -->
+            <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem">
 
-            <!-- ------------------------------------------------------------------------------------ -->
+                <?php
+                if(mysqli_num_rows($data)>0){
+                    for($x=0; $x<=3 && $row = mysqli_fetch_assoc($data); $x++){
+                        ?>
+                <div class="sectionheading3">
+                    <div class="card1" style="margin:1rem"><img src="
+                    <?php
+                    if($row["filename"]==null){
+                        echo "/WADAK.com/App/uploads/noimage.jpg";
+                    }
+                    else{
+                       echo $row["filename"];
+                    }
+                    ?>
+                
+                
+                " alt="service" style="width:100% ; height:200px">
+                        <p style="text-align:end">
+                            <?=$row["username"]?>
+                        </p>
+                        <h3 style="text-align:center"><?= $row["title"] ?>
+                        </h3><br>
+                        <p><?=$row["description"]?></p><br>
+                        <p>MySQL is a database system used on the web
+                            MySQL is a database system that runs on a server
+                            MySQL is ideal for both small and large applications
+                            MySQL is very fast, reliable, and easy to use
+                            MySQL uses standard SQL
+                            MySQL compiles on a number of platforms
+                            MySQL is free to download and use
+                            MySQL is developed, distributed, and supported by Oracle Corporation
+                            MySQL is named after co-founder Monty Widenius's daughter: My
+                            The data in a MySQL database are stored in tables. A table is a collection of related data,
+                            and it consists of columns and rows.
 
-            <?php if(!isset($_SESSION["user"]["userrole"])){?>
-            <a href=" /WADAK.com/Implementation/view/registration.php"><button id="postbutton3">Register
-                    Now</button></a>
-            <?php }else {?>
-            <a href="/WADAK.com/Implementation/view/catagorymain.html"><button id="postbutton3">View
-                    Services</button></a>
-            <?php } ?>
+                            Databases are useful for storing information categorically. A company may have a database
+                            with the following tables:
+
+                            Employees
+                            Products
+                            Customers
+                            Orders
+
+
+                            MySQL is a database system used on the web
+                            MySQL is a database system that runs on a server
+                            MySQL is ideal for both small and large applications
+                            MySQL is very fast, reliable, and easy to use
+                            MySQL uses standard SQL
+                            MySQL compiles on a number of platforms
+                            MySQL is free to download and use
+                            MySQL is developed, distributed, and supported by Oracle Corporation
+                            MySQL is named after co-founder Monty Widenius's daughter: My
+                            The data in a MySQL database are stored in tables. A table is a collection of related data,
+                            and it consists of columns and rows.
+
+                            Databases are useful for storing information categorically. A company may have a database
+                            with the following tables:
+
+                            Employees
+                            Products
+                            Customers
+                            Orders
+
+                        </p>
+                    </div>
+                </div>
+                <?php
+                }
+                }
+                ?>
+            </div>
+
+
+
+
+
+            <!------------------x--------------section2----------------------x---------------->
+
+            <!----------------------------------section3--------------------------------------->
+
+            <div class="container3">
+                <h1 class="">TOP SERVICE PROVIDERS</h1>
+
+                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem">
+
+                    <?php
+                if(mysqli_num_rows($data)>0){
+                    for($x=0; $x<=3 && $row = mysqli_fetch_assoc($data); $x++){
+                        ?>
+                    <div class="sectionheading3">
+                        <div class="card1" style="margin:1rem"><img src="
+                    <?php
+                    if($row["filename"]==null){
+                        echo "/WADAK.com/App/uploads/noimage.jpg";
+                    }
+                    else{
+                       echo $row["filename"];
+                    }
+                    ?>
+                
+                
+                " alt="service" style="width:100% ; height:200px">
+                            <p style="text-align:end">
+                                <?=$row["username"]?>
+                            </p>
+                            <h3 style="text-align:center"><?= $row["title"] ?>
+                            </h3><br>
+                            <p><?=$row["description"]?></p><br>
+                            <p>MySQL is a database system used on the web
+                                MySQL is a database system that runs on a server
+                                MySQL is ideal for both small and large applications
+                                MySQL is very fast, reliable, and easy to use
+                                MySQL uses standard SQL
+                                MySQL compiles on a number of platforms
+                                MySQL is free to download and use
+                                MySQL is developed, distributed, and supported by Oracle Corporation
+                                MySQL is named after co-founder Monty Widenius's daughter: My
+                                The data in a MySQL database are stored in tables. A table is a collection of related
+                                data,
+                                and it consists of columns and rows.
+
+                                Databases are useful for storing information categorically. A company may have a
+                                database
+                                with the following tables:
+
+                                Employees
+                                Products
+                                Customers
+                                Orders
+
+
+                                MySQL is a database system used on the web
+                                MySQL is a database system that runs on a server
+                                MySQL is ideal for both small and large applications
+                                MySQL is very fast, reliable, and easy to use
+                                MySQL uses standard SQL
+                                MySQL compiles on a number of platforms
+                                MySQL is free to download and use
+                                MySQL is developed, distributed, and supported by Oracle Corporation
+                                MySQL is named after co-founder Monty Widenius's daughter: My
+                                The data in a MySQL database are stored in tables. A table is a collection of related
+                                data,
+                                and it consists of columns and rows.
+
+                                Databases are useful for storing information categorically. A company may have a
+                                database
+                                with the following tables:
+
+                                Employees
+                                Products
+                                Customers
+                                Orders
+
+                            </p>
+                        </div>
+                    </div>
+                    <?php
+                }
+                }
+                ?>
+                </div>
+
+                <!-- ------------------------------------------------------------------------------------ -->
+
+                <?php if(!isset($_SESSION["user"]["userrole"])){?>
+                <a href=" /WADAK.com/Implementation/view/registration.php"><button id="postbutton3">Register
+                        Now</button></a>
+                <?php }else {?>
+                <a href="/WADAK.com/Implementation/view/catagorymain.html"><button id="postbutton3">View
+                        Services</button></a>
+                <?php } ?>
+            </div>
         </div>
-        </div>
 
-
+        <br>
 
 
         <!------------------x--------------section3----------------------x---------------->
@@ -235,7 +336,8 @@
 
                 <div class="col2">
                     <ul>
-                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="https://www.facebook.com/wadakcom" target="_blank"><i
+                                    class="fab fa-facebook-square"></i></a></li>
                         <li><i class="fab fa-instagram-square"></i></li>
                         <li><i class="fab fa-linkedin"></i></li>
                         <li><i class="fab fa-twitter-square"></i></li>
