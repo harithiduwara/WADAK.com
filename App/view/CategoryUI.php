@@ -78,22 +78,33 @@
                 <div class="box">
                     <p class="head-1">Category - Details</p>
                     <br />
+
+                    <!-- View Category table -->
+                    <?php
+                    include_once 'cataconfig.php';
+                    $result = mysqli_query($conn,"SELECT C_ID, Name,value FROM categories");
+                    ?>
                     <table>
                         <tr>
-                            <th>Name</th>
                             <th>Category ID</th>
+                            <th>Name</th>
                             <th>Minimum Value</th>
                         </tr>
-                        <?php
-               /* require_once("backend/dbconfig.php");
-                $sql ="SELECT C_ID,Name FROM categories";
-                $result = mysqli_query($connection,$sql);
-                $out = "";
-                while($data=$result->fetch_assoc()){
-                    $out .= "<tr><td>".$data['Name']."</td><td>".$data['C_ID']."</td><td><a href='backend/deleteCategory.php?id=".$data['C_ID']."'>Delete</a></tr>";
-                } 
-                echo $out; */
-                ?>
+                
+                <?php
+	             $i=0;
+	             while($row = mysqli_fetch_array($result)) {
+	          ?>
+	           <tr class="<?php if(isset($classname)) echo $classname;?>">
+	           <td><?php echo $row["C_ID"]; ?></td>
+	           <td><?php echo $row["Name"]; ?></td>
+	           <td><?php echo $row["value"]; ?></td>
+	        
+	           </tr>
+	           <?php
+	           $i++;
+	           }
+	          ?>
                     </table>
                 </div>
             </div>
