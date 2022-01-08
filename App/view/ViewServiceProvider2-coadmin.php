@@ -59,11 +59,12 @@
   <br/>
 
 
+  <div class="search-form">
   <form action="" method="POST">
     <input type ="text" name ="SP_ID" placeholder="Enter Id">
     <input type ="submit" name ="search" placeholder="Search">
    </form>
-
+  </div>
 
 <?php 
 $conn= mysqli_connect("localhost","root","");

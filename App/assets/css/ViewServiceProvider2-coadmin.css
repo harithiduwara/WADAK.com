@@ -315,3 +315,13 @@ td input{
 .box2:hover{
     background-color:#05ac05;
 }
+
+.search-form{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+.search-form .input[type=submit]:hover {
+    background-color: #45a049;
+  }
