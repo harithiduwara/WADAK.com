@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import 'owl.carousel/dist/assets/owl.carousel.css';
 @import 'owl.carousel';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -208,6 +209,7 @@ img {vertical-align: middle;}
     from {
         opacity: .4
     }
+
     to {
         opacity: 1
     }
@@ -217,6 +219,7 @@ img {vertical-align: middle;}
     from {
         opacity: .4
     }
+
     to {
         opacity: 1
     }
@@ -331,7 +334,7 @@ img {vertical-align: middle;}
 
 .box2 {
     width: 92%;
-    height: 200px;
+    /* height: 200px; */
     background-color: #c4c4c4;
     margin-top: 30px;
     margin-left: 12px;

@@ -6,7 +6,7 @@ if(!$con){
     die("Connection failed" . mysqli_connect_error());
 }
 
-$data = mysqli_query($con, "select * from postjob , register where register.uid = postjob.uid and (title like '%".$_GET["search"]."%' or description like '%".$_GET["search"]."%')");
+  $data = mysqli_query($con, "select * from postjob , register where register.uid = postjob.uid and (title like '%".$_GET["search"]."%' or description like '%".$_GET["search"]."%' or address like '%".$_GET["search"]."%')");
 
 // print_r($data);
 
@@ -127,6 +127,7 @@ $data = mysqli_query($con, "select * from postjob , register where register.uid 
                     <h3><?= $row["title"] ?>
                     </h3><br>
                     <p><?=$row["description"]?></p><br>
+
                     <div>
                         <p><?php echo "Price : " . $row["budget"]?></p>
                         <p><button style=" background-color:green;"><i class="fa fa-heart"></i></button></p>
@@ -140,7 +141,7 @@ $data = mysqli_query($con, "select * from postjob , register where register.uid 
             } 
             
             else { 
-                echo "0 results" ; 
+                echo "No result found....." ; 
                 } 
             ?>
 
