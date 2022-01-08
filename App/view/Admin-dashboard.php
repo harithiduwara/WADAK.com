@@ -26,7 +26,7 @@
             <a href="CategoryUI.php" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
             <a href="coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Co-Admin</a>
-            <a href="/WADAK.com/Implementation/view/Add Coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
+            <a href="/WADAK.com/App/view/Add Coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Add Co-Admin</a>
             <a href="ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service
                 Provider</a>
@@ -125,18 +125,50 @@
                         <p>Co-Admin details </p>
                         <br />
                         <table>
-                            <tr>
-                                <th>Name</th>
-                                <th>User ID</th>
-                                <th>Contact</th>
-                                <th>Email</th>
-                            </tr>
-                            <tr>
-                                <th>Hansika Diddugoda</th>
-                                <th>CA01</th>
-                                <th>0771223465</th>
-                                <th>coad@gmail.com</th>
-                            </tr>
+<!-- View co-admin details -->                          
+                            <?php
+                            
+                                // Create connection
+                                $con = new mysqli('localhost', 'toor', 'toor', 'wadak');
+                                // Check connection
+                                if ($con->connect_error) {
+                                    die("Connection failed: " . $conn->connect_error);
+                                } 
+                                
+                                // $uid = $_SESSION["user"]["uid"];
+                                
+                                // $sql = "select * from postjob where uid=$uid";
+
+                                $coadminsql = "select * from register where userrole='coadmin'";
+
+                                // echo $sql;
+
+                                $result = $con->query($coadminsql);
+
+                                // echo $uid;
+                                    echo "<table>
+                                            <tr>
+                                                <th>Co Admin Name</th>
+                                                <th>User ID</th>
+                                                <th>Email</th>
+                                                <th>Contact No</th>
+                                            </tr>";
+                                    // output data of each row
+
+                                    // echo $result->num_rows;
+                              
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<tr>
+                                                <td>" . $row["name"]. "</td>
+                                                <td>" . $row["uid"]. "</td>
+                                                <td>" . $row["email"]. "</td>
+                                                <td>" . $row["contactno"]. "</td>
+                                            </tr>";
+                                    }
+                                    echo "</table>";
+
+                               // $conn->close();
+                                ?>
                         </table>
                     </div>
                 </div>
