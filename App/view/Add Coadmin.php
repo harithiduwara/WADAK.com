@@ -58,7 +58,7 @@
       }
 
     </style>
-    <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/Add%20Coadmin.css" type="text/css" />
+    <link rel="stylesheet" href="/WADAK.com/App/assets/css/Add%20Coadmin.css" type="text/css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -123,7 +123,7 @@
       <div class="col-div-2">
         <div class="box" style="height:65vh">
 
-          <form action="/WADAK.com/Implementation/controller/addcoadmin.php" method="post"
+          <form action="/WADAK.com/App/controller/addcoadmin.php" method="post"
             style="text-align:center; color:#0b6403">
             <div class="input-box">
               <div class="input_label">
@@ -131,7 +131,7 @@
               </div>
               <div class="input_data">
                 <input type="text" name="name" placeholder="Enter your first name" required>
-                <span class="error">*<?php echo $nameErr; ?></span>
+               <!-- <span class="error">*<?php echo $nameErr; ?></span> -->
               </div>
             </div>
 
