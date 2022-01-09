@@ -122,7 +122,7 @@
 
 
         <div class="container3">
-            <h1 class="">TOP SERVICE PROVIDERS </h1>
+            <h1 class="">TOP SERVICE CATAGORIES </h1>
 
             <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem; height: 60vmin;
                 overflow: hidden">
@@ -212,7 +212,7 @@
 
             <!----------------------------------section3--------------------------------------->
 
-            <div class="container3">
+            <div class="container3" style="margin-top: 2rem">
                 <h1 class="">TOP SERVICE PROVIDERS</h1>
 
                 <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem; height: 60vmin;
