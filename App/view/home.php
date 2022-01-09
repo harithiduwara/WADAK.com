@@ -103,11 +103,7 @@
         </div>
         <br>
 
-        <div style="text-align:center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
+
         <br>
 
 
@@ -126,9 +122,10 @@
 
 
         <div class="container3">
-            <h1 class="">TOP SERVICE PROVIDERS</h1>
+            <h1 class="">TOP SERVICE PROVIDERS </h1>
 
-            <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem">
+            <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem; height: 60vmin;
+                overflow: hidden">
 
                 <?php
                 if(mysqli_num_rows($data)>0){
@@ -218,7 +215,8 @@
             <div class="container3">
                 <h1 class="">TOP SERVICE PROVIDERS</h1>
 
-                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem">
+                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem; height: 60vmin;
+                overflow: hidden">
 
                     <?php
                 if(mysqli_num_rows($data)>0){
