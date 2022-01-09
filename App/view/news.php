@@ -100,7 +100,7 @@
 	          ?>
             </table>
 
-                <div id="buttons" style="text-align:center">
+                <div id="buttons" style="text-align:center; margin-top:100px" >
                     <a href="add news.php"><input type="button" class="button1" value="Add news" name="add"></a>
                     <a href="update news.php"><input type="button" class="button2" value="Update" name="update"></a>
                 </div>

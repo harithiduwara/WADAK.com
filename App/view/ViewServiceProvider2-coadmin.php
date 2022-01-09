@@ -13,21 +13,21 @@
 <div id="mySidenav" class="sidenav">
   <p class="logo">WADAK <span class="menu">&#9776;</span></p>
   <p class="logo1"> <span class="menu1">&#9776;</span></p>
-  <a href="home.php"class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
-  <a href="Co-admin dashboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
-  <a href="ServiceProviderUI-coadmin.html"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service Providers</a>
-  <a href="categorymain.html"class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Posts</a>
+  <a href="/WADAK.com/App/view/home.php"class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
+  <a href="/WADAK.com/App/view/Co-admin dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+  <a href="/WADAK.com/App/view/ServiceProviderUI-coadmin.php"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service Providers</a>
+  <a href="/WADAK.com/App/view/categorymain.php"class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Posts</a>
  
-  <a href="Q&A.html"class="icon-a"><i class="fa fa-question-circle icons"></i> &nbsp;&nbsp;Q & A Session</a>
-  <a href="chat.html"class="icon-a"><i class="fa fa-comment icons"></i> &nbsp;&nbsp;Chat</a>
-  <a href="news.php"class="icon-a"><i class="fa fa-newspaper-o icons"></i> &nbsp;&nbsp;News</a>
+  <a href="/WADAK.com/App/view/Q&A.php"class="icon-a"><i class="fa fa-question-circle icons"></i> &nbsp;&nbsp;Q & A Session</a>
+  <a href="/WADAK.com/App/view/chat.php"class="icon-a"><i class="fa fa-comment icons"></i> &nbsp;&nbsp;Chat</a>
+  <a href="/WADAK.com/App/view/news.php"class="icon-a"><i class="fa fa-newspaper-o icons"></i> &nbsp;&nbsp;News</a>
   <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
 </div>
 
 <div id="main">
   <div class="head">
     <div class="col-div-1">
-      <p class="nav">Service Provider Name</p>
+      <p class="nav">Service Provider Details</p>
 
     </div>
 
@@ -61,7 +61,7 @@
 
   <div class="search-form">
   <form action="" method="POST" >
-    <input type ="text" name ="SP_ID" placeholder="Enter Id" class="text">
+    <input type ="text" name ="SP_ID" placeholder="Enter User Id" class="text">
     <input type ="submit" name ="search" placeholder="Search" value="Search" class="submit">
    </form>
   </div>
@@ -80,7 +80,7 @@ if(isset($_POST['search']))
   <div class="col-div-2">
     <div class="box">
 
-      <form>
+      <form method="GET" action="/WADAK.com/App/model/deleteServiceProvider-coadmin.php">
       
         <table>
           <tr>
@@ -156,6 +156,9 @@ if(isset($_POST['search']))
             </td>
           </tr>
         </table>
+        <div class="box1">
+          <a href="/WADAK.com/App/model/deleteServiceProvider-coadmin.php?id=<?php echo $row["SP_ID"]; ?>">Delete</a>
+        </div>
       </form>
     </div>
   </div>
@@ -166,18 +169,22 @@ if(isset($_POST['search']))
       </div>
 
     </div>
-    <div class="box1">
-      <a href="#" onclick="myfunction1()">Delete</a>
+    <!--<div class="box1">
+      <a href="/WADAK.com/App/model/deleteServiceProvider-coadmin.php?id=<?php echo $row["SP_ID"]; ?>">Delete</a>
     </div>
     <div class="box2">
       <a href="#">Cancel</a>
-    </div>
+    </div>-->
   </div>
   <div class="clearfix"></div>
 </div>
 
 <?php
     }
+    if($row==0)
+     {
+        echo "Sorry No Records Found..";
+     }
 }
 ?>
 

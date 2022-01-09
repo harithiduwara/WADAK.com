@@ -98,7 +98,7 @@
     </div>
     <div class="col-div-2">
         <div class="box1">
-            <a href="ViewServiceProvider-coadmin.php">View</a>
+            <a href="ViewServiceProvider2-coadmin.php">View</a>
         </div>
     </div>
     <div class="clearfix"></div>

@@ -12,11 +12,11 @@ session_start();
         <title>Wadak.com</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/categorymain.css">
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/navigationBar.css">
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/toggle.css">
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/categorymain.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/navigationBar.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/toggle.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/owl.theme.default.min.css">
 
         <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
     </head>
@@ -27,26 +27,26 @@ session_start();
         <!----------------------------------Navigation-------------------------------------->
         <header>
 
-            <a href="home.html"><img class="wadaklogo" src="wadak.gif" alt="wadak gif"
+            <a href="home.html"><img class="wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif" alt="wadak gif"
                     style="float:left ;width:5rem; height:5%;"></a>
             <nav>
                 <ul class="navbar">
                     <?php
                                     if(isset($_SESSION["user"]["userrole"])){?>
-                    <li class="navbargreen"><a href="/WADAK.com/Implementation/view/postjob.html">Post Jobs</a></li>
+                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.html">Post Jobs</a></li>
                     <?php
                                 }
                                 ?>
                     <li class="greenbar"><a href="jobs.html">Jobs</a></li>
-                    <li><a href="/WADAK.com/Implementation/view/services.html">Services</a></li>
+                    <li><a href="/WADAK.com/App/view/services.html">Services</a></li>
 
                     <?php if(!isset($_SESSION["user"]["userrole"])){?>
 
                     <li><a href="./login.php">Login</a></li>
                     <?php }else {?>
                     <li><i class="far fa-bell"></i></li>
-                    <li><a href="/WADAK.com/Implementation/view/messages.html">Messages</a></li>
-                    <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.html"><i
+                    <li><a href="/WADAK.com/App/view/messages.html">Messages</a></li>
+                    <li><a href="/WADAK.com/App/view/hirepersondashboard.html"><i
                                 class="fas fa-user"></i></a></li>
                     <?php } ?>
 
@@ -212,7 +212,7 @@ session_start();
         <!--first row-->
         <div class="row">
             <div class="column">
-                <div class="card1"><img src="code.png" alt="service" style="width:100% ; height:200px">
+                <div class="card1"><img src="/WADAK.com/App/assets/images/code.png" alt="service" style="width:100% ; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
                     <p>I will code program or buld applications in java</p><br>
@@ -222,7 +222,7 @@ session_start();
             </div>
 
             <div class="column">
-                <div class="card1"><img src="download.jpg" alt="service" style="width:100%; height:200px">
+                <div class="card1"><img src="/WADAK.com/App/assets/images/download.jpg" alt="service" style="width:100%; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
                     <p>I will write code in c or c++ and build applications</p><br>
@@ -232,7 +232,7 @@ session_start();
             </div>
 
             <div class="column">
-                <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
+                <div class="card1"><img src="/WADAK.com/App/assets/images/database.jpg" alt="service" style="width:100%; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
                     <p>I will create your databases erp CRM or management systems</p><br>
@@ -242,7 +242,7 @@ session_start();
             </div>
 
             <div class="column">
-                <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
+                <div class="card1"><img src="/WADAK.com/App/assets/images/database.jpg" alt="service" style="width:100%; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
                     <p>I will create your databases erp CRM or management systems</p><br>
@@ -257,7 +257,7 @@ session_start();
         <br><br><br><br><br><br><br><br><br>
         <div class="row">
             <div class="column">
-                <div class="card1"><img src="code.png" alt="service" style="width:100% ; height:200px">
+                <div class="card1"><img src="/WADAK.com/App/assets/images/code.png" alt="service" style="width:100% ; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
                     <p>I will code program or buld applications in java</p><br>
@@ -267,7 +267,7 @@ session_start();
             </div>
 
             <div class="column">
-                <div class="card1"><img src="download.jpg" alt="service" style="width:100%; height:200px">
+                <div class="card1"><img src="/WADAK.com/App/assets/images/download.jpg" alt="service" style="width:100%; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
                     <p>I will write code in c or c++ and build applications</p><br>
@@ -277,7 +277,7 @@ session_start();
             </div>
 
             <div class="column">
-                <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
+                <div class="card1"><img src="/WADAK.com/App/assets/images/database.jpg" alt="service" style="width:100%; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
                     <p>I will create your databases erp CRM or management systems</p><br>
@@ -287,7 +287,7 @@ session_start();
             </div>
 
             <div class="column">
-                <div class="card1"><img src="database.jpg" alt="service" style="width:100%; height:200px">
+                <div class="card1"><img src="/WADAK.com/App/assets/images/database.jpg" alt="service" style="width:100%; height:200px">
                     <h9 style=" margin-right:1000px">@username</h9>
                     <h3>Title</h3><br>
                     <p>I will create your databases erp CRM or management systems</p><br>
@@ -305,7 +305,7 @@ session_start();
         <div class="footer">
             <div class="container">
                 <div class="col1">
-                    <a href="#""><img class=" wadaklogo" src="wadak.gif" alt="wadak gif"></a>
+                    <a href="#""><img class=" wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif" alt="wadak gif"></a>
                     <ul>
                         <li><a href="#">Terms & Condition</a></li>
                         <li><a href="#">Privacy Policy</a></li>

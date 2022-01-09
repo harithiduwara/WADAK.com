@@ -293,7 +293,7 @@ td input{
     letter-spacing: 0.5px;
 }
 .box1:hover{
-    background-color:#05ac05;
+    background-color:#e45d03;
 }
 .box2{
     width: 100px;
@@ -305,7 +305,7 @@ td input{
     padding:10px 15px;
     border-radius: 10px;
     box-shadow: 2px 5px 10px #ddd;
-    position: relative;
+    position: inline;
 }
 .box2 a{
     color:#d8d8d8;
