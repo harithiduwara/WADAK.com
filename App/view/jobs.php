@@ -6,9 +6,9 @@ if(!$con){
     die("Connection failed" . mysqli_connect_error());
 }
 
-  $data = mysqli_query($con, "select * from postjob , register where register.uid = postjob.uid and (title like '%".$_GET["search"]."%' or description like '%".$_GET["search"]."%' or address like '%".$_GET["search"]."%')");
+    $query = "select * from postjob , register where register.uid = postjob.uid and (title like '%".$_GET["search"]."%' or description like '%".$_GET["search"]."%' or address like '%".$_GET["search"]."%')";
 
-// print_r($data);
+  $data = mysqli_query($con, $query);
 
 
 ?>
@@ -34,6 +34,7 @@ if(!$con){
 
     <body>
 
+        <?="$query"?>;
 
         <!----------------------------------Navigation-------------------------------------->
         <header>
@@ -130,7 +131,15 @@ if(!$con){
 
                     <div>
                         <p><?php echo "Price : " . $row["budget"]?></p>
-                        <p><button style=" background-color:green;"><i class="fa fa-heart"></i></button></p>
+
+
+
+                        <a>
+                            <a><button style="background-color:green;"
+                                    href="/WADAK.com/App/controller/views.php?jobid=<?=$row["jobid"]?>">
+                                    <i class="fa fa-heart"></i></button></p>
+                            </a>
+                        </a>
                     </div>
 
                 </div>

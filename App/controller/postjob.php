@@ -71,7 +71,7 @@ $jobpost = "insert into postjob(title, description, budget, jobtype, uid, filena
 
 if (mysqli_query($con, $jobpost)) {
     echo "New Job Has Created Successfully";
-    //header('location:/WADAK.com/App/view/home.php');
+    header('location:/WADAK.com/App/view/home.php');
 } 
 else {
     echo "Error: " . $reg . "<br>" . mysqli_error($con);

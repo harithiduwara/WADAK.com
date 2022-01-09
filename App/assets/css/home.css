@@ -309,7 +309,8 @@ img {vertical-align: middle;}
 
 .container3 .sectionheading3 {
     background-color: white;
-    height: 60vh;
+    height: 60vmin;
+    overflow: hidden;
 }
 
 .sectionheading3 h1 {

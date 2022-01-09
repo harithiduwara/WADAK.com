@@ -60,6 +60,10 @@
 
 
                 </ul>
+
+                <!-- <ul>Hello
+                    <?php //echo $_SESSION["user"]["username"] ?>
+                </ul> -->
             </nav>
         </header>
 
@@ -158,10 +162,12 @@
                             MySQL is free to download and use
                             MySQL is developed, distributed, and supported by Oracle Corporation
                             MySQL is named after co-founder Monty Widenius's daughter: My
-                            The data in a MySQL database are stored in tables. A table is a collection of related data,
+                            The data in a MySQL database are stored in tables. A table is a collection of related
+                            data,
                             and it consists of columns and rows.
 
-                            Databases are useful for storing information categorically. A company may have a database
+                            Databases are useful for storing information categorically. A company may have a
+                            database
                             with the following tables:
 
                             Employees
@@ -179,10 +185,12 @@
                             MySQL is free to download and use
                             MySQL is developed, distributed, and supported by Oracle Corporation
                             MySQL is named after co-founder Monty Widenius's daughter: My
-                            The data in a MySQL database are stored in tables. A table is a collection of related data,
+                            The data in a MySQL database are stored in tables. A table is a collection of related
+                            data,
                             and it consists of columns and rows.
 
-                            Databases are useful for storing information categorically. A company may have a database
+                            Databases are useful for storing information categorically. A company may have a
+                            database
                             with the following tables:
 
                             Employees
@@ -244,7 +252,8 @@
                                 MySQL is free to download and use
                                 MySQL is developed, distributed, and supported by Oracle Corporation
                                 MySQL is named after co-founder Monty Widenius's daughter: My
-                                The data in a MySQL database are stored in tables. A table is a collection of related
+                                The data in a MySQL database are stored in tables. A table is a collection of
+                                related
                                 data,
                                 and it consists of columns and rows.
 
@@ -267,7 +276,8 @@
                                 MySQL is free to download and use
                                 MySQL is developed, distributed, and supported by Oracle Corporation
                                 MySQL is named after co-founder Monty Widenius's daughter: My
-                                The data in a MySQL database are stored in tables. A table is a collection of related
+                                The data in a MySQL database are stored in tables. A table is a collection of
+                                related
                                 data,
                                 and it consists of columns and rows.
 

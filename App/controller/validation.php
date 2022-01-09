@@ -19,12 +19,14 @@ $num = 0;
 
 $num = mysqli_num_rows($result);
 
-$us= "select userrole, uid from register where username= '$username";
+$us= "select userrole, uid, profilepic, username from register where username= '$username";
 
 $fetchass= ($result->fetch_assoc());
 
 $us=($fetchass)["userrole"];
 $usid=($fetchass)["uid"];
+$uspp = ($fetchass)["profilepic"];
+$usname = ($fetchass)["username"];
 
 
 
@@ -34,10 +36,9 @@ if (session_status() === PHP_SESSION_NONE) {
 
 $_SESSION["user"]["uid"]=$usid;
 
+$_SESSION["user"]["profilepic"]=$uspp;
 
-// echo $usid;
-
-
+$_SESSION["user"]["username"]= $usname;
 
 if($num==1){
     
