@@ -124,7 +124,7 @@
         <div class="container3">
             <h1 class="">TOP SERVICE CATAGORIES </h1>
 
-            <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem; height: 60vmin;
+            <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem; height: 40vmin;
                 overflow: hidden">
 
                 <?php
@@ -149,52 +149,8 @@
                         </p>
                         <h3 style="text-align:center"><?= $row["title"] ?>
                         </h3><br>
-                        <p><?=$row["description"]?></p><br>
-                        <p>MySQL is a database system used on the web
-                            MySQL is a database system that runs on a server
-                            MySQL is ideal for both small and large applications
-                            MySQL is very fast, reliable, and easy to use
-                            MySQL uses standard SQL
-                            MySQL compiles on a number of platforms
-                            MySQL is free to download and use
-                            MySQL is developed, distributed, and supported by Oracle Corporation
-                            MySQL is named after co-founder Monty Widenius's daughter: My
-                            The data in a MySQL database are stored in tables. A table is a collection of related
-                            data,
-                            and it consists of columns and rows.
-
-                            Databases are useful for storing information categorically. A company may have a
-                            database
-                            with the following tables:
-
-                            Employees
-                            Products
-                            Customers
-                            Orders
-
-
-                            MySQL is a database system used on the web
-                            MySQL is a database system that runs on a server
-                            MySQL is ideal for both small and large applications
-                            MySQL is very fast, reliable, and easy to use
-                            MySQL uses standard SQL
-                            MySQL compiles on a number of platforms
-                            MySQL is free to download and use
-                            MySQL is developed, distributed, and supported by Oracle Corporation
-                            MySQL is named after co-founder Monty Widenius's daughter: My
-                            The data in a MySQL database are stored in tables. A table is a collection of related
-                            data,
-                            and it consists of columns and rows.
-
-                            Databases are useful for storing information categorically. A company may have a
-                            database
-                            with the following tables:
-
-                            Employees
-                            Products
-                            Customers
-                            Orders
-
+                        <p style="text-align: center"><?=$row["description"]?></p><br>
+                        <p>
                         </p>
                     </div>
                 </div>
@@ -215,7 +171,7 @@
             <div class="container3" style="margin-top: 2rem">
                 <h1 class="">TOP SERVICE PROVIDERS</h1>
 
-                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem; height: 60vmin;
+                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem; height: 40vmin;
                 overflow: hidden">
 
                     <?php
@@ -240,54 +196,8 @@
                             </p>
                             <h3 style="text-align:center"><?= $row["title"] ?>
                             </h3><br>
-                            <p><?=$row["description"]?></p><br>
-                            <p>MySQL is a database system used on the web
-                                MySQL is a database system that runs on a server
-                                MySQL is ideal for both small and large applications
-                                MySQL is very fast, reliable, and easy to use
-                                MySQL uses standard SQL
-                                MySQL compiles on a number of platforms
-                                MySQL is free to download and use
-                                MySQL is developed, distributed, and supported by Oracle Corporation
-                                MySQL is named after co-founder Monty Widenius's daughter: My
-                                The data in a MySQL database are stored in tables. A table is a collection of
-                                related
-                                data,
-                                and it consists of columns and rows.
-
-                                Databases are useful for storing information categorically. A company may have a
-                                database
-                                with the following tables:
-
-                                Employees
-                                Products
-                                Customers
-                                Orders
-
-
-                                MySQL is a database system used on the web
-                                MySQL is a database system that runs on a server
-                                MySQL is ideal for both small and large applications
-                                MySQL is very fast, reliable, and easy to use
-                                MySQL uses standard SQL
-                                MySQL compiles on a number of platforms
-                                MySQL is free to download and use
-                                MySQL is developed, distributed, and supported by Oracle Corporation
-                                MySQL is named after co-founder Monty Widenius's daughter: My
-                                The data in a MySQL database are stored in tables. A table is a collection of
-                                related
-                                data,
-                                and it consists of columns and rows.
-
-                                Databases are useful for storing information categorically. A company may have a
-                                database
-                                with the following tables:
-
-                                Employees
-                                Products
-                                Customers
-                                Orders
-
+                            <p style="text-align: center"><?=$row["description"]?></p><br>
+                            <p>
                             </p>
                         </div>
                     </div>
@@ -300,10 +210,10 @@
                 <!-- ------------------------------------------------------------------------------------ -->
 
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
-                <a href=" /WADAK.com/Implementation/view/registration.php"><button id="postbutton3">Register
+                <a href=" /WADAK.com/App/view/registration.php"><button id="postbutton3">Register
                         Now</button></a>
                 <?php }else {?>
-                <a href="/WADAK.com/Implementation/view/catagorymain.html"><button id="postbutton3">View
+                <a href="/WADAK.com/App/view/catagorymain.php"><button id="postbutton3">View
                         Services</button></a>
                 <?php } ?>
             </div>

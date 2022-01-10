@@ -17,8 +17,7 @@ body {
 
 .postcontainer {
     position: relative;
-    width: 1520px;
-    height: 800px;
+    height: 85vh;
     background: #EEEEEE;
     box-sizing: border-box;
 }
@@ -120,10 +119,6 @@ nav ul li a:hover {
     font-family: sans-serif;
 }
 
-/*.remember{
-    display: inline-block;
-    color: green;
-}*/
 
 .inputcontainer .form .inputbox input[type="submit"] {
     background: red;
@@ -142,6 +137,6 @@ nav ul li a:hover {
 }
 
 #loginbox {
-    margin-left: 32vw;
+    margin-left: 15vw;
     margin-top: 10%;
 }
