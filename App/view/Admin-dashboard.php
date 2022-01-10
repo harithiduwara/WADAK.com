@@ -26,8 +26,6 @@
             <a href="CategoryUI.php" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
             <a href="coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Co-Admin</a>
-            <a href="/WADAK.com/App/view/Add Coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
-                &nbsp;&nbsp;Add Co-Admin</a>
             <a href="ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service
                 Provider</a>
             <a href="ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
