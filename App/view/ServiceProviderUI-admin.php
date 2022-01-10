@@ -9,7 +9,7 @@
             }
 
         </style>
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/ServiceProviderUI-admin.css" type="text/css" />
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/ServiceProviderUI-admin.css" type="text/css" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -21,19 +21,17 @@
             <p class="logo">WADAK <span class="menu">&#9776;</span></p>
             <p class="logo1"> <span class="menu1">&#9776;</span></p>
             <a href="home.php" class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
-            <a href="Admin-dashboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            <a href="Admin-dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
             <a href="CategoryUI.php" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
-            <a href="/WADAK.com/Implementation/view/coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
+            <a href="/WADAK.com/App/view/coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Co-Admin</a>
-            <a href="/WADAK.com/Implementation/view/Add Coadmin.html" class="icon-a"><i class="fa fa-users icons"></i>
-                &nbsp;&nbsp;Add Co-Admin</a>
-            <a href="ServiceProviderUI-admin.html" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service
+            <a href="ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service
                 Provider</a>
             <a href="ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
-            <a href="View Report.html" class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
-            <a href="PaymentUI.html" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
-            <a href="/WADAK.com/Implementation/view/leaderboard.html" class="icon-a"><i
+            <a href="View Report.php" class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
+            <a href="PaymentUI.php" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
+            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i
                     class="fa fa-object-group icons"></i>
                 &nbsp;&nbsp;Leaderboard</a>
             <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
@@ -62,11 +60,11 @@
                     <div class="profile">
                         <p>Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="AdminProfile.html">Profile</a></p>
-                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Admin-dashboard.html">Dashboard</a>
+                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="AdminProfile.php">Profile</a></p>
+                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Admin-dashboard.php">Dashboard</a>
                             </p>
                             <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a
-                                    href="/WADAK.com/implementation/controller/logout.php">Log Out</a></p>
+                                    href="/WADAK.com/App/controller/logout.php">Log Out</a></p>
                         </div>
                     </div>
                 </div>
@@ -80,48 +78,81 @@
                 <div class="box">
                     <p class="head-1">Service Provider - Details</p>
             <br/>
-            <table>
+            <?php
+                            
+                                // Create connection
+                                $con = new mysqli('localhost', 'toor', 'toor', 'wadak');
+                                // Check connection
+                                if ($con->connect_error) {
+                                    die("Connection failed: " . $conn->connect_error);
+                                } 
+                                
+                                // $uid = $_SESSION["user"]["uid"];
+                                
+                                // $sql = "select * from postjob where uid=$uid";
+
+                                $spsql = "select * from register where userrole='serviceprovider'";
+
+                                // echo $sql;
+
+                                $result = $con->query($spsql);
+
+                                // echo $uid;
+                                    echo "<table>
+                                            <tr>
+                                                <th>Service Provider Name</th>
+                                                <th>Username</th>
+                                                <th>User ID</th>
+                                                <th>Email</th>
+                                                <th>Contact No</th>
+                                            </tr>";
+                                    // output data of each row
+
+                                    // echo $result->num_rows;
+                              
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<tr>
+                                                <td>" . $row["name"]. "</td>
+                                                <td>" . $row["username"]. "</td>
+                                                <td>" . $row["uid"]. "</td>
+                                                <td>" . $row["email"]. "</td>
+                                                <td>" . $row["contactno"]. "</td>
+                                            </tr>";
+                                    }
+                                    echo "</table>";
+
+                                
+
+                               // $conn->close();
+                                ?>
+            <!--<table>
                 <tr>
                     <th>Service provider Name </th>
-                    <td><?php echo $this->content[0]['SP_ID'];?></td>
+                    <th> ID</th>
+                    <th>email</th>
+                    <th>contact</th>
+                    <td><?php echo $this->content[0]['SP_ID'];?></td> 
 
                 </tr>
-                <!--<tr>
+                <tr>
                     <th>Service provider Name</th>
                     <th> ID</th>
                     <th>email</th>
                     <th>contact</th>
                 </tr>
                 <tr>
-                    <td>S.K.Silva</td>
+                    <td>S.S.Malsha</td>
                     <td>0001</td>
                     <td>sir@gmail.com</td>
                     <td>0712345678</td>
-                </tr>
-                <tr>
-                    <td>A.G.Dew</td>
-                    <td>0002</td>
-                    <td>dew@gmail.com</td>
-                    <td>077234567</td>
-                </tr>
-                <tr>
-                    <td>S.S.Hima</td>
-                    <td>0003</td>
-                    <td>hima@gmail.com</td>
-                    <td>0765432789</td>
-                </tr>
-                <tr>
-                    <td>S.K.Perera</td>
-                    <td>0004</td>
-                    <td>pr@gmail.com</td>
-                    <td>0716894567</td>
                 </tr> -->
+                
             </table>
                 </div>
             </div>
             <div class="col-div-2">
                 <div class="box1">
-                    <a href="ViewServiceProvider-admin.html">View</a>
+                    <a href="ViewServiceProvider-admin.php">View</a>
                 </div>
             </div>
             <div class="clearfix"></div>
