@@ -15,6 +15,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+nav .ul .a {
+    background-color: #679969;
+}
+
 .postcontainer {
     position: relative;
     height: 85vh;
@@ -58,13 +62,13 @@ nav ul li a {
 }
 
 nav ul li a.active, nav ul li a:hover {
-    background: green;
+    background: rgb(33, 90, 33);
     color: white;
     transition: 0.5s;
 }
 
 nav ul li a:hover {
-    background-color: #4EEC54;
+    background-color: #275a29;
     color: white;
     transition: 0.5s;
 }
