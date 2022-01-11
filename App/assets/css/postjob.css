@@ -144,3 +144,14 @@ nav ul li a:hover {
     margin-left: 15vw;
     margin-top: 10%;
 }
+
+/* ----------------------------View Job Post ------------------------------- */
+
+.postcontainer .h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    text-decoration: none;
+    padding: 1px solid;
+    color: black;
+}
