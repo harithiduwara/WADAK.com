@@ -39,8 +39,17 @@
             </ul>
         </nav>
         <div class="postcontainer" style="height:85vmin">
-            <div class="inputcontainer" id="loginbox" style="margin-left: 15vw; margin-top: 5% ;height:70vmin">
+            <div class="inputcontainer" id="loginbox"
+                style="margin-left: 15vw; margin-top: 5% ;height:70vmin; display:grid; grid-template-columns: 1fr 1fr; grid-gap:1rem;">
 
+                <diV>
+                    <p>
+                        Hellow
+                    </p>
+                </diV>
+                <diV>
+                    <p> Hellow</p>
+                </diV>
             </div>
         </div>
         </div>
