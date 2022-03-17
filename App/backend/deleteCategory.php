@@ -8,5 +8,4 @@ if(isset($_GET['id'])){
     header("location:../CategoryUI.php");
     exit();
 }
-
 ?>
