@@ -293,7 +293,7 @@
         <script src="/WADAK.com/App/assets/js/Jquery3.4.1.min.js"></script>
         <script src="/WADAK.com/App/assets/js/home.js"></script>
         <script src="/WADAK.com/App/assets/js/owl.carousel.min.js"></script>
-
+        <!-- Testing -->
     </body>
 
 </html>
