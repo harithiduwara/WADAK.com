@@ -143,13 +143,13 @@
     <div class="col-div-2">
         <div class="imgbox">
             <div class="img">
-                <img src="sp.png" width="325" height="380">
+                <img src="/WADAK.com/App/assets/images/sp.png" width="325" height="380">
             </div>
 
         </div>
-        <div class="box1">
+        <!--<div class="box1">
             <a href="#" onclick="myfunction1()">Delete</a>
-        </div>
+        </div>-->
         <div class="box2">
             <a href="ServiceProviderUI-admin.html">Cancel</a>
         </div>
