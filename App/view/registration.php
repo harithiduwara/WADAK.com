@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Registration</title>
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/registration.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/registration.css">
     </head>
-
+    
     <body>
 
         <nav>
