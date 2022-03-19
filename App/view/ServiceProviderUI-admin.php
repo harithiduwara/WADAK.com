@@ -77,14 +77,19 @@
             <div class="col-div-2">
                 <div class="box">
                     <p class="head-1">Service Provider - Details</p>
-            <br/>
-            <?php
+                    <br/>
+
+
+            <!-- View Service providers -->
+            
+                    <?php
+         
                             
-                                // Create connection
+                               // Create connection
                                 $con = new mysqli('localhost', 'toor', 'toor', 'wadak');
                                 // Check connection
                                 if ($con->connect_error) {
-                                    die("Connection failed: " . $conn->connect_error);
+                                    die("Connection failed: " . $con->connect_error);
                                 } 
                                 
                                 // $uid = $_SESSION["user"]["uid"];
@@ -125,29 +130,7 @@
 
                                // $conn->close();
                                 ?>
-            <!--<table>
-                <tr>
-                    <th>Service provider Name </th>
-                    <th> ID</th>
-                    <th>email</th>
-                    <th>contact</th>
-                    <td><?php echo $this->content[0]['SP_ID'];?></td> 
-
-                </tr>
-                <tr>
-                    <th>Service provider Name</th>
-                    <th> ID</th>
-                    <th>email</th>
-                    <th>contact</th>
-                </tr>
-                <tr>
-                    <td>S.S.Malsha</td>
-                    <td>0001</td>
-                    <td>sir@gmail.com</td>
-                    <td>0712345678</td>
-                </tr> -->
-                
-            </table>
+        
                 </div>
             </div>
             <div class="col-div-2">
