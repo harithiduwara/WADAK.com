@@ -38,15 +38,17 @@
                 <div class="animation "></div>
             </ul>
         </nav>
-        <div class="postcontainer" style="height:85vmin">
+        <div class="postcontainer" style="height:120vmin">
+
             <div class="inputcontainer" id="loginbox"
-                style="margin-left: 15vw; margin-top: 5% ;height:70vmin; display:grid; grid-template-columns: 1fr 1fr; grid-gap:1rem;">
+                style="margin-left: 15vw; margin-top: 5% ;height:100vmin; display:grid; grid-template-columns: 1fr 1fr; grid-gap:1rem;">
 
                 <diV>
                     <img src="/WADAK.com/App/uploads/noimage.jpg" alt="Job post Image" ;
                         style="width:100% ; height:65vmin">
                 </diV>
                 <diV>
+
                     <h1 style="font-size:3rem; color: green;
                                 padding: 7px 13px;
                                 border-radius: 3px;
@@ -79,8 +81,19 @@
                         <button>
                             Hello
                         </button>
+                        <button>
+                            Hello
+                        </button>
                     </span>
                 </diV>
+                <div style="padding:1rem; margin-top: -5rem">
+                    <h1 style="font-size:3rem">Rank</h1>
+                    <h1 style="font-size:2rem">5 Stars</h1>
+
+                </div>
+                <div>
+
+                </div>
             </div>
         </div>
         </div>

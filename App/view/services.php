@@ -33,7 +33,7 @@ session_start();
                 <ul class="navbar">
                     <?php
                                     if(isset($_SESSION["user"]["userrole"])){?>
-                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.html">Post Jobs</a></li>
+                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Post Jobs</a></li>
                     <?php
                                 }
                                 ?>
@@ -83,125 +83,7 @@ session_start();
 
         <!-------------------------------------boxes--------------------------------------------->
 
-        <!-- <div class="boxcontainer">
-            <div class="griditem">
-                <a href="#">
-                    <img src="1.jpg">
-                </a>
 
-                <div class="username">
-                    <i class="fas fa-user"></i>
-                    <a href="https://fontawesome.com/v5.15/icons/user?style=solid" target="_blank">Username</a>
-                </div>
-
-                <div class="jobtitle">
-                    <a href="#">
-                        <h2>I will create a professional minimalist logo design
-                        </h2>
-                    </a>
-                    <div class="pricebar">
-                        <h3>Starting Price</h3>
-                    </div>
-                </div>
-
-
-
-            </div>
-            <div class="griditem">
-                <a href="#">
-                    <img src="1.jpg">
-                </a>
-
-                <div class="username">
-                    <i class="fas fa-user"></i>
-                    <a href="https://fontawesome.com/v5.15/icons/user?style=solid" target="_blank">Username</a>
-                </div>
-
-                <div class="jobtitle">
-                    <a href="#">
-                        <h2>I will create a professional minimalist logo design
-                        </h2>
-                    </a>
-                </div>
-
-                <div class="pricebar">
-                    <h3>Starting Price</h3>
-                </div>
-
-            </div>
-            <div class="griditem">
-                <a href="#">
-                    <img src="1.jpg">
-                </a>
-
-                <div class="username">
-                    <i class="fas fa-user"></i>
-                    <a href="https://fontawesome.com/v5.15/icons/user?style=solid" target="_blank">Username</a>
-                </div>
-
-                <div class="jobtitle">
-                    <a href="#">
-                        <h2>I will create a professional minimalist logo design
-                        </h2>
-                    </a>
-                </div>
-
-                <div class="pricebar">
-                    <h3>Starting Price</h3>
-                </div>
-
-            </div>
-            \
-            <div class="griditem">
-                <a href="#">
-                    <img src="1.jpg">
-                </a>
-
-                <div class="username">
-                    <i class="fas fa-user"></i>
-                    <a href="https://fontawesome.com/v5.15/icons/user?style=solid" target="_blank">Username</a>
-                </div>
-
-                <div class="jobtitle">
-                    <a href="#">
-                        <h2>I will create a professional minimalist logo design
-                        </h2>
-                    </a>
-                    <div class="pricebar">
-                        <h3>Starting Price</h3>
-                    </div>
-                </div>
-
-                <div class="pricebar">
-                    <h3>Starting Price</h3>
-                </div>
-
-            </div>
-            <div class="griditem">
-                <a href="#">
-                    <img src="1.jpg">
-                </a>
-
-                <div class="username">
-                    <i class="fas fa-user"></i>
-                    <a href="https://fontawesome.com/v5.15/icons/user?style=solid" target="_blank">Username</a>
-                </div>
-
-                <div class="jobtitle">
-                    <a href="#">
-                        <h2>I will create a professional minimalist logo design
-                        </h2>
-                    </a>
-                </div>
-
-                <div class="pricebar">
-                    <h3>Starting Price</h3>
-                </div>
-
-            </div>
-
-
-        </div> -->
         <!-------------------x------------------boxes------------------------x------------------->
 
         <!----------------------------------footer--------------------------------------->
@@ -304,8 +186,8 @@ session_start();
         <div class="footer">
             <div class="container">
                 <div class="col1">
-                    <a href="#""><img class=" wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif"
-                        alt="wadak gif"></a>
+                    <a href="#"><img class=" wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif"
+                            alt="wadak gif"></a>
                     <ul>
                         <li><a href="#">Terms & Condition</a></li>
                         <li><a href="#">Privacy Policy</a></li>
