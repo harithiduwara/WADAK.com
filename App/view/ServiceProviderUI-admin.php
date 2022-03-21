@@ -135,7 +135,7 @@
             </div>
             <div class="col-div-2">
                 <div class="box1">
-                    <a href="ViewServiceProvider-admin.php">View</a>
+                    <a href="/WADAK.com/App/view/ViewServiceProvider-admin.php">View</a>
                 </div>
             </div>
             <div class="clearfix"></div>
