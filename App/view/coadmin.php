@@ -133,7 +133,7 @@
                     <a href="Add%20Coadmin.php">Add</a>
                 </div>
                 <div class="box2">
-                    <a href="#">View</a>
+                    <a href="/WADAK.com/App/view/ViewCoAdmin.php">View</a>
                 </div>
             </div>
             <div class="clearfix"></div>

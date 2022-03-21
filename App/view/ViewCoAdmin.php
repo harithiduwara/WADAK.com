@@ -9,7 +9,7 @@
             }
 
         </style>
-        <link rel="stylesheet" href="App\assets\css\ViewCoAdmin.css" type="text/css" />
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/ViewCoAdmin.css" type="text/css" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -69,10 +69,19 @@
             <div class="clearfix"></div>
             <br />
 
+            <div class="search-form">
+                    <form action="" method="POST" >
+                        <input type ="text" name ="SP_ID" placeholder="Enter User Id" class="text">
+                        <input type ="submit" name ="search" placeholder="Search" value="Search" class="submit">
+                    </form>
+            </div>
+
+
             <div class="col-div-2">
                 <div class="box">
+                
 
-                    <form>
+                    <!--<form>
                         <table>
                             <tr>
                                 <td>
@@ -91,7 +100,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </form>
+                    </form> -->
                 </div>
             </div>
             <div class="col-div-2">

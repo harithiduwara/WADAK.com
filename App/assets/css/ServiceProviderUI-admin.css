@@ -223,7 +223,7 @@ body{
     float: left;
 }
 .box{
-    width: 1000px;
+    width: 1150px;
     height: 900px;
     background-color: #ffffff;
     margin-left: 10px;
@@ -253,7 +253,7 @@ body{
 }
 .box1{
     width: 60px;
-    left: 650px;
+    left: 600px;
     height: 25px;
     margin-top: 250px;
     background-color: green ;

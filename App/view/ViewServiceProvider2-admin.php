@@ -28,7 +28,7 @@
 <div id="main">
     <div class="head">
         <div class="col-div-1">
-            <p class="nav">Service Provider Name</p>
+            <p class="nav">Service Provider Details</p>
 
         </div>
 
@@ -58,6 +58,8 @@
 
     <div class="clearfix"></div>
     <br/>
+
+    
 
     <div class="col-div-2">
         <div class="box">
