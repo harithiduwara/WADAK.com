@@ -23,24 +23,24 @@
             <p class="logo1"> <span class="menu1">&#9776;</span></p>
             <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i>
                 &nbsp;&nbsp;Home</a>
-            <a href="/WADAK.com/App/view/hirepersondashboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
             <a href="/WADAK.com/App/view/joborders.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Job Posts</a>
-            <a href="/WADAK.com/App/view/previousordershireperson.html" class="icon-a"><i class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/App/view/previousordershireperson.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Previous Orders</a>
 
-            <a href="/WADAK.com/App/view/previousorders.html" class="icon-a"><i class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/App/view/previousorders.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Service Posts</a>
-            <a href="/WADAK.com/App/view/previousorders.html" class="icon-a"><i class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/App/view/previousorders.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Previous Services</a>
             <a href="/WADAK.com/App/view/news2.php" class="icon-a"><i class="far fa-envelope-open"></i>
                 &nbsp;&nbsp;News</a>
-            <a href="/WADAK.com/App/view/messages.html" class="icon-a"><i class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/App/view/chat.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Messages</a>
             <a href="/WADAK.com/App/view/a.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Achievements</a>
-            <a href="/WADAK.com/App/view/leaderboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Leaderboard</a>
             <a href="/WADAK.com/App/view/askforad.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Advertisements</a>

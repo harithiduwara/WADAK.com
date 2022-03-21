@@ -66,7 +66,7 @@
                     <div class="profile">
                         <p>Username <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="userProfile.html">Profile</a></p>
+                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="userProfile.php">Profile</a></p>
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a
                                     href="hirepersondashboard.html">Dashboard</a>
                             </p>
@@ -77,7 +77,7 @@
                                 session_start();
                                 unset($_SESSION["id"]);
                                 unset($_SESSION["name"]);
-                                header("Location:../view/login.php");
+                                // header("Location:../view/login.php");
                             ?>
                         </div>
                     </div>

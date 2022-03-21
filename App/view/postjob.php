@@ -69,7 +69,7 @@
 
                         <div class="inputbox">
                             <span>Price</span>
-                            <input type="number" name="price" min="5" step="any" />
+                            <input type="number" name="price" min="1000" step="any">
                         </div>
 
                         <div class="inputbox">
