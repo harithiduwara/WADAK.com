@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!Doctype HTML>
 <html>
 
@@ -26,7 +30,7 @@
             <a href="#" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
             <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i>
                 &nbsp;&nbsp;Q & A Session</a>
-            <a href="/WADAK.com/App/view/messages.html" class="icon-a"><i class="fa fa-comment icons"></i>
+            <a href="/WADAK.com/App/view/chat.php" class="icon-a"><i class="fa fa-comment icons"></i>
                 &nbsp;&nbsp;Chat</a>
             <a href="/WADAK.com/App/view/news.php" class="icon-a"><i class="fa fa-newspaper-o icons"></i>
                 &nbsp;&nbsp;News</a>
