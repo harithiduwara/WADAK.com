@@ -1,5 +1,19 @@
 <?php
     session_start();
+
+    $jobid = $_GET["jobid"];
+
+
+
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+
+    if(!$con){
+        die("Connection failed" .mysqli_connect_error());
+        }
+
+    $query = "select * from postjob where jobid=$jobid";
+
+    $result = mysqli_query($con, $query);
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +31,13 @@
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/postjob.css">
     </head>
 
-    <body>
 
+
+    <body>
+        <?php
+            $row = mysqli_fetch_assoc($result);
+            // echo $row["jobid"];
+        ?>
         <nav>
             <label class="logo">WADAK</label>
             <ul style="margin-top: 1rem">
@@ -43,9 +62,19 @@
             <div class="inputcontainer" id="loginbox"
                 style="margin-left: 15vw; margin-top: 5%; height:90vmin; display:grid; grid-template-columns: 1fr 1fr; grid-gap:1rem;">
 
-                <diV>
-                    <img src="/WADAK.com/App/uploads/noimage.jpg" alt="Job post Image" ;
-                        style="width:100% ; height:65vmin">
+                <diV><img src="
+                    <?php
+                    if($row["filename"]==null){
+                        echo "/WADAK.com/App/uploads/noimage.jpg";
+                    }
+                    else{
+                       echo $row["filename"];
+                    }
+                    ?>
+                
+                
+                " alt="service" style="width:100% ; height:65vmin">
+
                 </diV>
                 <diV>
 
@@ -54,35 +83,23 @@
                                 border-radius: 3px;
                                 font-weight: bold;
                                 text-transform: uppercase;
-                                text-align: center;">tag creates a holding space for the referenced image.</h1>
+                                text-align: center;"> <?php echo $row["title"] ?></h1>
 
-                    <p>
-                        The HTML <img> tag is used to embed
-                        an image in a web page.
-
-                        Images are not technically inserted into a web page; images are linked to web pages. The
-                        <img>
-                        tag creates a holding space for the referenced image.
-
-                        The <img> tag is empty, it contains attributes only, and does not have a closing tag.
-
-                        The <img> tag has two required attributes:
-
-                        src - Specifies the path to the image
-                        alt - Specifies an alternate text for the image
+                    <p style="font-size:2rem">
+                        <?php echo $row["description"] ?>
                     </p>
 
-                    <h1 style="font-size:50px">5000LKR</h1>
-                    <p>1000 Views</p>
+                    <h1 style="font-size:50px">
+                        <?php echo $row["budget"] ?> LKR
+                    </h1>
+                    <p><?php echo $row["views"] ?> Views</p>
+
                     <span>
-                        <button>
-                            Hello
+                        <button style="padding:1rem">
+                            Apply
                         </button>
-                        <button>
-                            Hello
-                        </button>
-                        <button>
-                            Hello
+                        <button style="padding:1rem">
+                            Chat
                         </button>
                     </span>
                 </diV>

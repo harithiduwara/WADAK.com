@@ -128,7 +128,7 @@ if(!$con){
                         </h9>
                     </a>
 
-                    <a href="/WADAK.com/App/view/jobpostview.php">
+                    <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
                         <h3><?= $row["title"] ?>
                         </h3>
                     </a>
