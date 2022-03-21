@@ -1,5 +1,14 @@
 <?php
     session_start();
+
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+    if(!$con){
+        die("Connection failed" . mysqli_connect_error());
+    }
+    
+    $result = "SELECT News_ID,date,description FROM news";
+
+    $data = mysqli_query($con, $result);
 ?>
 
 <!Doctype HTML>
@@ -34,7 +43,7 @@
                 &nbsp;&nbsp;Chat</a>
             <a href="/WADAK.com/App/view/news.php" class="icon-a"><i class="fa fa-newspaper-o icons"></i>
                 &nbsp;&nbsp;News</a>
-            <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
+
         </div>
 
         <div id="main">
@@ -54,7 +63,7 @@
                     </div>
 
                     <div class="profile">
-                        <!--<img src="images/user.png" class="pro-img" /> -->
+
                         <p>Co Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
                             <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="CoAdmin-profile.html">Profile</a></p>
@@ -81,8 +90,8 @@
                 <!--news table delete and view-->
                 <?php
                 // include_once 'newsconfig.php';
-                include_once '/WADAK.com/App/controller/newsconfig.php';
-                $result = mysqli_query($conn,"SELECT News_ID,date,description FROM news");
+                // include_once '/WADAK.com/App/controller/newsconfig.php';
+                // $result = mysqli_query($conn,"SELECT News_ID,date,description FROM news");
                 ?>
 
                 <table style="width:835px; margin-left:10px">
@@ -94,7 +103,7 @@
                     </tr>
                     <?php
 	             $i=0;
-	             while($row = mysqli_fetch_array($result)) {
+	             while($row = mysqli_fetch_array($data)) {
 	          ?>
                     <tr class="<?php if(isset($classname)) echo $classname;?>">
                         <td><?php echo $row["News_ID"]; ?></td>
