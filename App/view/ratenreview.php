@@ -16,12 +16,12 @@
         <div class=nav>
             <nav class="navclass">
                 <ul id="navbar">
-                    <li id="navbargreen"><a href="Add achievement post - Service provider.html">Post Jobs</a></li>
+                    <li id="navbargreen"><a href="/WADAK.com/App/view/Add achievement post - Service provider.php">Post Jobs</a></li>
                     <li class="greenbar"><a href="#">Jobs</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="/WADAK.com/App/view/serices.php">Services</a></li>
                     <li><i class="far fa-bell"></i></li>
-                    <li><a href="#">Leaderboard</a></li>
-                    <li><a href="chat.html">Messages</a></li>
+                    <li><a href="/WADAK.com/App/view/leaderboard.php">Leaderboard</a></li>
+                    <li><a href="/WADAK.com/App/view/chat.php">Messages</a></li>
                     <li><a href="/WADAK.com/implementation/controller/logout.php">Logout</a></li>
                 </ul>
             </nav>

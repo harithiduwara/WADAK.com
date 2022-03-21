@@ -15,14 +15,14 @@ session_start();
 <div id="mySidenav" class="sidenav">
     <p class="logo">WADAK <span class="menu">&#9776;</span></p>
     <p class="logo1"> <span class="menu1">&#9776;</span></p>
-    <a href="#"class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
-    <a href="AdminPanel.html" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
-    <a href="achievemts.php" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Achievements</a>
+    <a href="/WADAK.com/App/view/home.php"class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
+    <a href="/WADAK.com/App/view/AdminPanel.php" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+    <a href="/WADAK.com/App/view/achievemts.php" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Achievements</a>
     <a href="/WADAK.com/Implementation/view/news2.php" class="icon-a"><i class="far fa-envelope-open"></i> &nbsp;&nbsp;News</a>
-            <a href="/WADAK.com/Implementation/view/messages.html" class="icon-a"><i
+            <a href="/WADAK.com/Implementation/view/messages.php" class="icon-a"><i
                 class="fa fa-tasks icons"></i>
             &nbsp;&nbsp;Messages</a>
-            <a href="/WADAK.com/Implementation/view/leaderboard.html" class="icon-a"><i
+            <a href="/WADAK.com/Implementation/view/leaderboard.php" class="icon-a"><i
                 class="fa fa-dashboard icons"></i>
             &nbsp;&nbsp;Leaderboard</a>
 </div>

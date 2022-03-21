@@ -11,12 +11,12 @@
         <nav>
             <label class="logo">WADAK</label>
             <ul>
-                <li><a href="home.php" class="active">Home</a></li>
+                <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
                 <li><a href="#">Jobs</a> </li>
-                <li><a href="Add achievement post - Service provider.html">POST JOB</a> </li>
+                <li><a href="/WADAK.com/App/view/Add achievement post - Service provider.php">POST JOB</a> </li>
                 <li><a href="#">Services</a> </li>
-                <li><a href="leaderboard.html">Leaderboard</a></li>
-                <li><a href="chat.html">MESSAGES</a> </li>
+                <li><a href="/WADAK.com/App/view/leaderboard.php">Leaderboard</a></li>
+                <li><a href="/WADAK.com/App/view/chat.php">MESSAGES</a> </li>
                 <li><a href="/WADAK.com/implementation/controller/logout.php">Logout</a> </li>
                 <div class="animation "></div>
             </ul>

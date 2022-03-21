@@ -18,20 +18,20 @@
             <ul class="navbar">
                 <?php
                 if(isset($_SESSION["user"]["userrole"])){?>
-                <li class="navbargreen"><a href="/WADAK.com/Implementation/view/postjob.html">Post Jobs</a></li>
+                <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Post Jobs</a></li>
                 <?php
                                     }
                                     ?>
-                <li class="greenbar"><a href="jobs.php">Jobs</a></li>
-                <li><a href="/WADAK.com/Implementation/view/services.php">Services</a></li>
+                <li class="greenbar"><a href="/WADAK.com/App/view/jobs.php">Jobs</a></li>
+                <li><a href="/WADAK.com/App/view/services.php">Services</a></li>
 
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
 
                 <li><a href="./login.php">Login</a></li>
                 <?php }else {?>
                 <li><i class="far fa-bell"></i></li>
-                <li><a href="/WADAK.com/Implementation/view/messages.html">Messages</a></li>
-                <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.html"><i class="fas fa-user"></i></a>
+                <li><a href="/WADAK.com/App/view/messages.php">Messages</a></li>
+                <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a>
                 </li>
                 <?php } ?>
 

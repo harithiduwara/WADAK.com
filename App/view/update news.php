@@ -11,14 +11,14 @@
     <div id="mySidenav" class="sidenav">
         <p class="logo">WADAK <span class="menu">&#9776;</span></p>
         <p class="logo1"> <span class="menu1">&#9776;</span></p>
-        <a href="home.php"class="icon-a"> &nbsp;&nbsp;Home</a>
-        <a href="Co-admin dashboard.html" class="icon-a"></i> &nbsp;&nbsp;Dashboard</a>
-        <a href="ViewServiceProvider-coadmin.html"class="icon-a"> &nbsp;&nbsp;Service Provider</a>
-        <a href="#"class="icon-a"> &nbsp;&nbsp;Post</a>
+        <a href="/WADAK.com/App/view/home.php"class="icon-a"> &nbsp;&nbsp;Home</a>
+        <a href="/WADAK.com/App/view/Co-admin dashboard.php" class="icon-a"></i> &nbsp;&nbsp;Dashboard</a>
+        <a href="/WADAK.com/App/view/ViewServiceProvider-coadmin.php"class="icon-a"> &nbsp;&nbsp;Service Provider</a>
+        <a href="/WADAK.com/App/view/jobpost.php"class="icon-a"> &nbsp;&nbsp;Post</a>
         <a href="#"class="icon-a"> &nbsp;&nbsp;Advertisements</a>
-        <a href="Q&A.html"class="icon-a"> &nbsp;&nbsp;Q&A Session</a>
+        <a href="/WADAK.com/App/view/Q&A.php"class="icon-a"> &nbsp;&nbsp;Q&A Session</a>
         <a href="#"class="icon-a"> &nbsp;&nbsp;Chat</a>
-        <a href="news.php"class="icon-a"> &nbsp;&nbsp;News</a>
+        <a href="/WADAK.com/App/view/news.php"class="icon-a"> &nbsp;&nbsp;News</a>
         <a href="#"class="icon-a">&nbsp;&nbsp;Notification</a>
     </div>
     
