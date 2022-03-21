@@ -6,20 +6,17 @@
         <title>Registration</title>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/registration.css">
     </head>
-    
+
     <body>
 
         <nav>
             <label class="logo">WADAK</label>
             <ul>
-                <li><a href="/WADAK.com/Implementation/view/home.php" class="active">Home</a></li>
-                <!-- <li><a href="/WADAK.com/Implementation/view/postjob.html">POST JOB</a> </li> -->
-                <li><a href="#">Jobs</a> </li>
-
-                <li><a href="#">Services</a> </li>
-                <li><a href="/WADAK.com/Implementation/view/leaderboard.html">Leaderboard</a> </li>
-                <!-- <li><a href="chat.html">MESSAGES</a> </li> -->
-                <li><a href="/WADAK.com/Implementation/view/login.php">Login</a> </li>
+                <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
+                <li><a href="/WADAK.com/App/view/job post.php">Jobs</a> </li>
+                <li><a href="/WADAK.com/App/view/services.php">Services</a> </li>
+                <li><a href="/WADAK.com/App/view/leaderboard.php">Leaderboard</a> </li>
+                <li><a href="/WADAK.com/App/view/login.php">Login</a> </li>
                 <div class="animation "></div>
             </ul>
         </nav>
@@ -37,7 +34,7 @@
                     <div class="input-box">
                         <span class="details">Name</span>
                         <input type="text" name="name" placeholder="Enter your first name" required>
-                        
+
                     </div>
 
                     <div class="input-box">

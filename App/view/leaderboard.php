@@ -14,13 +14,10 @@
         <nav>
             <label class="logo">WADAK</label>
             <ul>
-                <!-- <li><a href="#" class="active">Home</a></li>
-        <li><a href="Add achievement post - Service provider.html">Post Job</a> </li> -->
                 <li><a href="jobs.php">Jobs</a> </li>
                 <li><a href="services.php">Services</a> </li>
-                <!-- <li><i class="far fa-bell"></i></li>
-        <li><a href="messages.html">Messages</a> </li> -->
-                <li><a href="/WADAK.com/Implementation/controller/logout.php">Logout</a> </li>
+
+                <li><a href="/WADAK.com/App/controller/logout.php">Logout</a> </li>
                 <div class="animation "></div>
             </ul>
         </nav>

@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <style>
-            a {
-                text-decoration: none;
-            }
+        a {
+            text-decoration: none;
+        }
 
         </style>
         <title>Add CO-Admin</title>
@@ -17,11 +17,11 @@
         <nav>
             <label class="logo">WADAK</label>
             <ul>
-                <li><a href="home.php" class="active">Home</a></li>
-                <li><a href="#">Jobs</a> </li>
-                <li><a href="#">POST JOB</a> </li>
-                <li><a href="#">Services</a> </li>
-                <li><a href="#">MESSAGES</a> </li>
+                <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
+                <li><a href="/WADAK.com/App/view/jobpost.php">Jobs</a> </li>
+                <li><a href="/WADAK.com/App/view/postjob.php">POST JOB</a> </li>
+                <li><a href="/WADAK.com/App/view/services.php">Services</a> </li>
+                <li><a href="/WADAK.com/App/view/chat.php">MESSAGES</a> </li>
                 <li><a href="/WADAK.com/implementation/controller/logout.php">Logout</a> </li>
                 <div class="animation "></div>
             </ul>

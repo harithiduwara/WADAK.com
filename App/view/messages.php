@@ -23,14 +23,14 @@
         <nav>
             <label class="logo">WADAK</label>
             <ul style="margin-top: 1rem">
-                <li><a href="/WADAK.com/Implementation/view/home.php" class="active">Home</a></li>
-                <li><a href="/WADAK.com/Implementation/view/postjob.html">Post Job</a> </li>
-                <li><a href="jobs.php">Jobs</a> </li>
-                <li><a href="services.php">Services</a> </li>
+                <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
+                <li><a href="/WADAK.com/App/view/postjob.html">Post Job</a> </li>
+                <li><a href="/WADAK.com/App/view/jobs.php">Jobs</a> </li>
+                <li><a href="/WADAK.com/App/view/services.php">Services</a> </li>
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
                 <li><a href="./login.php"></a></li>
                 <?php }else {?>
-                <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.html"><i class="fas fa-user"></i></a>
+                <li><a href="/WADAK.com/App/view/hirepersondashboard.html"><i class="fas fa-user"></i></a>
                 </li>
                 <?php } ?>
                 <div class="animation "></div>

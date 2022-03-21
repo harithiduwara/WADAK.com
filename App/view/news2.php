@@ -18,14 +18,14 @@
         <nav>
             <label class="logo">WADAK</label>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="Add achievement post - Service provider.html">Post Job</a> </li>
-                <li><a href="#">Jobs</a> </li>
-                <li><a href="catagorymain.html">Services</a> </li>
-                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
+                <li><a href="/WADAK.com/App/view/postjob.php">Post Job</a> </li>
+                <li><a href="/WADAK.com/App/view/jobs.php">Jobs</a> </li>
+                <li><a href="/WADAK.com/App/view/services.php">Services</a> </li>
+                <li><a href="/WADAK.com/App/view/leaderboard.php">Leaderboard</a></li>
                 <li><i class="far fa-bell"></i></li>
-                <li><a href="#">Messages</a> </li>
-                <li><a href="/WADAK.com/Implementation/controller/logout.php">Logout</a> </li>
+                <li><a href="/WADAK.com/App/view/chat.php">Messages</a> </li>
+                <li><a href="/WADAK.com/App/controller/logout.php">Logout</a> </li>
                 <div class="animation "></div>
             </ul>
         </nav>
