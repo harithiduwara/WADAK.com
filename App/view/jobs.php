@@ -169,3 +169,12 @@ if(!$con){
 
 
 </html>
+
+
+
+
+
+<div class="chat1">
+    <p style="font-size:3rem; text-align:left; padding:0.5rem">Hello</p>
+    <br>
+</div>

@@ -1,5 +1,18 @@
 <?php
     session_start();
+
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+    
+    if(!$con){
+        die("Connection failed" . mysqli_connect_error());
+    }
+
+    $query1 = "SELECT * FROM `chatInterface` WHERE ownerId= 3 ORDER BY lastUpdate ASC";
+    
+    $data = mysqli_query($con, $query1);
+
+    
+
 ?>
 
 
@@ -14,7 +27,7 @@
         }
 
         </style>
-        <title>Apply Service</title>
+        <title>Messages</title>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/message.css">
     </head>
 
@@ -36,13 +49,36 @@
                 <div class="animation "></div>
             </ul>
         </nav>
-        <div class="postcontainer">
+        <div class="postcontainer" style="height:120vh">
             <div class="chat">
                 <div class="leftbar">
-                    <h1>USER</h1>
+                    <input type="text" name="search"
+                        style="width: -webkit-fill-available; height:3rem; text-align:center"
+                        placeholder="Search User..">
+                    <?php
+                    if(mysqli_num_rows($data)>0){
+                        while($row=mysqli_fetch_assoc($data)){
+                            $query2 ="SELECT name FROM register WHERE uid=".$row["chatPerson"]."";
+
+                            $result = mysqli_query($con, $query2);
+                            
+                            $row2 = mysqli_fetch_assoc($result);
+                            echo '<div class="chat1">
+    <p style="font-size:3rem; text-align:left; padding:0.5rem 0.5rem 0rem 0.5rem">'.$row2["name"].'</p>
+    <br>
+</div>';
+                        }
+                    }
+                    ?>
                 </div>
+
+
+
+
+
+
                 <div class="rightbar">
-                    <h1>Hello</h1>
+                    <h1 style="font-size:3rem">Hello</h1>
                 </div>
             </div>
 

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -16,8 +17,8 @@ body {
 
 .postcontainer {
     position: relative;
-    width: 1520px;
-    height: 800px;
+    width: 20%;
+    height: 120vh;
     background: #EEEEEE;
     box-sizing: border-box;
 }
@@ -96,59 +97,6 @@ nav ul li a:hover {
     text-align: center;
 }
 
-/*
-
-.inputcontainer .form .inputbox {
-    position: relative;
-    width: 20vw;
-    margin-bottom: 30px;
-    margin-top: 30px;
-}
-
-.inputcontainer .form .inputbox #des {
-    height: 10rem;
-}
-
-.inputcontainer .form .inputbox input {
-    height: 3rem;
-    width: 100%;
-    outline: none;
-    text-align: center;
-    background-color: #C2EFBE;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 300;
-    font-family: sans-serif;
-}
-
-/*.remember{
-    display: inline-block;
-    color: green;
-}*/
-
-/* .inputcontainer .form .inputbox input[type="submit"] {
-    background: red;
-    width: 40%;
-    color: white;
-    font-weight: bold;
-    font-family: sans-serif;
-}
-
-.logincontainer {
-    width: 100vw;
-}
-
-.inputcontainer {
-    margin-top: 30%;
-}
-
-#loginbox {
-    margin-left: 34vw;
-    margin-top: 10%;
-}
- */
-
 .chat {
     width: 60vw;
     height: 70vh;
@@ -169,4 +117,8 @@ nav ul li a:hover {
 
 .rightbar {
     border: 1px solid green;
+}
+
+#searchbar {
+    width: -webkit-fill-available;
 }
