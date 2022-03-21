@@ -12,14 +12,14 @@
     <div id="mySidenav" class="sidenav">
         <p class="logo">WADAK <span class="menu">&#9776;</span></p>
         <p class="logo1"> <span class="menu1">&#9776;</span></p>
-        <a href="#"class="icon-a"> &nbsp;&nbsp;Home</a>
+        <a href="/WADAK.com/App/view/home.php"class="icon-a"> &nbsp;&nbsp;Home</a>
         <a href="#" class="icon-a"></i> &nbsp;&nbsp;Dashboard</a>
         <a href="#"class="icon-a"> &nbsp;&nbsp;Service Provider</a>
-        <a href="#"class="icon-a"> &nbsp;&nbsp;Post</a>
-        <a href="#"class="icon-a"> &nbsp;&nbsp;Advertisements</a>
-        <a href="#"class="icon-a"> &nbsp;&nbsp;Q&A Session</a>
-        <a href="#"class="icon-a"> &nbsp;&nbsp;Chat</a>
-        <a href="#"class="icon-a"> &nbsp;&nbsp;News</a>
+        <a href="/WADAK.com/App/view/jobpost.php"class="icon-a"> &nbsp;&nbsp;Post</a>
+        <a href="/WADAK.com/App/view/ads.php"class="icon-a"> &nbsp;&nbsp;Advertisements</a>
+        <a href="/WADAK.com/App/view/"class="icon-a"> &nbsp;&nbsp;Q&A Session</a>
+        <a href="/WADAK.com/App/view/chat.php"class="icon-a"> &nbsp;&nbsp;Chat</a>
+        <a href="/WADAK.com/App/view/news2.php"class="icon-a"> &nbsp;&nbsp;News</a>
         <a href="#"class="icon-a">&nbsp;&nbsp;Notification</a>
     </div>
     
@@ -27,13 +27,13 @@
     <nav>
         <label class="logo">WADAK</label>
         <ul>
-            <li><a href="Add achievement post - Service provider.html">Post Job</a> </li>
-            <li><a href="#">Jobs</a> </li>
-            <li><a href="catagorymain.html">Services</a> </li>
-            <li><a href="leaderboard.html">Leaderboard</a></li>
+            <li><a href="/WADAK.com/App/view/Add achievement post - Service provider.php">Post Job</a> </li>
+            <li><a href="/WADAK.com/App/view/jobpost.php">Jobs</a> </li>
+            <li><a href="/WADAK.com/App/view/catagorymain.php">Services</a> </li>
+            <li><a href="/WADAK.com/App/view/leaderboard.php">Leaderboard</a></li>
             <li><i class="far fa-bell"></i></li>
-            <li><a href="#">Messages</a> </li>
-            <li><a href="/WADAK.com/implementation/controller/logout.php">Logout</a> </li>
+            <li><a href="/WADAK.com/App/view/chat.php">Messages</a> </li>
+            <li><a href="/WADAK.com/App/controller/logout.php">Logout</a> </li>
             <div class="animation "></div>
         </ul>
     </nav>

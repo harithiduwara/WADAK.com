@@ -27,7 +27,7 @@ session_start();
         <!----------------------------------Navigation-------------------------------------->
         <header>
 
-            <a href="home.html"><img class="wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif" alt="wadak gif"
+            <a href="/WADAK.com/App/view/home.html"><img class="wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif" alt="wadak gif"
                     style="float:left ;width:5rem; height:5%;"></a>
             <nav>
                 <ul class="navbar">

@@ -30,7 +30,7 @@
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
                 <li><a href="./login.php"></a></li>
                 <?php }else {?>
-                <li><a href="/WADAK.com/App/view/hirepersondashboard.html"><i class="fas fa-user"></i></a>
+                <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a>
                 </li>
                 <?php } ?>
                 <div class="animation "></div>

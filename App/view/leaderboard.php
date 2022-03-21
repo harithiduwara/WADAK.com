@@ -14,8 +14,8 @@
         <nav>
             <label class="logo">WADAK</label>
             <ul>
-                <li><a href="jobs.php">Jobs</a> </li>
-                <li><a href="services.php">Services</a> </li>
+                <li><a href="/WADAK.com/App/view/jobs.php">Jobs</a> </li>
+                <li><a href="/WADAK.com/App/view/services.php">Services</a> </li>
 
                 <li><a href="/WADAK.com/App/controller/logout.php">Logout</a> </li>
                 <div class="animation "></div>

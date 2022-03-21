@@ -36,12 +36,12 @@
                     <li class="greenbar"><a href="#">Jobs</a></li>
                     <li><a href="#">Services</a></li>
                     <li><i class="far fa-bell"></i></li>
-                    <li><a href="#">Messages</a></li>
+                    <li><a href="/WADAK.com/App/view/chat.php">Messages</a></li>
 
                     <?php if(!isset($_SESSION["user"]["userrole"])){?>
                     <li><a href="./login.php">Login</a></li>
                     <?php }else {?>
-                    <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.html"><i
+                    <li><a href="/WADAK.com/Implementation/view/hirepersondashboard.php"><i
                                 class="fas fa-user"></i></a></li>
                     <?php } ?>
 

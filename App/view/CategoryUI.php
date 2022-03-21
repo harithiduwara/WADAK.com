@@ -20,20 +20,20 @@
         <div id="mySidenav" class="sidenav">
             <p class="logo">WADAK <span class="menu">&#9776;</span></p>
             <p class="logo1"> <span class="menu1">&#9776;</span></p>
-            <a href="home.php" class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
-            <a href="Admin-dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
+            <a href="/WADAK.com/App/view/Admin-dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
-            <a href="CategoryUI.php" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
+            <a href="/WADAK.com/App/view/CategoryUI.php" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
             <a href="/WADAK.com/App/view/coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Co-Admin</a>
             <a href="/WADAK.com/Implementation/view/Add Coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Add Co-Admin</a>
-            <a href="ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service
+            <a href="/WADAK.com/App/view/ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service
                 Provider</a>
-            <a href="ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
-            <a href="View Report.php" class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
-            <a href="PaymentUI.php" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
-            <a href="/WADAK.com/Implementation/view/leaderboard.php" class="icon-a"><i
+            <a href="/WADAK.com/App/view/ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
+            <a href="/WADAK.com/App/view/View Report.php" class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
+            <a href="/WADAK.com/App/view/PaymentUI.php" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
+            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i
                     class="fa fa-object-group icons"></i> &nbsp;&nbsp;Leaderboard</a>
             <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
         </div>

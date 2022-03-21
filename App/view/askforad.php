@@ -24,23 +24,23 @@
             <p class="logo">WADAK <span class="menu">&#9776;</span></p>
             <p class="logo1"> <span class="menu1">&#9776;</span></p>
 
-            <a href="/WADAK.com/Implementation/view/home.php" class="icon-a"><i class="fa fa-home icons"></i>
+            <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i>
                 &nbsp;&nbsp;Home</a>
-            <a href="/WADAK.com/Implementation/view/hirepersondashboard.html" class="icon-a"><i
+            <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
             <?php
             if(isset($_SESSION["user"]["userrole"])){
-            ?> <a href="/WADAK.com/Implementation/view/messages.html" class="icon-a"><i class="fa fa-tasks icons"></i>
+            ?> <a href="/WADAK.com/App/view/messages.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Messages</a>
             <?php } ?>
 
-            <a href="/WADAK.com/Implementation/view/messages.html" class="icon-a"><i class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/App/view/messages.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Messages</a>
-            <a href="/WADAK.com/Implementation/view/leaderboard.html" class="icon-a"><i
+            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Leaderboard</a>
-            <a href="/WADAK.com/Implementation/view/news2.php" class="icon-a"><i class="far fa-envelope-open"></i>
+            <a href="/WADAK.com/App/view/news2.php" class="icon-a"><i class="far fa-envelope-open"></i>
                 &nbsp;&nbsp;News</a>
 
 
