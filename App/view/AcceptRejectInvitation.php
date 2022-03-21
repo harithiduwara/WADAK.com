@@ -20,18 +20,18 @@
         <div id="mySidenav" class="sidenav">
             <p class="logo">WADAK <span class="menu">&#9776;</span></p>
             <p class="logo1"> <span class="menu1">&#9776;</span></p>
-            <a href="/WADAK.com/Implementation/view/home.php" class="icon-a"><i class="fa fa-home icons"></i>
+            <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i>
                 &nbsp;&nbsp;Home</a>
-            <a href="/WADAK.com/Implementation/view/hirepersondashboard.html" class="icon-a"><i
+            <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
-            <a href="/WADAK.com/Implementation/view/previousordershireperson.html" class="icon-a"><i
+            <a href="/WADAK.com/App/view/previousordershireperson.php" class="icon-a"><i
                     class="fa fa-tasks icons"></i> &nbsp;&nbsp;Previous Orders</a>
-            <a href="/WADAK.com/Implementation/view/appliedservices.html" class="icon-a"><i
+            <a href="/WADAK.com/App/view/appliedservices.php" class="icon-a"><i
                     class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Applied Services</a>
-            <a href="news2.php" class="icon-a"><i class="far fa-envelope-open"></i> &nbsp;&nbsp;News</a>
-            <a href="accept reject invitation.html" class="icon-a"><i class="fa fa-envelope icons"></i>
+            <a href="/WADAK.com/App/view/news2.php" class="icon-a"><i class="far fa-envelope-open"></i> &nbsp;&nbsp;News</a>
+            <a href="/WADAK.com/App/view/accept reject invitation.php" class="icon-a"><i class="fa fa-envelope icons"></i>
                 &nbsp;&nbsp;Invitations</a>
 
         </div>
@@ -43,14 +43,14 @@
         <nav>
             <label class="logo">WADAK</label>
             <ul>
-                <li><a href="home.php" class="active">Home</a></li>
-                <li><a href="Add achievement post - Service provider.html">Post Job</a> </li>
-                <li><a href="#">Jobs</a> </li>
-                <li><a href="catagorymain.html">Services</a> </li>
-                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
+                <li><a href="/WADAK.com/App/view/Add achievement post - Service provider.php">Post Job</a> </li>
+                <li><a href="/WADAK.com/App/view/jobs.php">Jobs</a> </li>
+                <li><a href="/WADAK.com/App/view/catagorymain.php">Services</a> </li>
+                <li><a href="/WADAK.com/App/view/leaderboard.php">Leaderboard</a></li>
                 <li><i class="far fa-bell"></i></li>
-                <li><a href="#">Messages</a> </li>
-                <li><a href="/WADAK.com/implementation/controller/logout.php">Logout</a> </li>
+                <li><a href="/WADAK.com/App/view/messages.php">Messages</a> </li>
+                <li><a href="/WADAK.com/App/controller/logout.php">Logout</a> </li>
 
                 <!-- <li><a href="#">Login</a> </li> 
             No need a login right!-->

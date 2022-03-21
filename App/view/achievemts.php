@@ -20,8 +20,8 @@
         <div id="mySidenav" class="sidenav">
             <p class="logo">WADAK <span class="menu">&#9776;</span></p>
             <p class="logo1"> <span class="menu1">&#9776;</span></p>
-            <a href="#" class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
-            <a href="Admin-dashboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
+            <a href="/WADAK.com/App/view/Admin-dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
 
         </div>
@@ -48,7 +48,7 @@
                     <div class="profile">
                         <p>Service Provider Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="profile.php">Profile</a></p>
+                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/profile.php">Profile</a></p>
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Dashboard</a> </p>
                             <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;Log Out</p>
                         </div>

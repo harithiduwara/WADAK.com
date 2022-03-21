@@ -10,7 +10,7 @@
 
         </style>
         <title>Add CO-Admin</title>
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/ADD co-admin.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/ADD co-admin.css">
     </head>
 
     <body>
@@ -22,7 +22,7 @@
                 <li><a href="/WADAK.com/App/view/postjob.php">POST JOB</a> </li>
                 <li><a href="/WADAK.com/App/view/services.php">Services</a> </li>
                 <li><a href="/WADAK.com/App/view/chat.php">MESSAGES</a> </li>
-                <li><a href="/WADAK.com/implementation/controller/logout.php">Logout</a> </li>
+                <li><a href="/WADAK.com/App/controller/logout.php">Logout</a> </li>
                 <div class="animation "></div>
             </ul>
         </nav>
