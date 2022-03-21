@@ -8,12 +8,12 @@
     <head>
         <title>Job post </title>
         <style>
-            a {
-                text-decoration: none;
-            }
+        a {
+            text-decoration: none;
+        }
 
         </style>
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/job post.css" type="text/css" />
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/job post.css" type="text/css" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -111,44 +111,42 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
+        $(".menu").click(function() {
+            $("#mySidenav").css('width', '70px');
+            $("#main").css('margin-left', '70px');
+            $(".logo").css('display', 'none');
+            $(".logo1").css('display', 'block');
+            $(".logo span").css('visibility', 'visible');
+            $(".logo span").css('margin-left', '-10px');
+            $(".icon-a").css('visibility', 'hidden');
+            $(".icon-a").css('height', '25px');
+            $(".icons").css('visibility', 'visible');
+            $(".icons").css('margin-left', '-8px');
+            $(".menu1").css('display', 'block');
+            $(".menu").css('display', 'none');
+        });
 
-            $(".menu").click(function () {
-                $("#mySidenav").css('width', '70px');
-                $("#main").css('margin-left', '70px');
-                $(".logo").css('display', 'none');
-                $(".logo1").css('display', 'block');
-                $(".logo span").css('visibility', 'visible');
-                $(".logo span").css('margin-left', '-10px');
-                $(".icon-a").css('visibility', 'hidden');
-                $(".icon-a").css('height', '25px');
-                $(".icons").css('visibility', 'visible');
-                $(".icons").css('margin-left', '-8px');
-                $(".menu1").css('display', 'block');
-                $(".menu").css('display', 'none');
-            });
-
-            $(".menu1").click(function () {
-                $("#mySidenav").css('width', '300px');
-                $("#main").css('margin-left', '300px');
-                $(".logo").css('visibility', 'visible');
-                $(".logo").css('display', 'block');
-                $(".icon-a").css('visibility', 'visible');
-                $(".icons").css('visibility', 'visible');
-                $(".menu").css('display', 'block');
-                $(".menu1").css('display', 'none');
-            });
-
+        $(".menu1").click(function() {
+            $("#mySidenav").css('width', '300px');
+            $("#main").css('margin-left', '300px');
+            $(".logo").css('visibility', 'visible');
+            $(".logo").css('display', 'block');
+            $(".icon-a").css('visibility', 'visible');
+            $(".icons").css('visibility', 'visible');
+            $(".menu").css('display', 'block');
+            $(".menu1").css('display', 'none');
+        });
         </script>
         <script>
-            $(document).ready(function () {
-                $(".profile p").click(function () {
-                    $(".profile-div").toggle();
+        $(document).ready(function() {
+            $(".profile p").click(function() {
+                $(".profile-div").toggle();
 
-                });
-                $(".noti-icon").click(function () {
-                    $(".notification-div").toggle();
-                });
             });
+            $(".noti-icon").click(function() {
+                $(".notification-div").toggle();
+            });
+        });
         </script>
     </body>
 

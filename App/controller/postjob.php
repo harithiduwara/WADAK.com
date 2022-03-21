@@ -14,6 +14,7 @@ mysqli_select_db($con, 'wadak');
 $data = mysqli_query($con, "select * from postjob");
 
 session_start();
+
 $jobid = $title = $description = $budget = $joblist = "";
 $jobidErr = $titleErr = $descriptionErr = $budgetErr = $joblistErr = "";
 
