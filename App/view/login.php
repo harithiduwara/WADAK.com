@@ -19,10 +19,8 @@
             <a href=" /WADAK.com/App/view/home.php"> <label class=" logo">WADAK</label></a>
             <ul style="margin-top: 1rem">
                 <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
-                <!-- <li><a href="#">Post Job</a> </li> -->
                 <li><a href="jobs.php">Jobs</a> </li>
                 <li><a href="services.php">Services</a> </li>
-                <!-- <li><a href="#">Messages</a> </li> -->
                 <li><a href="/WADAK.com/App/view/registration.php">Register</a> </li>
                 <div class="animation "></div>
             </ul>
@@ -44,7 +42,7 @@
                         </div>
                     </form>
 
-                    <p><a href="forgot%20password.html">Forgotten your Username or Password?</a></p>
+                    <p><a href="/WADAK.com/App/view/forgot password.php">Forgotten your Username or Password?</a></p>
                     <p><a href="./registration.php">Create an Account</a></p>
                 </div>
             </div>

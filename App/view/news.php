@@ -9,7 +9,7 @@
         }
 
         </style>
-        <link rel="stylesheet" href="/WADAK.com/App/assets/css/news.css" type="text/css"/>
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/news.css" type="text/css" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -24,9 +24,12 @@
             <a href="/WADAK.com/App/view/ServiceProviderUI-coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Service Providers</a>
             <a href="#" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
-            <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i> &nbsp;&nbsp;Q & A Session</a>
-            <a href="/WADAK.com/App/view/messages.html" class="icon-a"><i class="fa fa-comment icons"></i> &nbsp;&nbsp;Chat</a>
-            <a href="/WADAK.com/App/view/news.php" class="icon-a"><i class="fa fa-newspaper-o icons"></i> &nbsp;&nbsp;News</a>
+            <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i>
+                &nbsp;&nbsp;Q & A Session</a>
+            <a href="/WADAK.com/App/view/messages.html" class="icon-a"><i class="fa fa-comment icons"></i>
+                &nbsp;&nbsp;Chat</a>
+            <a href="/WADAK.com/App/view/news.php" class="icon-a"><i class="fa fa-newspaper-o icons"></i>
+                &nbsp;&nbsp;News</a>
             <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
         </div>
 
@@ -71,36 +74,38 @@
             <div class="wrapper">
                 <div class="title"><span>Recent site announcements</span></div>
 
-<!--news table delete and view-->
+                <!--news table delete and view-->
                 <?php
-                include_once 'newsconfig.php';
+                // include_once 'newsconfig.php';
+                include_once '/WADAK.com/App/controller/newsconfig.php';
                 $result = mysqli_query($conn,"SELECT News_ID,date,description FROM news");
                 ?>
 
-               <table style="width:835px; margin-left:10px">
-	               <tr>
-	                <td>News Id</td>
-	                <td>Date</td>
-	                <td>News</td>
-	                <td></td>
-	               </tr>
-	          <?php
+                <table style="width:835px; margin-left:10px">
+                    <tr>
+                        <td>News Id</td>
+                        <td>Date</td>
+                        <td>News</td>
+                        <td></td>
+                    </tr>
+                    <?php
 	             $i=0;
 	             while($row = mysqli_fetch_array($result)) {
 	          ?>
-	           <tr class="<?php if(isset($classname)) echo $classname;?>">
-	           <td><?php echo $row["News_ID"]; ?></td>
-	           <td><?php echo $row["date"]; ?></td>
-	           <td><?php echo $row["description"]; ?></td>
-	           <td><a href="/WADAK.com/App/model/deletenews.php?id=<?php echo $row["News_ID"]; ?>">Delete</a></td>
-	           </tr>
-	           <?php
+                    <tr class="<?php if(isset($classname)) echo $classname;?>">
+                        <td><?php echo $row["News_ID"]; ?></td>
+                        <td><?php echo $row["date"]; ?></td>
+                        <td><?php echo $row["description"]; ?></td>
+                        <td><a href="/WADAK.com/App/model/deletenews.php?id=<?php echo $row["News_ID"]; ?>">Delete</a>
+                        </td>
+                    </tr>
+                    <?php
 	           $i++;
 	           }
 	          ?>
-            </table>
+                </table>
 
-                <div id="buttons" style="text-align:center; margin-top:100px" >
+                <div id="buttons" style="text-align:center; margin-top:100px">
                     <a href="add news.php"><input type="button" class="button1" value="Add news" name="add"></a>
                     <a href="update news.php"><input type="button" class="button2" value="Update" name="update"></a>
                 </div>
