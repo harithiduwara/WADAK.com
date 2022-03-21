@@ -122,11 +122,17 @@ if(!$con){
                 
                 
                 " alt="service" style="width:100% ; height:200px">
-                    <h9>
-                        <?=$row["username"]?>
-                    </h9>
-                    <h3><?= $row["title"] ?>
-                    </h3><br>
+                    <a href="/WADAK.com/App/view/userprofile.php">
+                        <h9>
+                            <?=$row["username"]?>
+                        </h9>
+                    </a>
+
+                    <a href="/WADAK.com/App/view/jobpostview.php">
+                        <h3><?= $row["title"] ?>
+                        </h3>
+                    </a>
+                    <br>
                     <p><?=$row["description"]?></p><br>
 
                     <div>
