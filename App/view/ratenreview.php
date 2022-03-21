@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rate & Review</title>
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/ratenreview.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/ratenreview.css">
         <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
     </head>
 
@@ -16,7 +16,8 @@
         <div class=nav>
             <nav class="navclass">
                 <ul id="navbar">
-                    <li id="navbargreen"><a href="/WADAK.com/App/view/Add achievement post - Service provider.php">Post Jobs</a></li>
+                    <li id="navbargreen"><a href="/WADAK.com/App/view/Add achievement post - Service provider.php">Post
+                            Jobs</a></li>
                     <li class="greenbar"><a href="#">Jobs</a></li>
                     <li><a href="/WADAK.com/App/view/serices.php">Services</a></li>
                     <li><i class="far fa-bell"></i></li>
