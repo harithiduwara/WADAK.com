@@ -8,10 +8,10 @@ if(isset($_POST['add'])){
     $sql = "INSERT INTO achievements(Name,Place,Date,Admin_ID) VALUES ('$name','$place','$date',$adminId)";
     mysqli_query($connection,$sql);
     //header("Implementation\view\addac.php?messege=1");
-    header('location:/WADAK.com/Implementation/view/achievemts.php');
+    header('location:/WADAK.com/App/view/achievemts.php');
     exit();
 }else{
-    header('location:/WADAK.com/Implementation/view/home.php');
+    header('location:/WADAK.com/App/view/home.php');
 }
 ?>
 
