@@ -14,23 +14,47 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     </head>
 
     <body>
 
-        <nav>
-            <label class="logo">WADAK</label>
-            <ul>
-                <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
-                <li><a href="/WADAK.com/App/view/Add achievement post - Service provider.php">Post Job</a> </li>
-                <li><a href="#">Jobs</a> </li>
-                <li><a href="#">Services</a> </li>
-                <li><a href="/WADAK.com/App/view/leaderboard.php">Leaderboard</a> </li>
-                <li><a href="/WADAK.com/App/view/chat.php">Messages</a> </li>
-                <li><a href="/WADAK.com/implementation/controller/logout.php">Logout</a> </li>
-                <div class="animation "></div>
-            </ul>
-        </nav>
+        <header>
+            <!-- <img class="wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif" alt="wadak gif"
+                style="float:left; width:5%; height:5%"> -->
+            <a href="/WADAK.com/App/view/home.php"> <label style=" color: green;
+                                                                    font-size: 2rem;
+                                                                    line-height: 80px;
+                                                                    padding: 0 100px;
+                                                                    font-weight: bold;">WADAK</label></a>
+            <nav>
+                <ul class="navbar">
+                    <?php
+                        if(isset($_SESSION["user"]["userrole"])){?>
+                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Post Jobs</a></li>
+                    <?php
+                    }
+                    ?>
+                    <li class="greenbar"><a href="jobs.php">Jobs</a></li>
+                    <li><a href="/WADAK.com/App/view/services.php">Services</a></li>
+
+                    <?php if(!isset($_SESSION["user"]["userrole"])){?>
+
+                    <li><a href="./login.php">Login</a></li>
+                    <?php }else {?>
+                    <li><i class="far fa-bell"></i></li>
+                    <li><a href="/WADAK.com/App/view/messages.php">Messages</a></li>
+                    <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a></li>
+                    <?php } ?>
+
+
+                </ul>
+
+                <!-- <ul>Hello
+                    <?php //echo $_SESSION["user"]["username"] ?>
+                </ul> -->
+            </nav>
+        </header>
 
 
 

@@ -39,8 +39,13 @@ if(!$con){
         <!----------------------------------Navigation-------------------------------------->
         <header>
 
-            <a href="home.php"><img class="wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif" alt="wadak gif"
-                    style="float:left ;width:5rem; height:5%;"></a>
+            <a href="/WADAK.com/App/view/home.php"> <label style=" color: green;
+                                                                    font-size: 2rem;
+                                                                    line-height: 80px;
+                                                                    padding: 0 100px;
+                                                                    font-weight: bold;">WADAK</label></a>
+            <!-- <a href="home.php"><img class="wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif" alt="wadak gif"
+                    style="float:left ;width:5rem; height:5%;"></a> -->
             <nav>
                 <ul class="navbar">
                     <?php
