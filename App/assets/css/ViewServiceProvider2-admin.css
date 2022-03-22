@@ -87,7 +87,7 @@ body{
 .profile p{
     color: #6c7293;
     font-weight: 500;
-    margin-left: 35px;
+    margin-left: 20px;
     margin-top: 10px;
     font-size: 13.5px;
     background-color: white;
@@ -218,12 +218,13 @@ body{
 }
 .box{
     width: 750px;
-    height: 750px;
+    height: 550px;
     background-color: #ffffff;
     margin-left: 10px;
     padding:10px;
     box-shadow: 2px 5px 10px #ddd;
     position: relative;
+    
 }
 .box p{
     color: #6c7293;
@@ -249,7 +250,7 @@ table{
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    font-size: 20px;
+    font-size: 15px;
 }
 td, th {
     text-align: left;
@@ -292,7 +293,7 @@ td input{
     letter-spacing: 0.5px;
 }
 .box1:hover{
-    background-color:#05ac05;
+    background-color:#e45d03;
 }
 .box2{
     width: 100px;
@@ -304,7 +305,7 @@ td input{
     padding:10px 15px;
     border-radius: 10px;
     box-shadow: 2px 5px 10px #ddd;
-    position: relative;
+    position: inline;
 }
 .box2 a{
     color:#d8d8d8;
@@ -315,3 +316,28 @@ td input{
 .box2:hover{
     background-color:#05ac05;
 }
+
+.search-form .text{
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 40%;
+    border-color: #05ac05;
+  }
+
+.search-form .submit {
+    background-color: #05ac05;
+    width: 10%;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    
+  }
+
+ .search-form .submit:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #37bf37;
+  }
