@@ -1,8 +1,20 @@
 <?php
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+    session_start();
+?>
+
+=======
+>>>>>>> Stashed changes
     include_once 'cataconfig.php';
     $query = "SELECT* from categories";
     $run = mysqli_query($conn,$query);
 ?>
+<<<<<<< Updated upstream
+=======
+>>>>>>> af9bd960dc3198dfc85baf73645bdf1764f4ce9b
+>>>>>>> Stashed changes
 <!Doctype HTML>
 <html>
 
@@ -103,15 +115,15 @@
 	             while($row = mysqli_fetch_array($result)) {
 	          ?>
 	           <tr class="<?php if(isset($classname)) echo $classname;?>">
-               <form action="" method="POST" role = "form">
+               <!--<form action="" method="POST" role = "form">-->
 	           <td><?php echo $row["C_ID"]; ?></td>
 	           <td><?php echo $row["Name"]; ?></td>
 	           <td><?php echo $row["value"]; ?></td>
+               <!--<td>
+                   <input type = "checkbox" name = "keyToDelete" value="<?php// echo $row['C_ID'];?>" required >
+               </td>-->
                <td>
-                   <input type = "checkbox" name = "keyToDelete" value="<?php echo $row['C_ID'];?>" required >
-               </td>
-               <td>
-                    <a href="WADAK.com/App/model/deleteCateg.php? id="<?php echo $row['C_ID'];?>"" id="btn">Delete</a></td>
+                    <a href="/WADAK.com/App/model/deleteCateg.php? id=<?php echo $row["C_ID"];?>">Delete</a></td>
                 
                </td>
 	        

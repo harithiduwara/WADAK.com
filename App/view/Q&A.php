@@ -39,6 +39,9 @@
             </ul>
         </nav>
 
+        <br><br>
+        <input type="text" placeholder="Enter your question here.." style="width:50%; margin-left:300px;" >
+        <input type="submit" value="Add Question" style="width:150px; height:30px;cursor: pointer;font-size:15px">
         <div class="box">
             <p class="heading">Q&A</p>
             <div class="qa">
@@ -68,11 +71,11 @@
         </div>
 
         <div class="buttons" id="buttonleft" style="text-align:center">
-            <a href="Add question.html">
+            <a href="/WADAK.com/App/view/Add question.php">
                 <button class="button button1">Add Question</button></a>
-            <a href="delete question.html">
+            <a href="/WADAK.com/App/view/delete question.php">
                 <button class="button button2">Delete Question</button></a>
-            <a href="delete answer.html">
+            <a href="/WADAK.com/App/view/delete answer.php">
                 <button class="button button3">Delete Answer</button></a>
         </div>
 
