@@ -1,6 +1,15 @@
 <?php
     session_start();
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+    if(!$con){
+        die("Connection failed" . mysqli_connect_error());
+    }
+    
+    $result = "SELECT question FROM faq";
+
+    $data = mysqli_query($con, $result);
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -20,8 +29,8 @@
                 if(isset($_SESSION["user"]["userrole"])){?>
                 <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Post Jobs</a></li>
                 <?php
-                                    }
-                                    ?>
+                  }
+                ?>
                 <li class="greenbar"><a href="/WADAK.com/App/view/jobs.php">Jobs</a></li>
                 <li><a href="/WADAK.com/App/view/services.php">Services</a></li>
 
@@ -40,33 +49,53 @@
         </nav>
 
         <br><br>
-        <input type="text" placeholder="Enter your question here.." style="width:50%; margin-left:300px;" >
-        <input type="submit" value="Add Question" style="width:150px; height:30px;cursor: pointer;font-size:15px">
+        <form method="POST" action="/WADAK.com/App/model/add_question.php" name="questionform" onsubmit="return validateForm()" required>
+        <input type="text" name="question" placeholder="Enter your question here.." style="width:50%; margin-left:300px;" >
+        <input type="submit" value="Add Question" name ="add" style="width:150px; height:30px;cursor: pointer;font-size:15px">
+        </form>
+
         <div class="box">
             <p class="heading">Q&A</p>
             <div class="qa">
 
+
+            <?php
+	             $i=0;
+	             while($row = mysqli_fetch_array($data)) {
+	          ?>
+                    <tr class="<?php if(isset($classname)) echo $classname;?>">
+                        <?php #echo $row["question"]; ?>
+                        
+                        <!--<a href="/WADAK.com/App/model/deletenews.php?id=<?php #echo $row["question_id"]; ?>">Delete</a>-->
+                        
+                    </tr>
+                   
+
                 <details>
-                    <summary>How register</summary>
+                    <summary><?php echo $row["question"]; ?></summary>
+                    <h4 class="text">Register in here</h4>
+                    <input type="text" placeholder="Type your reply here...">
+                    <input type="submit" value="Reply">
+                </details>
+
+                <!--<details>
+                    <summary><?php #echo $row["question"]; ?></summary>
                     <h4 class="text">Register in here</h4>
                     <input type="text" placeholder="Type your reply here...">
                     <input type="submit" value="Reply">
                 </details>
 
                 <details>
-                    <summary>How to register as service provider</summary>
+                    <summary><?php# echo $row["question"]; ?></summary>
                     <h4 class="text">Register in here</h4>
                     <input type="text" placeholder="Type your reply here...">
                     <input type="submit" value="Reply">
-                </details>
+                </details>-->
 
-                <details>
-                    <summary>How register as Hire person</summary>
-                    <h4 class="text">Register in here</h4>
-                    <input type="text" placeholder="Type your reply here...">
-                    <input type="submit" value="Reply">
-                </details>
-
+                <?php
+	           $i++;
+	           }
+	          ?>
             </div>
         </div>
 
@@ -81,6 +110,17 @@
 
 
 
+
+        <script>
+         function validateForm() {
+         var x = document.forms["questionform"]["question"].value;
+         if (x == "") 
+         {
+          alert("date must be filled out");
+          return false;
+         }
+    }
+    </script>
     </body>
 
 </html>
