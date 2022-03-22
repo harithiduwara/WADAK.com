@@ -94,7 +94,6 @@
                             <th>Category ID</th>
                             <th>Name</th>
                             <th>Minimum Value</th>
-                            <th>Select</th>
                             <th>Action</th>
                         </tr>
                 
@@ -108,7 +107,7 @@
 	           <td><?php echo $row["Name"]; ?></td>
 	           <td><?php echo $row["value"]; ?></td>
                <!--<td>
-                   <input type = "checkbox" name = "keyToDelete" value="<?php// echo $row['C_ID'];?>" required >
+                   <input type = "checkbox" name = "keyToDelete" value="<?php // echo $row['C_ID'];?>" required >
                </td>-->
                <td>
                     <a href="/WADAK.com/App/model/deleteCateg.php? id=<?php echo $row["C_ID"];?>">Delete</a></td>
@@ -127,9 +126,7 @@
                 <div class="box1">
                     <a href="AddCategory.php">Add</a>
                 </div>
-                <div class="box2">
-                    <a href="DeleteCategory.php">Delete</a>
-                </div>
+                
             </div>
             <div class="clearfix"></div>
         </div>
