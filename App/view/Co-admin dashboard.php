@@ -58,7 +58,7 @@
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a
                                     href="/WADAK.com/App/view/Co-admin dashboard.php">Dashboard</a> </p>
                             <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a
-                                    href="/WADAK.com/implementation/controller/logout.php">Log Out</a></p>
+                                    href="/WADAK.com/App/controller/logout.php">Log Out</a></p>
                         </div>
                     </div>
                 </div>
@@ -174,7 +174,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <?php 
                
                $post2_query="SELECT * FROM postjob";
