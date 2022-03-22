@@ -5,7 +5,7 @@
         die("Connection failed" . mysqli_connect_error());
     }
     
-    $result = "SELECT question FROM faq";
+    $result = "SELECT question,answer FROM faq";
 
     $data = mysqli_query($con, $result);
 ?>
@@ -70,14 +70,15 @@
                         
                     </tr>
                    
-
-                <details>
+                
+                <details> 
                     <summary><?php echo $row["question"]; ?></summary>
-                    <h4 class="text">Register in here</h4>
-                    <input type="text" placeholder="Type your reply here...">
-                    <input type="submit" value="Reply">
+                    <h4><?php echo $row["answer"]; ?></h4>
+                    <form method="POST" action="/WADAK.com/App/model/add_answer.php">  
+                    <input type="text" placeholder="Type your reply here..." name="answer">
+                    <input type="submit" value="Reply" name="reply" >
                 </details>
-
+                
                 <!--<details>
                     <summary><?php #echo $row["question"]; ?></summary>
                     <h4 class="text">Register in here</h4>
@@ -99,14 +100,14 @@
             </div>
         </div>
 
-        <div class="buttons" id="buttonleft" style="text-align:center">
+        <!--<div class="buttons" id="buttonleft" style="text-align:center">
             <a href="/WADAK.com/App/view/Add question.php">
                 <button class="button button1">Add Question</button></a>
             <a href="/WADAK.com/App/view/delete question.php">
                 <button class="button button2">Delete Question</button></a>
             <a href="/WADAK.com/App/view/delete answer.php">
                 <button class="button button3">Delete Answer</button></a>
-        </div>
+        </div>-->
 
 
 
