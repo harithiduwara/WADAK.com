@@ -26,8 +26,6 @@
             <a href="/WADAK.com/App/view/CategoryUI.php" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
             <a href="/WADAK.com/App/view/coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Co-Admin</a>
-            <a href="/WADAK.com/Implementation/view/Add Coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
-                &nbsp;&nbsp;Add Co-Admin</a>
             <a href="/WADAK.com/App/view/ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service
                 Provider</a>
             <a href="/WADAK.com/App/view/ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
@@ -64,7 +62,7 @@
                             <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="#">Profile</a></p>
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Dashboard</a> </p>
                             <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a
-                                    href="/WADAK.com/implementation/controller/logout.php">Log Out</a></p>
+                                    href="/WADAK.com/App/controller/logout.php">Log Out</a></p>
                         </div>
                     </div>
                 </div>
@@ -84,11 +82,15 @@
                     include_once 'cataconfig.php';
                     $result = mysqli_query($conn,"SELECT C_ID, Name,value FROM categories");
                     ?>
+
+
                     <table>
                         <tr>
                             <th>Category ID</th>
                             <th>Name</th>
                             <th>Minimum Value</th>
+                            <th>Select</th>
+                            <th>Action</th>
                         </tr>
                 
                 <?php
@@ -96,9 +98,17 @@
 	             while($row = mysqli_fetch_array($result)) {
 	          ?>
 	           <tr class="<?php if(isset($classname)) echo $classname;?>">
+               <form action="" method="POST" role = "form">
 	           <td><?php echo $row["C_ID"]; ?></td>
 	           <td><?php echo $row["Name"]; ?></td>
 	           <td><?php echo $row["value"]; ?></td>
+               <td>
+                   <input type = "checkbox" name = "keyToDelete" value="<?php echo $row['C_ID'];?>" required >
+               </td>
+               <td>
+                    <a href="WADAK.com/App/model/deleteCateg.php? id="<?php echo $row['C_ID'];?>"" id="btn">Delete</a></td>
+                
+               </td>
 	        
 	           </tr>
 	           <?php
