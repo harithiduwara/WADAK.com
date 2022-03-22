@@ -64,9 +64,9 @@
                             
                             $row2 = mysqli_fetch_assoc($result);
                             echo '<div class="chat1">
-    <p style="font-size:3rem; text-align:left; padding:0.5rem 0.5rem 0rem 0.5rem">'.$row2["name"].'</p>
-    <br>
-</div>';
+                                    <p style="font-size:3rem; text-align:left; padding:0.5rem 0.5rem 0rem 0.5rem">'.$row2["name"].'</p>
+                                    <br>
+                                    </div>';
                         }
                     }
                     ?>
