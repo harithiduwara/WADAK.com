@@ -46,7 +46,7 @@
                 <div class="profile-div">
                     <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="AdminProfile">Profile</a></p>
                     <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Admin-dashboard">Dashboard</a> </p>
-                    <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a href="/WADAK.com/implementation/controller/logout.php">Log Out</a></p>
+                    <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a href="/WADAK.com/App/controller/logout.php">Log Out</a></p>
                 </div>
             </div>
         </div>
@@ -65,8 +65,8 @@
                     <input type="value" placeholder="Category ID">
                 </div>
                 <div class="inputbox">
-                    <a href="CategoryUI.html">Delete</a>
-                    <a href="CategoryUI.html">Cancel</a>
+                    <a href="/WADAK.com/App/view/CategoryUI.php">Delete</a>
+                    <a href="/WADAK.com/App/view/CategoryUI.php">Cancel</a>
                 </div>
             </form>
         </div>
