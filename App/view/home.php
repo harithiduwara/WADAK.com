@@ -36,7 +36,13 @@
 
         <!----------------------------------Navigation-------------------------------------->
         <header>
-            <a href="/WADAK.com/App/view/home.php"> <label class="logo" id="logo">WADAK</label></a>
+            <!-- <img class="wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif" alt="wadak gif"
+                style="float:left; width:5%; height:5%"> -->
+            <a href="/WADAK.com/App/view/home.php"> <label style=" color: green;
+                                                                    font-size: 2rem;
+                                                                    line-height: 80px;
+                                                                    padding: 0 100px;
+                                                                    font-weight: bold;">WADAK</label></a>
             <nav>
                 <ul class="navbar">
                     <?php
@@ -76,7 +82,7 @@
         <div class="slideshow-container">
 
             <div class="mySlides fade">
-                <!-- <div class="numbertext">1 / 3</div> -->
+                <div class="numbertext">1 / 3</div>
                 <img src="/WADAK.com/App/assets/images/1.jpg" style="width:100%">
                 <div class="text">
                     <h1 style="color:white">Welcome to WADAK Paradise!</h1>
@@ -84,7 +90,7 @@
             </div>
 
             <div class="mySlides fade">
-                <!-- <div class="numbertext">2 / 3</div> -->
+                <div class="numbertext">2 / 3</div>
                 <img src="/WADAK.com/App/assets/images/2.jpg" style="width:100%">
                 <div class="text">
                     <h1>Save Your Time! Be With Your Family!</h1>
@@ -92,7 +98,7 @@
             </div>
 
             <div class="mySlides fade">
-                <!-- <div class="numbertext">3 / 3</div> -->
+                <div class="numbertext">3 / 3</div>
                 <img src="/WADAK.com/App/assets/images/3.jpg" style="width:100%">
                 <div class="text">
                     <h1>Enjoy Every Single Moment!</h1>
@@ -143,13 +149,22 @@
                 
                 
                 " alt="service" style="width:100% ; height:200px">
-                        <p style="text-align:end">
-                            <?=$row["username"]?>
-                        </p>
-                        <h3 style="text-align:center"><?= $row["title"] ?>
-                        </h3><br>
-                        <p style="text-align: center"><?=$row["description"]?></p><br>
-                        <p>
+                        <a href="">
+                            <p style="text-align:end">
+                                <?=$row["username"]?>
+                            </p>
+                        </a>
+
+                        <a href="">
+                            <h3 style="text-align:center"><?= $row["title"] ?>
+                            </h3>
+                        </a>
+                        <br>
+                        <a href="">
+                            <p style="text-align: center"><?=$row["description"]?></p><br>
+                            <p>
+                        </a>
+
                         </p>
                     </div>
                 </div>
@@ -178,26 +193,40 @@
                     for($x=0; $x<=3 && $row = mysqli_fetch_assoc($data); $x++){
                         ?>
                     <div class="sectionheading3">
-                        <div class="card1" style="margin:1rem"><img src="
-                    <?php
-                    if($row["filename"]==null){
-                        echo "/WADAK.com/App/uploads/noimage.jpg";
-                    }
-                    else{
-                       echo $row["filename"];
-                    }
-                    ?>
+                        <div class="card1" style="margin:1rem">
+                            <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
+                                <img src="
+                                    <?php
+                                    if($row["filename"]==null){
+                                        echo "/WADAK.com/App/uploads/noimage.jpg";
+                                    }
+                                    else{
+                                    echo $row["filename"];
+                                    }
+                                    ?>
                 
                 
                 " alt="service" style="width:100% ; height:200px">
-                            <p style="text-align:end">
-                                <?=$row["username"]?>
-                            </p>
-                            <h3 style="text-align:center"><?= $row["title"] ?>
-                            </h3><br>
-                            <p style="text-align: center"><?=$row["description"]?></p><br>
-                            <p>
-                            </p>
+
+                            </a>
+
+                            <a href="/WADAK.com/App/view/userprofile.php?uid=<?=$row["uid"]?>">
+                                <p style="text-align:end">
+                                    <?=$row["username"]?>
+                                </p>
+                            </a>
+
+                            <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
+                                <h3 style="text-align:center"><?= $row["title"] ?>
+                                </h3>
+                            </a>>
+                            <br>
+                            <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
+
+                                <p style="text-align: center"><?=$row["description"]?></p><br>
+                                <p>
+                                </p>
+                            </a>
                         </div>
                     </div>
                     <?php

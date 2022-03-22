@@ -106,7 +106,7 @@ button:hover {
     float: none;
 }
 
-label#logo.logo a {
+label.logo {
     color: green;
     font-size: 38px;
     line-height: 80px;
