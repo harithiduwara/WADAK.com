@@ -106,6 +106,7 @@
                                                 <th>User ID</th>
                                                 <th>Email</th>
                                                 <th>Contact No</th>
+                                                <th>Action</th>
                                             </tr>";
                                     // output data of each row
 
@@ -118,6 +119,7 @@
                                                 <td>" . $row["uid"]. "</td>
                                                 <td>" . $row["email"]. "</td>
                                                 <td>" . $row["contactno"]. "</td>
+                                                <td><a href='/WADAK.com/App/model/deleteCoadmin.php?id=".$row['uid']."' id='btn'>Delete</a></td>
                                             </tr>";
                                     }
                                     echo "</table>";
