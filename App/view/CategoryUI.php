@@ -1,3 +1,8 @@
+<?php
+    include_once 'cataconfig.php';
+    $query = "SELECT* from categories";
+    $run = mysqli_query($conn,$query);
+?>
 <!Doctype HTML>
 <html>
 
