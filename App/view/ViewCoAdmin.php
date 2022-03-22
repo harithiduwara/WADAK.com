@@ -9,7 +9,7 @@
             }
 
         </style>
-        <link rel="stylesheet" href="/WADAK.com/App/assets/css/ViewCoAdmin.css" type="text/css" />
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/ViewServiceProvider2-coadmin.css" type="text/css" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -23,7 +23,7 @@
             <a href="/WADAK.com/App/view/Admin-dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
             <a href="/WADAK.com/App/view/CategoryUI.php" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
-            <a href="/WADAK.com/App/view/ViewCoAdmin.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Co-Admin</a>
+            <a href="/WADAK.com/App/view/coadmin.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Co-Admin</a>
             <a href="/WADAK.com/App/view/ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service
                 Provider</a>
             <a href="#" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
@@ -71,49 +71,99 @@
 
             <div class="search-form">
                     <form action="" method="POST" >
-                        <input type ="text" name ="SP_ID" placeholder="Enter User Id" class="text">
+                        <input type ="text" name ="uid" placeholder="Enter User Id" class="text">
                         <input type ="submit" name ="search" placeholder="Search" value="Search" class="submit">
                     </form>
             </div>
 
+            <?php 
+            $conn= mysqli_connect("localhost","root","");
+            $db=mysqli_select_db($conn,'wadak');
+if(isset($_POST['search']))
+{
+    $id= $_POST['uid'];
+    $query="SELECT name,uid,contactno,email,address,birthday FROM register WHERE uid = '$id'";
+    //$query= "select * from register where userrole='coadmin'";
+    $query_run=mysqli_query($conn,$query);
+    while($row = mysqli_fetch_array($query_run))
+    {
+        ?>
+  <div class="col-div-2">
+    <div class="box">
+      
+        <table>
+          <tr>
+            <td>
+               Name :
+            </td>
+            <td>
+              <?php echo $row['name']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Co-admin ID :
+            </td>
+            <td>
+              <?php echo $row['uid']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Contact :
+            </td>
+            <td>
+               <?php echo $row['contactno']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Email :
+            </td>
+            <td>
+              <?php echo $row['email']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Address:
+            </td>
+            <td>
+              <?php echo $row['address']; ?> 
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Date of Birth :
+            </td>
+            <td>
+              <?php echo $row['birthday']; ?>
+            </td>
+          </tr>
 
-            <div class="col-div-2">
-                <div class="box">
-                
+        </table>
 
-                    <!--<form>
-                        <table>
-                            <tr>
-                                <td>
-                                    Co-Admin ID :
-                                </td>
-                                <td>
-                                    <input type="search" placeholder=" ">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Name :
-                                </td>
-                                <td>
-                                    <input type="text" placeholder=" ">
-                                </td>
-                            </tr>
-                        </table>
-                    </form> -->
-                </div>
-            </div>
-            <div class="col-div-2">
+      </form>
+      
+    </div>
+  </div>
+  <div class="col-div-2">
+    <div class="imgbox">
+      <div class="img">
+        <img src="/WADAK.com/App/assets/images/sp.png" width="325" height="380">
+      </div>
+      
+    </div>
 
-                <div class="box1">
-                    <a href="/WADAK.com/Implementation/view/coadmin.php">Add</a>
-                </div>
-                <div class="box2">
-                    <a href="Admin-dashboard.html">View</a>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
+  <?php
+    }
+    if($row==0)
+     {
+        echo "Sorry No Records Found..";
+     }
+}
+?>
+      
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
