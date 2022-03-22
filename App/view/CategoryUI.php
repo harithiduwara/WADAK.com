@@ -1,20 +1,8 @@
 <?php
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
+
     session_start();
 ?>
 
-=======
->>>>>>> Stashed changes
-    include_once 'cataconfig.php';
-    $query = "SELECT* from categories";
-    $run = mysqli_query($conn,$query);
-?>
-<<<<<<< Updated upstream
-=======
->>>>>>> af9bd960dc3198dfc85baf73645bdf1764f4ce9b
->>>>>>> Stashed changes
 <!Doctype HTML>
 <html>
 

@@ -13,15 +13,7 @@ if (isset($_GET['id'])) {
 
 ?>
 
-=======
->>>>>>> Stashed changes
-    $sql = "DELETE FROM categories WHERE C_ID = $id";
-    mysqli_query($connection,$sql);
-    header("location:/WADAK.com/App/view/CategoryUI.php");
-    exit();
 
-}
->>>>>>> af9bd960dc3198dfc85baf73645bdf1764f4ce9b
 
 <?php
 include_once 'cataconfig.php';
