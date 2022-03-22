@@ -1,0 +1,345 @@
+body{
+    font-family:  sans-serif;
+    background-color: #efeff5;
+    margin: 50px 0px;
+    font-family: system-ui;
+    }
+
+
+.main-section small{
+    font-size: 12px;
+    }
+.main-section h3, .main-section h5{
+    margin: 0px;
+    }
+.main-section{
+    width: 960px;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 120px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }    
+
+.head-section{
+        border-bottom:1px solid #E6E6E6;
+        clear: both;
+        overflow: hidden;
+        width: 100%;
+        background-color: rgb(243, 250, 244);
+        }
+.headLeft-section{
+        width: calc(30% - 1px);
+        float: left;
+        border-right:1px solid #E6E6E6;
+        }
+.headLeft-sub{
+        padding: 15px;
+        text-align: center;
+        }
+.headLeft-sub input{
+        width: 60%;
+        border-radius: 0px;
+        border:1px solid #E6E6E6;
+        padding: 7px;
+        }
+.headLeft-sub button{
+        background: rgb(7, 247, 47);
+        color: #fff;
+        border:1px solid #E6E6E6;
+        padding: 7px 15px;
+        cursor: pointer;
+        }
+.headRight-section{
+        width: 70%;
+        float: left;
+        }
+.headRight-sub{
+        padding: 10px 15px 0px 15px;
+        }   
+        
+.body-section{
+            clear: both;
+            overflow: hidden;
+            width: 100%;
+            }
+ .left-section{
+            width: calc(30% - 1px);
+            float: left;
+            height: 500px;
+            border-right:1px solid #E6E6E6;
+            background-color: #FFF;
+            z-index: 1;
+            position: relative;
+            }
+.left-section ul{
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            }
+.left-section ul li{
+            padding: 15px 0px;
+            cursor: pointer;
+            }
+                  
+
+.mCustomScrollBox, .mCSB_container{
+                overflow: unset !important;
+                }
+               
+               
+.left-section .chatList{
+                overflow: hidden;
+                }
+.left-section .chatList .img{
+                width: 60px;
+                float: left;
+                text-align: center;
+                position: relative;
+                }
+
+.left-section .chatList .img img{
+                width: 30px;
+                border-radius: 50%;
+                }
+.left-section .chatList .img i{
+                position: absolute;
+                font-size: 10px;
+                color: #52E2A7;
+                border:1px solid #fff;
+                border-radius: 50%;
+                left: 10px;
+                }
+.left-section .chatList .desc{
+                width: calc(100% - 60px);
+                float: left;
+                position: relative;
+                }
+.left-section .chatList .desc h5{
+                margin-top: 6px;
+                line-height: 5px;
+                }
+.left-section .chatList .desc .time{
+                position: absolute;
+                right: 15px;
+                color: #c1c1c1;
+                }
+ .right-section{
+                width: 70%;
+                float: left;
+                height: 500px;
+                background-color: #F6F6F6;
+                position: relative;
+                }
+.message{
+                height: calc(100% - 68px);
+                font-family: sans-serif;
+                }
+.message ul{
+                padding: 0px;
+                list-style: none;
+                margin: 0px auto;
+                width: 90%;
+                overflow:hidden;
+                }
+.message ul li{
+                position: relative;
+                width: 80%;
+                padding: 15px 0px;
+                clear: both;
+                }
+.message ul li.msg-left{
+                float: left;
+                }
+.message ul li.msg-left img{
+                position: absolute;
+                width: 40px;
+                bottom: 30px;
+                }
+.message ul li.msg-left .msg-desc{
+                margin-left: 70px;
+                font-size: 12px;
+                background: #E8E8E8;
+                padding:5px 10px;
+                border-radius: 5px 5px 5px 0px;
+                position: relative;
+                }
+.message ul li.msg-left .msg-desc:before{
+                position: absolute;
+                content: '';
+                border:10px solid transparent;
+                border-bottom-color: #E8E8E8;
+                bottom: 0px;
+                left: -10px;
+                }
+.message ul li.msg-left small{
+                float: right;
+                color: #c1c1c1;
+                }
+.message ul li.msg-right{
+                float: right;
+                }
+.message ul li.msg-right img{
+                position: absolute;
+                width: 40px;
+                right: 0px;
+                bottom: 30px;
+                }
+ .message ul li.msg-right .msg-desc{
+                margin-right: 70px;
+                font-size: 12px;
+                background: #939493;
+                color: white;
+                padding:5px 10px;
+                border-radius: 5px 5px 5px 0px;
+                position: relative;
+                }
+ .message ul li.msg-right .msg-desc:before{
+                position: absolute;
+                content: '';
+                border:10px solid transparent;
+                
+                bottom: 0px;
+                right: -10px;
+                }
+.message ul li.msg-right small{
+                float: right;
+                color: #c1c1c1;
+                margin-right: 70px;
+                }
+ .message ul li.msg-day{
+                border-top:1px solid #EBEBEB;
+                width: 100%;
+                padding: 0px;
+                margin: 15px 0px;
+                }
+.message ul li.msg-day small{
+                position: absolute;
+                top: -10px;
+                background: #F6F6F6;
+                color: #c1c1c1;
+                padding: 3px 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                }
+ .right-section-bottom{
+                background: #fff;
+                width: 100%;
+                padding: 15px;
+                position: absolute;
+                bottom: 0px;
+                border-top:1px solid #E6E6E6;
+                text-align: center;
+                }
+ .right-section-bottom input{
+                border:0px;
+                padding:8px 5px;
+                width:calc(100% - 150px);
+                }
+  .right-section-bottom .btn-send{
+                border:0px;
+                padding: 8px 10px;
+                float: right;
+                margin-right: 30px;
+                color: #03ec64;
+                font-size: 15px;
+                background: rgb(7, 247, 47);
+                cursor: pointer;
+                color: white;
+                border-radius: 5px;
+                }
+ .upload-btn {
+                position: relative;
+                overflow: hidden;
+                display: inline-block;
+                float: left;
+                cursor: pointer;
+
+                }
+
+ .upload-btn i{
+                border:0px;
+                padding: 8px 10px;
+                color: #0c580c;
+                font-size: 18px;
+                background: #fff;
+                cursor: pointer;
+                }
+ .upload-btn input[type=file] {
+                font-size: 100px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                }            
+
+
+
+/*navigation bar*/
+
+
+
+
+nav {
+    position: fixed;
+    top: 0px;
+}
+
+nav {
+    background: white;
+    height: 80px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.logo {
+    color: green;
+    font-size: 38px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 100px;
+    margin-top: 12px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: green;
+    font-size: 16px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background: green;
+    color: white;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    background-color: #4EEC54;
+    color: white;
+    transition: 0.5s;
+}
+
+.animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+
+
