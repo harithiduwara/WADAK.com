@@ -106,6 +106,14 @@ button:hover {
     float: none;
 }
 
+label#logo.logo a {
+    color: green;
+    font-size: 38px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
 /* ----------------------------------Slider------------------------------------------>
 
 * {box-sizing: border-box}

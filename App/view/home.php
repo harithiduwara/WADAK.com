@@ -36,8 +36,7 @@
 
         <!----------------------------------Navigation-------------------------------------->
         <header>
-            <img class="wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif" alt="wadak gif"
-                style="float:left; width:5%; height:5%">
+            <a href="/WADAK.com/App/view/home.php"> <label class="logo" id="logo">WADAK</label></a>
             <nav>
                 <ul class="navbar">
                     <?php

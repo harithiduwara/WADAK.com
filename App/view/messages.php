@@ -34,7 +34,7 @@
     <body>
 
         <nav>
-            <label class="logo">WADAK</label>
+            <a href="/WADAK.com/App/view/home.php"> <label class="logo">WADAK</label></a>
             <ul style="margin-top: 1rem">
                 <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
                 <li><a href="/WADAK.com/App/view/postjob.html">Post Job</a> </li>
