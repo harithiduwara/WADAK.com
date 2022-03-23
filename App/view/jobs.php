@@ -58,7 +58,8 @@ if(!$con){
                                 }
                                 ?>
 
-                    <li><a href="/WADAK.com/App/view/services.php">Services</a></li>
+
+                    <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
 
                     <?php if(!isset($_SESSION["user"]["userrole"])){?>
 
