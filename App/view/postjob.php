@@ -36,18 +36,26 @@
             </ul>
         </nav>
         <div class="postcontainer" style="height:85vmin">
-            <div class="inputcontainer" id="loginbox" style="margin-left: 15vw; margin-top: 10% ;height:50vmin">
-                <div class="form">
+            <div class="inputcontainer" id="inputbox" style="margin-left: 15vw; margin-top: 7vh; height:65vmin">
+                <div class="form" style="text-align: center; margin-left: 6rem">
 
                     <form action="/WADAK.com/App/controller/postjob.php" method="post" enctype="multipart/form-data">
+
                         <div class="inputbox">
                             <span>Title</span>
-                            <input type="text" name="title" placeholder="Enter Your Job Title" required>
+                            <input type="text" name="title" placeholder="Enter Your Title" required>
                         </div>
                         <div class="inputbox">
                             <span>DESCRIPTION</span>
                             <input id="des" type="text" name="description" placeholder="Enter Your Description"
                                 required>
+                        </div>
+                        <div class="inputbox">
+                            <span>Post Type</span>
+                            <select id="postType" name="postType" required>
+                                <option value="job">Job Post</option>
+                                <option value="service">Service Post</option>
+                            </select>
                         </div>
                         <div class="inputbox">
                             <span>Category</span>

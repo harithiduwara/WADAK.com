@@ -39,6 +39,13 @@ else{
     $description = test_input($_POST["description"]);
 }
 
+if(empty($_POST["postType"])){
+    $joblistErr = "postType is required!";
+}
+else{
+    $joblist = test_input($_POST["postType"]);
+}
+
 if(empty($_POST["joblist"])){
     $joblistErr = "joblist is required!";
 }
