@@ -71,7 +71,7 @@
                         <div class="profile-div">
                             <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="userprofile.php">Profile</a></p>
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a
-                                    href="hirepersondashboard.html">Dashboard</a> </p>
+                                    href="hirepersondashboard.php">Dashboard</a> </p>
                             <a href="/WADAK.com/App/controller/logout.php"></i>
                                 &nbsp;&nbsp;Log Out</a>
 
@@ -118,12 +118,7 @@
                                 <th>0771223465</th>
                                 <th>coad@gmail.com</th>
                             </tr>
-                            <tr>
-                                <th>Lasanthi Wathsala</th>
-                                <th>Wathsala</th>
-                                <th>0754249340</th>
-                                <th>lasanthiwathsala473@gmail.com</th>
-                            </tr>
+
                         </table>
                     </div>
                 </div>

@@ -22,13 +22,8 @@
                 <li><a href="/WADAK.com/App/view/Add achievement post - Service provider.php">Post Job</a> </li>
                 <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
                 <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
-                <!-- <li><a href="#">Leaderboard</a></li>-->
-                <!--<li><i class="far fa-bell"></i></li>-->
                 <li><a href="/WADAK.com/App/view/messages.php">Messages</a> </li>
                 <li><a href="/WADAK.com/App/controller/logout.php">Logout</a> </li>
-
-                <!-- <li><a href="#">Login</a> </li> 
-            No need a login right!-->
                 <div class="animation "></div>
             </ul>
         </nav>

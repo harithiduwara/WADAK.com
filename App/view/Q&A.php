@@ -27,12 +27,13 @@
             <ul class="navbar">
                 <?php
                 if(isset($_SESSION["user"]["userrole"])){?>
-                <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Post Jobs</a></li>
+                <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
                 <?php
                   }
                 ?>
-                <li class="greenbar"><a href="/WADAK.com/App/view/jobs.php">Jobs</a></li>
-                <li><a href="/WADAK.com/App/view/services.php">Services</a></li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>>
+
 
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
 
@@ -49,9 +50,12 @@
         </nav>
 
         <br><br>
-        <form method="POST" action="/WADAK.com/App/model/add_question.php" name="questionform" onsubmit="return validateForm()" required>
-        <input type="text" name="question" placeholder="Enter your question here.." style="width:50%; margin-left:300px;" >
-        <input type="submit" value="Add Question" name ="add" style="width:150px; height:30px;cursor: pointer;font-size:15px">
+        <form method="POST" action="/WADAK.com/App/model/add_question.php" name="questionform"
+            onsubmit="return validateForm()" required>
+            <input type="text" name="question" placeholder="Enter your question here.."
+                style="width:50%; margin-left:300px;">
+            <input type="submit" value="Add Question" name="add"
+                style="width:150px; height:30px;cursor: pointer;font-size:15px">
         </form>
 
         <div class="box">
@@ -59,26 +63,26 @@
             <div class="qa">
 
 
-            <?php
+                <?php
 	             $i=0;
 	             while($row = mysqli_fetch_array($data)) {
 	          ?>
-                    <tr class="<?php if(isset($classname)) echo $classname;?>">
-                        <?php #echo $row["question"]; ?>
-                        
-                        <!--<a href="/WADAK.com/App/model/deletenews.php?id=<?php #echo $row["question_id"]; ?>">Delete</a>-->
-                        
-                    </tr>
-                   
-                
-                <details> 
+                <tr class="<?php if(isset($classname)) echo $classname;?>">
+                    <?php #echo $row["question"]; ?>
+
+                    <!--<a href="/WADAK.com/App/model/deletenews.php?id=<?php #echo $row["question_id"]; ?>">Delete</a>-->
+
+                </tr>
+
+
+                <details>
                     <summary><?php echo $row["question"]; ?></summary>
                     <h4><?php echo $row["answer"]; ?></h4>
-                    <form method="POST" action="/WADAK.com/App/model/add_answer.php">  
-                    <input type="text" placeholder="Type your reply here..." name="answer">
-                    <input type="submit" value="Reply" name="reply" >
+                    <form method="POST" action="/WADAK.com/App/model/add_answer.php">
+                        <input type="text" placeholder="Type your reply here..." name="answer">
+                        <input type="submit" value="Reply" name="reply">
                 </details>
-                
+
                 <!--<details>
                     <summary><?php #echo $row["question"]; ?></summary>
                     <h4 class="text">Register in here</h4>
@@ -113,15 +117,14 @@
 
 
         <script>
-         function validateForm() {
-         var x = document.forms["questionform"]["question"].value;
-         if (x == "") 
-         {
-          alert("date must be filled out");
-          return false;
-         }
-    }
-    </script>
+        function validateForm() {
+            var x = document.forms["questionform"]["question"].value;
+            if (x == "") {
+                alert("date must be filled out");
+                return false;
+            }
+        }
+        </script>
     </body>
 
 </html>

@@ -14,16 +14,21 @@
     <body>
         <!-----------------------------navbar--------------------------------->
         <div class=nav>
-            <nav class="navclass">
-                <ul id="navbar">
-                    <li id="navbargreen"><a href="/WADAK.com/App/view/Add achievement post - Service provider.php">Post
-                            Jobs</a></li>
-                    <li class="greenbar"><a href="#">Jobs</a></li>
-                    <li><a href="/WADAK.com/App/view/serices.php">Services</a></li>
-                    <li><i class="far fa-bell"></i></li>
-                    <li><a href="/WADAK.com/App/view/leaderboard.php">Leaderboard</a></li>
-                    <li><a href="/WADAK.com/App/view/chat.php">Messages</a></li>
-                    <li><a href="/WADAK.com/implementation/controller/logout.php">Logout</a></li>
+            <nav>
+                <label class="logo">WADAK</label>
+                <ul style="margin-top: 1rem">
+                    <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
+                    <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+                    <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
+
+                    <li><a href="/WADAK.com/App/view/messages.php">Messages</a> </li>
+                    <?php if(!isset($_SESSION["user"]["userrole"])){?>
+                    <li><a href="./login.php"></a></li>
+                    <?php }else {?>
+                    <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a>
+                    </li>
+                    <?php } ?>
+                    <div class="animation "></div>
                 </ul>
             </nav>
         </div>

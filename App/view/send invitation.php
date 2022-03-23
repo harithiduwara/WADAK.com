@@ -21,8 +21,8 @@
             <ul>
                 <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
                 <li><a href="/WADAK.com/App/view/Add achievement post - Service provider.php">Post Job</a> </li>
-                <li><a href="#">Jobs</a> </li>
-                <li><a href="#">Services</a> </li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
                 <li><a href="/WADAK.com/App/view/leaderboard.php">Leaderboard</a> </li>
                 <li><a href="/WADAK.com/App/view/chat.php">Messages</a> </li>
                 <li><a href="/WADAK.com/implementation/controller/logout.php">Logout</a> </li>

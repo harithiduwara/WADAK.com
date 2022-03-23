@@ -26,8 +26,7 @@
 
             <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i>
                 &nbsp;&nbsp;Home</a>
-            <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i
-                    class="fa fa-dashboard icons"></i>
+            <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
             <?php
             if(isset($_SESSION["user"]["userrole"])){
@@ -37,8 +36,7 @@
 
             <a href="/WADAK.com/App/view/messages.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Messages</a>
-            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i
-                    class="fa fa-dashboard icons"></i>
+            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Leaderboard</a>
             <a href="/WADAK.com/App/view/news2.php" class="icon-a"><i class="far fa-envelope-open"></i>
                 &nbsp;&nbsp;News</a>
@@ -53,12 +51,12 @@
                 <li><a href="home.php" class="active">Home</a></li>
                 <?php
                 if(isset($_SESSION["user"]["userrole"])){?>
-                <li class="navbargreen"><a href="/WADAK.com/Implementation/view/postjob.html">Post Jobs</a></li>
+                <li class="navbargreen"><a href="/WADAK.com/Implementation/view/postjob.html">Add Post</a></li>
                 <?php
                     }
                     ?>
-                <li class="greenbar"><a href="jobs.html">Jobs</a></li>
-                <li><a href="/WADAK.com/Implementation/view/services.html">Services</a></li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
 
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
 

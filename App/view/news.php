@@ -89,9 +89,7 @@
 
                 <!--news table delete and view-->
                 <?php
-                // include_once 'newsconfig.php';
-                // include_once '/WADAK.com/App/controller/newsconfig.php';
-                // $result = mysqli_query($conn,"SELECT News_ID,date,description FROM news");
+
                 ?>
 
                 <table style="width:835px; margin-left:10px">

@@ -47,19 +47,23 @@ if(!$con){
                                                                     line-height: 80px;
                                                                     padding: 0 100px;
                                                                     font-weight: bold;">WADAK</label></a>
-            <!-- <a href="home.php"><img class="wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif" alt="wadak gif"
-                    style="float:left ;width:5rem; height:5%;"></a> -->
             <nav>
                 <ul class="navbar">
                     <?php
                         if(isset($_SESSION["user"]["userrole"])){?>
-                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
+                    <li><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
                     <?php
                     }
                     ?>
-
-
+                    <?php 
+                    if($postType=="job"){?>
                     <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
+                    <?php }
+                    else{ ?>
+                    <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+                    <?php }
+                    ?>
+
 
                     <?php if(!isset($_SESSION["user"]["userrole"])){?>
 

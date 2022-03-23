@@ -12,12 +12,23 @@
     <body>
 
         <nav>
-            <label class="logo">WADAK</label>
+            <label class="logo"><a href="/WADAK.com/App/view/home.php">WADAK</a></label>
             <ul>
-                <li><a href="/WADAK.com/App/view/jobs.php">Jobs</a> </li>
-                <li><a href="/WADAK.com/App/view/services.php">Services</a> </li>
+                <?php
+                        if(isset($_SESSION["user"]["userrole"])){?>
+                <li><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
+                <?php
+                    }
+                    ?>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>>
 
+                <?php
+                        if(isset($_SESSION["user"]["userrole"])){?>
                 <li><a href="/WADAK.com/App/controller/logout.php">Logout</a> </li>
+                <?php
+                    }
+                    ?>
                 <div class="animation "></div>
             </ul>
         </nav>

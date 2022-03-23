@@ -4,9 +4,9 @@
     <head>
         <title>Co-Admin Dashboard</title>
         <style>
-            a {
-                text-decoration: none;
-            }
+        a {
+            text-decoration: none;
+        }
 
         </style>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/Co-admin%20bashboard.css" type="text/css" />
@@ -22,12 +22,16 @@
             <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
             <a href="/WADAK.com/App/view/Co-admin dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
-            <a href="/WADAK.com/App/view/viewServiceProvider2-coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
+            <a href="/WADAK.com/App/view/viewServiceProvider2-coadmin.php" class="icon-a"><i
+                    class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Service Providers</a>
-            
-            <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i> &nbsp;&nbsp;Q & A Session</a>
-            <a href="/WADAK.com/App/view/messages.php" class="icon-a"><i class="fa fa-comment icons"></i> &nbsp;&nbsp;Chat</a>
-            <a href="/WADAK.com/App/view/News.php" class="icon-a"><i class="fa fa-newspaper-o icons"></i> &nbsp;&nbsp;News</a>
+
+            <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i>
+                &nbsp;&nbsp;Q & A Session</a>
+            <a href="/WADAK.com/App/view/messages.php" class="icon-a"><i class="fa fa-comment icons"></i>
+                &nbsp;&nbsp;Chat</a>
+            <a href="/WADAK.com/App/view/News.php" class="icon-a"><i class="fa fa-newspaper-o icons"></i>
+                &nbsp;&nbsp;News</a>
             <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
         </div>
 
@@ -51,10 +55,11 @@
                     </div>
 
                     <div class="profile">
-                        <!--<img src="images/user.png" class="pro-img" /> -->
+
                         <p>Co-Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/CoAdmin-profile.php">Profile</a></p>
+                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a
+                                    href="/WADAK.com/App/view/CoAdmin-profile.php">Profile</a></p>
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a
                                     href="/WADAK.com/App/view/Co-admin dashboard.php">Dashboard</a> </p>
                             <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a
@@ -85,7 +90,7 @@
                       {
                         echo '<h2 class="nb-0"> No Data </h2>';
                       }
-                    ?>  
+                    ?>
                 </div>
             </div>
             <div class="col-div-4-1">
@@ -103,7 +108,7 @@
                       {
                         echo '<h2 class="nb-0"> No Data </h2>';
                       }
-                    ?>  
+                    ?>
                 </div>
             </div>
             <div class="col-div-4-1">
@@ -131,7 +136,7 @@
                       {
                         echo '<p class="nb-0"> No Data </p>';
                       }
-                    ?>  
+                    ?>
                     </div>
                 </div>
             </div>
@@ -151,7 +156,7 @@
                       {
                         echo '<p class="nb-0"> No Data </p>';
                       }
-                    ?>  
+                    ?>
                     </div>
                 </div>
             </div>
@@ -170,44 +175,44 @@
                       {
                         echo '<h2 class="nb-0"> No Data </h2>';
                       }
-                    ?>  
+                    ?>
                     </div>
                 </div>
             </div>
-            
+
             <?php 
                
                $post2_query="SELECT * FROM postjob";
                $post2_query_run=mysqli_query($connection,$post2_query);
             ?>
             <div class="table_div">
-            <table width="100%" cellspacing="0"  style="border: 1px solid #dddddd;text-align:left;">
-                <thead>
-                    <tr style="color:Green;background-color:grey;">
-                    <th>Job_ID</th>
-                    <th>Job Title</th>
-                    <th>Description</th>
-                    <th>Budget</th>
-                    <th>Job Type</th>
-                    <th>Hire Person Id</th>
-                    </tr>
-                </thead>
-                 <tbody>
-                     <?php
+                <table width="100%" cellspacing="0" style="border: 1px solid #dddddd;text-align:left;">
+                    <thead>
+                        <tr style="color:Green;background-color:grey;">
+                            <th>Job_ID</th>
+                            <th>Job Title</th>
+                            <th>Description</th>
+                            <th>Budget</th>
+                            <th>Job Type</th>
+                            <th>Hire Person Id</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
                      if(mysqli_num_rows($post2_query_run)>0)
                      {
                          while($row=mysqli_fetch_assoc($post2_query_run))
                          {
                              ?>
-                             <tr> 
-                             <td> <?php echo $row['jobid']; ?></td> 
-                             <td> <?php echo $row['title']; ?> </td> 
-                             <td> <?php echo $row['description']; ?> </td> 
-                             <td> <?php echo $row['budget']; ?> </td> 
-                             <td> <?php echo $row['jobtype']; ?> </td> 
-                             <td> <?php echo $row['uid']; ?> </td> 
-                    </tr>
-                    <?php
+                        <tr>
+                            <td> <?php echo $row['jobid']; ?></td>
+                            <td> <?php echo $row['title']; ?> </td>
+                            <td> <?php echo $row['description']; ?> </td>
+                            <td> <?php echo $row['budget']; ?> </td>
+                            <td> <?php echo $row['jobtype']; ?> </td>
+                            <td> <?php echo $row['uid']; ?> </td>
+                        </tr>
+                        <?php
                             
                          }
                      }
@@ -215,59 +220,57 @@
                          echo "No records Found";
                      }
                      ?>
-                     
-                </tbody>         
-            </table>
-            <div>
+
+                    </tbody>
+                </table>
+                <div>
 
 
-            <div class="clearfix"></div>
-        </div>
+                    <div class="clearfix"></div>
+                </div>
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-
-            $(".menu").click(function () {
-                $("#mySidenav").css('width', '70px');
-                $("#main").css('margin-left', '70px');
-                $(".logo").css('display', 'none');
-                $(".logo1").css('display', 'block');
-                $(".logo span").css('visibility', 'visible');
-                $(".logo span").css('margin-left', '-10px');
-                $(".icon-a").css('visibility', 'hidden');
-                $(".icon-a").css('height', '25px');
-                $(".icons").css('visibility', 'visible');
-                $(".icons").css('margin-left', '-8px');
-                $(".menu1").css('display', 'block');
-                $(".menu").css('display', 'none');
-            });
-
-            $(".menu1").click(function () {
-                $("#mySidenav").css('width', '300px');
-                $("#main").css('margin-left', '300px');
-                $(".logo").css('visibility', 'visible');
-                $(".logo").css('display', 'block');
-                $(".icon-a").css('visibility', 'visible');
-                $(".icons").css('visibility', 'visible');
-                $(".menu").css('display', 'block');
-                $(".menu1").css('display', 'none');
-            });
-
-        </script>
-        <script>
-            $(document).ready(function () {
-                $(".profile p").click(function () {
-                    $(".profile-div").toggle();
-
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script>
+                $(".menu").click(function() {
+                    $("#mySidenav").css('width', '70px');
+                    $("#main").css('margin-left', '70px');
+                    $(".logo").css('display', 'none');
+                    $(".logo1").css('display', 'block');
+                    $(".logo span").css('visibility', 'visible');
+                    $(".logo span").css('margin-left', '-10px');
+                    $(".icon-a").css('visibility', 'hidden');
+                    $(".icon-a").css('height', '25px');
+                    $(".icons").css('visibility', 'visible');
+                    $(".icons").css('margin-left', '-8px');
+                    $(".menu1").css('display', 'block');
+                    $(".menu").css('display', 'none');
                 });
-                $(".noti-icon").click(function () {
-                    $(".notification-div").toggle();
-                });
-            });
-        </script>
 
-       
+                $(".menu1").click(function() {
+                    $("#mySidenav").css('width', '300px');
+                    $("#main").css('margin-left', '300px');
+                    $(".logo").css('visibility', 'visible');
+                    $(".logo").css('display', 'block');
+                    $(".icon-a").css('visibility', 'visible');
+                    $(".icons").css('visibility', 'visible');
+                    $(".menu").css('display', 'block');
+                    $(".menu1").css('display', 'none');
+                });
+                </script>
+                <script>
+                $(document).ready(function() {
+                    $(".profile p").click(function() {
+                        $(".profile-div").toggle();
+
+                    });
+                    $(".noti-icon").click(function() {
+                        $(".notification-div").toggle();
+                    });
+                });
+                </script>
+
+
     </body>
 
 </html>

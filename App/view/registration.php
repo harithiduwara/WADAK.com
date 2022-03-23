@@ -13,9 +13,8 @@
             <label class="logo">WADAK</label>
             <ul>
                 <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
-                <li><a href="/WADAK.com/App/view/job post.php">Jobs</a> </li>
-                <li><a href="/WADAK.com/App/view/services.php">Services</a> </li>
-                <li><a href="/WADAK.com/App/view/leaderboard.php">Leaderboard</a> </li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
                 <li><a href="/WADAK.com/App/view/login.php">Login</a> </li>
                 <div class="animation "></div>
             </ul>

@@ -28,17 +28,22 @@
             <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
             <a href="/WADAK.com/App/view/Admin-dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
-            <a href="/WADAK.com/App/view/CategoryUI.php" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
+            <a href="/WADAK.com/App/view/CategoryUI.php" class="icon-a"><i class="fa fa-tasks icons"></i>
+                &nbsp;&nbsp;Categories</a>
             <a href="/WADAK.com/App/view/coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Co-Admin</a>
-            <a href="/WADAK.com/App/view/ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service
+            <a href="/WADAK.com/App/view/ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i>
+                &nbsp;&nbsp;Service
                 Provider</a>
-            <a href="/WADAK.com/App/view/ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
-            <a href="/WADAK.com/App/view/View Report.php" class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
-            <a href="/WADAK.com/App/view/PaymentUI.php" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
-            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i
-                    class="fa fa-object-group icons"></i> &nbsp;&nbsp;Leaderboard</a>
-            <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
+            <a href="/WADAK.com/App/view/ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i>
+                &nbsp;&nbsp;Advertisements</a>
+            <a href="/WADAK.com/App/view/View Report.php" class="icon-a"><i class="fa fa-envelope icons"></i>
+                &nbsp;&nbsp;Reports</a>
+            <a href="/WADAK.com/App/view/PaymentUI.php" class="icon-a"><i class="fa fa-money icons"></i>
+                &nbsp;&nbsp;Payments</a>
+            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i class="fa fa-object-group icons"></i>
+                &nbsp;&nbsp;Leaderboard</a>
+
         </div>
 
 
@@ -96,26 +101,27 @@
                             <th>Minimum Value</th>
                             <th>Action</th>
                         </tr>
-                
-                <?php
+
+                        <?php
 	             $i=0;
 	             while($row = mysqli_fetch_array($result)) {
 	          ?>
-	           <tr class="<?php if(isset($classname)) echo $classname;?>">
-               <!--<form action="" method="POST" role = "form">-->
-	           <td><?php echo $row["C_ID"]; ?></td>
-	           <td><?php echo $row["Name"]; ?></td>
-	           <td><?php echo $row["value"]; ?></td>
-               <!--<td>
+                        <tr class="<?php if(isset($classname)) echo $classname;?>">
+                            <!--<form action="" method="POST" role = "form">-->
+                            <td><?php echo $row["C_ID"]; ?></td>
+                            <td><?php echo $row["Name"]; ?></td>
+                            <td><?php echo $row["value"]; ?></td>
+                            <!--<td>
                    <input type = "checkbox" name = "keyToDelete" value="<?php // echo $row['C_ID'];?>" required >
                </td>-->
-               <td>
-                    <a href="/WADAK.com/App/model/deleteCateg.php? id=<?php echo $row["C_ID"];?>">Delete</a></td>
-                
-               </td>
-	        
-	           </tr>
-	           <?php
+                            <td>
+                                <a href="/WADAK.com/App/model/deleteCateg.php? id=<?php echo $row["C_ID"];?>">Delete</a>
+                            </td>
+
+                            </td>
+
+                        </tr>
+                        <?php
 	           $i++;
 	           }
 	          ?>
@@ -126,7 +132,7 @@
                 <div class="box1">
                     <a href="AddCategory.php">Add</a>
                 </div>
-                
+
             </div>
             <div class="clearfix"></div>
         </div>

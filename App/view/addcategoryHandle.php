@@ -14,4 +14,3 @@ if(isset($_POST['add'])){
     header('location:/WADAK.com/App/view/home.php');
 }
 ?>
-
