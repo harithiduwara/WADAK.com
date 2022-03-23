@@ -78,6 +78,7 @@
                 <details>
                     <summary><?php echo $row["question"]; ?></summary>
                     <h4><?php echo $row["answer"]; ?></h4>
+<<<<<<< Updated upstream
                     <form method="POST" action="/WADAK.com/App/model/add_answer.php">
                         <input type="text" placeholder="Type your reply here..." name="answer">
                         <input type="submit" value="Reply" name="reply">
@@ -96,6 +97,15 @@
                     <input type="text" placeholder="Type your reply here...">
                     <input type="submit" value="Reply">
                 </details>-->
+=======
+                    <form method="POST" action="/WADAK.com/App/model/add_answer.php">  
+                    <input type="text" placeholder="Type your reply here..." name="answer">
+                    <input type="text" placeholder="Type your question id here..." name="question_id">
+                    <input type="submit" value="Reply" name="reply" >
+                    <!--<a href="/WADAK.com/App/model/add_answer.php?id=<?php# echo $row["question_id"]; ?>"> </a> -->
+                </details>
+                
+>>>>>>> Stashed changes
 
                 <?php
 	           $i++;
@@ -103,17 +113,6 @@
 	          ?>
             </div>
         </div>
-
-        <!--<div class="buttons" id="buttonleft" style="text-align:center">
-            <a href="/WADAK.com/App/view/Add question.php">
-                <button class="button button1">Add Question</button></a>
-            <a href="/WADAK.com/App/view/delete question.php">
-                <button class="button button2">Delete Question</button></a>
-            <a href="/WADAK.com/App/view/delete answer.php">
-                <button class="button button3">Delete Answer</button></a>
-        </div>-->
-
-
 
 
         <script>
