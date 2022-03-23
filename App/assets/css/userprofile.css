@@ -21,7 +21,7 @@ nav .ul .a {
 }
 
 .postcontainer {
-  min-height: 100vh;
+  min-height: 200vh;
   background: #EEEEEE;
   box-sizing: border-box;
 }
@@ -73,13 +73,7 @@ nav ul li a:hover {
   transition: 0.5s;
 }
 
-.animation {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  border-radius: 8px;
-  transition: all .5s ease 0s;
-}
+
 
 /* ----------------------End of Navigation---------------------------------- */
 

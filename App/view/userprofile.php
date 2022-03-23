@@ -68,24 +68,46 @@
                 <div class="cardcontainer">
 
                     <div class="card">
+
+                        <?php
+
+                        $query2 ="SELECT * FROM register where uid=$uid";
+
+                        $data2 = mysqli_query($con, $query2);
+                        
+                        $row2 = mysqli_fetch_assoc($data2);
+                        ?>
                         <header>
                             <div class="avatar">
-                                <img src="/WADAK.com/App/assets/images/1.jpg" alt="Jhon Doe" id="profilepic" />
+                                <img src="<?=$row2["profilePic"]?>" alt="Jhon Doe" id="profilepic" />
                             </div>
                         </header>
 
-                        <h3 class="usernameProfile">Jhon Doe</h3>
+
+
+                        <h3 class="usernameProfile"><?=$row2["username"]?></h3>
                         <div class="desc">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit et
-                                cupiditate deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit et
-                                cupiditate delenitiggggggggggggg
-                                scascikudfasivhnisfndhiovhioshfvijhaihsioalhvohfdiosvhadhisfhvisfohvids</p>
+                            <p><?=$row2["profileDescription"]?>
+                            </p>
                         </div>
+
                         <div class="chat" style="padding:0.5rem">
-                            <a href="" target="_blank"><i class="fa fa-envelope fa-3x"></i></a>
-                            <div class="clear"></div>
+                            <?php
+                        if(isset($_SESSION["user"]["userrole"])){?>
+                            <span class="navbargreen"><a href="" target="_blank"><i
+                                        class="fa fa-envelope fa-3x"></i></a>
+
+                            </span>
+                            <?php
+                        }
+                        else{?>
+                            <span class="navbargreen"><a href="/WADAK.com/App/view/login.php"><i
+                                        class="fa fa-envelope fa-3x"></i></a></span>
+                            <?php
+                        }
+                        ?>
                         </div>
+
 
                         <footer>
                             <a href="" target="_blank"><i class="fa fa-telegram fa-2x"></i></a>
@@ -102,16 +124,16 @@
             <hr>
             <div class="posts">
 
-
-                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem; height: 40vmin;
+                <div>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem;
                 overflow: hidden">
 
-                    <?php
+                        <?php
                 if(mysqli_num_rows($data)>0){
                     while($row = mysqli_fetch_assoc($data)){
                         ?>
-                    <div class="sectionheading3">
-                        <div class="card1" style="margin:1rem"><img src="
+                        <div class="sectionheading3">
+                            <div class="card1" style="margin:1rem"><img src="
                     <?php
                     if($row["filename"]==null){
                         echo "/WADAK.com/App/uploads/noimage.jpg";
@@ -123,29 +145,24 @@
                 
                 
                 " alt="service" style="width:100% ; height:200px">
-                            <a href="/WADAK.com/App/view/userprofile.php?uid=<?=$row["uid"]?>">
-                                <p style="text-align:end">
-                                    <?=$row["username"]?>
+                                <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
+                                    <h3 style="text-align:center"><?= $row["title"] ?>
+                                    </h3>
+                                </a>
+                                <br>
+                                <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
+                                    <p style="text-align: center"><?=$row["description"]?></p><br>
+                                    <p>
+                                </a>
+
                                 </p>
-                            </a>
-
-                            <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
-                                <h3 style="text-align:center"><?= $row["title"] ?>
-                                </h3>
-                            </a>
-                            <br>
-                            <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
-                                <p style="text-align: center"><?=$row["description"]?></p><br>
-                                <p>
-                            </a>
-
-                            </p>
+                            </div>
                         </div>
-                    </div>
-                    <?php
+                        <?php
                 }
                 }
                 ?>
+                    </div>
                 </div>
             </div>
     </body>
