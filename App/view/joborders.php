@@ -1,12 +1,26 @@
 <?php
     session_start();
+
+    $uid = $_SESSION["user"]['uid'];
+
+    // var_dump($_SESSION["user"]['uid']);
+
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+    
+    if(!$con){
+        die("Connection failed" . mysqli_connect_error());
+    }
+    $query = "SELECT * FROM register WHERE uid=$uid";
+    $data = mysqli_query($con, $query);
+    $userData = mysqli_fetch_assoc($data);
+
 ?>
 
 <!Doctype HTML>
 <html>
 
     <head>
-        <title>Categories</title>
+        <title>Job Orders</title>
         <style>
         a {
             text-decoration: none;

@@ -2,6 +2,10 @@
 
     session_start();
 
+    $uid = $_SESSION["user"]['uid'];
+
+    // var_dump($_SESSION["user"]['uid']);
+
     $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
     
     if(!$con){
@@ -9,6 +13,7 @@
     }
     $query = "SELECT * FROM register WHERE uid=$uid";
     $data = mysqli_query($con, $query);
+    $userData = mysqli_fetch_assoc($data);
 
 ?>
 
@@ -31,14 +36,14 @@
 
 
     <body>
-
+        <!-- <?=$uid?> -->
         <div id="mySidenav" class="sidenav">
             <p class="logo">WADAK <span class="menu">&#9776;</span></p>
             <p class="logo1"> <span class="menu1">&#9776;</span></p>
             <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i>
                 &nbsp;&nbsp;Home</a>
-            <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
-                &nbsp;&nbsp;Dashboard</a>
+            <!-- <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
+                &nbsp;&nbsp;Dashboard</a> -->
             <a href="/WADAK.com/App/view/joborders.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Job Posts</a>
             <a href="/WADAK.com/App/view/previousordershireperson.php" class="icon-a"><i class="fa fa-tasks icons"></i>
@@ -80,10 +85,14 @@
 
                     <div class="profile">
 
-                        <p>User Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
+                        <p>
+                            <?=$userData["username"]?> <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+                        </p>
 
                         <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="userprofile.php">Profile</a></p>
+                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a
+                                    href="/WADAK.com/App/view/userprofile.php?uid=<?=$userData["uid"]?>">Profile</a></p>
+
                             <p><i class="fa-duotone fa-arrow-right-from-bracket"></i> &nbsp;&nbsp; <a
                                     href="/WADAK.com/App/controller/logout.php">Log
                                     out</a>
@@ -104,7 +113,7 @@
             <div class="clearfix"></div>
             <br />
             <div class="col-div-12">
-                <div class="box-8">
+                <div class="box8">
                     <h1>Leaderboard</h1>
                     <h2>Reviews : 1000</h2>
                     <h2>Stars : 4.7</h2>
@@ -128,10 +137,10 @@
                                 <th>Email</th>
                             </tr>
                             <tr>
-                                <th>Harith Iduwara</th>
-                                <th>Harith</th>
-                                <th>0771223465</th>
-                                <th>coad@gmail.com</th>
+                                <th><?=$userData["name"]?></th>
+                                <th><?=$userData["username"]?></th>
+                                <th><?=$userData["contactno"]?>5</th>
+                                <th><?=$userData["email"]?></th>
                             </tr>
 
                         </table>
