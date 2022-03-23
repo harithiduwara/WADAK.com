@@ -44,7 +44,7 @@
             <nav>
                 <ul class="navbar">
                     <?php
-                        if(isset($_SESSION["user"]["userrole"])){?>
+                    if(isset($_SESSION["user"]["userrole"])){?>
                     <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
                     <?php
                     }

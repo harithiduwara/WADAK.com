@@ -1,8 +1,22 @@
+<?php
+
+    session_start();
+
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+    
+    if(!$con){
+        die("Connection failed" . mysqli_connect_error());
+    }
+    $query = "SELECT * FROM register WHERE uid=$uid";
+    $data = mysqli_query($con, $query);
+
+?>
+
 <!Doctype HTML>
 <html>
 
     <head>
-        <title>Hire Person Dashboard</title>
+        <title>User Dashboard</title>
         <style>
         a {
             text-decoration: none;
@@ -70,10 +84,11 @@
 
                         <div class="profile-div">
                             <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="userprofile.php">Profile</a></p>
-                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a
-                                    href="hirepersondashboard.php">Dashboard</a> </p>
-                            <a href="/WADAK.com/App/controller/logout.php"></i>
-                                &nbsp;&nbsp;Log Out</a>
+                            <p><i class="fa-duotone fa-arrow-right-from-bracket"></i> &nbsp;&nbsp; <a
+                                    href="/WADAK.com/App/controller/logout.php">Log
+                                    out</a>
+                            </p>
+
 
                         </div>
                     </div>
