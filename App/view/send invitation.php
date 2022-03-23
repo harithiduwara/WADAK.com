@@ -20,12 +20,21 @@
             <label class="logo">WADAK</label>
             <ul>
                 <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
-                <li><a href="/WADAK.com/App/view/Add achievement post - Service provider.php">Post Job</a> </li>
+                <?php
+                if(isset($_SESSION["user"]["userrole"])){?>
+                <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
+                <?php
+                }
+                ?>
                 <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
                 <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
+                <?php if(isset($_SESSION["user"]["userrole"])){?>
+
                 <li><a href="/WADAK.com/App/view/leaderboard.php">Leaderboard</a> </li>
                 <li><a href="/WADAK.com/App/view/chat.php">Messages</a> </li>
                 <li><a href="/WADAK.com/implementation/controller/logout.php">Logout</a> </li>
+                <?php }else {?>
+
                 <div class="animation "></div>
             </ul>
         </nav>
