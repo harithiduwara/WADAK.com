@@ -76,22 +76,70 @@
             <div class="clearfix"></div>
             <br />
 
+            <?php include('dbconfig.php');?>
+
             <div class="col-div-4-1">
                 <div class="box">
                     <p class="head-1">Total Co-Admins</p>
                     <i class="fa fa-users box-icon"></i>
+
+                    <?php
+
+                        $co_query = "SELECT * FROM register WHERE userrole = 'coadmin' ";
+                        $co_query_run = mysqli_query($connection,$co_query);
+
+                        if($co_total = mysqli_num_rows($co_query_run))
+                        {
+                            echo '<h2 align = center  style="margin-top:40px;margin-left:30px;color:#58655C;font-size:50px; font-weight:500"> '.$co_total.' </h2>';
+                        }
+                        else{
+                            echo '<h2 class="nb-0"> No Data </h2>';
+                        }
+
+                    ?>
+
                 </div>
             </div>
             <div class="col-div-4-1">
                 <div class="box">
                     <p class="head-1">Total Service Providers</p>
                     <i class="fa fa-users box-icon"></i>
+
+                    <?php
+
+                        $sp_query = "SELECT * FROM register WHERE userrole = 'serviceprovider' ";
+                        $sp_query_run = mysqli_query($connection,$sp_query);
+
+                        if($sp_total = mysqli_num_rows($sp_query_run))
+                        {
+                            echo '<h2 align = center  style="margin-top:40px;color:#58655C;font-size:50px; font-weight:500"> '.$sp_total.' </h2>';
+                        }
+                        else{
+                            echo '<h2 class="nb-0"> No Data </h2>';
+                        }
+
+                    ?>
                 </div>
             </div>
             <div class="col-div-4-1">
                 <div class="box">
                     <p class="head-1">Total Hire Persons</p>
                     <i class="fa fa-users box-icon"></i>
+
+                    <?php
+
+                        $hp_query = "SELECT * FROM register WHERE userrole = 'hireperson' ";
+                        $hp_query_run = mysqli_query($connection,$hp_query);
+
+                        if($hp_total = mysqli_num_rows($hp_query_run))
+                        {
+                            echo '<h2 align = center  style="margin-top:40px;color:#58655C;font-size:50px; font-weight:500"> '.$hp_total.' </h2>';
+                        }
+                        else{
+                            echo '<h2 align = center  style="margin-top:40px;color:#58655C;font-size:35px; font-weight:500"> No Data </h2>';
+                        }
+
+                    ?>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -101,6 +149,21 @@
                 <div class="box-1">
                     <div class="content-box-1">
                         <p class="head-1">Advertisements <span><a href="#">View All</a></span></p>
+
+                        <?php
+
+                        $ad_query = "SELECT * FROM advertisement ";
+                        $ad_query_run = mysqli_query($connection,$ad_query);
+
+                        if($ad_total = mysqli_num_rows($ad_query_run))
+                        {
+                            echo '<h2 align = center  style="margin-top:40px;color:#58655C;font-size:50px; font-weight:500"> '.$ad_total.' </h2>';
+                        }
+                        else{
+                            echo '<h2 align = center  style="margin-top:40px;color:#58655C;font-size:35px; font-weight:500"> No Data </h2>';
+                        }
+
+                    ?>
                     </div>
                 </div>
             </div>
@@ -108,13 +171,43 @@
                 <div class="box-1">
                     <div class="content-box-1">
                         <p class="head-1">News <span><a href="#">View All</a></span></p>
+
+                        <?php
+
+                        $news_query = "SELECT * FROM news";
+                        $news_query_run = mysqli_query($connection,$news_query);
+
+                        if($news_total = mysqli_num_rows($news_query_run))
+                        {
+                            echo '<h2 align = center  style="margin-top:40px;color:#58655C;font-size:50px; font-weight:500"> '.$news_total.' </h2>';
+                        }
+                        else{
+                            echo '<h2 align = center  style="margin-top:40px;color:#58655C;font-size:35px; font-weight:500"> No Data </h2>';
+                        }
+
+                    ?>
                     </div>
                 </div>
             </div>
             <div class="col-div-4-1">
                 <div class="box-1">
                     <div class="content-box-1">
-                        <p class="head-1">Total Deactivated Accounts</p>
+                        <p class="head-1">Total Categories</p>
+
+                        <?php
+
+                        $ct_query = "SELECT * FROM categories";
+                        $ct_query_run = mysqli_query($connection,$ct_query);
+
+                        if($ct_total = mysqli_num_rows($ct_query_run))
+                        {
+                            echo '<h2 align = center  style="margin-top:40px;color:#58655C  ;font-size:50px; font-weight:500"> '.$ct_total.' </h2>';
+                        }
+                        else{
+                            echo '<h2 align = center  style="margin-top:40px;color:#58655C;font-size:35px; font-weight:500"> No Data </h2>';
+                        }
+
+                    ?>
                     </div>
                 </div>
             </div>
