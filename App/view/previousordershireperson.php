@@ -27,7 +27,7 @@
         }
 
         </style>
-        <link rel="stylesheet" href="/WADAK.com/App/assets/css/CategoryUI.css" type="text/css" />
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/Admin-dashboard.css" type="text/css" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -61,15 +61,13 @@
                 &nbsp;&nbsp;Advertisements</a>
         </div>
         <div id="main">
+
             <div class="head">
                 <div class="col-div-1">
                     <p class="nav">Previous Orders</p>
-
                 </div>
 
                 <div class="col-div-1">
-                    <i class="fa fa-search search-icon"></i>
-
                     <i class="fa fa-bell noti-icon"></i>
                     <div class="notification-div">
                         <p class="noti-head">Notification </p>
@@ -80,21 +78,21 @@
                     </div>
 
                     <div class="profile">
-                        <p>Username <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
-                        <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="userProfile.php">Profile</a></p>
-                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a
-                                    href="hirepersondashboard.html">Dashboard</a>
-                            </p>
-                            <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a
-                                    href="/WADAK.com/implementation/controller/logout.php">Log Out</a></p>
 
-                            <?php
-                                session_start();
-                                unset($_SESSION["id"]);
-                                unset($_SESSION["name"]);
-                                // header("Location:../view/login.php");
-                            ?>
+                        <p>
+                            <?=$userData["username"]?> <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+                        </p>
+
+                        <div class="profile-div">
+                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a
+                                    href="/WADAK.com/App/view/userprofile.php?uid=<?=$userData["uid"]?>">Profile</a></p>
+
+                            <p><i class="fa-duotone fa-arrow-right-from-bracket"></i> &nbsp;&nbsp; <a
+                                    href="/WADAK.com/App/controller/logout.php">Log
+                                    out</a>
+                            </p>
+
+
                         </div>
                     </div>
                 </div>
@@ -105,7 +103,7 @@
             <br />
 
             <div class="col-div-2">
-                <div class="box">
+                <div class="box" style="width:80vw">
                     <p class="head-1"></p>
                     <br />
                     <?php                                

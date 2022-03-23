@@ -71,8 +71,6 @@
                 </div>
 
                 <div class="col-div-1">
-                    <i class="fa fa-search search-icon"></i>
-
                     <i class="fa fa-bell noti-icon"></i>
                     <div class="notification-div">
                         <p class="noti-head">Notification </p>
