@@ -83,7 +83,7 @@
 
             <div class="mySlides fade">
 
-                <img src="/WADAK.com/App/assets/images/1.jpg" style="width:100%">
+                <img src="/WADAK.com/App/assets/images/1.jpg" style="width:100%; object-fit: cover">
                 <div class="text">
                     <h1 style="color:white">Welcome to WADAK Paradise!</h1>
                 </div>
@@ -148,7 +148,7 @@
                     ?>
                 
                 
-                " alt="service" style="width:100% ; height:200px">
+                " alt="service" style="width:100% ; height:200px; object-fit: cover;">
                         <a href="/WADAK.com/App/view/userprofile.php?uid=<?=$row["uid"]?>">
                             <p style="text-align:end">
                                 <?=$row["username"]?>
@@ -206,7 +206,7 @@
                                     ?>
                 
                 
-                " alt="service" style="width:100% ; height:200px">
+                " alt="service" style="width:100% ; height:200px; object-fit: cover;">
 
                             </a>
 

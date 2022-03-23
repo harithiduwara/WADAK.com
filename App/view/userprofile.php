@@ -42,7 +42,7 @@
     <body>
 
         <nav>
-            <label class="logo">WADAK</label>
+            <a href="/WADAK.com/App/view/home.php"><label class="logo">WADAK</label></a>
             <ul style="margin-top: 1rem">
                 <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
                 <li><a href="/WADAK.com/App/view/jobs.php" target="_blank">Jobs</a> </li>
@@ -110,9 +110,16 @@
 
 
                         <footer>
-                            <a href="" target="_blank"><i class="fa fa-telegram fa-2x"></i></a>
-                            <a href=""><i class="fa fa-twitter fa-2x"></i></a>
-                            <a href=""><i class="fa fa-instagram fa-2x"></i></a>
+                            <?php
+                                $query3 = "SELECT * FROM userLinks where uid = $uid";
+                                
+                                $data3 = mysqli_query($con, $query3);
+
+                                $row3 = mysqli_fetch_assoc($data3);
+                            ?>
+                            <a href="<?=$row3["telegram"]?>" target="_blank"><i class="fa fa-telegram fa-2x"></i></a>
+                            <a href="<?=$row3["twitter"]?>" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                            <a href="<?=$row3["insta"]?>" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
                         </footer>
                     </div>
 
@@ -144,7 +151,7 @@
                     ?>
                 
                 
-                " alt="service" style="width:100% ; height:200px">
+                " alt="service" style="width:100% ; height:200px; object-fit: cover;">
                                 <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
                                     <h3 style="text-align:center"><?= $row["title"] ?>
                                     </h3>
