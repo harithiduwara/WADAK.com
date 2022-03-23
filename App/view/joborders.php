@@ -66,7 +66,7 @@
         <div id="main">
             <div class="head">
                 <div class="col-div-1">
-                    <p class="nav">Job Posts</p>
+                    <p class="nav">Active Job Posts</p>
 
                 </div>
 
@@ -83,13 +83,18 @@
                     </div>
 
                     <div class="profile">
-                        <p>Username<i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
+                        <p>
+                            <?=$userData["username"]?> <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+                        </p>
+
                         <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="AdminProfile.html">Profile</a></p>
-                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Admin-dashboard.html">Dashboard</a>
+                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a
+                                    href="/WADAK.com/App/view/userprofile.php?uid=<?=$userData["uid"]?>">Profile</a></p>
+
+                            <p><i class="fa-duotone fa-arrow-right-from-bracket"></i> &nbsp;&nbsp; <a
+                                    href="/WADAK.com/App/controller/logout.php">Log
+                                    out</a>
                             </p>
-                            <p><a href="/WADAK.com/Implementation/controller/logout.php"><i
-                                        class=" fa fa-power-off"></i> &nbsp;&nbsp;Log Out</a></p>
                         </div>
                     </div>
                 </div>
@@ -105,19 +110,8 @@
                         <p class="head-1">Job History</p>
                         <br />
 
-                        <?php
-                            
-                                // Create connection
-                                $con = new mysqli('localhost', 'toor', 'toor', 'wadak');
-                                // Check connection
-                                if ($con->connect_error) {
-                                    die("Connection failed: " . $conn->connect_error);
-                                } 
-                                
-                                $uid = $_SESSION["user"]["uid"];
-                                
-                                $sql = "select * from postjob where uid=$uid";
-
+                        <?php                                
+                                $sql = "select * from postjob where uid=$uid and status=0";
 
                                 $result = $con->query($sql);
 
