@@ -38,7 +38,7 @@
                   }
                 ?>
                 <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
-                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
 
 
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
