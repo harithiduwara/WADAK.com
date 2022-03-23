@@ -18,6 +18,12 @@
             Q&A
         </title>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/Q&A.css">
+        <style>
+        body {
+            background-image: url('/WADAK.com/App/assets/images/question.jpg');
+           
+             }
+</style>
     </head>
 
     <body>
@@ -78,9 +84,9 @@
                 <details>
                     <summary><?php echo $row["question"]; ?></summary>
                     <h4><?php echo $row["answer"]; ?></h4>
-<<<<<<< Updated upstream
                     <form method="POST" action="/WADAK.com/App/model/add_answer.php">
                         <input type="text" placeholder="Type your reply here..." name="answer">
+                        <input type="text" placeholder="Type question id here..." name="question_id">
                         <input type="submit" value="Reply" name="reply">
                 </details>
 
@@ -97,15 +103,12 @@
                     <input type="text" placeholder="Type your reply here...">
                     <input type="submit" value="Reply">
                 </details>-->
-=======
-                    <form method="POST" action="/WADAK.com/App/model/add_answer.php">  
-                    <input type="text" placeholder="Type your reply here..." name="answer">
-                    <input type="text" placeholder="Type your question id here..." name="question_id">
-                    <input type="submit" value="Reply" name="reply" >
+
+                     
                     <!--<a href="/WADAK.com/App/model/add_answer.php?id=<?php# echo $row["question_id"]; ?>"> </a> -->
                 </details>
                 
->>>>>>> Stashed changes
+
 
                 <?php
 	           $i++;
