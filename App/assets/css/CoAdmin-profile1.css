@@ -254,7 +254,7 @@ td, th {
     padding: 15px;
 }
 
-td input{
+td {
     width: 450px;
     height: 40px;
     border: none;
@@ -322,4 +322,27 @@ td input{
 .box2:hover{
     background-color:#05ac05;
 }
+.search-form .text{
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 40%;
+    border-color: #05ac05;
+  }
 
+.search-form .submit {
+    background-color: #05ac05;
+    width: 10%;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    
+  }
+
+ .search-form .submit:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #37bf37;
+  }
