@@ -106,42 +106,82 @@
 
             <div class="col-div-2">
                 <div class="box">
-                    <p class="head-1">Order History</p>
+                    <p class="head-1">Completed Jobs</p>
                     <br />
-                    <table>
-                        <tr>
-                            <th>Date</th>
-                            <th>Job Title</th>
-                            <th>Job Description</th>
+                    <?php                                
+                                $sql = "select * from postjob where uid=$uid and status=1";
 
-                        </tr>
+                                $result = $con->query($sql);
 
-                        <tr>
-                            <th>2021-10-10</th>
-                            <th>Web Development</th>
-                            <th>I can create responsive websites.</th>
+                                // echo $uid;
+                                    echo "<table>
+                                            <tr>
+                                                <th>Job ID</th>
+                                                <th>Job Title</th>
+                                                <th>Job Description</th>
+                                                <th>Budget</th>
+                                                <th>Job Type</th>
+                                            </tr>";
+                                    // output data of each row
 
-                        </tr>
+                                    // echo $result->num_rows;
+                                    
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<tr>
+                                                <td>" . $row["jobid"]. "</td>
+                                                <td>" . $row["title"]. "</td>
+                                                <td>" . $row["description"]. "</td>
+                                                <td>" . $row["budget"]. "</td>
+                                                <td>" . $row["jobtype"]. "</td>
+                                            </tr>";
+                                    }
+                                    echo "</table>";
 
-                        <tr>
-                            <th>2021-10-12</th>
-                            <th>Logo Design</th>
-                            <th>I can create facinating logos.</th>
+                                
 
-                        </tr>
-
-                        <tr>
-                            <th>2021-10-15</th>
-                            <th>Web Development</th>
-                            <th>I can create responsive websites.</th>
-
-                        </tr>
-
-
-                    </table>
+                                $conn->close();
+                                ?>
                 </div>
             </div>
-            <div class="clearfix"></div>
+            <div class="col-div-3">
+                <div class="box3">
+                    <p class="head-2">Canceled Jobs</p>
+                    <br />
+                    <?php                                
+                                $sql = "select * from postjob where uid=$uid and status=2";
+
+                                $result = $con->query($sql);
+
+                                // echo $uid;
+                                    echo "<table>
+                                            <tr>
+                                                <th>Job ID</th>
+                                                <th>Job Title</th>
+                                                <th>Job Description</th>
+                                                <th>Budget</th>
+                                                <th>Job Type</th>
+                                            </tr>";
+                                    // output data of each row
+
+                                    // echo $result->num_rows;
+                                    
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<tr>
+                                                <td>" . $row["jobid"]. "</td>
+                                                <td>" . $row["title"]. "</td>
+                                                <td>" . $row["description"]. "</td>
+                                                <td>" . $row["budget"]. "</td>
+                                                <td>" . $row["jobtype"]. "</td>
+                                            </tr>";
+                                    }
+                                    echo "</table>";
+
+                                
+
+                                $conn->close();
+                                ?>
+                </div>
+            </div>
         </div>
 
 
