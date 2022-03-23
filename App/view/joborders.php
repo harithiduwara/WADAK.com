@@ -107,7 +107,7 @@
             <div class="col-div-2">
                 <div class="col-div-2">
                     <div class="box">
-                        <p class="head-1">Job History</p>
+                        <p class="head-1"></p>
                         <br />
 
                         <?php                                
