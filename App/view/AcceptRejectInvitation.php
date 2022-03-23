@@ -22,16 +22,16 @@
             <p class="logo1"> <span class="menu1">&#9776;</span></p>
             <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i>
                 &nbsp;&nbsp;Home</a>
-            <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i
-                    class="fa fa-dashboard icons"></i>
+            <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
-            <a href="/WADAK.com/App/view/previousordershireperson.php" class="icon-a"><i
-                    class="fa fa-tasks icons"></i> &nbsp;&nbsp;Previous Orders</a>
-            <a href="/WADAK.com/App/view/appliedservices.php" class="icon-a"><i
-                    class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/App/view/previousordershireperson.php" class="icon-a"><i class="fa fa-tasks icons"></i>
+                &nbsp;&nbsp;Previous Orders</a>
+            <a href="/WADAK.com/App/view/appliedservices.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Applied Services</a>
-            <a href="/WADAK.com/App/view/news2.php" class="icon-a"><i class="far fa-envelope-open"></i> &nbsp;&nbsp;News</a>
-            <a href="/WADAK.com/App/view/accept reject invitation.php" class="icon-a"><i class="fa fa-envelope icons"></i>
+            <a href="/WADAK.com/App/view/news2.php" class="icon-a"><i class="far fa-envelope-open"></i>
+                &nbsp;&nbsp;News</a>
+            <a href="/WADAK.com/App/view/accept reject invitation.php" class="icon-a"><i
+                    class="fa fa-envelope icons"></i>
                 &nbsp;&nbsp;Invitations</a>
 
         </div>
@@ -52,8 +52,6 @@
                 <li><a href="/WADAK.com/App/view/messages.php">Messages</a> </li>
                 <li><a href="/WADAK.com/App/controller/logout.php">Logout</a> </li>
 
-                <!-- <li><a href="#">Login</a> </li> 
-            No need a login right!-->
                 <div class="animation "></div>
             </ul>
         </nav>

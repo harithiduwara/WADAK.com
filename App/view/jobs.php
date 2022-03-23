@@ -52,11 +52,11 @@ if(!$con){
             <nav>
                 <ul class="navbar">
                     <?php
-                    if(isset($_SESSION["user"]["userrole"])){?>
-                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Post Jobs</a></li>
+                        if(isset($_SESSION["user"]["userrole"])){?>
+                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
                     <?php
-                                }
-                                ?>
+                    }
+                    ?>
 
 
                     <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>

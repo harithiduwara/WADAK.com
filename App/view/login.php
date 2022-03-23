@@ -19,8 +19,8 @@
             <a href=" /WADAK.com/App/view/home.php"> <label class=" logo">WADAK</label></a>
             <ul style="margin-top: 1rem">
                 <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
-                <li><a href="/WADAK.com/App/view/jobs.php">Jobs</a> </li>
-                <li><a href="/WADAK.com/App/view/services.php">Services</a> </li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
                 <li><a href="/WADAK.com/App/view/registration.php">Register</a> </li>
                 <div class="animation "></div>
             </ul>

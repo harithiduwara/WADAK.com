@@ -20,8 +20,8 @@
             <ul>
                 <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
                 <li><a href="/WADAK.com/App/view/Add achievement post - Service provider.php">Post Job</a> </li>
-                <li><a href="/WADAK.com/App/view/jobs.php">Jobs</a> </li>
-                <li><a href="/WADAK.com/App/view/services.php">Services</a> </li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
                 <!-- <li><a href="#">Leaderboard</a></li>-->
                 <!--<li><i class="far fa-bell"></i></li>-->
                 <li><a href="/WADAK.com/App/view/messages.php">Messages</a> </li>
@@ -37,7 +37,8 @@
 
         <!-- news containers -->
 
-        <h1 style="margin-top:12px; margin-left:100px; color:#6c7293;"><a href="/WADAK.com/App/view/achievemts.php"> Achievements</a></h1>
+        <h1 style="margin-top:12px; margin-left:100px; color:#6c7293;"><a href="/WADAK.com/App/view/achievemts.php">
+                Achievements</a></h1>
 
 
 
