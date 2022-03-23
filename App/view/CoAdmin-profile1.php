@@ -9,7 +9,7 @@
       }
 
     </style>
-    <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/CoAdmin-profile1.css" type="text/css" />
+    <link rel="stylesheet" href="/WADAK.com/App/assets/css/CoAdmin-profile1.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
@@ -66,15 +66,24 @@
 
       <div class="clearfix"></div>
       <br />
+      <div class="search-form">
+                    <form action="" method="POST" >
+                        <input type ="text" name ="uid" placeholder="Enter User Id" class="text">
+                        <input type ="submit" name ="search" placeholder="Search" value="Search" class="submit">
+                    </form>
+      </div>
+
+     
 
       <div class="col-div-2">
         <div class="box">
 
           <form>
             <table>
+            
               <tr>
                 <td>
-                  First Name :
+                  Name :
                 </td>
                 <td>
                   <input type="text" placeholder=" ">
@@ -82,15 +91,7 @@
               </tr>
               <tr>
                 <td>
-                  Last Name :
-                </td>
-                <td>
-                  <input type="text" placeholder=" ">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  NIC :
+                  Co-admin Id :
                 </td>
                 <td>
                   <input type="text" placeholder=" ">
@@ -101,7 +102,7 @@
                   Contact :
                 </td>
                 <td>
-                  <input type="phone" placeholder=" ">
+                  <input type="text" placeholder=" ">
                 </td>
               </tr>
               <tr>
@@ -109,12 +110,20 @@
                   Email :
                 </td>
                 <td>
-                  <input type="email" placeholder=" ">
+                  <input type="phone" placeholder=" ">
                 </td>
               </tr>
               <tr>
                 <td>
                   Address :
+                </td>
+                <td>
+                  <input type="email" placeholder=" ">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Date of birth :
                 </td>
                 <td>
                   <input type="text" placeholder=" ">
@@ -128,7 +137,7 @@
       <div class="col-div-2">
         <div class="imgbox">
           <div class="img">
-            <img src="sp.png" width="325" height="335">
+            <img src="/WADAK.com/App/assets/images/sp.png" width="325" height="335">
             <p>Name</p>
           </div>
 
@@ -136,12 +145,7 @@
         <div class="box1">
           <a href="#" onclick="myfunction1()">Edit</a>
         </div>
-        <div class="box2">
-          <a href="#" onclick="myfunction2()">Delete</a>
-        </div>
-        <div class="box2">
-          <a href="#">Cancel</a>
-        </div>
+        
       </div>
       <div class="clearfix"></div>
     </div>
