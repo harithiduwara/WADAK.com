@@ -1,15 +1,18 @@
 <?php 
 session_start();
 
+$postType = $_GET["postType"]??"job";
+
 $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
 if(!$con){
     die("Connection failed" . mysqli_connect_error());
 }
 
-    $query = "select * from postjob , register where register.uid = postjob.uid and (title like '%".$_GET["search"]."%' or description like '%".$_GET["search"]."%' or address like '%".$_GET["search"]."%')";
+    $query = "select * from postjob , register where postType='".$postType."' and (register.uid = postjob.uid and (title like '%".$_GET["search"]."%' or description like '%".$_GET["search"]."%' or address like '%".$_GET["search"]."%'))";
 
-  $data = mysqli_query($con, $query);
+    $data = mysqli_query($con, $query);
 
+    
 
 ?>
 
@@ -107,15 +110,15 @@ if(!$con){
         <!----------------------------------footer--------------------------------------->
 
 
-        <div style="display:grid;grid-template-columns: 1fr 1fr 1fr 1fr;grid-gap:1rem">
+        <div style="display:grid;grid-template-columns: 1fr 1fr 1fr 1fr;grid-gap:1rem; background-color: #f1f1f1;">
             <?php
             if (mysqli_num_rows($data) > 0) {
-            // output data of each row
+
             while($row = mysqli_fetch_assoc($data)) {
           
             ?>
             <div>
-                <div class="card1" style="margin:1rem"><img src="
+                <div class="card1" style="margin:1rem; "><img src="
                     <?php
                     if($row["filename"]==null){
                         echo "/WADAK.com/App/uploads/noimage.jpg";
@@ -126,7 +129,7 @@ if(!$con){
                     ?>
                 
                 
-                " alt="service" style="width:100% ; height:200px">
+                " alt="service" style="width:100% ; height:200px; object-fit: cover;">
                     <a href="/WADAK.com/App/view/userprofile.php?uid=<?=$row["uid"]?>">
                         <h9>
                             <?=$row["username"]?>

@@ -36,8 +36,6 @@
 
         <!----------------------------------Navigation-------------------------------------->
         <header>
-            <!-- <img class="wadaklogo" src="/WADAK.com/App/assets/images/wadak.gif" alt="wadak gif"
-                style="float:left; width:5%; height:5%"> -->
             <a href="/WADAK.com/App/view/home.php"> <label style=" color: green;
                                                                     font-size: 2rem;
                                                                     line-height: 80px;
@@ -51,8 +49,8 @@
                     <?php
                     }
                     ?>
-                    <li class="greenbar"><a href="jobs.php">Jobs</a></li>
-                    <li><a href="/WADAK.com/App/view/services.php">Services</a></li>
+                    <li class="greenbar"><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+                    <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
 
                     <?php if(!isset($_SESSION["user"]["userrole"])){?>
 
