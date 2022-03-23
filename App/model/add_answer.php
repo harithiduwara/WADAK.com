@@ -4,9 +4,11 @@ require 'newsconfig.php';
 if(isset($_POST['reply']))
 {
 
+$question_id=$_POST["question_id"];
 $answer=$_POST["answer"];
 
-$sql = "INSERT INTO faq(answer) VALUES ( '$answer')";
+
+$sql = "UPDATE faq SET answer ='$answer'WHERE question_id='$question_id'";
 
     if(mysqli_query($conn,$sql)){
         echo "<script type='text/javascript'>
