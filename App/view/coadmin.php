@@ -137,6 +137,9 @@
                 <div class="box2">
                     <a href="/WADAK.com/App/view/ViewCoAdmin.php">View</a>
                 </div>
+                <div class="box3">
+                    <a href="/WADAK.com/App/view/update coAdmin.php">Update</a>
+                </div>
             </div>
             <div class="clearfix"></div>
         </div>
