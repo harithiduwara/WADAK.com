@@ -47,7 +47,7 @@
                 <ul class="navbar">
                     <?php
                         if(isset($_SESSION["user"]["userrole"])){?>
-                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Post Jobs</a></li>
+                    <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
                     <?php
                     }
                     ?>
@@ -136,8 +136,10 @@
                 if(mysqli_num_rows($data)>0){
                     for($x=0; $x<=3 && $row = mysqli_fetch_assoc($data); $x++){
                         ?>
-                <div class="sectionheading3">
-                    <div class="card1" style="margin:1rem"><img src="
+                <div class=" sectionheading3">
+                    <div class="card1"
+                        style="margin:1rem; background-color: rgb(248, 248, 248); padding: 0.5rem 0.5rem 0.5rem 0.5rem">
+                        <img src="
                     <?php
                     if($row["filename"]==null){
                         echo "/WADAK.com/App/uploads/noimage.jpg";
@@ -193,7 +195,8 @@
                     for($x=0; $x<=3 && $row = mysqli_fetch_assoc($data); $x++){
                         ?>
                     <div class="sectionheading3">
-                        <div class="card1" style="margin:1rem">
+                        <div class="card1"
+                            style="margin:1rem; background-color: rgb(248, 248, 248); padding: 0.5rem 0.5rem 0.5rem 0.5rem">
                             <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
                                 <img src="
                                     <?php
@@ -219,7 +222,7 @@
                             <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
                                 <h3 style="text-align:center"><?= $row["title"] ?>
                                 </h3>
-                            </a>>
+                            </a>
                             <br>
                             <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
 

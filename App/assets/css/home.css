@@ -324,6 +324,11 @@ img {vertical-align: middle;}
 .sectionheading3 h1 {
     margin-top: 10px;
     padding-top: 2rem;
+
+}
+
+.card1 {
+    background-color: rgb(243, 243, 243);
 }
 
 #postbutton3 {
