@@ -75,8 +75,6 @@
                 &nbsp;&nbsp;Categories</a>
             <a href="/WADAK.com/App/view/coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Co-Admin</a>
-            <a href="/WADAK.com/App/view/Add Coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
-                &nbsp;&nbsp;Add Co-Admin</a>
             <a href="/WADAK.com/App/view/ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Service
                 Provider</a>
@@ -85,7 +83,7 @@
                 &nbsp;&nbsp;Reports</a>
             <a href="/WADAK.com/App/view/PaymentUI.php" class="icon-a"><i class="fa fa-money icons"></i>
                 &nbsp;&nbsp;Payments</a>
-            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i class="fa fa-object-group icons"></i>
+            <a href="/WADAK.com/App/view/lead.php" class="icon-a"><i class="fa fa-object-group icons"></i>
                 &nbsp;&nbsp;Leaderboard</a>
 
         </div>
@@ -129,7 +127,7 @@
             <br />
 
             <div class="col-div-2">
-                <div class="box" style="height:65vh">
+                <div class="box"  style="height:65vh">
 
                     <form action="/WADAK.com/App/controller/addcoadmin.php" method="post"
                         style="text-align:center; color:#0b6403">
