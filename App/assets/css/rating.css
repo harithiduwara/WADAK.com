@@ -1,36 +1,202 @@
-fieldset.label{margin:0; padding:0;}
-body{margin:20px;}
-h1{font-size:1.5em; margin:10px;}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-.rating{
-    border:none;
-    float:left;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    font-weight: lighter;
 }
 
-.rating>input{display:none}
-.rating>label:before{
-    margin:5px;
-    font-size:3.25em;
-    font-family:FontAwesome;
-    display:inline-block;
-    content:"\f005";
+body {
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Open Sans', sans-serif;
+    background: #f6f6f6;
 }
 
-.rating > .half:before{
-    content:"\f009";
-    position:absolute;
+nav .ul .a {
+    background-color: #679969;
 }
 
-.rating > label{
-    color:#ddd;
-    float:right;
+.postcontainer {
+    position: relative;
+    height: 85vh;
+    background: #EEEEEE;
+    box-sizing: border-box;
 }
 
-.rating > input:checked ~ label,
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label{color:#FFD700;}
+nav {
+    background: white;
+    height: 80px;
+    width: 100%;
+}
 
-.rating > input:checked + label:hover,
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label,
-.rating > input:checked ~ label:hover ~ label{color:#FFED85;}
+label.logo {
+    color: green;
+    font-size: 38px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 100px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: green;
+    font-size: 16px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background: rgb(33, 90, 33);
+    color: white;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    background-color: #275a29;
+    color: white;
+    transition: 0.5s;
+}
+
+.animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+
+
+/*container*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+.container{
+    max-width: 700px;
+    padding: 0 20px;
+    margin: 50px auto;
+    margin-left: 500px; 
+  }
+  
+  .wrapper{
+    width: 70%;
+    height: 450px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+    margin-top: 100px;
+  }
+  .wrapper .title{
+    height: 50px;
+    background: #1fe629;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper form{
+    padding: 30px 25px 25px 25px;
+  }
+  .wrapper form .row{
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    position: relative;
+  }
+  .wrapper form .row input{
+   /* height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 60px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    font-size: 16px;
+    transition: all 0.3s ease;*/
+
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(109, 240, 109);
+    border-radius: 4px;
+    box-sizing: none;
+    font-size: 16px;
+  }
+  
+  form .row input::placeholder{
+    color: #999;
+  }
+  /*.wrapper form .row i{
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    color: #fff;
+    font-size: 18px;
+    background: #23dd42;
+    border: 1px solid #21eb42;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }*/
+  
+  .button{
+    border: none;
+    color: rgb(229, 236, 230);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background: rgb(33, 189, 33);
+    margin-right: 500%;
+    border-radius: 5px;
+    margin-top: 50px;
+    width: 100%;
+
+  
+}
+
+.button1:hover {
+background-color: #41ec41;
+color: white;
+}
+
+
+
+
+input[type=text] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: none;
+}
