@@ -5,37 +5,46 @@
         <meta charset="UTF-8">
         <title>Add achievement post</title>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/leaderboard.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/categorymain.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/navigationBar.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/toggle.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/owl.carousel.min.css">
+        <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-
-        <nav>
-            <label class="logo"><a href="/WADAK.com/App/view/home.php">WADAK</a></label>
-            <ul>
+        <nav style="height:10vh">
+            <a href="/WADAK.com/App/view/home.php"><label class="logo">WADAK </label></a>
+            <ul class="navbar">
                 <?php
                         if(isset($_SESSION["user"]["userrole"])){?>
                 <li><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
                 <?php
                     }
                     ?>
-                <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
-                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>>
 
-                <?php
-                        if(isset($_SESSION["user"]["userrole"])){?>
-                <li><a href="/WADAK.com/App/controller/logout.php">Logout</a> </li>
-                <?php
-                    }
-                    ?>
-                <div class="animation "></div>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
+
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+
+
+
+                <?php if(!isset($_SESSION["user"]["userrole"])){?>
+
+                <li><a href="./login.php">Login</a></li>
+                <?php }else {?>
+                <li><i class="far fa-bell"></i></li>
+                <li><a href="/WADAK.com/App/view/messages.php">Messages</a></li>
+                <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a></li>
+                <?php } ?>
+
+
             </ul>
         </nav>
         </br>
 
         <div class="box1">
-            <p class="name">Leaderboard</p>
+            <p class="name" style="padding: 2rem 1rem 2rem 1rem">Leaderboard</p>
 
         </div>
         </br>

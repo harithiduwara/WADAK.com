@@ -37,7 +37,7 @@
 
         <div id="mySidenav" class="sidenav">
             <p class="logo">WADAK <span class="menu">&#9776;</span></p>
-            <!-- <p class="logo1"> <span class="menu1">&#9776;</span></p> -->
+
             <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i>
                 &nbsp;&nbsp;Home</a>
             <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
@@ -64,7 +64,11 @@
             <a href="/WADAK.com/App/view/askforad.php" Target="_blank" class="icon-a"><i
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Advertisements</a>
+            <a href="/WADAK.com/App/view/userProfileUpdate.php" Target="_blank" class="icon-a"><i
+                    class="fa fa-dashboard icons"></i>
+                &nbsp;&nbsp;Update Profile</a>
         </div>
+
         <div id="main">
             <div class="head">
                 <div class="col-div-1">
@@ -189,7 +193,6 @@
                 });
             });
             </script>
-
     </body>
 
 </html>

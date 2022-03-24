@@ -8,8 +8,10 @@
     if(!$con){
         die("Connection failed" . mysqli_connect_error());
     }
-
-    $data = mysqli_query($con, "select * from postjob , register where register.uid = postjob.uid and (title like '%".$_GET["search"]."%' or description like '%".$_GET["search"]."%')");
+    
+    $query = "select * from postjob , register where register.uid = postjob.uid and (title like '%".$_GET["search"]."%' or description like '%".$_GET["search"]."%')";
+    
+    $data = mysqli_query($con, $query);
 
 ?>
 
