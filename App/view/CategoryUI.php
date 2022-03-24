@@ -7,11 +7,24 @@
 <html>
 
     <head>
-        <title>Categories</title>
+         <title>Categories</title>
         <style>
         a {
             text-decoration: none;
-        }
+        } 
+
+        /*
+        .box {
+            width: 1000px;
+            height: 100%;
+            background-color: #ffffff;
+            margin-left: 10px;
+            padding: 10px;
+            padding-bottom: 30px;
+            border-radius: 20px;
+            box-shadow: 2px 5px 10px #ddd;
+            position: relative;
+        } */
 
         </style>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/CategoryUI.css" type="text/css" />
