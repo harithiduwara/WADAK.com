@@ -9,12 +9,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $sql = "INSERT INTO star_rating (name,rate,comment) VALUES ('$name','$rate','$comment')";
     if (mysqli_query($conn, $sql))
     {
-        echo "Your Rate added successfully";
-    }
-    else
-    {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
+            echo "<script type='text/javascript'>
+            alert('Successfully inserted');
+            window.location='/WADAK.com/App/view/Categorymain.php';
+            </script>";;
+        }
+        else{
+            echo "Error:".$sql."<br>".mysqli_error($conn);
+        }
     mysqli_close($conn);
 }
 ?>

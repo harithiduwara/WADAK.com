@@ -1,46 +1,65 @@
-<!Doctype HTML>
-<html>
-<head>
-    <link rel="stylesheet" href="/WADAK.com/App/assets/css/rating.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-
-
-
+    <head>
+        <meta charset="UTF-8">
+        <style>
+        a {
+            text-decoration: none;
+        }
+        </style>
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/rating.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+        <title>Rating</title>
         
-    <form action="/WADAK.com/App/model/insert_rating.php" method="post">
-         <h4>Name</h4>
-        <input type="text" name="name">
-    
-    <br>
-     
-         <h4>Comment</h4>
-        <input type="text" name="comment">
-        <br><br>
-    
-         <div class="rateyo" id= "rate"
-         data-rateyo-rating="4"
-         data-rateyo-num-stars="5"
-         data-rateyo-score="3">
-         </div>
- 
-    <span class='result'>0</span>
-    <br>
-    <input type="hidden" name="rate">
- 
-    
-   <br>
-    <input type="submit" name="add"> 
-    
+    </head>
 
-    
-    
- 
-</form>
-                
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <body>
+
+        <nav>
+            <label class="logo">WADAK</label>
+            <ul style="margin-top: 1rem">
+                <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
+
+                <li><a href="/WADAK.com/App/view/messages.php">Messages</a> </li>
+                <?php if(!isset($_SESSION["user"]["userrole"])){?>
+                <li><a href="./login.php"></a></li>
+                <?php }else {?>
+                <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a>
+                </li>
+                <?php } ?>
+                <div class="animation "></div>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="wrapper">
+                <div class="title">Rate Our Service</div>
+                <form action="/WADAK.com/App/model/insert_rating.php" method="post">
+                <div class="row">
+                  
+                  <input type="text" name="name" placeholder="Your name..."><br><br><br>
+                  
+                  <input type="text" name="comment" placeholder="Tell us your comment..."><br><br>
+                  <div class="rateyo" id= "rate"
+                   data-rateyo-rating="4"
+                   data-rateyo-num-stars="5"
+                   data-rateyo-score="3">
+                 </div><br>
+                 <span class='result'>0</span><br>
+                 <input type="hidden" name="rate"><br>
+
+                </div><br><br><br><br><br><br>
+                <input type="submit" name="add" value="Post" class=" button button1"> 
+               </form>
+            </div>
+        </div>            
+            
+        
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
  
 <script>
@@ -56,11 +75,10 @@
     });
  
 </script>
-</body>
- 
+    </body>
+
 </html>
 
-       
         
 
             
