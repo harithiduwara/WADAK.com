@@ -34,7 +34,7 @@
             <a href="/WADAK.com/App/view/ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
             <a href="/WADAK.com/App/view/View Report.php" class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
             <a href="/WADAK.com/App/view/PaymentUI.php" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
-            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i
+            <a href="/WADAK.com/App/view/lead.php" class="icon-a"><i
                     class="fa fa-object-group icons"></i> &nbsp;&nbsp;Leaderboard</a>
             <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
         </div>

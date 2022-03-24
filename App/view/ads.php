@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <title>Categories</title>
+        <title>Ad details</title>
         <style>
         a {
             text-decoration: none;
@@ -27,8 +27,6 @@
                 &nbsp;&nbsp;Categories</a>
             <a href="/WADAK.com/App/view/coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Co-Admin</a>
-            <a href="/WADAK.com/App/view/Add Coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
-                &nbsp;&nbsp;Add Co-Admin</a>
             <a href="/WADAK.com/App/view/ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Service
                 Provider</a>
@@ -38,7 +36,7 @@
                 &nbsp;&nbsp;Reports</a>
             <a href="/WADAK.com/App/view/PaymentUI.php" class="icon-a"><i class="fa fa-money icons"></i>
                 &nbsp;&nbsp;Payments</a>
-            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i class="fa fa-object-group icons"></i>
+            <a href="/WADAK.com/App/view/lead.php" class="icon-a"><i class="fa fa-object-group icons"></i>
                 &nbsp;&nbsp;Leaderboard</a>
 
         </div>
@@ -83,43 +81,48 @@
                 <div class="box">
                     <p class="head-1">Advertisements - Details</p>
                     <br />
+
+<!-- View Advertisement table -->
+
+                    <?php
+                        include_once 'cataconfig.php';
+                        $result = mysqli_query($conn,"SELECT Ad_no, date,description, type, user_id, Co_Admin_ID FROM advertisement WHERE is_advanced_paid = 1 ");
+                    ?>
+
                     <table>
                         <tr>
                             <th>Ad ID</th>
                             <th>Date</th>
-                            <th>Email</th>
                             <th>Description</th>
-                            <th>Budget</th>
+                            <th>Type</th>
+                            <th>User Id</th>
+                            <th>Accepted CA Id</th>
                         </tr>
 
-                        <tr>
-                            <th>1234</th>
-                            <th>2021-08-25</th>
-                            <th>Shantha@gamil.com</th>
-                            <th>Cakes by Cakes</th>
-                            <th>200</th>
+                        <?php
+	             $i=0;
+	             while($row = mysqli_fetch_array($result)) {
+	          ?>
+                        <tr class="<?php if(isset($classname)) echo $classname;?>">
+                            <!--<form action="" method="POST" role = "form">-->
+                            <td><?php echo $row["Ad_no"]; ?></td>
+                            <td><?php echo $row["date"]; ?></td>
+                            <td><?php echo $row["description"]; ?></td>
+                            <td><?php echo $row["type"]; ?></td>
+                            <td><?php echo $row["user_id"]; ?></td>
+                            <td><?php echo $row["Co_Admin_ID"]; ?></td>
+                            
+
                         </tr>
                         <?php
-                require_once("backend/dbconfig.php");
-                $sql ="SELECT C_ID,Name FROM categories";
-                $result = mysqli_query($connection,$sql);
-                $out = "";
-                while($data=$result->fetch_assoc()){
-                    $out .= "<tr><td>".$data['Name']."</td><td>".$data['C_ID']."</td><td><a href='backend/deleteCategory.php?id=".$data['C_ID']."'>Delete</a></tr>";
-                }
-                echo $out;
-                ?>
+	           $i++;
+	           }
+	          ?>
+                       
                     </table>
                 </div>
             </div>
-            <div class="col-div-2">
-                <div class="box1">
-                    <a href="AddCategory.php">Add</a>
-                </div>
-                <div class="box2">
-                    <a href="DeleteCategory.php">Delete</a>
-                </div>
-            </div>
+            
             <div class="clearfix"></div>
         </div>
 

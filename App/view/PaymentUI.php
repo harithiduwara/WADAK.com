@@ -36,7 +36,7 @@
                 &nbsp;&nbsp;Reports</a>
             <a href="/WADAK.com/App/view/PaymentUI.php" class="icon-a"><i class="fa fa-money icons"></i>
                 &nbsp;&nbsp;Payments</a>
-            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i class="fa fa-object-group icons"></i>
+            <a href="/WADAK.com/App/view/lead.php" class="icon-a"><i class="fa fa-object-group icons"></i>
                 &nbsp;&nbsp;Leaderboard</a>
 
         </div>

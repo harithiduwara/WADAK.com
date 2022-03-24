@@ -222,15 +222,18 @@ body{
     width: 34%;
     float: left;
 }
-.box{
+.box {
     width: 1000px;
-    height: 900px;
+    height: 100%;
     background-color: #ffffff;
     margin-left: 10px;
-    padding:10px;
+    padding: 10px;
+    padding-bottom: 30px;
+    border-radius: 20px;
     box-shadow: 2px 5px 10px #ddd;
     position: relative;
 }
+
 .box p{
     color: #6c7293;
     font-weight: 500;

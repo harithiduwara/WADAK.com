@@ -139,7 +139,7 @@
                                 <span class="details">Co-admin Id</span>
                             </div>
                             <div class="input_data">
-                                <input type="text" name="username" placeholder="Enter Co-admin Id" required>
+                                <input type="text" name="uid" placeholder="Enter Co-admin Id" required>
                             </div>
                         </div>
 

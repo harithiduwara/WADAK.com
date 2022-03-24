@@ -246,11 +246,14 @@ body{
 .head-1 span a:hover{
     background-color: #37bf37;
 }
-table{
-    font-family: arial, sans-serif;
+table {
+    font-family: system-ui;
     border-collapse: collapse;
     width: 100%;
     font-size: 18px;
+    font-weight: 500;
+    color: #346b34;
+    /* font-family: f; */
 }
 td, th {
     text-align: left;
@@ -261,7 +264,10 @@ td {
     width: 420px;
     height: 40px;
     border:#6c7293;
-    background-color: #C2EFBE;
+    /* background-color: #C2EFBE; */
+}
+.tr{
+    background-color: #c2efbe; 
 }
 .imgbox{
     width: 325px;

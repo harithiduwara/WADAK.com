@@ -15,8 +15,8 @@ $data = mysqli_query($con, "select * from postjob");
 
 session_start();
 
-$jobid = $title = $description = $budget = $joblist = "";
-$jobidErr = $titleErr = $descriptionErr = $budgetErr = $joblistErr = "";
+$jobid = $title = $description = $budget = $joblist = $postType = "";
+$jobidErr = $titleErr = $descriptionErr = $budgetErr = $joblistErr = $postTypeErr ="";
 
 function test_input($data){
     $data = trim($data);
@@ -40,10 +40,10 @@ else{
 }
 
 if(empty($_POST["postType"])){
-    $joblistErr = "postType is required!";
+    $postTypeErr = "postType is required!";
 }
 else{
-    $joblist = test_input($_POST["postType"]);
+    $postType = test_input($_POST["postType"]);
 }
 
 if(empty($_POST["joblist"])){
@@ -71,11 +71,10 @@ if($uploadok == 1){
  } 
 
 
+// $s = "select * from postjob where title='$title'";
 
-$s = "select * from postjob where title='$title'";
 
-
-$jobpost = "insert into postjob(title, description, budget, jobtype, uid, filename) values('$title', '$description', '$budget', '$joblist', '$uid', '$filename')";
+$jobpost = "insert into postjob(title, description, budget, jobtype, uid, filename, postType) values('$title', '$description', '$budget', '$joblist', '$uid', '$filename', '$postType')";
 
 if (mysqli_query($con, $jobpost)) {
     echo "New Job Has Created Successfully";

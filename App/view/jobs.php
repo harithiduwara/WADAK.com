@@ -142,7 +142,7 @@ if(!$con){
                     </a>
 
                     <a href=" /WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
-                        <h3><?= $row["title"] ?>
+                        <h3 style="font-size:1.5rem; color:green"><?= $row["title"] ?>
                         </h3>
                     </a>
                     <br>
@@ -150,15 +150,15 @@ if(!$con){
 
                     <div>
                         <p><?php echo "Price : " . $row["budget"]?></p>
-
-
-
-                        <a>
-                            <a><button style="background-color:green;"
-                                    href="/WADAK.com/App/controller/views.php?jobid=<?=$row["jobid"]?>">
+                        <div style="margin-top:1rem">
+                            <!-- <a href="/WADAK.com/App/controller/views.php?jobid=<?=$row["jobid"]?>"><button
+                                    style="background-color:green;">
                                     <i class="fa fa-heart"></i></button></p>
-                            </a>
-                        </a>
+                            </a> -->
+                            <p><?=$row["views"]?> Views</p>
+                        </div>
+
+
                     </div>
 
                 </div>
