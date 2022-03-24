@@ -3,7 +3,7 @@
     session_start();
 
     $uid = $_SESSION["user"]['uid'];
-
+    $postType = $_GET["postType"]??"job";
     // var_dump($_SESSION["user"]['uid']);
 
     $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
@@ -15,6 +15,7 @@
     $data = mysqli_query($con, $query);
     $userData = mysqli_fetch_assoc($data);
 
+    $postTypeUC = ucfirst($postType);
 ?>
 <!Doctype HTML>
 <html>
@@ -27,7 +28,7 @@
         }
 
         </style>
-        <link rel="stylesheet" href="/WADAK.com/App/assets/css/CategoryUI.css" type="text/css" />
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/Admin-dashboard.css" type="text/css" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -43,33 +44,37 @@
                 &nbsp;&nbsp;Dashboard</a>
             <a href="/WADAK.com/App/view/joborders.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Job Posts</a>
-            <a href="/WADAK.com/App/view/previousordershireperson.php" class="icon-a"><i class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/App/view/previousordershireperson.php?postType=job" class="icon-a"><i
+                    class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Previous Orders</a>
             <a href="/WADAK.com/App/view/previousorders.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Service Posts</a>
-            <a href="/WADAK.com/App/view/previousorders.php" class="icon-a"><i class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/App/view/previousordershireperson.php?postType=service" class="icon-a"><i
+                    class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Previous Services</a>
-            <a href="/WADAK.com/App/view/news2.php" class="icon-a"><i class="far fa-envelope-open"></i>
+            <a href="/WADAK.com/App/view/news2.php" Target="_blank" class="icon-a"><i class="far fa-envelope-open"></i>
                 &nbsp;&nbsp;News</a>
-            <a href="/WADAK.com/App/view/chat.php" class="icon-a"><i class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/App/view/chat.php" Target="_blank" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Messages</a>
-            <a href="/WADAK.com/App/view/a.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            <a href="/WADAK.com/App/view/a.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Achievements</a>
-            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            <a href="/WADAK.com/App/view/leaderboard.php" Target="_blank" class="icon-a"><i
+                    class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Leaderboard</a>
-            <a href="/WADAK.com/App/view/askforad.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            <a href="/WADAK.com/App/view/askforad.php" Target="_blank" class="icon-a"><i
+                    class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Advertisements</a>
         </div>
         <div id="main">
+
             <div class="head">
                 <div class="col-div-1">
-                    <p class="nav">Previous Orders</p>
-
+                    <p class="nav">Previous
+                        <?php echo ucfirst($postType)?> Orders
+                    </p>
                 </div>
 
                 <div class="col-div-1">
-                    <i class="fa fa-search search-icon"></i>
-
                     <i class="fa fa-bell noti-icon"></i>
                     <div class="notification-div">
                         <p class="noti-head">Notification </p>
@@ -80,21 +85,21 @@
                     </div>
 
                     <div class="profile">
-                        <p>Username <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
-                        <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="userProfile.php">Profile</a></p>
-                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a
-                                    href="hirepersondashboard.html">Dashboard</a>
-                            </p>
-                            <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a
-                                    href="/WADAK.com/implementation/controller/logout.php">Log Out</a></p>
 
-                            <?php
-                                session_start();
-                                unset($_SESSION["id"]);
-                                unset($_SESSION["name"]);
-                                // header("Location:../view/login.php");
-                            ?>
+                        <p>
+                            <?=$userData["username"]?> <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+                        </p>
+
+                        <div class="profile-div">
+                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a
+                                    href="/WADAK.com/App/view/userprofile.php?uid=<?=$userData["uid"]?>">Profile</a></p>
+
+                            <p><i class="fa-duotone fa-arrow-right-from-bracket"></i> &nbsp;&nbsp; <a
+                                    href="/WADAK.com/App/controller/logout.php">Log
+                                    out</a>
+                            </p>
+
+
                         </div>
                     </div>
                 </div>
@@ -105,7 +110,7 @@
             <br />
 
             <div class="col-div-2">
-                <div class="box">
+                <div class="box" style="width:80vw">
                     <p class="head-1"></p>
                     <br />
                     <?php                                
@@ -116,11 +121,11 @@
                                 // echo $uid;
                                     echo "<table>
                                             <tr>
-                                                <th>Job ID</th>
-                                                <th>Job Title</th>
-                                                <th>Job Description</th>
+                                                <th>$postTypeUC ID</th>
+                                                <th>$postTypeUC Title</th>
+                                                <th>$postTypeUC Description</th>
                                                 <th>Budget</th>
-                                                <th>Job Type</th>
+                                                <th>$postTypeUC Type</th>
                                             </tr>";
                                     // output data of each row
 
@@ -143,45 +148,7 @@
                                 ?>
                 </div>
             </div>
-            <div class="col-div-3">
-                <div class="box3">
-                    <p class="head-2">Canceled Jobs</p>
-                    <br />
-                    <?php                                
-                                $sql = "select * from postjob where uid=$uid and status=2";
 
-                                $result = $con->query($sql);
-
-                                // echo $uid;
-                                    echo "<table>
-                                            <tr>
-                                                <th>Job ID</th>
-                                                <th>Job Title</th>
-                                                <th>Job Description</th>
-                                                <th>Budget</th>
-                                                <th>Job Type</th>
-                                            </tr>";
-                                    // output data of each row
-
-                                    // echo $result->num_rows;
-                                    
-                                    while($row = $result->fetch_assoc()) {
-                                        echo "<tr>
-                                                <td>" . $row["jobid"]. "</td>
-                                                <td>" . $row["title"]. "</td>
-                                                <td>" . $row["description"]. "</td>
-                                                <td>" . $row["budget"]. "</td>
-                                                <td>" . $row["jobtype"]. "</td>
-                                            </tr>";
-                                    }
-                                    echo "</table>";
-
-                                
-
-                                $conn->close();
-                                ?>
-                </div>
-            </div>
         </div>
 
 
