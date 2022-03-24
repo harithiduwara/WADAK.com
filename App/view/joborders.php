@@ -3,6 +3,8 @@
 
     $uid = $_SESSION["user"]['uid'];
 
+    $postType = $_GET['postType'];
+  
     // var_dump($_SESSION["user"]['uid']);
 
     $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
@@ -14,13 +16,17 @@
     $data = mysqli_query($con, $query);
     $userData = mysqli_fetch_assoc($data);
 
+    $postTypeUC = ucfirst($postType);
+
 ?>
 
 <!Doctype HTML>
 <html>
 
     <head>
-        <title>Job Orders</title>
+        <title>
+            <?=$postTypeUC?> Orders
+        </title>
         <style>
         a {
             text-decoration: none;
@@ -42,12 +48,13 @@
                 &nbsp;&nbsp;Home</a>
             <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
-            <a href="/WADAK.com/App/view/joborders.php" class="icon-a"><i class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/App/view/joborders.php?postType=job" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Job Posts</a>
             <a href="/WADAK.com/App/view/previousordershireperson.php?postType=job" class="icon-a"><i
                     class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Previous Orders</a>
-            <a href="/WADAK.com/App/view/previousorders.php" class="icon-a"><i class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/App/view/joborders.php?postType=service" class="icon-a"><i
+                    class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Service Posts</a>
             <a href="/WADAK.com/App/view/previousordershireperson.php?postType=service" class="icon-a"><i
                     class="fa fa-tasks icons"></i>
@@ -72,7 +79,8 @@
         <div id="main">
             <div class="head">
                 <div class="col-div-1">
-                    <p class="nav">Active Job Posts</p>
+                    <p class="nav">Active <?=$postTypeUC?> Posts
+                    </p>
 
                 </div>
 
@@ -122,31 +130,31 @@
                                 // echo $uid;
                                     echo "<table>
                                             <tr>
-                                                <th>Job ID</th>
-                                                <th>Job Title</th>
-                                                <th>Job Description</th>
+                                                <th>$postTypeUC ID</th>
+                                                <th>$postTypeUC Title</th>
+                                                <th>$postTypeUC Description</th>
                                                 <th>Budget</th>
-                                                <th>Job Type</th>
-                                            </tr>";
-                                    // output data of each row
+                                                <th>$postTypeUC Type</th>
+                                                </tr>";
+                        // output data of each row
 
-                                    // echo $result->num_rows;
-                                    
-                                    while($row = $result->fetch_assoc()) {
-                                        echo "<tr>
-                                                <td>" . $row["jobid"]. "</td>
-                                                <td>" . $row["title"]. "</td>
-                                                <td>" . $row["description"]. "</td>
-                                                <td>" . $row["budget"]. "</td>
-                                                <td>" . $row["jobtype"]. "</td>
-                                            </tr>";
-                                    }
-                                    echo "</table>";
+                        // echo $result->num_rows;
 
-                                
+                        while($row = $result->fetch_assoc()) {
+                        echo "<tr>
+                            <td>" . $row["jobid"]. "</td>
+                            <td>" . $row["title"]. "</td>
+                            <td>" . $row["description"]. "</td>
+                            <td>" . $row["budget"]. "</td>
+                            <td>" . $row["jobtype"]. "</td>
+                        </tr>";
+                        }
+                        echo "</table>";
 
-                                $conn->close();
-                                ?>
+
+
+                        $conn->close();
+                        ?>
 
                     </div>
                 </div>

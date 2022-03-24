@@ -16,27 +16,25 @@
     $userData = mysqli_fetch_assoc($data);
 
 ?>
-
 <!Doctype HTML>
 <html>
 
     <head>
-        <title>User Dashboard</title>
+        <title>Categories</title>
         <style>
         a {
             text-decoration: none;
         }
 
         </style>
-        <link rel="stylesheet" href="/WADAK.com/App/assets/css/Admin-dashboard.css" type="text/css" />
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/CategoryUI.css" type="text/css" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./css/profile.css" type="text/css" />
     </head>
 
 
     <body>
-        <!-- <?=$uid?> -->
+
         <div id="mySidenav" class="sidenav">
             <p class="logo">WADAK <span class="menu">&#9776;</span></p>
 
@@ -71,14 +69,16 @@
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Update Profile</a>
         </div>
-
         <div id="main">
             <div class="head">
-                <div class="col-div-6">
-                    <p class="nav"> Dashboard</p>
+                <div class="col-div-1">
+                    <p class="nav">Active Services</p>
+
                 </div>
 
-                <div class="col-div-6">
+                <div class="col-div-1">
+                    <i class="fa fa-search search-icon"></i>
+
                     <i class="fa fa-bell noti-icon"></i>
                     <div class="notification-div">
                         <p class="noti-head">Notification </p>
@@ -89,20 +89,15 @@
                     </div>
 
                     <div class="profile">
-
-                        <p>
-                            <?=$userData["username"]?> <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
-                        </p>
-
+                        <p>Username <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
                             <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a
-                                    href="/WADAK.com/App/view/userprofile.php?uid=<?=$userData["uid"]?>">Profile</a></p>
-
-                            <p><i class="fa-duotone fa-arrow-right-from-bracket"></i> &nbsp;&nbsp; <a
-                                    href="/WADAK.com/App/controller/logout.php">Log
-                                    out</a>
+                                    href="/WADAK.com/App/view/userProfile.php">Profile</a></p>
+                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a
+                                    href="/WADAK.com/App/view/hirepersondashboard.php">Dashboard</a>
                             </p>
-
+                            <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a
+                                    href="/WADAK.com/App/controller/logout.php">Log Out</a></p>
 
                         </div>
                     </div>
@@ -110,46 +105,49 @@
                 <div class="clearfix"></div>
             </div>
 
-            <div class="clearfix"></div>
+
             <br />
 
-            <div class="clearfix"></div>
-            <br />
-            <div class="col-div-12">
-                <div class="box8" style="text-align:center">
-                    <h1 style="color:green; font-size:5rem">LEADERBOARD</h1>
-                    <h2>Reviews : 1000</h2>
-                    <h2>Stars : 4.7</h2>
-                    <h2>Rank : 5</h2>
+            <div class="col-div-2">
+                <div class="box">
+                    <p class="head-1"></p>
+                    <br />
+                    <?php                                
+                                $sql = "select * from postjob where uid=$uid and status=1";
+
+                                $result = $con->query($sql);
+
+                                // echo $uid;
+                                    echo "<table>
+                                            <tr>
+                                                <th>Job ID</th>
+                                                <th>Job Title</th>
+                                                <th>Job Description</th>
+                                                <th>Budget</th>
+                                                <th>Job Type</th>
+                                            </tr>";
+                                    // output data of each row
+
+                                    // echo $result->num_rows;
+                                    
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<tr>
+                                                <td>" . $row["jobid"]. "</td>
+                                                <td>" . $row["title"]. "</td>
+                                                <td>" . $row["description"]. "</td>
+                                                <td>" . $row["budget"]. "</td>
+                                                <td>" . $row["jobtype"]. "</td>
+                                            </tr>";
+                                    }
+                                    echo "</table>";
+
+                                
+
+                                $conn->close();
+                                ?>
                 </div>
             </div>
 
-
-            <div class="clearfix"></div>
-            <br />
-            <div class="col-div-12">
-                <div class="box-8">
-                    <div class="content-box">
-                        <p>User details </p>
-                        <br />
-                        <table>
-                            <tr>
-                                <th>Name</th>
-                                <th>Username</th>
-                                <th>Contact</th>
-                                <th>Email</th>
-                            </tr>
-                            <tr>
-                                <th><?=$userData["name"]?></th>
-                                <th><?=$userData["username"]?></th>
-                                <th><?=$userData["contactno"]?>5</th>
-                                <th><?=$userData["email"]?></th>
-                            </tr>
-
-                        </table>
-                    </div>
-                </div>
-            </div>
         </div>
 
 
@@ -192,6 +190,7 @@
             });
         });
         </script>
+
     </body>
 
 </html>
