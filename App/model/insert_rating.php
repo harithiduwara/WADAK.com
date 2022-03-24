@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $sql = "INSERT INTO star_rating (name,rate,comment) VALUES ('$name','$rate','$comment')";
     if (mysqli_query($conn, $sql))
     {
-        echo "New Rate addedddd successfully";
+        echo "Your Rate added successfully";
     }
     else
     {
