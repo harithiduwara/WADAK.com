@@ -2,7 +2,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: #efeff5;
-    font-family: system-ui;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .clearfix {
@@ -362,6 +362,4 @@ tr:nth-child(even) {
     color: #6c7293 !important;
 }
 
-.box8 {
-    
-}
+.box8 {}

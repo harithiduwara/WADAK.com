@@ -112,8 +112,8 @@
             <div class="clearfix"></div>
             <br />
             <div class="col-div-12">
-                <div class="box8">
-                    <h1>Leaderboard</h1>
+                <div class="box8" style="text-align:center">
+                    <h1 style="color:green; font-size:5rem">LEADERBOARD</h1>
                     <h2>Reviews : 1000</h2>
                     <h2>Stars : 4.7</h2>
                     <h2>Rank : 5</h2>
