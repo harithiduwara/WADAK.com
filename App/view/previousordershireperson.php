@@ -3,7 +3,7 @@
     session_start();
 
     $uid = $_SESSION["user"]['uid'];
-
+    $postType = $_GET["postType"]??"job";
     // var_dump($_SESSION["user"]['uid']);
 
     $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
@@ -15,6 +15,7 @@
     $data = mysqli_query($con, $query);
     $userData = mysqli_fetch_assoc($data);
 
+    $postTypeUC = ucfirst($postType);
 ?>
 <!Doctype HTML>
 <html>
@@ -64,7 +65,9 @@
 
             <div class="head">
                 <div class="col-div-1">
-                    <p class="nav">Previous Orders</p>
+                    <p class="nav">Previous
+                        <?php echo ucfirst($postType)?> Orders
+                    </p>
                 </div>
 
                 <div class="col-div-1">
@@ -114,11 +117,11 @@
                                 // echo $uid;
                                     echo "<table>
                                             <tr>
-                                                <th>Job ID</th>
-                                                <th>Job Title</th>
-                                                <th>Job Description</th>
+                                                <th>$postTypeUC ID</th>
+                                                <th>$postTypeUC Title</th>
+                                                <th>$postTypeUC Description</th>
                                                 <th>Budget</th>
-                                                <th>Job Type</th>
+                                                <th>$postTypeUC Type</th>
                                             </tr>";
                                     // output data of each row
 
@@ -141,45 +144,7 @@
                                 ?>
                 </div>
             </div>
-            <div class="col-div-3">
-                <div class="box3">
-                    <p class="head-2">Canceled Jobs</p>
-                    <br />
-                    <?php                                
-                                $sql = "select * from postjob where uid=$uid and status=2";
 
-                                $result = $con->query($sql);
-
-                                // echo $uid;
-                                    echo "<table>
-                                            <tr>
-                                                <th>Job ID</th>
-                                                <th>Job Title</th>
-                                                <th>Job Description</th>
-                                                <th>Budget</th>
-                                                <th>Job Type</th>
-                                            </tr>";
-                                    // output data of each row
-
-                                    // echo $result->num_rows;
-                                    
-                                    while($row = $result->fetch_assoc()) {
-                                        echo "<tr>
-                                                <td>" . $row["jobid"]. "</td>
-                                                <td>" . $row["title"]. "</td>
-                                                <td>" . $row["description"]. "</td>
-                                                <td>" . $row["budget"]. "</td>
-                                                <td>" . $row["jobtype"]. "</td>
-                                            </tr>";
-                                    }
-                                    echo "</table>";
-
-                                
-
-                                $conn->close();
-                                ?>
-                </div>
-            </div>
         </div>
 
 

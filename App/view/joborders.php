@@ -47,7 +47,6 @@
                 &nbsp;&nbsp;Job Posts</a>
             <a href="/WADAK.com/App/view/previousordershireperson.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Previous Orders</a>
-
             <a href="/WADAK.com/App/view/previousorders.php" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Service Posts</a>
             <a href="/WADAK.com/App/view/previousorders.php" class="icon-a"><i class="fa fa-tasks icons"></i>
