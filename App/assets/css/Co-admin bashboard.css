@@ -214,12 +214,14 @@ body{
 }
 
 .col-div-4-1{
-    width: 33.3%;
+    width: 33.3%; 
     float: left;
 }
 .box{
+    
     width: 88%;
     height: 200px;
+   /* background-color: #ffffff;*/
     background-color: #ffffff;
     margin-left: 10px;
     padding:10px;
@@ -294,3 +296,13 @@ body{
 .box-8{
     margin-left: 10px;
 }*/
+
+
+
+.title{
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-bottom: 2px solid #999;
+}
