@@ -7,7 +7,7 @@ session_start();
 
     <head>
         <meta charset="UTF-8">
-        <title>Update achievements</title>
+        <title>User Profile Update</title>
         <style>
         a {
             text-decoration: none;
@@ -51,7 +51,7 @@ session_start();
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Advertisements</a>
             <a href="/WADAK.com/App/view/userProfileUpdate.php" Target="_blank" class="icon-a"><i
-                    class="fa fa-dashboard icons"></i>
+                    class="fa-solid fa-wrench"></i>
                 &nbsp;&nbsp;Update Profile</a>
         </div>
 
@@ -93,27 +93,34 @@ session_start();
 
         <div class="inputContainer" style="margin:auto;width: 50%; height:50vh">
             <div class="form" style="position: relative;">
-                <form action="updateac.php" method="POST">
+                <form action="/WADAK.com/App/controller/updateProfile.php" method="POST" enctype="multipart/form-data">
                     <div class="inputbox">
-                        <input type="value" name="id" required="true" placeholder="Email">
+                        <input type="value" name="address" placeholder="Address">
                     </div>
                     <div class="inputbox">
-                        <input type="value" name="id" required="true" placeholder="Contact Nunmber">
+                        <input type="tel" name="contactNo" placeholder="Contact Nunmber">
+                    </div>
+                    <div>
+                        <label for="img" style="color:green">Update Profile Picture</label><br>
+                        <div style="text-align:center"> <input type="file" id="fileToUpload" name="fileToUpload"
+                                accept="image/*" style="margin-left:5rem"></div>
+
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="url" name="telegram" placeholder="Telegram Link">
                     </div>
                     <div class="inputbox">
-                        <input type="text" name="achievementName" required="true" placeholder="Telegram Link">
+                        <input type="url" name="twitter" placeholder="Twitter Link">
                     </div>
                     <div class="inputbox">
-                        <input type="text" name="place" required="true" placeholder="Twitter Link">
-                    </div>
-                    <div class="inputbox">
-                        <input type="text" name="date" required="true" placeholder="Instagram Link">
+                        <input type="url" name="Instagram" placeholder="Instagram Link">
                     </div>
 
                     <div class="inputbox">
                         <table style="width:50%;">
                             <tr>
-                                <td><input type="submit" name="add" value="Update" style="width: 200px !important;">
+                                <td><input type="submit" name="update" value="Update" style="width: 200px !important;">
                                 </td>
                                 <td><input type="reset" name="reset" style="width: 200px !important;"
                                         value="Revoke Links">
