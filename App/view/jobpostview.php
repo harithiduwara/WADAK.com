@@ -14,6 +14,10 @@
     $query = "select * from postjob where jobid=$jobid";
 
     $result = mysqli_query($con, $query);
+
+    $row = mysqli_fetch_assoc($result);
+
+     // echo $row["jobid"];
 ?>
 
 <!DOCTYPE html>
@@ -27,17 +31,14 @@
         }
 
         </style>
-        <title>Post A Job</title>
+        <title> <?=$row["title"]?> </title>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/postjob.css">
     </head>
 
 
 
     <body>
-        <?php
-            $row = mysqli_fetch_assoc($result);
-            // echo $row["jobid"];
-        ?>
+
         <nav>
             <label class="logo">WADAK</label>
             <ul style="margin-top: 1rem">
@@ -96,9 +97,8 @@
                     <p><?php echo $row["views"] ?> Views</p>
 
                     <span>
-                        <button style="padding:1rem">
-                            Apply
-                        </button>
+                        <a href="/WADAK.com/App/view/apply.php?jobid=<?=$row["jobid"]?>"> <button style="padding:1rem">
+                                Apply</button></a>
                         <button style="padding:1rem">
                             Chat
                         </button>

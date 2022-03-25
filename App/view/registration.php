@@ -63,12 +63,14 @@
 
                     <div class="input-box">
                         <span class="details">Password</span>
-                        <input type="password" name="password" placeholder="Enter your password" required>
+                        <input type="password" name="password" placeholder="Enter your password"
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">Repeat Password</span>
-                        <input type="password" name="password1" placeholder="Re-enter your password" required>
+                        <input type="password" name="password1" placeholder="Re-enter your password"
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$" required>
                     </div>
 
                 </div>
@@ -76,7 +78,8 @@
 
                 <br><br>
 
-                <br><input type="checkbox"> &nbsp;&nbsp; “I accept the Terms of Service” or “I accept the Privacy
+                <br><input type="checkbox" required> &nbsp;&nbsp; “I accept the Terms of Service” or “I accept the
+                Privacy
                 Statement” Click here to indicate that you have
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;read and agree to the terms presented in the Terms and
                 Conditions agreement. <br>
@@ -91,6 +94,45 @@
             </form>
         </div>
         </div>
+
+        <script>
+        let password = document.querySelector("[name='password']")
+        let confirm_password = document.querySelector("[name='password1']")
+
+        const form = document.querySelector('form');
+
+        form.addEventListener("submit", validateForm)
+
+        function validateForm(event) {
+
+            form.querySelectorAll(".field-error").forEach(e => {
+                e.remove()
+            })
+
+            form.querySelectorAll(".field").forEach(e => {
+                e.classList.remove("invalid")
+            })
+
+            let valid = password.value === confirm_password.value;
+
+
+            if (!valid) {
+                if (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+
+                let error_msg = document.createElement("div")
+                error_msg.classList.add('field-error')
+                error_msg.innerText = 'Password Not Matching'
+                error_msg.style.color = 'red'
+                console.log(confirm_password.parentElement)
+                confirm_password.parentElement.append(error_msg)
+                confirm_password.parentElement.classList.add("invalid")
+            }
+
+        }
+        </script>
 
     </body>
 

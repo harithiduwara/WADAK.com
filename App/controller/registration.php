@@ -149,7 +149,6 @@ $num= mysqli_num_rows($result);
 
     // echo $reg;
 
-    
     if (mysqli_query($con, $reg)) {
         echo "New record created successfully";
         header('location:/WADAK.com/App/view/login.php');
