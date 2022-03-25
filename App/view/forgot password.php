@@ -10,27 +10,37 @@
 
         </style>
         <title>Forgot password</title>
-        <link rel="stylesheet" href="/WADAK.com/Implementation/assets/css/forgot%20password.css">
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/forgot%20password.css">
     </head>
 
     <body>
 
         <nav>
-            <label class="logo">WADAK</label>
-            <ul>
-                <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
-                <li><a href="/WADAK.com/App/view/postjob.php">Post Job</a> </li>
+            <a href="/WADAK.com/App/view/home.php"><label class="logo">WADAK</label></a>
+            <ul class="navbar">
+                <?php
+                    if(isset($_SESSION["user"]["userrole"])){?>
+                <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
+                <?php
+                    }
+                    ?>
                 <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
-                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>>
-                <li><a href="/WADAK.com/App/view/leaderboard.php">Leaderboard</a></li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
+
+                <?php if(!isset($_SESSION["user"]["userrole"])){?>
+
+                <li><a href="./login.php">Login</a></li>
+                <?php }else {?>
                 <li><i class="far fa-bell"></i></li>
-                <li><a href="/WADAK.com/App/view/chat.php">Messages</a> </li>
-                <li><a href="/WADAK.com/App/controller/login.php">Login</a> </li>
-                <div class="animation "></div>
+                <li><a href="/WADAK.com/App/view/messages.php">Messages</a></li>
+                <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a></li>
+                <?php } ?>
+
+
             </ul>
         </nav>
-        <div class="loginContainer">
-            <div class="inputContainer">
+        <div class="loginContainer" style="width:100vw; height:95vh; ">
+            <div class="inputContainer" style="margin-left:5vw; margin-top:15vh">
                 <div class="form">
                     <h2>Reset your password</h2>
                     <form>

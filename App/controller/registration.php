@@ -150,22 +150,22 @@ $num= mysqli_num_rows($result);
     // echo $reg;
 
     if (mysqli_query($con, $reg)) {
-        echo "New record created successfully";
-        header('location:/WADAK.com/App/view/login.php');
-    } 
-    else {
-        echo "Error: " . $reg . "<br>" . mysqli_error($con);
-    }
+        echo "New record created successfully";?>
 
-    // echo "Registration Successful";
-    // echo mysqli_num_rows($data);
+<script>
+// alert('User Successfully Registered');
+location.href = '/WADAK.com/App/view/login.php'
+</script>
 
- } 
+
+<?php 
+//header('location:/WADAK.com/App/view/login.php'); 
 }
-else{
-    echo"error";
+ else { 
+    echo "Error: " .$reg. "<br>" . mysqli_error($con); } 
+    echo "Registration Successful" ; 
+    // echo mysqli_num_rows($data); 
 }
-
-
-
-?>
+ } else{ 
+    echo"error"; } 
+    ?>
