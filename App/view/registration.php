@@ -27,7 +27,7 @@
                 <h4>Registration</h4>
             </div><br>
 
-            <form action="/WADAK.com/Implementation/controller/registration.php" method="post">
+            <form action="/WADAK.com/App/controller/registration.php" method="post">
                 <div class="user-details">
 
                     <div class="input-box">

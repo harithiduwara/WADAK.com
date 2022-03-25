@@ -3,7 +3,7 @@
 
     $jobid = $_GET["jobid"];
 
-
+    $uid = $_SESSION["user"]['uid'];
 
     $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
 
@@ -47,7 +47,8 @@
                 <?php if(isset($_SESSION["user"]["userrole"])){?>
                 <li><a href="/WADAK.com/App/view/messages.php" target="_blank">Messages</a> </li>
                 <?php }?>
-                <li><a href="/WADAK.com/App/view/userprofile.php" target="_blank">PROFILE</a> </li>
+                <li><a href="/WADAK.com/App/view/hirepersondashboard.php?uid=<?=$uid?>" target="_blank">PROFILE</a>
+                </li>
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
                 <li><a href="./login.php"></a></li>
                 <?php }else {?>
@@ -73,7 +74,7 @@
                     ?>
                 
                 
-                " alt="service" style="width:100% ; height:65vmin">
+                " alt="service" style="width:100% ; height:65vmin; object-fit: cover; ">
 
                 </diV>
                 <diV>
@@ -101,6 +102,15 @@
                         <button style="padding:1rem">
                             Chat
                         </button>
+                        <?php
+                            if(isset($_SESSION["user"]["userrole"]) && $uid==$reuslt($con, "select uid from postjob where jobid=$jobid")){?>
+                        <button style="padding:1rem">
+                            Delete
+                        </button>
+                        <?php 
+                        }
+                        ?>
+
                     </span>
                 </diV>
                 <div style="padding:1rem; margin-top: -4rem">

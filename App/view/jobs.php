@@ -48,7 +48,7 @@ if(!$con){
                                                                     padding: 0 100px;
                                                                     font-weight: bold;">WADAK</label></a>
             <nav>
-                <ul class="navbar">
+                <ul class="navbar" style="background-color:white">
                     <?php
                         if(isset($_SESSION["user"]["userrole"])){?>
                     <li><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
@@ -115,7 +115,7 @@ if(!$con){
         <!----------------------------------footer--------------------------------------->
 
 
-        <div style="display:grid;grid-template-columns: 1fr 1fr 1fr 1fr;grid-gap:1rem; background-color: #f1f1f1;">
+        <div style="display:grid;grid-template-columns: 1fr 1fr 1fr 1fr;grid-gap:1rem; text-align:center">
             <?php
             if (mysqli_num_rows($data) > 0) {
 
@@ -123,7 +123,8 @@ if(!$con){
           
             ?>
             <div>
-                <div class="card1" style="margin:1rem; "><img src="
+                <div class="card1" style="margin:1rem; background-color:#f1f1f1"><a
+                        href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>"><img src="
                     <?php
                     if($row["filename"]==null){
                         echo "/WADAK.com/App/uploads/noimage.jpg";
@@ -134,8 +135,8 @@ if(!$con){
                     ?>
                 
                 
-                " alt="service" style="width:100% ; height:200px; object-fit: cover;">
-                    <a href="/WADAK.com/App/view/userprofile.php?uid=<?=$row["uid"]?>">
+                " alt="service" style="width:100% ; height:200px; object-fit: cover; text-align:end !important;">
+
                         <h9>
                             <?=$row["username"]?>
                         </h9>
@@ -145,12 +146,13 @@ if(!$con){
                         <h3 style="font-size:1.5rem; color:green"><?= $row["title"] ?>
                         </h3>
                     </a>
-                    <br>
-                    <p><?=$row["description"]?></p><br>
+                    <br><a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
+                        <p><?=$row["description"]?></p>
+                    </a><br>
 
                     <div>
                         <p><?php echo "Price : " . $row["budget"]?></p>
-                        <div style="margin-top:1rem">
+                        <div style="margin-top:1rem; color:green">
                             <!-- <a href="/WADAK.com/App/controller/views.php?jobid=<?=$row["jobid"]?>"><button
                                     style="background-color:green;">
                                     <i class="fa fa-heart"></i></button></p>
