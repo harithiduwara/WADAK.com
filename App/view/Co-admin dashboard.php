@@ -28,7 +28,7 @@
 
             <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i>
                 &nbsp;&nbsp;Q & A Session</a>
-            <a href="/WADAK.com/App/view/messages.php" class="icon-a"><i class="fa fa-comment icons"></i>
+            <a href="/WADAK.com/App/view/chat2.php" class="icon-a"><i class="fa fa-comment icons"></i>
                 &nbsp;&nbsp;Chat</a>
             <a href="/WADAK.com/App/view/News.php" class="icon-a"><i class="fa fa-newspaper-o icons"></i>
                 &nbsp;&nbsp;News</a>
@@ -200,15 +200,13 @@
                $post2_query_run=mysqli_query($connection,$post2_query);
             ?>
 
-            <div class="table_div" style="background-color:white;margin-top:250px">
+            <div class="table_div" style="background-color:white;margin-top:250px;width:70%;box-shadow: 2px 5px 10px #ddd;">
             <div class="recent-posts">
-            <div class="title" style="">
-                                               
-              <h3> Recent Job Posts</h3> <div>
-
-                <table width="100%" style="border: 1px solid #dddddd;text-align:left;">
+                <table width="100%" style="text-align:left;">
+                <!--<h3 style="color:gray;margin-left:0px;border-bottom:2px solid #999;padding:15px 10px">Recent Job Posts </h3>-->
+                <p class="head-1" style="border-bottom:2px solid #999;padding:15px 10px"> Recent Job posts<span><a href="/WADAK.com/App/view/Categorymain.php">View All</a></span></p> 
                     <thead>
-                        <tr style="color:Green;">
+                        <tr style="">
                             <!--<th>Job_ID</th>-->
                             <th>Job Title</th>
                             <th>Description</th>
