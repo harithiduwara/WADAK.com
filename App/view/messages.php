@@ -7,9 +7,8 @@
         die("Connection failed" . mysqli_connect_error());
     }
 
-    $query1 = "SELECT * FROM `chatInterface` WHERE ownerId= 3 ORDER BY lastUpdate ASC";
-
-    $data = mysqli_query($con, $query1);
+    $active_uid = $_GET["active_uid"] ;
+    $uid = $_SESSION['user']['uid'];
 
     $action = $_GET["action"];
     
@@ -17,7 +16,13 @@
         $sender_id = $_SESSION['user']['uid'];
         $receiver_id = $_POST["receiver_id"];
         $message = $_POST["message"];
-        $insertMessage = "INSERT INTO `chat`( `senderId`, `receiverId`, `message`) VALUES ('[value-1]','[value-2]','[value-3]')";
+        $insertMessage = "INSERT INTO `chat`( `senderId`, `receiverId`, `message`) VALUES ('".$sender_id."','".$receiver_id."','".$message."')";
+        if (mysqli_query($con, $insertMessage)) {
+        //echo "New record created successfully";
+    } 
+    else {
+        echo "Error: " . $reg . "<br>" . mysqli_error($con);
+    }
     }
 
 ?>
@@ -65,41 +70,65 @@
                         placeholder="Search User..">
 
                     <?php
-                    if(mysqli_num_rows($data)>0){
-                        while($row=mysqli_fetch_assoc($data)){
-                            $query2 ="SELECT name FROM register";
+                    
+                        $users_query ="SELECT name,uid FROM register";
 
-                            $result = mysqli_query($con, $query2);
-                            
-                            $row2 = mysqli_fetch_assoc($result);
-                            echo '<div class="chat1">
-                                    <p style="font-size:2rem; text-align:left; border: 1px solid green">'.$row2["name"].'</p>
-                                    <br>
-                                    </div>';
-                        }
-                    }
-                    ?>
+                        $users = mysqli_query($con, $users_query);
+                    
+                    if(mysqli_num_rows($users)>0){
+                        while($row=mysqli_fetch_assoc($users)){ ?>
+
+                    <div class="chat1">
+                        <a href="?active_uid=<?=$row["uid"]?>"
+                            style=" font-size:2rem; text-align:left; border: 1px solid green">
+                            <?= ucfirst($row["name"])?></a>
+                        <br>
+                    </div>
+                    <?php } ?>
+
                 </div>
+                <?php } ?>
 
 
 
 
 
 
-                <div class="rightbar">
+                <div class=" rightbar">
                     <h1 style="font-size:3rem">Username</h1>
+
+                    <?php
+                       $msgs_query = "SELECT * FROM `chat` WHERE (senderId = $uid AND receiverId = $active_uid ) OR (senderId = $active_uid AND receiverId = $uid ) ORDER BY chatDate "; 
+                        $msgs = mysqli_query($con, $msgs_query);
+                    
+                    if(mysqli_num_rows($msgs)>0){
+                        while($row=mysqli_fetch_assoc($msgs)){ ?>
+
+                    <div
+                        style="<?=$active_uid == $row["senderId"] ? 'text-align: left; margin-left:1rem':'text-align: right; margin-right:1rem'?>">
+                        <?= $row["message"]?> </div>
+
+                    <?php } ?>
+
+
+                    <?php } ?>
+
+
+
                     <div>
 
                     </div>
                     <div style="bottom:1rem">
-                        <form action="/WADAK.com/App/view/messages.php?action=send_message" method="post"
-                            enctype="multipart/form-data">
+                        <form action="/WADAK.com/App/view/messages.php?action=send_message&active_uid=<?=$active_uid?>"
+                            method="post" enctype="multipart/form-data">
 
                             <div class="inputbox">
-
-                                <span style="width: -webkit-fill-available;"> <input type=" text" name="search"
+                                <input value="<?=$active_uid?>" type='hidden' name="receiver_id">
+                                <span style="width: -webkit-fill-available;">
+                                    <input type=" text" name="message"
                                         style="width:80%;height:3rem; text-align:center; margin-bottom:0rem"
                                         placeholder="Type here.......">
+
 
                                     <button type="submit"><i class="fa-solid fa-angles-up"></i>Send
                                     </button>
