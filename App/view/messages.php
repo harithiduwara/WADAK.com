@@ -11,12 +11,10 @@
 
     $data = mysqli_query($con, $query1);
 
-    $insertMessage = "INSERT INTO `chat`(`id`, `chatInterfaceId`, `senderId`, `receiverId`, `chatDate`, `message`, `status`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]')";
-
     $action = $_GET["action"];
     
     if($action=="send_message"){
-        
+        $insertMessage = "INSERT INTO `chat`(`id`, `chatInterfaceId`, `senderId`, `receiverId`, `chatDate`, `message`, `status`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]')";
     }
     
 
