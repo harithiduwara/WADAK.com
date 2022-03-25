@@ -14,12 +14,11 @@
     $action = $_GET["action"];
     
     if($action=="send_message"){
-        $insertMessage = "INSERT INTO `chat`(`id`, `chatInterfaceId`, `senderId`, `receiverId`, `chatDate`, `message`, `status`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]')";
+        $sender_id = $_SESSION['user']['uid'];
+        $receiver_id = $_POST["receiver_id"];
+        $message = $_POST["message"];
+        $insertMessage = "INSERT INTO `chat`( `senderId`, `receiverId`, `message`) VALUES ('[value-1]','[value-2]','[value-3]')";
     }
-    
-
-
-    
 
 ?>
 
@@ -119,5 +118,6 @@
 
 </html>
 
-
-if(mysqli_num_rows($data)>0){ WHERE uid = " .$row["chatPerson"]. "
+<?php
+    $con -> close();
+?>
