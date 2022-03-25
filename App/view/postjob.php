@@ -1,6 +1,20 @@
-<?php
-    session_start();
+<?php 
+session_start();
+
+$postType = $_GET["postType"]??"job";
+
+$con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+if(!$con){
+    die("Connection failed" . mysqli_connect_error());
+}
+
+    $query = "SELECT * FROM `jobCategories`";
+
+    $data = mysqli_query($con, $query);
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -13,11 +27,13 @@
         }
 
         </style>
-        <title>Post A Job</title>
+        <title>Add Post</title>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/postjob.css">
     </head>
 
     <body>
+
+
 
         <nav>
             <a href="/WADAK.com/App/view/home.php"> <label class="logo">WADAK</label></a>
@@ -61,12 +77,22 @@
                         <div class="inputbox">
                             <span>Category</span>
                             <select id="jobs" name="joblist" required>
-                                <option value="webdev">Web Development</option>
-                                <option value="uidev">UI Design</option>
-                                <option value="logo">Logo Design</option>
-                                <option value="graphic">Graphic Design</option>
-                                <option value="app">App Development</option>
-                                <option value="app">Other</option>
+                                <?php
+                                    if (mysqli_num_rows($data) > 0) {
+
+                                    while($row = mysqli_fetch_assoc($data)) {
+          
+                                    ?>
+                                <option value="<?=$row["categoryId"]?>">
+                                    <?=$row["categoryName"]?>
+                                </option>
+                                <?php
+                                }
+                                }
+                                ?>
+
+
+                                <option value="other">Other</option>
                             </select>
                         </div>
 

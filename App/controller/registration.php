@@ -42,7 +42,7 @@ function test_input($data){
     }
     else{
         $name = test_input($_POST["name"]);
-        // echo "Hellooooooo";
+ 
     }
 
     if(empty($_POST["username"])){
@@ -141,7 +141,7 @@ $num= mysqli_num_rows($result);
 
     if($num==1){
     echo "Username already taken!";
-    header('location:/WADAK.com/Implementation/view/registration.php');
+    header('location:/WADAK.com/App/view/registration.php');
     }
     else{
         $reg= "insert into register(name, username, birthday, address, email, contactno, password, userrole) values('$name', '$username',
@@ -152,7 +152,7 @@ $num= mysqli_num_rows($result);
     
     if (mysqli_query($con, $reg)) {
         echo "New record created successfully";
-        header('location:/WADAK.com/Implementation/view/login.php');
+        header('location:/WADAK.com/App/view/login.php');
     } 
     else {
         echo "Error: " . $reg . "<br>" . mysqli_error($con);

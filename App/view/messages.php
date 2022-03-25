@@ -8,10 +8,17 @@
     }
 
     $query1 = "SELECT * FROM `chatInterface` WHERE ownerId= 3 ORDER BY lastUpdate ASC";
-    
+
     $data = mysqli_query($con, $query1);
 
+    $action = $_GET["action"];
     
+    if($action=="send_message"){
+        $sender_id = $_SESSION['user']['uid'];
+        $receiver_id = $_POST["receiver_id"];
+        $message = $_POST["message"];
+        $insertMessage = "INSERT INTO `chat`( `senderId`, `receiverId`, `message`) VALUES ('[value-1]','[value-2]','[value-3]')";
+    }
 
 ?>
 
@@ -29,6 +36,7 @@
         </style>
         <title>Messages</title>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/message.css">
+        <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -55,16 +63,17 @@
                     <input type="text" name="search"
                         style="width: -webkit-fill-available; height:3rem; text-align:center"
                         placeholder="Search User..">
+
                     <?php
                     if(mysqli_num_rows($data)>0){
                         while($row=mysqli_fetch_assoc($data)){
-                            $query2 ="SELECT name FROM register WHERE uid=".$row["chatPerson"]."";
+                            $query2 ="SELECT name FROM register";
 
                             $result = mysqli_query($con, $query2);
                             
                             $row2 = mysqli_fetch_assoc($result);
                             echo '<div class="chat1">
-                                    <p style="font-size:3rem; text-align:left; padding:0.5rem 0.5rem 0rem 0.5rem">'.$row2["name"].'</p>
+                                    <p style="font-size:2rem; text-align:left; border: 1px solid green">'.$row2["name"].'</p>
                                     <br>
                                     </div>';
                         }
@@ -78,11 +87,37 @@
 
 
                 <div class="rightbar">
-                    <h1 style="font-size:3rem">Hello</h1>
+                    <h1 style="font-size:3rem">Username</h1>
+                    <div>
+
+                    </div>
+                    <div style="bottom:1rem">
+                        <form action="/WADAK.com/App/view/messages.php?action=send_message" method="post"
+                            enctype="multipart/form-data">
+
+                            <div class="inputbox">
+
+                                <span style="width: -webkit-fill-available;"> <input type=" text" name="search"
+                                        style="width:80%;height:3rem; text-align:center; margin-bottom:0rem"
+                                        placeholder="Type here.......">
+
+                                    <button type="submit"><i class="fa-solid fa-angles-up"></i>Send
+                                    </button>
+                                </span>
+
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
+
             </div>
 
         </div>
     </body>
 
 </html>
+
+<?php
+    $con -> close();
+?>
