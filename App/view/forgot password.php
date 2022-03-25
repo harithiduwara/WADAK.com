@@ -9,7 +9,7 @@
         }
 
         </style>
-        <title>Forgot password</title>
+        <title>Forgot Password</title>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/forgot%20password.css">
     </head>
 
@@ -44,10 +44,10 @@
                 <div class="form">
                     <h2>Reset your password</h2>
                     <form>
-                        <div class="inputbox">
-                            <input type="password" placeholder="Enter your email address or phone number">
+                        <div class="inputbox" style="width:-webkit-fill-available">
+                            <input type="password" placeholder="Enter your email address">
                         </div>
-                        <p>We'll send you the Username and Password of your account.</p>
+                        <p>We'll send you an email.</p>
                         <p>After Log in, <b>you need to change your password</b></p>
                         <div class="inputbox">
                             <a href="home.php" class="button"> Continue</a>
