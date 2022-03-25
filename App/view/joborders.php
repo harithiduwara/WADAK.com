@@ -33,7 +33,7 @@
         }
 
         </style>
-        <link rel="stylesheet" href="/WADAK.com/App/assets/css/CategoryUI.css" type="text/css" />
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/Admin-dashboard.css" type="text/css" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -61,7 +61,7 @@
                 &nbsp;&nbsp;Previous Services</a>
             <a href="/WADAK.com/App/view/news2.php" Target="_blank" class="icon-a"><i class="far fa-envelope-open"></i>
                 &nbsp;&nbsp;News</a>
-            <a href="/WADAK.com/App/view/chat.php" Target="_blank" class="icon-a"><i class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/App/view/messages.php" Target="_blank" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Messages</a>
             <a href="/WADAK.com/App/view/a.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Achievements</a>

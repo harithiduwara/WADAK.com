@@ -2,18 +2,20 @@
 session_start();
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Update achievements</title>
+    <title>Add achievements</title>
     <style>
         a {
             text-decoration: none;
         }
     </style>
-    <link rel="stylesheet" href="updateac.css" type="text/css" />
+    <link rel="stylesheet" href="addac.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -27,14 +29,20 @@ session_start();
         <a href="/WADAK.com/Implementation/view/news2.php" class="icon-a"><i class="far fa-envelope-open"></i> &nbsp;&nbsp;News</a>
         <a href="/WADAK.com/Implementation/view/messages.html" class="icon-a"><i class="fa fa-tasks icons"></i>
             &nbsp;&nbsp;Messages</a>
-        <a href="/WADAK.com/Implementation/view/leaderboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i>
+        <a href="/WADAK.com/App/view/complain.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            &nbsp;&nbsp;complaints</a>
+        <a href="/WADAK.com/App/view/complain.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
             &nbsp;&nbsp;Leaderboard</a>
+        <a href="/WADAK.com/Implementation/view/leaderboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            &nbsp;&nbsp;applied posts</a>
+        <a href="/WADAK.com/Implementation/view/leaderboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            &nbsp;&nbsp;Invitations</a>
     </div>
 
     <div id="main">
         <div class="head">
             <div class="col-div-1">
-                <p class="nav">Update Achievements</p>
+                <p class="nav">Advertisement payment</p>
             </div>
 
             <div class="col-div-1">
@@ -65,62 +73,37 @@ session_start();
         <br>
 
 
-        <?php
+        <!-- <input type="hidden" name="id" value="<?php echo $_SESSION['user']['uid'] ?>" placeholder="Enter your ID">
+                    <br><br>
+                    <br><br><span> Description</span><br><br>
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="Description" placeholder="Description">
+                    <br><br><span> Type</span><br><br>
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="type" placeholder="Type">
+                    <br><br><span> Advertisement Image</span><br><br>
+                    <i class="fas fa-user"></i>
+                    <input type="file" name="file">
 
-        // $A_ID = $_GET['uid'];
-        // $sql = "select * from achievements where A_ID=$A_ID";
-        // $result = mysqli_multi_query($con, $sql);
-        // $row = mysqli_fetch_assoc($result);
-        $servername = "localhost";
-        $username = "toor";
-        $password = "toor";
-        $database = "wadak";
-
-        $connection = mysqli_connect($servername, $username, $password, $database);
-
-        // Check connection
-        if (mysqli_connect_errno()) {
-            echo "Failed to connect to MySQL: " . mysqli_connect_error();
-            exit();
-        }
-
-        if (isset($_GET['uid'])) {
-            $A_ID = $_GET['uid'];
-            $sql = "select * from achievements WHERE A_ID=$A_ID";
-            $result = mysqli_query($connection, $sql);
-            $row = mysqli_fetch_assoc($result);
-            $Name = $row['Name'];
-            $Place = $row['Place'];
-            $Date = $row['Date'];
-            $Level = $row['Level'];
-            $image = $row['image'];
-            $A_ID = $row['A_ID'];
-        }
-
-        ?>
+                </div> <br><br><br>
+                <input type="submit" name="pay" value="Pay from here"> -->
 
 
 
         <div class="inputContainer" style="margin:auto;width: 50%;">
             <div class="form" style="position: relative;">
-                <form action="updateac.php" method="POST">
+                <form action="addpayHandle.php" method="POST" enctype="multipart/form-data">
                     <div class="inputbox">
-                        <input type="value" name="id" required="true" value=<?php echo $A_ID ?> placeholder="Achievement ID">
+                        <input type="hidden" name="id" value="<?php echo $_SESSION['user']['uid'] ?>" placeholder="Enter your ID">
                     </div>
                     <div class="inputbox">
-                        <input type="text" name="achievementName" required="true" value=<?php echo $Name ?> placeholder="Name">
+                        <input type="text" name="description" required="true" placeholder="description">
                     </div>
                     <div class="inputbox">
-                        <input type="text" name="place" required="true" value=<?php echo $Place ?> placeholder="Institute">
+                        <input type="text" name="type" required="true" placeholder="Email">
                     </div>
                     <div class="inputbox">
-                        <input type="text" name="date" required="true" value=<?php echo $Date ?> placeholder="From To">
-                    </div>
-                    <div class="inputbox">
-                        <input type="text" name="level" required="true" value=<?php echo $Level ?> placeholder="level">
-                    </div>
-                    <div class="inputbox">
-                        <input type="file" name="file" value=<?php echo $image ?> required="true">
+                        <input type="file" name="file" required="true">
                     </div>
                     <!-- <div class="inputbox">
                     <input type="value" placeholder="Achievements ID">
@@ -128,7 +111,7 @@ session_start();
                     <div class="inputbox">
                         <table style="width:50%;">
                             <tr>
-                                <td><input type="submit" name="add" value="Update" style="width: 200px !important;"></td>
+                                <td><input type="submit" name="add" value="Add" style="width: 200px !important;"></td>
                                 <td><input type="reset" name="reset" style="width: 200px !important;" value="reset"></td>
                             </tr>
                         </table>

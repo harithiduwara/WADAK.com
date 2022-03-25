@@ -122,3 +122,7 @@ nav ul li a:hover {
 #searchbar {
     width: -webkit-fill-available;
 }
+
+.typing {
+    margin-top: 55vh;
+}

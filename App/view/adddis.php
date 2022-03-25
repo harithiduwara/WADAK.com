@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>achievements</title>
+    <title>advertisements</title>
     <style>
         a {
             text-decoration: none;
@@ -27,7 +27,7 @@
     <div id="main">
         <div class="head">
             <div class="col-div-1">
-                <p class="nav">Achievements</p>
+                <p class="nav">advertisements</p>
 
             </div>
 
@@ -64,15 +64,12 @@
                 <br />
                 <table cellspacing="5">
                     <tr>
-                        <th>Name</th>
-                        <th>Place</th>
+                        <th>AD_NUMBER</th>
                         <th>Date</th>
-                        <th>Level</th>
-                        <th>Certificate</th>
-                        <th>Id</th>
-                        <th>Delete</th>
-                        <th>Update</th>
-
+                        <th>Description</th>
+                        <th>Email</th>
+                        <th>Image</th>
+                        <th>User_Id</th>
                     </tr>
                     <?php
                     //require_once("/Implementation/backend/dbconfig.php");
@@ -90,7 +87,7 @@
                     }
 
 
-                    $sql = "SELECT Name,Place,Date,Level,image,A_ID FROM achievements";
+                    $sql = "SELECT  Ad_no,date,description,type,image,user_id FROM advertisement";
                     $result = mysqli_query($connection, $sql);
                     // $out = "";
                     // while ($data = $result->fetch_assoc()) {
@@ -102,12 +99,12 @@
                     // echo $out;
                     if ($result) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            $Name = $row['Name'];
-                            $Place = $row['Place'];
-                            $Date = $row['Date'];
-                            $Level = $row['Level'];
+                            $Name = $row['Ad_no'];
+                            $Place = $row['date'];
+                            $Date = $row['description'];
+                            $Level = $row['type'];
                             $image = $row['image'];
-                            $A_ID = $row['A_ID'];
+                            $A_ID = $row['user_id'];
                             echo '<tr>
                             <td>' . $Name . '</td>
                             <td>' . $Place . '</td>
@@ -115,8 +112,6 @@
                             <td>' . $Level . '</td>
                             <td><img src=' . $image . '/></td>
                             <td>' . $A_ID . '</td>
-                            <td> <button> <a href="delete.php?did=' . $A_ID . '">Delete</a></button></td>
-                            <td><button> <a href="updateacc.php?uid=' . $A_ID . '">Update</a></button></td>
                             </tr>';
                         }
                     }
@@ -136,9 +131,9 @@
             </div>
         </div>
         <div class="col-div-2">
-            <div class="box1">
+            <!-- <div class="box1">
                 <a href="addac.php">Add</a>
-            </div>
+            </div> -->
             <!-- <div class="box2">
                 <a href="deleteacc.php">Delete</a>
             </div>

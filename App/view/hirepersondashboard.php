@@ -57,7 +57,7 @@
                 &nbsp;&nbsp;Previous Services</a>
             <a href="/WADAK.com/App/view/news2.php" Target="_blank" class="icon-a"><i class="far fa-envelope-open"></i>
                 &nbsp;&nbsp;News</a>
-            <a href="/WADAK.com/App/view/chat.php" Target="_blank" class="icon-a"><i class="fa fa-tasks icons"></i>
+            <a href="/WADAK.com/App/view/messages.php" Target="_blank" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Messages</a>
             <a href="/WADAK.com/App/view/a.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Achievements</a>

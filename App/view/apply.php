@@ -1,104 +1,116 @@
+<?php
+    session_start();
+
+    $jobid = $_GET["jobid"];
+
+    $uid = $_SESSION["user"]['uid'];
+
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+
+    if(!$con){
+        die("Connection failed" .mysqli_connect_error());
+        }
+
+    $query = "SELECT * from postjob where jobid=$jobid";
+
+    $result = mysqli_query($con, $query);
+
+    $row = mysqli_fetch_assoc($result);
+
+    $query1 = "SELECT username from register where uid = '$row["uid"]'";
+
+?>
+
 <!DOCTYPE html>
 <html>
 
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title> <?= $row["postType"] ?> </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/apply.css">
     </head>
 
     <body>
 
-        <body>
+        <?=$row["jobid"]?>
+        <nav>
+            <label class="logo">WADAK</label>
+            <ul class="navbar">
+                <?php
+                    if(isset($_SESSION["user"]["userrole"])){?>
+                <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
+                <?php
+                    }
+                    ?>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
 
-            <nav>
-                <label class="logo">WADAK</label>
-                <ul>
-                    <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
-                    <li><a href="/WADAK.com/App/view/Add achievement post - Service provider.php">Add Post</a> </li>
-                    <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
-                    <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
-                    <li><a href="/WADAK.com/App/view/leaderboard.php">Leaderboard</a></li>
-                    <li><i class="far fa-bell"></i></li>
-                    <li><a href="/WADAK.com/App/view/chat.php">Messages</a> </li>
-                    <li><a href="/WADAK.com/App/controller/logout.php">Logout</a> </li>
-                    <div class="animation "></div>
-                </ul>
-            </nav>
+                <?php if(!isset($_SESSION["user"]["userrole"])){?>
 
-            <div class="container">
-                <div class="title">
-                    <h4>Post Job</h4>
-                </div><br>
+                <li><a href="./login.php">Login</a></li>
+                <?php }else {?>
+                <li><i class="far fa-bell"></i></li>
+                <li><a href="/WADAK.com/App/view/messages.php">Messages</a></li>
+                <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a></li>
+                <?php } ?>
+            </ul>
+        </nav>
 
-                <form action="#">
-                    <div class="job-details">
 
-                        <div class="input-box">
-                            <span class="details">Title</span>
-                            <input type="text" placeholder="Job Title">
-                        </div>
 
-                        <div class="input-box">
-                            <span class="details">Description</span>
-                            <input type="text" placeholder="Your Desicription" id="des">
-                        </div>
+        <div class="container">
+            <div class="title">
+                <h4>
+                    <?php
+                    echo strtoupper($row["title"]) . "by" . $row1["username"];
+                    ?>
+                </h4>
+            </div><br>
 
-                        <div class="input-box">
-                            <span class="details">Budget</span>
-                            <input type="number" placeholder="$0.00">
-                        </div>
+            <form action="#">
+                <div class="job-details">
 
-                        <div class="input-box">
-                            <span class="details">Tags</span>
-                            <input type="text" placeholder="Tags that will bring you reach">
-                        </div>
-
+                    <div class="input-box">
+                        <span class="details">Title</span>
+                        <input type="text" placeholder="Job Title">
                     </div>
 
-
-                    <br><br>
-
-                    <div class="type-details">
-                        <span class="type-title">Select Catagory</span>
-                        <div class="category"><br>
-                            <label for="">
-                                <input type="radio" name="type" id="dot-1">
-                                <span class="type">&nbsp; Web Developer</span>
-                            </label>
-                            <label for="">
-                                <input type="radio" name="type" id="dot-2">
-                                <span class="type"> &nbsp; Software Developer</span>
-                            </label>
-                            <label for="">
-                                <input type="radio" name="type" id="dot-3">
-                                <span class="type"> &nbsp; Graphic Designer</span>
-                            </label>
-                            <label for="">
-                                <input type="radio" name="type" id="dot-4">
-                                <span class="type"> &nbsp; Software Developer</span>
-                            </label>
-                        </div>
+                    <div class="input-box">
+                        <span class="details">Description</span>
+                        <input type="text" placeholder="Your Desicription" id="des">
                     </div>
 
-                    <div class="button" id="btn">
-                        <input type="submit" value="Cancel" id="red">
-                        <input type="submit" value="Post" id="green">
+                    <div class="input-box">
+                        <span class="details">Budget</span>
+                        <input type="number" placeholder="$0.00">
                     </div>
 
-                </form>
-            </div>
-            </div>
+                    <div class="input-box">
+                        <span class="details">Tags</span>
+                        <input type="text" placeholder="Tags that will bring you reach">
+                    </div>
 
-        </body>
+                </div>
+
+
+                <br><br>
+
+
+                <div class="button" id="btn">
+                    <input type="submit" value="Cancel" id="red">
+                    <input type="submit" value="Post" id="green">
+                </div>
+
+            </form>
+        </div>
+        </div>
+
+    </body>
 
 </html>
 
-
-</body>
 
 
 

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>achievements</title>
+    <title>added service posts</title>
     <style>
         a {
             text-decoration: none;
@@ -27,7 +27,7 @@
     <div id="main">
         <div class="head">
             <div class="col-div-1">
-                <p class="nav">Achievements</p>
+                <p class="nav">Service posts</p>
 
             </div>
 
@@ -64,14 +64,12 @@
                 <br />
                 <table cellspacing="5">
                     <tr>
-                        <th>Name</th>
-                        <th>Place</th>
-                        <th>Date</th>
-                        <th>Level</th>
-                        <th>Certificate</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>File</th>
+                        <th>Experience</th>
                         <th>Id</th>
-                        <th>Delete</th>
-                        <th>Update</th>
 
                     </tr>
                     <?php
@@ -90,7 +88,7 @@
                     }
 
 
-                    $sql = "SELECT Name,Place,Date,Level,image,A_ID FROM achievements";
+                    $sql = "SELECT title,description,category,image,experience,id FROM postservice";
                     $result = mysqli_query($connection, $sql);
                     // $out = "";
                     // while ($data = $result->fetch_assoc()) {
@@ -102,21 +100,19 @@
                     // echo $out;
                     if ($result) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            $Name = $row['Name'];
-                            $Place = $row['Place'];
-                            $Date = $row['Date'];
-                            $Level = $row['Level'];
-                            $image = $row['image'];
-                            $A_ID = $row['A_ID'];
+                            $t = $row['title'];
+                            $d = $row['description'];
+                            $c = $row['category'];
+                            $im = $row['image'];
+                            $exp = $row['experience'];
+                            $ID = $row['id'];
                             echo '<tr>
-                            <td>' . $Name . '</td>
-                            <td>' . $Place . '</td>
-                            <td>' . $Date . '</td>
-                            <td>' . $Level . '</td>
-                            <td><img src=' . $image . '/></td>
-                            <td>' . $A_ID . '</td>
-                            <td> <button> <a href="delete.php?did=' . $A_ID . '">Delete</a></button></td>
-                            <td><button> <a href="updateacc.php?uid=' . $A_ID . '">Update</a></button></td>
+                            <td>' . $t . '</td>
+                            <td>' . $d . '</td>
+                            <td>' . $c . '</td>
+                            <td><img src=' . $im . '/></td>
+                            <td>' . $exp . '</td>
+                            <td>' . $ID . '</td>
                             </tr>';
                         }
                     }
@@ -137,7 +133,7 @@
         </div>
         <div class="col-div-2">
             <div class="box1">
-                <a href="addac.php">Add</a>
+                <a href="addservice.php">Add service</a>
             </div>
             <!-- <div class="box2">
                 <a href="deleteacc.php">Delete</a>
