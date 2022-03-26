@@ -10,6 +10,15 @@
         a {
             text-decoration: none;
         }
+        .del-button{
+            padding: 8px;
+            background-color: #4a504fbd;
+            border-radius: 10px;
+        }
+
+        .del-button a{
+            color: white;
+        } 
 
         </style>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/Co-admin.css" type="text/css" />
@@ -119,7 +128,7 @@
                                                 <td>" . $row["uid"]. "</td>
                                                 <td>" . $row["email"]. "</td>
                                                 <td>" . $row["contactno"]. "</td>
-                                                <td><a href='/WADAK.com/App/model/deleteCoadmin.php?id=".$row['uid']."' id='btn'>Delete</a></td>
+                                                <td><div class=\"del-button\"><a href='/WADAK.com/App/model/deleteCoadmin.php?id=".$row['uid']."' id='btn'>Delete</a></div></td>
                                             </tr>";
                                     }
                                     echo "</table>";

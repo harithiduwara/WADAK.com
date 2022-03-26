@@ -8,6 +8,25 @@
                 text-decoration: none;
             }
 
+            .del-button{
+                padding: 8px;
+                background-color: #4a504fbd;
+                border-radius: 10px;
+            }
+
+            .del-button a{
+                color: white;
+            }
+            .view-btn{
+                padding: 8px;
+                background-color: #30a117bd;
+                border-radius: 10px;
+            }
+
+            .view-btn a{
+                color: white;
+            }
+
         </style>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/View%20Report.css" type="text/css" />
         <link rel="stylesheet"
@@ -31,7 +50,7 @@
             <a href="ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
             <a href="/WADAK.com/App/view/View Report.php" class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
             <a href="/WADAK.com/App/view/PaymentUI.php" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
-            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i
+            <a href="/WADAK.com/App/view/lead.php" class="icon-a"><i
                     class="fa fa-object-group icons"></i>
                 &nbsp;&nbsp;Leaderboard</a>
             <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
@@ -79,25 +98,55 @@
                 <div class="box">
                     <p class="head-1">Report - Details</p>
                     <br />
+
+<!-- View Complains -->
+                    <?php
+                    include_once 'cataconfig.php';
+                    $result = mysqli_query($conn,"SELECT c_ID, `from` ,title, complain, sol, any FROM complains");
+                    ?>
+
                     <table>
                         <tr>
-                            <th>Reporter </br> (Hire Person)</th>
-                            <th>Service Provider</th>
-                            <th>Date</th>
-                            <th>Reason</th>
+                            <th>Complain Id</th>
+                            <th>Complainer</th>
+                            <th>Title</th>
+                            <th>Complain</th>
+                            <th>Solution to be expected</th>
+                            <th>Any other things</th>
+                            <!--<th>check</th> -->
+                            <th>Action</th>
                         </tr>
-                        <tr>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
+
+                        <?php
+	                        $i=0;
+	                        while($row = mysqli_fetch_array($result)) {
+	                    ?>
+                            <tr class="<?php if(isset($classname)) echo $classname;?>">
+                            <!--<form action="" method="POST" role = "form">-->
+                            <td><?php echo $row["c_ID"]; ?></td>
+                            <td><?php echo $row["from"]; ?></td>
+                            <td><?php echo $row["title"]; ?></td>
+                            <td><?php echo $row["complain"]; ?></td>
+                            <td><?php echo $row["sol"]; ?></td>
+                            <td><?php echo $row["any"]; ?></td>
+                            <!--<td>
+                                <input type = "checkbox" name = "keyToDelete" value="<?php // echo $row['C_ID'];?>" required >
+                            </td> -->
+                            <td>
+
+                                <div class="del-button"><a href="/WADAK.com/App/model/deleterep.php? id=<?php echo $row["c_ID"];?>">Delete</a></div>    
+                            
+                                <br>
+                                <div class="view-btn"><a href="/WADAK.com/App/view/ServiceProviderUI-admin.php">View</a></div>
+                                
+                            </td>
+
                         </tr>
-                        <tr>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                        </tr>
+                        <?php
+	           $i++;
+	           }
+	          ?>
+                        
                     </table>
                 </div>
             </div>

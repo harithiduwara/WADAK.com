@@ -7,7 +7,7 @@
             a {
                 text-decoration: none;
             }
-
+            
         </style>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/ServiceProviderUI-admin.css" type="text/css" />
         <link rel="stylesheet"
@@ -31,7 +31,7 @@
             <a href="ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
             <a href="/WADAK.com/App/view/View Report.php" class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
             <a href="/WADAK.com/App/view/PaymentUI.php" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
-            <a href="/WADAK.com/App/view/leaderboard.php" class="icon-a"><i
+            <a href="/WADAK.com/App/view/lead.php" class="icon-a"><i
                     class="fa fa-object-group icons"></i>
                 &nbsp;&nbsp;Leaderboard</a>
             <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
@@ -74,70 +74,74 @@
             <div class="clearfix"></div>
             <br />
 
+            <div class="search-form">
+                <form action="" method="GET">
+                        <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="text" placeholder="Search data">
+                        <button type="submit" class="submit" placeholder="Search">Search</button>
+                </form>
+            </div>
+
+            <br>
+
             <div class="col-div-2">
                 <div class="box">
                     <p class="head-1">Service Provider - Details</p>
-                    <br/>
 
 
             <!-- View Service providers -->
-            
-                    <?php
-         
-                            
-                               // Create connection
-                                $con = new mysqli('localhost', 'toor', 'toor', 'wadak');
-                                // Check connection
-                                if ($con->connect_error) {
-                                    die("Connection failed: " . $con->connect_error);
-                                } 
-                                
-                                // $uid = $_SESSION["user"]["uid"];
-                                
-                                // $sql = "select * from postjob where uid=$uid";
+            <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Service Provider Name</th>
+                                    <th>Username</th>
+                                    <th>User Id</th>
+                                    <th>Email</th>
+                                    <th>Contat No</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php 
+                                    include_once 'cataconfig.php';
 
-                                $spsql = "select * from register where userrole='serviceprovider'";
+                                    if(isset($_GET['search']))
+                                    {
+                                        $filtervalues = $_GET['search'];
+                                        $result = "SELECT * FROM register WHERE CONCAT(name,username,uid,email,contactno) LIKE '%$filtervalues%' AND userrole='serviceprovider'";
+                                        $query_run = mysqli_query($conn, $result);
 
-                                // echo $sql;
-
-                                $result = $con->query($spsql);
-
-                                // echo $uid;
-                                    echo "<table>
-                                            <tr>
-                                                <th>Service Provider Name</th>
-                                                <th>Username</th>
-                                                <th>User ID</th>
-                                                <th>Email</th>
-                                                <th>Contact No</th>
-                                            </tr>";
-                                    // output data of each row
-
-                                    // echo $result->num_rows;
-                              
-                                    while($row = $result->fetch_assoc()) {
-                                        echo "<tr>
-                                                <td>" . $row["name"]. "</td>
-                                                <td>" . $row["username"]. "</td>
-                                                <td>" . $row["uid"]. "</td>
-                                                <td>" . $row["email"]. "</td>
-                                                <td>" . $row["contactno"]. "</td>
-                                            </tr>";
+                                        if(mysqli_num_rows($query_run) > 0)
+                                        {
+                                            foreach($query_run as $row)
+                                            {
+                                                ?>
+                                                <tr>
+                                                    <td><?= $row['name']; ?></td>
+                                                    <td><?= $row['username']; ?></td>
+                                                    <td><?= $row['uid']; ?></td>
+                                                    <td><?= $row['email']; ?></td>
+                                                    <td><?= $row['contactno']; ?></td>
+                                                    <td><div class="del-button"><a href="/WADAK.com/App/model/deletesp-admin.php?id=<?= $row['uid']; ?>">Delete</a></div></td>
+                                                </tr>
+                                                <?php
+                                            }
+                                        }
+                                        else
+                                        {
+                                            ?>
+                                                <tr>
+                                                    <td >No Record Found</td>
+                                                </tr>
+                                            <?php
+                                        }
                                     }
-                                    echo "</table>";
-
-                                
-
-                               // $conn->close();
                                 ?>
+                            </tbody>
+                        </table>
+
+                </div>
+            </div>
         
-                </div>
-            </div>
-            <div class="col-div-2">
-                <div class="box1">
-                    <a href="/WADAK.com/App/view/ViewServiceProvider-admin.php">View</a>
-                </div>
-            </div>
             <div class="clearfix"></div>
         </div>
 

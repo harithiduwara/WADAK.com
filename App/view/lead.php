@@ -9,11 +9,10 @@
         }
 
         .wrapper{
-
+            min-height: 500px;
             background-color: white;
             padding: 20px;
             padding-bottom: 20px;
-            border-radius: 20px;
 }
 
         </style>
