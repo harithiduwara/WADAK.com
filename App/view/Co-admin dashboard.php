@@ -22,9 +22,10 @@
             <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
             <a href="/WADAK.com/App/view/Co-admin dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
-            <a href="/WADAK.com/App/view/viewServiceProvider2-coadmin.php" class="icon-a"><i
+            <a href="/WADAK.com/App/view/ServiceProviderUI-coadmin.php" class="icon-a"><i
                     class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Service Providers</a>
+            <a href="/WADAK.com/App/view/jobs.php"class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Posts</a>    
 
             <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i>
                 &nbsp;&nbsp;Q & A Session</a>
