@@ -5,8 +5,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $name = $_POST["name"];
     $rate = $_POST["rate"];
     $comment=$_POST["comment"];
+    $raterId=$_GET["raterId"];
  
-    $sql = "INSERT INTO star_rating (name,rate,comment) VALUES ('$name','$rate','$comment')";
+    $sql = "INSERT INTO star_rating (raterId,name,rate,comment) VALUES ('$raterId','$name','$rate','$comment')";
     if (mysqli_query($conn, $sql))
     {
             echo "<script type='text/javascript'>
