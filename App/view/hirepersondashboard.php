@@ -115,30 +115,29 @@ $userData = mysqli_fetch_assoc($data);
                 <h2>Rank : 5</h2>
             </div>
         </div>
+            <div class="clearfix"></div>
+            <br />
+            <div class="col-div-12">
+                <div class="box-8">
+                    <div class="content-box">
+                        <p>User details </p>
+                        <br />
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Username</th>
+                                <th>Contact</th>
+                                <th>Email</th>
+                            </tr>
+                            <tr>
+                                <th><?=$userData["name"]?></th>
+                                <th><?=$userData["username"]?></th>
+                                <th><?=$userData["contactno"]?></th>
+                                <th><?=$userData["email"]?></th>
+                            </tr>
 
-
-        <div class="clearfix"></div>
-        <br />
-        <div class="col-div-12">
-            <div class="box-8">
-                <div class="content-box">
-                    <p>User details </p>
-                    <br />
-                    <table>
-                        <tr>
-                            <th>Name</th>
-                            <th>Username</th>
-                            <th>Contact</th>
-                            <th>Email</th>
-                        </tr>
-                        <tr>
-                            <th><?= $userData["name"] ?></th>
-                            <th><?= $userData["username"] ?></th>
-                            <th><?= $userData["contactno"] ?>5</th>
-                            <th><?= $userData["email"] ?></th>
-                        </tr>
-
-                    </table>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

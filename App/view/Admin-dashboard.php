@@ -152,7 +152,7 @@
 
                         <?php
 
-                        $ad_query = "SELECT * FROM advertisement ";
+                        $ad_query = "SELECT * FROM advertisement WHERE is_advanced_paid = 1 OR is_accepted = 1 ";
                         $ad_query_run = mysqli_query($connection,$ad_query);
 
                         if($ad_total = mysqli_num_rows($ad_query_run))

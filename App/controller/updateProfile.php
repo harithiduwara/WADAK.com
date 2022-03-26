@@ -13,8 +13,6 @@ mysqli_select_db($con, 'wadak');
 
 $data = mysqli_query($con, "select * from postjob");
 
-session_start();
-
 $jobid = $title = $description = $budget = $joblist = $postType = "";
 $jobidErr = $titleErr = $descriptionErr = $budgetErr = $joblistErr = $postTypeErr ="";
 
@@ -26,41 +24,54 @@ function test_input($data){
 }
 
 if(empty($_POST["address"])){
-    // $titleErr = "";
+
+    $address = "";
 }
 else{
     $address = test_input($_POST["address"]);
 }
 
-if(empty($_POST["conatctNo"])){
-    // $descriptionErr = "";
+if(empty($_POST["contactno"])){
+;
+    $contactno = "";
 }
 else{
-    $description = test_input($_POST["conatctNo"]);
+    $contactno = test_input($_POST["contactno"]);
+}
+
+if(empty($_POST["profileDescription"])){
+
+    $desc = "";
+}
+else{
+    $desc = test_input($_POST["profileDescription"]);
 }
 
 if(empty($_POST["telegram"])){
-    // $postTypeErr = "";
+
+    $telegram ="";
 }
 else{
-    $postType = test_input($_POST["telegram"]);
+    $telegram = test_input($_POST["telegram"]);
 }
 
 if(empty($_POST["twitter"])){
-    // $joblistErr = "";
+   
+    $twitter = "";
 }
 else{
-    $joblist = test_input($_POST["twitter"]);
+    $twitter = test_input($_POST["twitter"]);
 }
 
-if(empty($_POST["Instagram"])){
-    // $budgetErr = "";
+if(empty($_POST["instagram"])){
+ 
+     $instagram = "";
 }
 else{
-    $budget = test_input($_POST["Instagram"]);
+    $instagram = test_input($_POST["instagram"]);
 }
 
-require '/Applications/MAMP/htdocs/WADAK.com/App/controller/updateProfilePicture.php';
+require '/Applications/MAMP/htdocs/WADAK.com/App/controller/fileupload.php';
 
 $filename= $filenameErr ="";
 
@@ -74,11 +85,11 @@ if($uploadok == 1){
 // $s = "select * from postjob where title='$title'";
 
 
-$jobpost = "insert into postjob(title, description, budget, jobtype, uid, filename, postType) values('$title', '$description', '$budget', '$joblist', '$uid', '$filename', '$postType')";
+$updateProfile = "UPDATE register SET address ='$address' , contactno = '$contactno', telegram = '$telegram', twitter = '$twitter', instagram = '$instagram', profilePic = '$filename', profileDescription = '$desc' where uid =$uid" ;
 
-if (mysqli_query($con, $jobpost)) {
-    echo "New Job Has Created Successfully";
-    header('location:/WADAK.com/App/view/home.php');
+if (mysqli_query($con, $updateProfile)) {
+    echo "You are updated successfully";
+    header('location:/WADAK.com/App/view/hirepersondashboard.php');
 } 
 else {
     echo "Error: " . $reg . "<br>" . mysqli_error($con);
