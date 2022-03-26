@@ -110,7 +110,7 @@
                     }
 
 
-                    $sql = "SELECT from,title,complain,sol,any,c_ID FROM complains";
+                    $sql = "SELECT `from`,title,complain,sol,any,c_ID FROM complains";
                     $result = mysqli_query($connection, $sql);
                     // $out = "";
                     // while ($data = $result->fetch_assoc()) {
