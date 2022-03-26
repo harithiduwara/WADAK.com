@@ -1,4 +1,34 @@
 <?php
+require 'newsconfig.php';
+$question_id=$_GET['replyid'];
+if(isset($_POST['reply']))
+{
+
+#$question_id=$_POST["question_id"];
+$answer=$_POST["answer"];
+
+
+$sql = "UPDATE faq SET answer ='$answer'WHERE question_id='$question_id'";
+
+    if(mysqli_query($conn,$sql)){
+        echo "<script type='text/javascript'>
+        alert('Successfully inserted');
+        window.location='/WADAK.com/App/view/Q&A.php';
+        </script>";;
+    }
+    else{
+        echo "Error:".$sql."<br>".mysqli_error($conn);
+    }
+}
+else 
+{
+    echo "cancelled";
+}
+
+?>
+
+
+<?php
     session_start();
     $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
     if(!$con){
@@ -54,7 +84,7 @@
 
             </ul>
         </nav>
-
+   <!-- Add Question-->
         <br><br>
         <form method="POST" action="/WADAK.com/App/model/add_question.php" name="questionform"
             onsubmit="return validateForm()" required>
@@ -74,42 +104,21 @@
 	             while($row = mysqli_fetch_array($data)) {
 	          ?>
                 <tr class="<?php if(isset($classname)) echo $classname;?>">
-                    <?php #echo $row["question"]; ?>
-
-                    <!--<a href="/WADAK.com/App/model/deletenews.php?id=<?php #echo $row["question_id"]; ?>">Delete</a>-->
-
+                    <?php #echo $row["question_id"]; ?>
                 </tr>
 
-
+         <!-- Add Answer-->
                 <details>
                     <summary><?php echo $row["question"]; ?></summary>
                     <h4><?php echo $row["answer"]; ?></h4>
-                    <form method="POST" action="/WADAK.com/App/model/add_answer.php">
+                   <!-- <h4><?php #echo $row["question_id"]; ?></h4>-->
+                    <form method="POST" >
                         <input type="text" placeholder="Type your reply here..." name="answer">
-                        <input type="text" placeholder="Type question id here..." name="question_id">
-                        <input type="submit" value="Reply" name="reply">
+                        <!--<input type="text" placeholder="Type question id here..." name="question_id">-->
+                        <input type="submit" value="Reply" name="reply" href="/WADAK.com/App/view/Q&A.php?replyid=<?php echo $row["question_id"]; ?>">
                 </details>
-
-                <!--<details>
-                    <summary><?php #echo $row["question"]; ?></summary>
-                    <h4 class="text">Register in here</h4>
-                    <input type="text" placeholder="Type your reply here...">
-                    <input type="submit" value="Reply">
-                </details>
-
-                <details>
-                    <summary><?php# echo $row["question"]; ?></summary>
-                    <h4 class="text">Register in here</h4>
-                    <input type="text" placeholder="Type your reply here...">
-                    <input type="submit" value="Reply">
-                </details>-->
-
-                     
-                    <!--<a href="/WADAK.com/App/model/add_answer.php?id=<?php# echo $row["question_id"]; ?>"> </a> -->
                 </details>
                 
-
-
                 <?php
 	           $i++;
 	           }
