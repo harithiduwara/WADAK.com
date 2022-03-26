@@ -315,7 +315,7 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    color: #799c79;
+    color: #656c65;
     margin-left: 0px;
 }
 
@@ -326,6 +326,6 @@ td, th {
     padding: 10px;
 }
 tr:nth-child(even) {
-    background-color: #5643ff29;
+    background-color: #cdfaca;
     color: #6c7293!important;
 }
