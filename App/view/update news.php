@@ -1,3 +1,44 @@
+<?php
+    session_start();
+
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+    if(!$con){
+        die("Connection failed" . mysqli_connect_error());
+    }
+    
+    $result = "SELECT News_ID,date,description FROM news";
+
+    $data = mysqli_query($con, $result);
+?>
+
+
+<?php
+require 'newsconfig.php';
+$News_ID=$_GET['updateid'];
+if(isset($_POST['Update']))
+{
+$date=$_POST["date"];
+$description=$_POST["description"];
+
+$sql = "UPDATE news SET  date ='$date',description='$description' WHERE News_ID='$News_ID'";
+
+    if(mysqli_query($conn,$sql)){
+        echo "<script type='text/javascript'>
+        alert('Successfully updated');
+        window.location='/WADAK.com/App/view/news.php';
+        </script>";;
+    }
+    else{
+        echo "Error:".$sql."<br>".mysqli_error($conn);
+    }
+}
+else 
+{
+    echo "cancelled";
+}
+?>
+
+
 <!Doctype HTML>
 <html>
 <head>
@@ -56,11 +97,12 @@
         <br/> 
     </div>
     
+    
 
     <div class="container">
         <div class="wrapper">
           <div class="title"></div>
-          <form method="POST" action="/WADAK.com/App/model/update_news.php" name="updatenews" onsubmit="return validateForm()" required>
+          <form method="POST"  name="updatenews" onsubmit="return validateForm()" required>
             <div class="row"> 
                 <!--<span> News ID</span><br><br>
               <i class="fas fa-user"></i>
@@ -72,8 +114,9 @@
               <i class="fas fa-user"></i>
               <input type="text" placeholder="Description" name="description">
             </div> <br><br><br><br><br><br><br><br>
-            <input type="submit" class =" button button1" value="Update" name="Update" >
+            <input type="submit" class =" button button1" value="Update" name="Update" ></a>
             <button class="button button2">Cancel</button>
+           <!-- <a href="/WADAK.com/App/view/update news.php?updateid='.$News_ID.'">-->
           </form>
         </div>
       </div>
