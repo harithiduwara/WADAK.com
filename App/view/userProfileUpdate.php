@@ -1,7 +1,22 @@
 <?php
-session_start();
+
+    session_start();
+
+    $uid = $_SESSION["user"]['uid'];
+
+    // var_dump($_SESSION["user"]['uid']);
+
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+    
+    if(!$con){
+        die("Connection failed" . mysqli_connect_error());
+    }
+    $query = "SELECT * FROM register WHERE uid=$uid";
+    $data = mysqli_query($con, $query);
+    $userData = mysqli_fetch_assoc($data);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,7 +106,7 @@ session_start();
         <br>
 
 
-        <div class="inputContainer" style="margin:auto;width: 50%; height:50vh">
+        <div class="inputContainer" style="margin:auto;width: 50%; height:60vh">
             <div class="form" style="position: relative;">
                 <form action="/WADAK.com/App/controller/updateProfile.php" method="POST" enctype="multipart/form-data">
                     <div class="inputbox">
@@ -99,6 +114,10 @@ session_start();
                     </div>
                     <div class="inputbox">
                         <input type="tel" name="contactNo" placeholder="Contact Nunmber">
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="text" name="desc" placeholder="Profile Description">
                     </div>
                     <div>
                         <label for="img" style="color:green">Update Profile Picture</label><br>

@@ -142,7 +142,7 @@
                             <tr>
                                 <th><?=$userData["name"]?></th>
                                 <th><?=$userData["username"]?></th>
-                                <th><?=$userData["contactno"]?>5</th>
+                                <th><?=$userData["contactno"]?></th>
                                 <th><?=$userData["email"]?></th>
                             </tr>
 

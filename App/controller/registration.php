@@ -1,5 +1,7 @@
 <?php
 
+
+session_start();
 // error_reporting(E_ALL);
 
 // echo "Test";
@@ -18,7 +20,7 @@ $data = mysqli_query($con, "select * from register");
 // }
 
 // echo mysqli_num_rows($data);
-session_start();
+
 
 //validation
 

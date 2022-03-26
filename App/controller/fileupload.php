@@ -6,7 +6,9 @@ $target_file = $target_dir .time().'-'.rand(0,1000). basename($_FILES["fileToUpl
 $uploadok = 1;
 $imageFileType = strtolower(pathinfo($_FILES["fileToUpload"]["name"], PATHINFO_EXTENSION));
 
-var_dump($_FILES);
+
+// echo "<pre>";
+// print_r($_FILES);
 //Check if image file is a actual image or not 
 if(isset($_POST["submit"])){
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
@@ -36,8 +38,9 @@ if($_FILES["fileToUpload"]["size"]>50000000)
 
 //allow certain file formats\
 if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"){
-    var_dump($imageFileType);
-    echo "Sorry, we only allow jpg, png, jpeg.";
+    // var_dump($imageFileType);
+    // echo "Sorry, we only allow jpg, png, jpeg.";
+    echo $imageFileType;
     $uploadok = 0;
 }
 
@@ -47,7 +50,8 @@ if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpe
 print(__DIR__.'/../../'.$target_file);
 // if uploadok == 1 else a error
 if($uploadok ==0){
-    echo "Sorry, your file was not uploaded.";
+    // echo "Sorry, your file was not uploaded.";
+    $target_dir = "/WADAK.com/App/uploads/defaultProfilePic.jpg";
 }
 else{
     if(move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], __DIR__.'/../../../'.$target_file)){
