@@ -1,10 +1,10 @@
 <?php
 require 'newsconfig.php';
-
+$question_id=$_GET['replyid'];
 if(isset($_POST['reply']))
 {
 
-$question_id=$_POST["question_id"];
+#$question_id=$_POST["question_id"];
 $answer=$_POST["answer"];
 
 
