@@ -11,6 +11,15 @@
         <style>
         a {
             text-decoration: none;
+        }
+        .del-button{
+            padding: 8px;
+            background-color: #4a504fbd;
+            border-radius: 10px;
+        }
+
+        .del-button a{
+            color: white;
         } 
 
         /*
@@ -103,7 +112,7 @@
                     <!-- View Category table -->
                     <?php
                     include_once 'cataconfig.php';
-                    $result = mysqli_query($conn,"SELECT C_ID, Name,value FROM categories");
+                    $result = mysqli_query($conn,"SELECT C_ID, Name FROM categories");
                     ?>
 
 
@@ -111,7 +120,6 @@
                         <tr>
                             <th>Category ID</th>
                             <th>Name</th>
-                            <th>Minimum Value</th>
                             <th>Action</th>
                         </tr>
 
@@ -123,12 +131,11 @@
                             <!--<form action="" method="POST" role = "form">-->
                             <td><?php echo $row["C_ID"]; ?></td>
                             <td><?php echo $row["Name"]; ?></td>
-                            <td><?php echo $row["value"]; ?></td>
                             <!--<td>
                    <input type = "checkbox" name = "keyToDelete" value="<?php // echo $row['C_ID'];?>" required >
                </td>-->
                             <td>
-                                <a href="/WADAK.com/App/model/deleteCateg.php? id=<?php echo $row["C_ID"];?>">Delete</a>
+                            <div class="del-button"><a href="/WADAK.com/App/model/deleteCateg.php? id=<?php echo $row["C_ID"];?>">Delete</a></div>
                             </td>
 
                             </td>
