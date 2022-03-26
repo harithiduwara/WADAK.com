@@ -1,19 +1,19 @@
 <?php
 
-    session_start();
+session_start();
 
-    $uid = $_SESSION["user"]['uid'];
+$uid = $_SESSION["user"]['uid'];
 
-    // var_dump($_SESSION["user"]['uid']);
+// var_dump($_SESSION["user"]['uid']);
 
-    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
-    
-    if(!$con){
-        die("Connection failed" . mysqli_connect_error());
-    }
-    $query = "SELECT * FROM register WHERE uid=$uid";
-    $data = mysqli_query($con, $query);
-    $userData = mysqli_fetch_assoc($data);
+$con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+
+if (!$con) {
+    die("Connection failed" . mysqli_connect_error());
+}
+$query = "SELECT * FROM register WHERE uid=$uid";
+$data = mysqli_query($con, $query);
+$userData = mysqli_fetch_assoc($data);
 
 ?>
 
@@ -36,7 +36,7 @@
 
 
     <body>
-        <!-- <?=$uid?> -->
+        <!-- <?= $uid ?> -->
         <div id="mySidenav" class="sidenav">
             <p class="logo">WADAK <span class="menu">&#9776;</span></p>
 
@@ -61,11 +61,13 @@
                 &nbsp;&nbsp;Messages</a>
             <a href="/WADAK.com/App/view/a.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Achievements</a>
+            <a href="/WADAK.com/App/view/complain.php" Target="_blank" class="icon-a"><i
+                    class="fa fa-dashboard icons"></i>
+                &nbsp;&nbsp;Complains</a>
             <a href="/WADAK.com/App/view/leaderboard.php" Target="_blank" class="icon-a"><i
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Leaderboard</a>
-            <a href="/WADAK.com/App/view/askforad.php" Target="_blank" class="icon-a"><i
-                    class="fa fa-dashboard icons"></i>
+            <a href="/WADAK.com/App/view/askad.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Advertisements</a>
             <a href="/WADAK.com/App/view/userProfileUpdate.php" Target="_blank" class="icon-a"><i
                     class="fa fa-dashboard icons"></i>
@@ -91,12 +93,13 @@
                     <div class="profile">
 
                         <p>
-                            <?=$userData["username"]?> <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
+                            <?= $userData["username"] ?> <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
                         </p>
 
                         <div class="profile-div">
                             <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a
-                                    href="/WADAK.com/App/view/userprofile.php?uid=<?=$userData["uid"]?>">Profile</a></p>
+                                    href="/WADAK.com/App/view/userprofile.php?uid=<?= $userData["uid"] ?>">Profile</a>
+                            </p>
 
                             <p><i class="fa-duotone fa-arrow-right-from-bracket"></i> &nbsp;&nbsp; <a
                                     href="/WADAK.com/App/controller/logout.php">Log
@@ -112,9 +115,6 @@
 
             <div class="clearfix"></div>
             <br />
-
-            <div class="clearfix"></div>
-            <br />
             <div class="col-div-12">
                 <div class="box8" style="text-align:center">
                     <?php 
@@ -126,33 +126,33 @@
                     <h2>Rank : 5</h2>
                 </div>
             </div>
+        </div>
+        <div class="clearfix"></div>
+        <br />
+        <div class="col-div-12">
+            <div class="box-8">
+                <div class="content-box">
+                    <p>User details </p>
+                    <br />
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Contact</th>
+                            <th>Email</th>
+                        </tr>
+                        <tr>
+                            <th><?=$userData["name"]?></th>
+                            <th><?=$userData["username"]?></th>
+                            <th><?=$userData["contactno"]?></th>
+                            <th><?=$userData["email"]?></th>
+                        </tr>
 
-
-            <div class="clearfix"></div>
-            <br />
-            <div class="col-div-12">
-                <div class="box-8">
-                    <div class="content-box">
-                        <p>User details </p>
-                        <br />
-                        <table>
-                            <tr>
-                                <th>Name</th>
-                                <th>Username</th>
-                                <th>Contact</th>
-                                <th>Email</th>
-                            </tr>
-                            <tr>
-                                <th><?=$userData["name"]?></th>
-                                <th><?=$userData["username"]?></th>
-                                <th><?=$userData["contactno"]?></th>
-                                <th><?=$userData["email"]?></th>
-                            </tr>
-
-                        </table>
-                    </div>
+                    </table>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
 
 

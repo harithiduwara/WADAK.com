@@ -1,23 +1,20 @@
-<?php
-session_start();
-
-?>
-<!DOCTYPE html>
-<html lang="en">
+<!Doctype HTML>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Add achievements</title>
+    <title>complainss</title>
     <style>
         a {
             text-decoration: none;
         }
     </style>
-    <link rel="stylesheet" href="addac.css" type="text/css" />
+    <link rel="stylesheet" href="/WADAK.com/App/assets/css/achievemts.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+
 <body>
+
     <!-- <?= $uid ?> -->
     <div id="mySidenav" class="sidenav">
         <p class="logo">WADAK <span class="menu">&#9776;</span></p>
@@ -53,7 +50,8 @@ session_start();
     <div id="main">
         <div class="head">
             <div class="col-div-1">
-                <p class="nav">Send complaints</p>
+                <p class="nav">Complainss</p>
+
             </div>
 
             <div class="col-div-1">
@@ -69,7 +67,7 @@ session_start();
                 </div>
 
                 <div class="profile">
-                    <p>wathsala <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
+                    <p>Service Provider Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                     <div class="profile-div">
                         <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="profile.php">Profile</a></p>
                         <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Dashboard</a> </p>
@@ -81,56 +79,95 @@ session_start();
         </div>
 
         <div class="clearfix"></div>
-        <br>
+        <br />
+
+        <div class="col-div-2">
+            <div class="box">
+                <p class="head-1">Details</p>
+                <br />
+                <table cellspacing="5">
+                    <tr>
+                        <th>From</th>
+                        <th>Title</th>
+                        <th>Complain</th>
+                        <th>Expect Solution</th>
+                        <th>Any</th>
+                        <th>Id</th>
+                    </tr>
+                    <?php
+                    //require_once("/Implementation/backend/dbconfig.php");
+                    $servername = "localhost";
+                    $username = "toor";
+                    $password = "toor";
+                    $database = "wadak";
+
+                    $connection = mysqli_connect($servername, $username, $password, $database);
+
+                    // Check connection
+                    if (mysqli_connect_errno()) {
+                        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                        exit();
+                    }
 
 
-        <div class="inputContainer" style="margin:auto;width: 50%;height:auto;">
-            <div class="form" style="position: relative;">
-                <form action="email.php" method="POST" enctype="multipart/form-data">
-                    <div class="inputbox">
-                        <input type="text" name="from" required="true" placeholder="Email">
-                    </div>
-                    <div class="inputbox">
-                        <input type="text" name="title" required="true" placeholder="Title">
-                    </div>
-                    <div class="inputbox">
-                        <input type="text" name="com" required="true" placeholder="Message">
-                    </div>
-                    <div class="inputbox">
-                        <input type="text" name="sol" required="true" placeholder="Any other thing">
-                    </div>
-                    <div class="inputbox">
-                        <input type="file" name="any" required="true">
-                    </div>
-                    <!-- <div class="inputbox">
-                    <input type="value" placeholder="Achievements ID">
-                </div> -->
-                    <div class="inputbox">
-                        <table style="width:50%;">
-                            <tr>
-                                <td><input type="submit" name="add" value="send" style="width: 200px !important;"></td>
-                                <td><input type="reset" name="reset" style="width: 200px !important;" value="reset"></td>
-                            </tr>
-                        </table>
+                    $sql = "SELECT `from`,title,complain,sol,any,c_ID FROM complains";
+                    $result = mysqli_query($connection, $sql);
+                    // $out = "";
+                    // while ($data = $result->fetch_assoc()) {
+                    //     $out .= "<tr><td>" . $data['Name'] . "</td><td>" . $data['Place'] .
+                    //         "</td><td>" . $data['Date'] . "</td><td>" . $data['Level'] . "</td>
+                    //     <td><img src='.$data[image].'/></td><td>" . $data['A_ID'] . "</td></tr>";
+                    // }
+
+                    // echo $out;
+                    if ($result) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $from = $row['from'];
+                            $title = $row['title'];
+                            $complain = $row['complain'];
+                            $sol = $row['sol'];
+                            $any = $row['any'];
+                            $c_ID = $row['c_ID'];
+                            echo '<tr>
+                            <td>' . $from . '</td>
+                            <td>' . $title . '</td>
+                            <td>' . $complain . '</td>
+                            <td>' . $sol . '</td>
+                            <td>' . $any . '</td>
+                            <td>' . $c_ID . '</td>
+                            </tr>';
+                        }
+                    }
 
 
-                        <!-- <a href="CategoryUI.html">Add</a>
-                    <a href="CategoryUI.html">Cancel</a> -->
-                    </div>
-                </form>
+                    //  
+
+
+                    // }     
+
+
+
+
+                    ?>
+
+                </table>
             </div>
         </div>
-
-        </br>
-
+        <div class="col-div-2">
+            <!-- <div class="box1">
+                <a href="addac.php">Add</a>
+            </div> -->
+            <!-- <div class="box2">
+                <a href="deleteacc.php">Delete</a>
+            </div>
+            <div class="box2">
+                <a href="updateacc.php">Update</a>
+            </div> -->
+        </div>
+        <div class="clearfix"></div>
     </div>
-    <?php
-    if (isset($_GET['messege'])) {
-        if ($_GET['messege'] == 1) {
-            echo "<script> alert('Item Added.')</script>";
-        }
-    }
-    ?>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(".menu").click(function() {
@@ -170,7 +207,6 @@ session_start();
             });
         });
     </script>
-
 </body>
 
 </html>

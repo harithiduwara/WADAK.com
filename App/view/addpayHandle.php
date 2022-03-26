@@ -1,14 +1,11 @@
 <?php
 session_start();
 
-
-
-
 require_once("dbconfig.php");
 if (isset($_POST['add'])) {
     $id = $_POST['id'];
     $description = $_POST['description'];
-    $type = $_POST['type'];
+    $email = $_POST['email'];
     $file = $_FILES['file'];
 
     //print_r($file);
@@ -41,20 +38,20 @@ if (isset($_POST['add'])) {
     }
 
     $Co_AdminId = 1;
-    $sql = "INSERT INTO advertisement(user_id,description,type,image,Co_Admin_Id) VALUES ('$id','$description','$type','$ui',$Co_AdminId)";
+    $sql = "INSERT INTO advertisement(user_id,description,type,image,Co_Admin_Id) VALUES ('$id','$description','$email','$ui',$Co_AdminId)";
     mysqli_query($connection, $sql);
-    $to = 'lasanthiwathsala473@gmail.com';
-    $email_subject = 'Payment receipt';
-    $email_body = 'Your payment has sucessfully received';
-    $email_body .= '<b> ID : </b> {$id} <br>';
-    $email_body .= '<b> Description : </b> {$description} <br>';
-    $email_body .= '<b> Type : </b> {$type} <br>';
-    $email_body .= '<b> File : </b> {$file} <br>';
+    // $to = 'lasanthiwathsala473@gmail.com';
+    // $email_subject = 'Payment receipt';
+    // $email_body = 'Your payment has sucessfully received';
+    // $email_body .= '<b> ID : </b> {$id} <br>';
+    // $email_body .= '<b> Description : </b> {$description} <br>';
+    // $email_body .= '<b> Type : </b> {$type} <br>';
+    // $email_body .= '<b> File : </b> {$file} <br>';
 
-    $header = "From:{$to}\r\ncontent-Type: text/html;";
+    // $header = "From:{$to}\r\ncontent-Type: text/html;";
 
 
-    mail($type, $email_subject, $email_body, $header);
+    // mail($type, $email_subject, $email_body, $header);
 
     //header("Implementation\view\addac.php?messege=1");
     //header('location:/WADAK.com/App/view/adddis.php');
@@ -115,8 +112,8 @@ if (isset($_POST['add'])) {
         <input type="hidden" name="amount" value="500">
         <!-- <br><br>Customer Details<br> -->
         <input type="hidden" name="first_name" value="<?php echo $_SESSION['user']['username'] ?>">
-        <input type="hidden" name="last_name" value=""><br>
-        <input type="hidden" name="email" value="example@example.com">
+        <input type="hidden" name="last_name" value="Vithanage"><br>
+        <input type="hidden" name="email" value="<?php echo $email ?>">
         <input type="hidden" name="phone" value="0771234567"><br>
         <input type="hidden" name="address" value="No.1, Galle Road">
         <input type="hidden" name="city" value="Colombo">
