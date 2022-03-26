@@ -17,7 +17,11 @@
 
     $row = mysqli_fetch_assoc($result);
 
-    $query1 = "SELECT username from register where uid = '$row["uid"]'";
+    $query1 = "SELECT username from register where uid = ' ".$row["uid"]." '";
+
+    $result1 = mysqli_query($con, $query1);
+
+    $row1 = mysqli_fetch_assoc($result1);
 
 ?>
 
@@ -64,32 +68,23 @@
             <div class="title">
                 <h4>
                     <?php
-                    echo strtoupper($row["title"]) . "by" . $row1["username"];
+                    echo strtoupper($row["title"]) . " by " . $row1["username"];
                     ?>
                 </h4>
             </div><br>
 
-            <form action="#">
+            <form action="/WADAK.com/App/controller/applyController.php" method="post">
+
                 <div class="job-details">
-
-                    <div class="input-box">
-                        <span class="details">Title</span>
-                        <input type="text" placeholder="Job Title">
-                    </div>
-
-                    <div class="input-box">
+                    <input type="hidden"  value="<?=$row["jobid"]?>" name="jobid">
+                    <div class="input-box" style="text-align:center">
                         <span class="details">Description</span>
-                        <input type="text" placeholder="Your Desicription" id="des">
+                        <input type="text" style="text-align:center" name= "description"placeholder="Your description here....." id="des" required>
                     </div>
 
-                    <div class="input-box">
+                    <div class="input-box" style="text-align:center">
                         <span class="details">Budget</span>
-                        <input type="number" placeholder="$0.00">
-                    </div>
-
-                    <div class="input-box">
-                        <span class="details">Tags</span>
-                        <input type="text" placeholder="Tags that will bring you reach">
+                        <input type="number" min="1000" style="text-align:center" name= "newbudget" placeholder='<?=$row["budget"]?>' required>
                     </div>
 
                 </div>
@@ -99,8 +94,8 @@
 
 
                 <div class="button" id="btn">
-                    <input type="submit" value="Cancel" id="red">
-                    <input type="submit" value="Post" id="green">
+                    <input type="button" onclick="history.back()"value="Cancel" id="red">
+                    <input type="submit" value="Apply" id="green">
                 </div>
 
             </form>

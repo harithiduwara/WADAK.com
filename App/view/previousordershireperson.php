@@ -35,13 +35,16 @@
 
 
     <body>
-        <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav">
             <p class="logo">WADAK <span class="menu">&#9776;</span></p>
 
             <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i>
                 &nbsp;&nbsp;Home</a>
             <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
+            <a href="/WADAK.com/App/view/postapplications.php" class="icon-a"><i class="fa fa-tasks icons"></i>
+                &nbsp;&nbsp;Post Applications</a>
+                
             <a href="/WADAK.com/App/view/joborders.php?postType=job" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Job Posts</a>
             <a href="/WADAK.com/App/view/previousordershireperson.php?postType=job" class="icon-a"><i
@@ -59,11 +62,13 @@
                 &nbsp;&nbsp;Messages</a>
             <a href="/WADAK.com/App/view/a.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Achievements</a>
+            <a href="/WADAK.com/App/view/complain.php" Target="_blank" class="icon-a"><i
+                    class="fa fa-dashboard icons"></i>
+                &nbsp;&nbsp;Complains</a>
             <a href="/WADAK.com/App/view/leaderboard.php" Target="_blank" class="icon-a"><i
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Leaderboard</a>
-            <a href="/WADAK.com/App/view/askforad.php" Target="_blank" class="icon-a"><i
-                    class="fa fa-dashboard icons"></i>
+            <a href="/WADAK.com/App/view/askad.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Advertisements</a>
             <a href="/WADAK.com/App/view/userProfileUpdate.php" Target="_blank" class="icon-a"><i
                     class="fa fa-dashboard icons"></i>
