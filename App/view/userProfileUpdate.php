@@ -138,7 +138,7 @@
                             placeholder="Twitter Link">
                     </div>
                     <div class="inputbox">
-                        <input type="url" name="Instagram" value="<?=$userData["profileDescription"]?>"
+                        <input type="url" name="instagram" value="<?=$userData["profileDescription"]?>"
                             placeholder="Instagram Link">
                     </div>
 
