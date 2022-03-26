@@ -1,14 +1,23 @@
 <?php
+    session_start();
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+    if(!$con){
+        die("Connection failed" . mysqli_connect_error());
+    }
+    
+    $result = "SELECT question_id, question, answer FROM faq";
+
+    $data = mysqli_query($con, $result);
+?>
+
+<?php
 require 'newsconfig.php';
 $question_id=$_GET['replyid'];
 if(isset($_POST['reply']))
 {
-
 #$question_id=$_POST["question_id"];
 $answer=$_POST["answer"];
-
-
-$sql = "UPDATE faq SET answer ='$answer'WHERE question_id='$question_id'";
+$sql = "UPDATE faq SET answer ='$answer' WHERE question_id='$question_id'";
 
     if(mysqli_query($conn,$sql)){
         echo "<script type='text/javascript'>
@@ -24,21 +33,8 @@ else
 {
     echo "cancelled";
 }
-
 ?>
 
-
-<?php
-    session_start();
-    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
-    if(!$con){
-        die("Connection failed" . mysqli_connect_error());
-    }
-    
-    $result = "SELECT question,answer FROM faq";
-
-    $data = mysqli_query($con, $result);
-?>
 
 <!DOCTYPE html>
 <html>
@@ -111,10 +107,11 @@ else
                 <details>
                     <summary><?php echo $row["question"]; ?></summary>
                     <h4><?php echo $row["answer"]; ?></h4>
-                   <!-- <h4><?php #echo $row["question_id"]; ?></h4>-->
+                   <h4><?php #echo $row["question_id"]; ?></h4>
                     <form method="POST" >
                         <input type="text" placeholder="Type your reply here..." name="answer">
                         <!--<input type="text" placeholder="Type question id here..." name="question_id">-->
+                        <!--<input type="submit" value="Reply" name="reply" href="/WADAK.com/App/model/add_answer.php?replyid=<?php #echo $row["question_id"]; ?>">-->
                         <input type="submit" value="Reply" name="reply" href="/WADAK.com/App/view/Q&A.php?replyid=<?php echo $row["question_id"]; ?>">
                 </details>
                 </details>
