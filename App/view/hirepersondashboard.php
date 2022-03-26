@@ -44,6 +44,9 @@ $userData = mysqli_fetch_assoc($data);
                 &nbsp;&nbsp;Home</a>
             <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
+            <a href="/WADAK.com/App/view/postapplications.php" class="icon-a"><i class="fa fa-tasks icons"></i>
+                &nbsp;&nbsp;Post Applications</a>
+                
             <a href="/WADAK.com/App/view/joborders.php?postType=job" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Job Posts</a>
             <a href="/WADAK.com/App/view/previousordershireperson.php?postType=job" class="icon-a"><i
@@ -59,16 +62,16 @@ $userData = mysqli_fetch_assoc($data);
                 &nbsp;&nbsp;News</a>
             <a href="/WADAK.com/App/view/messages.php" Target="_blank" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Messages</a>
-            <a href="/WADAK.com/App/view/a.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
-                &nbsp;&nbsp;Achievements</a>
-            <a href="/WADAK.com/App/view/complain.php" Target="_blank" class="icon-a"><i
-                    class="fa fa-dashboard icons"></i>
-                &nbsp;&nbsp;Complains</a>
+            <!-- <a href="/WADAK.com/App/view/a.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
+                &nbsp;&nbsp;Achievements</a> -->
+            <!-- <a href="/WADAK.com/App/view/complain.php" Target="_blank" class="icon-a"><i
+                    class="fa fa-dashboard icons"></i> -->
+                <!-- &nbsp;&nbsp;Complains</a> -->
             <a href="/WADAK.com/App/view/leaderboard.php" Target="_blank" class="icon-a"><i
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Leaderboard</a>
-            <a href="/WADAK.com/App/view/askad.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
-                &nbsp;&nbsp;Advertisements</a>
+            <!-- <a href="/WADAK.com/App/view/askad.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
+                &nbsp;&nbsp;Advertisements</a> -->
             <a href="/WADAK.com/App/view/userProfileUpdate.php" Target="_blank" class="icon-a"><i
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Update Profile</a>
@@ -131,10 +134,10 @@ $userData = mysqli_fetch_assoc($data);
         <br />
         <div class="col-div-12">
             <div class="box-8">
-                <div class="content-box">
-                    <p>User details </p>
-                    <br />
-                    <table>
+                <div class="content-box" >
+                    
+                    
+                    <table style="width:78vw">
                         <tr>
                             <th>Name</th>
                             <th>Username</th>

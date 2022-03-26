@@ -13,7 +13,12 @@
 
     $data = mysqli_query($con, $query);
 
+    $query2 ="SELECT * FROM register where uid=$uid";
+
+    $data2 = mysqli_query($con, $query2);
     
+    $row2 = mysqli_fetch_assoc($data2);
+
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +32,7 @@
         }
 
         </style>
-        <title>User Profile</title>
+        <title><?=$row2["username"]?></title>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/userprofile.css">
 
         <link rel="stylesheet" href="/WADAK.com/App/view/css/owl.carousel.min.css">
@@ -73,14 +78,6 @@
 
                     <div class="card" style="border-radius:10%">
 
-                        <?php
-
-                        $query2 ="SELECT * FROM register where uid=$uid";
-
-                        $data2 = mysqli_query($con, $query2);
-                        
-                        $row2 = mysqli_fetch_assoc($data2);
-                        ?>
                         <header>
                             <div class="avatar">
                                 <img src="<?=$row2["profilePic"]?>" alt="Jhon Doe" id="profilepic" />
