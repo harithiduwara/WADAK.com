@@ -130,15 +130,14 @@
                     </div>
 
                     <div class="inputbox">
-                        <input type="url" name="telegram" value="<?=$userData["profileDescription"]?>"
+                        <input type="url" name="telegram" value="<?=$userData["telegram"]?>"
                             placeholder="Telegram Link">
                     </div>
                     <div class="inputbox">
-                        <input type="url" name="twitter" value="<?=$userData["profileDescription"]?>"
-                            placeholder="Twitter Link">
+                        <input type="url" name="twitter" value="<?=$userData["twitter"]?>" placeholder="Twitter Link">
                     </div>
                     <div class="inputbox">
-                        <input type="url" name="instagram" value="<?=$userData["profileDescription"]?>"
+                        <input type="url" name="instagram" value="<?=$userData["instagram"]?>"
                             placeholder="Instagram Link">
                     </div>
 

@@ -63,15 +63,15 @@
 
             </ul>
         </nav>
-        <div class="postcontainer" style="height:120vmin">
+        <div class="postcontainer" style="height:120vmin; background-color:white">
             <div class="grid-items" style=" display: grid;
                                             grid-template-columns: 1fr;
-                                            grid-gap: 1rem;">
+                                            grid-gap: 1rem; border-radius:10%">
 
                 <hr>
-                <div class="cardcontainer">
+                <div class=" cardcontainer">
 
-                    <div class="card">
+                    <div class="card" style="border-radius:10%">
 
                         <?php
 

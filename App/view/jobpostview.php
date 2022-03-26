@@ -91,15 +91,25 @@
                         <?php echo $row["description"] ?>
                     </p>
 
-                    <h1 style="font-size:50px">
+                    <h1 style="font-size:2rem; margin-bottom: 1rem">
                         <?php echo $row["budget"] ?> LKR
                     </h1>
-                    <p><?php echo $row["views"] ?> Views</p>
+                    <p style="font-size:1rem; margin-bottom: 1rem"><?php echo $row["views"] ?> Views</p>
 
-                    <span>
-                        <a href="/WADAK.com/App/view/apply.php?jobid=<?=$row["jobid"]?>"> <button style="padding:1rem">
+                    <span style="margin-top:1rem">
+
+                        <?php 
+                            if($row["uid"]=!$uid){?>
+                        <a href="/WADAK.com/App/view/apply.php?jobid=<?=$row["jobid"]?>">
+
+                            <button style="padding:1rem; margin-right:1rem; background-color:green; border-radius:20%">
                                 Apply</button></a>
-                        <button style="padding:1rem">
+
+                        <?php }
+
+                        ?>
+
+                        <button style="padding:1rem; margin-right:1rem; background-color:green; border-radius:20%">
                             Chat
                         </button>
                         <?php

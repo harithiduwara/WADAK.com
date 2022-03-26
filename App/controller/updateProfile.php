@@ -41,10 +41,10 @@ else{
 
 if(empty($_POST["profileDescription"])){
 
-    $desc = "";
+    $profileDescription = "";
 }
 else{
-    $desc = test_input($_POST["profileDescription"]);
+    $profileDescription = test_input($_POST["profileDescription"]);
 }
 
 if(empty($_POST["telegram"])){
@@ -79,13 +79,16 @@ $filename= $filenameErr ="";
 
 if($uploadok == 1){
      $filename = $target_file;
+ }
+ else{
+     $filename = "/WADAK.com/App/uploads/defaultProfilePic.jpg";
  } 
 
 
 // $s = "select * from postjob where title='$title'";
 
 
-$updateProfile = "UPDATE register SET address ='$address' , contactno = '$contactno', telegram = '$telegram', twitter = '$twitter', instagram = '$instagram', profilePic = '$filename', profileDescription = '$desc' where uid =$uid" ;
+$updateProfile = "UPDATE register SET address ='$address' , contactno = '$contactno', telegram = '$telegram', twitter = '$twitter', instagram = '$instagram', profilePic = '$filename', profileDescription = '$profileDescription' where uid =$uid" ;
 
 if (mysqli_query($con, $updateProfile)) {
     echo "You are updated successfully";
