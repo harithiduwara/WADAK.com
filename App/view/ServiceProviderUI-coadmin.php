@@ -1,3 +1,16 @@
+<?php
+    session_start();
+
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+    if(!$con){
+        die("Connection failed" . mysqli_connect_error());
+    }
+    
+    $result = "SELECT SP_ID,UserName,Email,description FROM service_provider";
+
+    $data = mysqli_query($con, $result);
+?>
+
 <!Doctype HTML>
 <html>
 <head>
@@ -16,12 +29,12 @@
     <a href="/WADAK.com/App/view/home.php"class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
     <a href="/WADAK.com/App/view/Co-admin%20dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
     <a href="/WADAK.com/App/view/ServiceProviderUI-coadmin.php"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service Providers</a>
-    <a href="#"class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Posts</a>
+    <a href="/WADAK.com/App/view/jobs.php"class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Posts</a>
     <a href="#"class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
     <a href="/WADAK.com/App/view/Q&A.php"class="icon-a"><i class="fa fa-question-circle icons"></i> &nbsp;&nbsp;Q & A Session</a>
     <a href="/WADAK.com/App/view/chat.php"class="icon-a"><i class="fa fa-comment icons"></i> &nbsp;&nbsp;Chat</a>
     <a href="/WADAK.com/App/view/news.php"class="icon-a"><i class="fa fa-newspaper-o icons"></i> &nbsp;&nbsp;News</a>
-    <a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>
+    
 </div>
 
 <div id="main">
@@ -62,43 +75,33 @@
         <div class="box">
             <p class="head-1">Service Provider - Details</p>
             <br/>
-            <table>
-                <tr>
-                    <th>Service provider Name</th>
-                    <th> ID</th>
-                    <th>email</th>
-                    <th>contact</th>
-                </tr>
-                <tr>
-                    <td>S.K.Silva</td>
-                    <td>0001</td>
-                    <td>sir@gmail.com</td>
-                    <td>0712345678</td>
-                </tr>
-                <tr>
-                    <td>A.G.Dew</td>
-                    <td>0002</td>
-                    <td>dew@gmail.com</td>
-                    <td>077234567</td>
-                </tr>
-                <tr>
-                    <td>S.S.Hima</td>
-                    <td>0003</td>
-                    <td>hima@gmail.com</td>
-                    <td>0765432789</td>
-                </tr>
-                <tr>
-                    <td>S.K.Perera</td>
-                    <td>0004</td>
-                    <td>pr@gmail.com</td>
-                    <td>0716894567</td>
-                </tr>
-            </table>
+            <table style="width:835px; margin-left:10px">
+                    <tr>
+                        <td style="color:green;">Id</td>
+                        <td style="color:green;">User Name</td>
+                        <td style="color:green;">Email</td>
+                        <td style="color:green;">Description</td>
+                    </tr>
+                    <?php
+	             $i=0;
+	             while($row = mysqli_fetch_array($data)) {
+	          ?>
+                    <tr class="<?php if(isset($classname)) echo $classname;?>">
+                        <td><?php echo $row["SP_ID"]; ?></td>
+                        <td><?php echo $row["UserName"]; ?></td>
+                        <td><?php echo $row["Email"]; ?></td>
+                        <td><?php echo $row["description"]; ?></td>
+                    </tr>
+                    <?php
+	           $i++;
+	           }
+	          ?>
+                </table>
         </div>
     </div>
     <div class="col-div-2">
         <div class="box1">
-            <a href="ViewServiceProvider2-coadmin.php">View</a>
+            <a href="ViewServiceProvider2-coadmin.php">Details</a>
         </div>
     </div>
     <div class="clearfix"></div>
