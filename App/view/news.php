@@ -94,10 +94,10 @@
 
                 <table style="width:835px; margin-left:10px">
                     <tr>
-                        <td>News Id</td>
-                        <td>Date</td>
-                        <td>News</td>
-                        <td></td>
+                        <td style="color:green;">News Id</td>
+                        <td style="color:green;">Date</td>
+                        <td style="color:green;">News</td>
+                        <td style="color:green;">Options</td>
                     </tr>
                     <?php
 	             $i=0;
@@ -108,7 +108,9 @@
                         <td><?php echo $row["date"]; ?></td>
                         <td><?php echo $row["description"]; ?></td>
                         <td><a style="background-color:rgb(250, 79, 11);padding: 3px 15px;color:white;"href="/WADAK.com/App/model/deletenews.php?id=<?php echo $row["News_ID"]; ?>"><i class="fa fa-trash box-icon"></i></a>
-                        <td><a style="background-color:rgb(33, 189, 33);padding: 3px 15px;color:white;" href="/WADAK.com/App/view/update news.php?id=<?php echo $row["News_ID"]; ?>"><i class="fa fa-edit box-icon"></i></a>
+                        <td><a style="background-color:rgb(33, 189, 33);padding: 3px 15px;color:white;" href="/WADAK.com/App/view/update news.php?updateid=<?php echo $row["News_ID"];?>"><i class="fa fa-edit box-icon"></i></a>
+                        </td>
+                        <!--<td><a style="background-color:rgb(33, 189, 33);padding: 3px 15px;color:white;" href="/WADAK.com/App/view/update news.php"><i class="fa fa-edit box-icon"></i></a>-->
                         </td>
                     </tr>
                     <?php
