@@ -1,15 +1,15 @@
 <?php
 require 'newsconfig.php';
-
+$News_ID=$_GET['updateid'];
 if(isset($_POST['Update']))
 {
-$id=$_POST["id"];
+
 $date=$_POST["date"];
 $description=$_POST["description"];
 
 
 
-$sql = "UPDATE news SET date ='$date',description='$description' WHERE News_ID='$id'";
+$sql = "UPDATE news SET  date ='$date',description='$description' WHERE News_ID='$News_ID'";
 
     if(mysqli_query($conn,$sql)){
         echo "<script type='text/javascript'>
