@@ -79,7 +79,7 @@
 
             <div class="col-div-2">
                 <div class="box">
-                    <p class="head-1">Advertisements - Details</p>
+                    <p class="head-1">Paid Advertisements Details</p>
                     <br />
 
 <!-- View Advertisement table -->
@@ -87,6 +87,98 @@
                     <?php
                         include_once 'cataconfig.php';
                         $result = mysqli_query($conn,"SELECT Ad_no, date,description, type, user_id, Co_Admin_ID FROM advertisement WHERE is_advanced_paid = 1 ");
+                    ?>
+
+                    <table>
+                        <tr>
+                            <th>Ad ID</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>User Id</th>
+                            <th>Accepted CA Id</th>
+                        </tr>
+
+                        <?php
+	             $i=0;
+	             while($row = mysqli_fetch_array($result)) {
+	          ?>
+                        <tr class="<?php if(isset($classname)) echo $classname;?>">
+                            <!--<form action="" method="POST" role = "form">-->
+                            <td><?php echo $row["Ad_no"]; ?></td>
+                            <td><?php echo $row["date"]; ?></td>
+                            <td><?php echo $row["description"]; ?></td>
+                            <td><?php echo $row["type"]; ?></td>
+                            <td><?php echo $row["user_id"]; ?></td>
+                            <td><?php echo $row["Co_Admin_ID"]; ?></td>
+                            
+
+                        </tr>
+                        <?php
+	           $i++;
+	           }
+	          ?>
+                       
+                    </table>
+                </div>
+
+                <br>
+
+                <div class="box">
+                    <p class="head-1">Accepted Advertisements Details</p>
+                    <br />
+
+<!-- View Advertisement table -->
+
+                    <?php
+                        include_once 'cataconfig.php';
+                        $result = mysqli_query($conn,"SELECT Ad_no, date,description, type, user_id, Co_Admin_ID FROM advertisement WHERE is_accepted = 1 ");
+                    ?>
+
+                    <table>
+                        <tr>
+                            <th>Ad ID</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>User Id</th>
+                            <th>Accepted CA Id</th>
+                        </tr>
+
+                        <?php
+	             $i=0;
+	             while($row = mysqli_fetch_array($result)) {
+	          ?>
+                        <tr class="<?php if(isset($classname)) echo $classname;?>">
+                            <!--<form action="" method="POST" role = "form">-->
+                            <td><?php echo $row["Ad_no"]; ?></td>
+                            <td><?php echo $row["date"]; ?></td>
+                            <td><?php echo $row["description"]; ?></td>
+                            <td><?php echo $row["type"]; ?></td>
+                            <td><?php echo $row["user_id"]; ?></td>
+                            <td><?php echo $row["Co_Admin_ID"]; ?></td>
+                            
+
+                        </tr>
+                        <?php
+	           $i++;
+	           }
+	          ?>
+                       
+                    </table>
+                </div>
+
+                <br>
+
+                <div class="box">
+                    <p class="head-1">Pending Advertisements Details</p>
+                    <br />
+
+<!-- View Advertisement table -->
+
+                    <?php
+                        include_once 'cataconfig.php';
+                        $result = mysqli_query($conn,"SELECT Ad_no, date,description, type, user_id, Co_Admin_ID FROM advertisement WHERE is_pending = 1 ");
                     ?>
 
                     <table>
