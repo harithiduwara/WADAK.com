@@ -170,7 +170,7 @@
             <div class="col-div-4-1">
                 <div class="box-1">
                     <div class="content-box-1">
-                        <p class="head-1">News <span><a href="#">View All</a></span></p>
+                        <p class="head-1">News <span><a href="/WADAK.com/App/view/news2.php">View All</a></span></p>
 
                         <?php
 
