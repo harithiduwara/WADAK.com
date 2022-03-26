@@ -52,6 +52,7 @@
                  <input type="hidden" name="rate"><br>
 
                 </div><br><br><br><br><br><br>
+                <a href="/WADAK.com/App/view/postjob.php?raterId=<?=$row["uid"]?>">
                 <input type="submit" name="add" value="Post" class=" button button1"> 
                </form>
             </div>
