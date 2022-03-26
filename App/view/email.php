@@ -53,8 +53,8 @@ if (isset($_POST['add'])) {
   $sql = "INSERT INTO complains(from,title,complain,sol,any) VALUES ('$from','$title','$com','$sol','$ui')";
   mysqli_query($connection, $sql);
   //header("Implementation\view\addac.php?messege=1");
-  header('location:/WADAK.com/App/view/complain.php');
-  //echo "added sucessfully!";
+  //header('location:/WADAK.com/App/view/seecomplain.php');
+  echo "added sucessfully!";
 
 
   exit();
