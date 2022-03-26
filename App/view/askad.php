@@ -100,7 +100,7 @@ session_start();
                         <input type="text" name="description" required="true" placeholder="description">
                     </div>
                     <div class="inputbox">
-                        <input type="text" name="type" required="true" placeholder="Email">
+                        <input type="text" name="email" required="true" placeholder="Email">
                     </div>
                     <div class="inputbox">
                         <input type="file" name="file" required="true">
