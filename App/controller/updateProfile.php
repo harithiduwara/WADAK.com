@@ -31,20 +31,20 @@ else{
     $address = test_input($_POST["address"]);
 }
 
-if(empty($_POST["conatctNo"])){
+if(empty($_POST["contactno"])){
 ;
     $contactno = "";
 }
 else{
-    $contactnon = test_input($_POST["conatctNo"]);
+    $contactno = test_input($_POST["contactno"]);
 }
 
-if(empty($_POST["desc"])){
+if(empty($_POST["profileDescription"])){
 
     $desc = "";
 }
 else{
-    $desc = test_input($_POST["desc"]);
+    $desc = test_input($_POST["profileDescription"]);
 }
 
 if(empty($_POST["telegram"])){
@@ -85,7 +85,7 @@ if($uploadok == 1){
 // $s = "select * from postjob where title='$title'";
 
 
-$updateProfile = "UPDATE register SET address ='$address' , contactno = '$contactNo', telegram = '$telegram', twitter = '$twitter', instagram = '$instagram', profilePic = '$filename', profileDescription = '$desc' where uid =$uid" ;
+$updateProfile = "UPDATE register SET address ='$address' , contactno = '$contactno', telegram = '$telegram', twitter = '$twitter', instagram = '$instagram', profilePic = '$filename', profileDescription = '$desc' where uid =$uid" ;
 
 if (mysqli_query($con, $updateProfile)) {
     echo "You are updated successfully";

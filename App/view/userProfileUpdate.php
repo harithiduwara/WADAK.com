@@ -11,6 +11,7 @@
     if(!$con){
         die("Connection failed" . mysqli_connect_error());
     }
+    
     $query = "SELECT * FROM register WHERE uid=$uid";
     $data = mysqli_query($con, $query);
     $userData = mysqli_fetch_assoc($data);
@@ -110,14 +111,16 @@
             <div class="form" style="position: relative;">
                 <form action="/WADAK.com/App/controller/updateProfile.php" method="POST" enctype="multipart/form-data">
                     <div class="inputbox">
-                        <input type="value" name="address" placeholder="Address">
+                        <input type="value" name="address" value="<?=$userData["address"]?>" placeholder="Address">
                     </div>
                     <div class="inputbox">
-                        <input type="tel" name="contactNo" placeholder="Contact Nunmber">
+                        <input type="tel" name="contactno" value="<?=$userData["contactno"]?>"
+                            placeholder=" Contact Nunmber">
                     </div>
 
                     <div class="inputbox">
-                        <input type="text" name="desc" placeholder="Profile Description">
+                        <input type="text" name="desc" value="<?=$userData["profileDescription"]?>"
+                            placeholder="Profile Description">
                     </div>
                     <div>
                         <label for="img" style="color:green">Update Profile Picture</label><br>
@@ -127,13 +130,16 @@
                     </div>
 
                     <div class="inputbox">
-                        <input type="url" name="telegram" placeholder="Telegram Link">
+                        <input type="url" name="telegram" value="<?=$userData["profileDescription"]?>"
+                            placeholder="Telegram Link">
                     </div>
                     <div class="inputbox">
-                        <input type="url" name="twitter" placeholder="Twitter Link">
+                        <input type="url" name="twitter" value="<?=$userData["profileDescription"]?>"
+                            placeholder="Twitter Link">
                     </div>
                     <div class="inputbox">
-                        <input type="url" name="Instagram" placeholder="Instagram Link">
+                        <input type="url" name="Instagram" value="<?=$userData["profileDescription"]?>"
+                            placeholder="Instagram Link">
                     </div>
 
                     <div class="inputbox">
