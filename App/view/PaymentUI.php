@@ -78,72 +78,102 @@
             <div class="clearfix"></div>
             <br />
 
-            <div class="col-div-2">
+            </div>
+
+            <?php include('dbconfig.php');?>
+
+            <div class="col-div-4-1">
                 <div class="box">
-                    <p class="head-1">Payment - Details</p>
-                    <br />
-                    <table>
-                        <tr>
-                            <th>Payer Name</th>
-                            <th>Advertisement ID</th>
-                            <th>Date</th>
-                            <th>Amount</th>
-                        </tr>
-                        <tr>
-                            <td>S.K.Silva</td>
-                            <td>0001</td>
-                            <td>Oct 10, 2021</td>
-                            <td>Rs.1000.00</td>
-                        </tr>
-                        <tr>
-                            <td>A.G.Dew</td>
-                            <td>0002</td>
-                            <td>Oct 12, 2021</td>
-                            <td>Rs.1000.00</td>
-                        </tr>
-                        <tr>
-                            <td>S.S.Hima</td>
-                            <td>0003</td>
-                            <td>Oct 13, 2021</td>
-                            <td>Rs.1000.00</td>
-                        </tr>
-                        <tr>
-                            <td>S.K.Perera</td>
-                            <td>0004</td>
-                            <td>Oct 15, 2021</td>
-                            <td>Rs.1000.00</td>
-                        </tr>
-                    </table>
+                    <p class="head-1" >Total Paid Advetisements</p>
+
+                    <?php
+
+                        $ad_query = "SELECT * FROM advertisement WHERE is_advanced_paid = 1 OR is_accepted = 1 ";
+                        $ad_query_run = mysqli_query($connection,$ad_query);
+
+                        if($ad_total = mysqli_num_rows($ad_query_run))
+                        {
+                            echo '<h2 align = center  style="margin-top:40px;color:#58655C;font-size:50px; font-weight:500"> '.$ad_total.' </h2>';
+                        }
+                        else{
+                            echo '<h2 align = center  style="margin-top:40px;color:#58655C;font-size:35px; font-weight:500"> No Data </h2>';
+                        }
+
+                    ?>
+
+
                 </div>
             </div>
-            </br>
-            <div class="box2">
-                <p class="head-1">Summary</p>
-                <br />
-                <table>
-                    <tr>
-                        <th>Month</th>
-                        <th>Total Advertisements</th>
-                        <th>Total Amount</th>
-                    </tr>
-                    <tr>
-                        <td>JANUARY</td>
-                    </tr>
-                    <tr>
-                        <td>FEBRUARY</td>
-                    </tr>
-                    <tr>
-                        <td>MARCH</td>
-                    </tr>
-                    <tr>
-                        <td>APRIL</td>
-                    </tr>
-                    <tr>
-                        <td>MAY</td>
-                    </tr>
+            <div class="col-div-4-1">
+                <div class="box">
+                    <p class="head-1">Total Income</p>
 
-                </table>
+                    <?php
+
+                        $ad_query = "SELECT Ad_no, user_id, date  FROM advertisement WHERE is_advanced_paid = 1 OR is_accepted = 1 ";
+                        $ad_query_run = mysqli_query($connection,$ad_query);
+
+                        if($ad_total = mysqli_num_rows($ad_query_run))
+                        {
+                            $payment = 500;
+                            $income = $ad_total*$payment;
+                            echo '<h2 align = center  style="margin-top:40px;color:#58655C;font-size:45px; font-weight:500"> LKR '.$income.' </h2>';
+                        }
+                        else{
+                            echo '<h2 align = center  style="margin-top:40px;color:#58655C;font-size:35px; font-weight:500"> No Data </h2>';
+                        }
+
+                    ?>
+
+                </div>
             </div>
+
+            <br>
+
+            <div class="col-div-12">
+                <div class="box-8">
+                    <div class="content-box">
+                        <p>Payment details </p>
+
+                        <?php
+                    include_once 'cataconfig.php';
+                    $result = mysqli_query($conn,"SELECT Ad_no, user_id, date  FROM advertisement WHERE is_advanced_paid = 1 OR is_accepted = 1 ");
+                    ?>
+                       
+                        <table>
+                            <tr>
+                                <th>Ad ID</th>
+                                <th>User ID</th>
+                                <th>Date</th>
+                                <th>Payment</th>
+                            </tr>
+
+
+                        <?php
+                            
+                            $i=0;
+                            while($row = mysqli_fetch_array($result)) {
+                        ?>
+                        <tr class="<?php if(isset($classname)) echo $classname;?>">
+                            <!--<form action="" method="POST" role = "form">-->
+                            <td><?php echo $row["Ad_no"]; ?></td>
+                            <td><?php echo $row["user_id"]; ?></td>
+                            <td><?php echo $row["date"]; ?></td>
+                            <td>LKR 500.00</td>
+                        </tr>
+                        <?php
+	           $i++;
+	           }
+	          ?>
+                    </table>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        
+            
             <div class="clearfix"></div>
         </div>
 
