@@ -107,7 +107,8 @@
                         <td><?php echo $row["News_ID"]; ?></td>
                         <td><?php echo $row["date"]; ?></td>
                         <td><?php echo $row["description"]; ?></td>
-                        <td><a href="/WADAK.com/App/model/deletenews.php?id=<?php echo $row["News_ID"]; ?>">Delete</a>
+                        <td><a style="background-color:rgb(250, 79, 11);padding: 3px 15px;color:white;"href="/WADAK.com/App/model/deletenews.php?id=<?php echo $row["News_ID"]; ?>"><i class="fa fa-trash box-icon"></i></a>
+                        <td><a style="background-color:rgb(33, 189, 33);padding: 3px 15px;color:white;" href="/WADAK.com/App/view/update news.php?id=<?php echo $row["News_ID"]; ?>"><i class="fa fa-edit box-icon"></i></a>
                         </td>
                     </tr>
                     <?php
@@ -118,11 +119,12 @@
 
                 <div id="buttons" style="text-align:center; margin-top:100px">
                     <a href="add news.php"><input type="button" class="button1" value="Add news" name="add"></a>
-                    <a href="update news.php"><input type="button" class="button2" value="Update" name="update"></a>
+                    
                 </div>
-
             </div>
         </div>
+
+       
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>

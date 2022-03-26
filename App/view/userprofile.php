@@ -121,9 +121,27 @@
 
                                 $row3 = mysqli_fetch_assoc($data3);
                             ?>
+                            <?php 
+                                if($row3["telegram"]=""){?>
                             <a href="<?=$row3["telegram"]?>" target="_blank"><i class="fa fa-telegram fa-2x"></i></a>
-                            <a href="<?=$row3["twitter"]?>" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-                            <a href="<?=$row3["insta"]?>" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                            <?php
+                                }
+                            ?>
+                            <?php 
+                                if($row3["twitter"]=""){?>
+                            <a href="<?=$row3["twitter"]?>" target="_blank"><i
+                                    class="fa fa-twitter fa-2x"></i></a></i></a>
+                            <?php
+                                }
+                            ?>
+                            <?php 
+                                if($row3["instagram"]=""){?>
+                            <a href="<?=$row3["instagram"]?>" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                            <?php
+                                }
+                            ?>
+
+
                         </footer>
                     </div>
 
@@ -137,13 +155,13 @@
 
                 <div>
                     <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem;
-                overflow: hidden">
+                background-color:white">
 
                         <?php
                 if(mysqli_num_rows($data)>0){
                     while($row = mysqli_fetch_assoc($data)){
                         ?>
-                        <div class="sectionheading3">
+                        <div class="sectionheading3" style="background-color:#f1f1fa">
                             <div class="card1" style="margin:1rem"><img src="
                     <?php
                     if($row["filename"]==null){

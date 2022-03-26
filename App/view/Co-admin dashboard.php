@@ -28,7 +28,7 @@
 
             <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i>
                 &nbsp;&nbsp;Q & A Session</a>
-            <a href="/WADAK.com/App/view/messages.php" class="icon-a"><i class="fa fa-comment icons"></i>
+            <a href="/WADAK.com/App/view/chat2.php" class="icon-a"><i class="fa fa-comment icons"></i>
                 &nbsp;&nbsp;Chat</a>
             <a href="/WADAK.com/App/view/News.php" class="icon-a"><i class="fa fa-newspaper-o icons"></i>
                 &nbsp;&nbsp;News</a>
@@ -71,7 +71,7 @@
             </div>
 
             <div class="clearfix"></div>
-            <br />
+            <br>
 
             <?php include('dbconfig.php');?>
 
@@ -114,7 +114,20 @@
             <div class="col-div-4-1">
                 <div class="box">
                     <p class="head-1">Q&A Session</p>
-                    <i class="fa fa-users box-icon"></i>
+                    <i class="fa fa-question box-icon"></i>
+                    <p>Total Questions :</p>
+                    <?php 
+                      $qa_query="SELECT * FROM faq";
+                      $qa_query_run=mysqli_query($connection,$qa_query);
+                      if($qa_total=mysqli_num_rows($qa_query_run))
+                      {
+                        echo '<h2 class="nb-0" style="margin-top:50px;margin-left:30px;color:grey;"> '.$qa_total.' </h2>';
+                      }
+                      else
+                      {
+                        echo '<h2 class="nb-0"> No Data </h2>';
+                      }
+                    ?>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -143,7 +156,7 @@
             <div class="col-div-4-1">
                 <div class="box-1">
                     <div class="content-box-1">
-                        <p class="head-1">News <span><a href="#">Handle</a></span></p>
+                        <p class="head-1">News <span><a href="/WADAK.com/App/view/News.php">Handle</a></span></p>
                         <?php 
                       $news_query="SELECT * FROM news";
                       $news_query_run=mysqli_query($connection,$news_query);
@@ -164,6 +177,7 @@
                 <div class="box-1">
                     <div class="content-box-1">
                         <p class="head-1">Total Job Posts</p>
+                        <i class="fa fa-clipboard box-icon" aria-hidden="true"></i>
                         <?php 
                       $post_query="SELECT * FROM postjob";
                       $post_query_run=mysqli_query($connection,$post_query);
@@ -185,16 +199,20 @@
                $post2_query="SELECT * FROM postjob";
                $post2_query_run=mysqli_query($connection,$post2_query);
             ?>
-            <div class="table_div">
-                <table width="100%" cellspacing="0" style="border: 1px solid #dddddd;text-align:left;">
+
+            <div class="table_div" style="background-color:white;margin-top:250px;width:70%;box-shadow: 2px 5px 10px #ddd;">
+            <div class="recent-posts">
+                <table width="100%" style="text-align:left;">
+                <!--<h3 style="color:gray;margin-left:0px;border-bottom:2px solid #999;padding:15px 10px">Recent Job Posts </h3>-->
+                <p class="head-1" style="border-bottom:2px solid #999;padding:15px 10px"> Recent Job posts<span><a href="/WADAK.com/App/view/Categorymain.php">View All</a></span></p> 
                     <thead>
-                        <tr style="color:Green;background-color:grey;">
-                            <th>Job_ID</th>
+                        <tr style="">
+                            <!--<th>Job_ID</th>-->
                             <th>Job Title</th>
                             <th>Description</th>
                             <th>Budget</th>
                             <th>Job Type</th>
-                            <th>Hire Person Id</th>
+                            <!--<th>Hire Person Id</th>-->
                         </tr>
                     </thead>
                     <tbody>
@@ -205,12 +223,12 @@
                          {
                              ?>
                         <tr>
-                            <td> <?php echo $row['jobid']; ?></td>
-                            <td> <?php echo $row['title']; ?> </td>
+                            <!--<td> <?php# echo $row['jobid']; ?></td>-->
+                            <td> <?php echo $row['title']; ?> </td> 
                             <td> <?php echo $row['description']; ?> </td>
                             <td> <?php echo $row['budget']; ?> </td>
                             <td> <?php echo $row['jobtype']; ?> </td>
-                            <td> <?php echo $row['uid']; ?> </td>
+                            <!--<td> <?php #echo $row['uid']; ?> </td>-->
                         </tr>
                         <?php
                             
@@ -223,6 +241,7 @@
 
                     </tbody>
                 </table>
+                    </div>
                 <div>
 
 

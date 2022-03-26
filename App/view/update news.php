@@ -62,13 +62,13 @@
           <div class="title"></div>
           <form method="POST" action="/WADAK.com/App/model/update_news.php" name="updatenews" onsubmit="return validateForm()" required>
             <div class="row"> 
-                <span> News ID</span><br><br>
+                <!--<span> News ID</span><br><br>
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Enter news ID" name="id">
-              <br><br><span> Date</span><br><br>
+              <input type="text" placeholder="Enter news ID" name="id">-->
+              <br><br><span> New Date</span><br><br>
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Enter the date" name="date">
-              <br><br><span> Discription</span><br><br>
+              <input type="date" placeholder="Enter the date" name="date">
+              <br><br><span> Update Description</span><br><br>
               <i class="fas fa-user"></i>
               <input type="text" placeholder="Description" name="description">
             </div> <br><br><br><br><br><br><br><br>

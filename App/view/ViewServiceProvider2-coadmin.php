@@ -61,7 +61,7 @@
 
   <div class="search-form">
   <form action="" method="POST" >
-    <input type ="text" name ="SP_ID" placeholder="Enter User Id" class="text">
+    <input type ="text" name ="UserName" placeholder="Search by User Name" class="text">
     <input type ="submit" name ="search" placeholder="Search" value="Search" class="submit">
    </form>
   </div>
@@ -71,8 +71,8 @@ $conn= mysqli_connect("localhost","root","");
 $db=mysqli_select_db($conn,'wadak');
 if(isset($_POST['search']))
 {
-    $SP_ID= $_POST['SP_ID'];
-    $query="SELECT SP_ID,Fname,Lname,Gender,Email,address,contact,DOB,description FROM service_provider WHERE SP_ID = '$SP_ID'";
+    $UserName= $_POST['UserName'];
+    $query="SELECT SP_ID,UserName,Fname,Lname,Gender,Email,address,contact,DOB,description FROM service_provider WHERE UserName = '$UserName'";
     $query_run=mysqli_query($conn,$query);
     while($row = mysqli_fetch_array($query_run))
     {
@@ -157,7 +157,7 @@ if(isset($_POST['search']))
           </tr>
         </table>
         <div class="box1">
-          <a href="/WADAK.com/App/model/deleteServiceProvider-coadmin.php?id=<?php echo $row["SP_ID"]; ?>">Delete</a>
+          <a href="/WADAK.com/App/model/deleteServiceProvider-coadmin.php?id=<?php echo $row["UserName"]; ?>">Delete</a>
         </div>
       </form>
     </div>
@@ -167,14 +167,9 @@ if(isset($_POST['search']))
       <div class="img">
         <img src="/WADAK.com/App/assets/images/sp.png" width="325" height="380">
       </div>
-
+      <h3 style="color:white;margin-right:40px;margin-left:40px;background-color:black;padding : 10px 15px">User Name :  <?php echo$row['UserName'];?></h3>
     </div>
-    <!--<div class="box1">
-      <a href="/WADAK.com/App/model/deleteServiceProvider-coadmin.php?id=<?php echo $row["SP_ID"]; ?>">Delete</a>
-    </div>
-    <div class="box2">
-      <a href="#">Cancel</a>
-    </div>-->
+    
   </div>
   <div class="clearfix"></div>
 </div>

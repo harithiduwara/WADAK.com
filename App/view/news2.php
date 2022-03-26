@@ -1,6 +1,4 @@
-<?php
-    session_start();
-?>
+
 <!Doctype HTML>
 <html>
 
@@ -52,7 +50,7 @@
 
         <!-- news containers -->
         <div class="HelloNews" style="text-align:center">
-            <h1 style="margin-top:12px; color:#6c7293;"> News</h1>
+            <h2 style="margin-top:12px; color:#6c7293;"> Announcements</h2>
             <table>
                 <!--php code-->
                 <?php
