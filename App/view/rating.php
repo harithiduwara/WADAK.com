@@ -1,3 +1,25 @@
+<?php
+
+session_start();
+
+$uid = $_SESSION["user"]['uid'];
+$postType = $_GET["postType"] ?? "job";
+// var_dump($_SESSION["user"]['uid']);
+$con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+if (!$con) {
+    die("Connection failed" . mysqli_connect_error());
+}
+
+$jobid = $_GET["jobid"];
+
+$query = "SELECT * FROM register WHERE uid=$uid";
+$data = mysqli_query($con, $query);
+$userData = mysqli_fetch_assoc($data);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -34,15 +56,15 @@
             </ul>
         </nav>
 
-        <div class="container">
+        <div class="container" >
             <div class="wrapper">
-                <div class="title">Rate Our Service</div>
-                <form action="/WADAK.com/App/model/insert_rating.php" method="post">
+                <div class="title">Rate Service</div>
+                <form action="/WADAK.com/App/model/insert_rating.php" method="post" style="height:60vh">
                 <div class="row">
                   
-                  <input type="text" name="name" placeholder="Your name..."><br><br><br>
+                  <input type="text" name="name" placeholder="Your name..." value="<?=$userData["name"]?>"><br> <br>
                   
-                  <input type="text" name="comment" placeholder="Tell us your comment..."><br><br>
+                  <input type="text" name="comment" placeholder="Let's us know your experience..." style="text-align:center"><br><br>
                   <div class="rateyo" id= "rate"
                    data-rateyo-rating="4"
                    data-rateyo-num-stars="5"
@@ -50,7 +72,8 @@
                  </div><br>
                  <span class='result'>0</span><br>
                  <input type="hidden" name="rate"><br>
-
+                 <input type="hidden" name="jobId" value="<?=$jobid?>"> <br>
+                 
                 </div><br><br><br><br><br><br>
                 <a href="/WADAK.com/App/view/postjob.php?raterId=<?=$row["uid"]?>">
                 <input type="submit" name="add" value="Post" class=" button button1"> 

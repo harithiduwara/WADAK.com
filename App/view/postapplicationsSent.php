@@ -172,6 +172,11 @@ $postTypeUC = ucfirst($postType);
                                     <a style="color:red" href="?cancel_id=<?= $row["id"] ?>">CANCEL</a>
                                 <?php } ?>
 
+                                <?php if ($row["status"] == 3) { ?>
+                                    <a style="color:green" href="/WADAK.com/App/view/rating.php?jobid=<?= $row["jobid"]?>">Rate</a> 
+                                  
+                                <?php } ?>
+
                             </td>
                         </tr>
                     <?php
