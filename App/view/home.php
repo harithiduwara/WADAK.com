@@ -149,7 +149,7 @@ $data = mysqli_query($con, $query);
             ?>
                     <div class=" sectionheading3">
                         <div class="card1" style="margin:1rem; background-color: rgb(248, 248, 248); padding: 0.5rem 0.5rem 0.5rem 0.5rem; border-radius: 10%">
-                            <a href="/WADAK.com/App/view/jobs.php?search=<?=$row1["categoryName"]?>"><img src="
+                            <a href="/WADAK.com/App/view/jobs.php?search=<?= $row1["categoryName"] ?>"><img src="
                     <?php
                     if ($row1["categoryImage"] == null) {
                         echo "/WADAK.com/App/uploads/noimage.jpg";
@@ -160,8 +160,8 @@ $data = mysqli_query($con, $query);
                 
                 
                 " alt="service" style="width:100% ; height:200px; object-fit: cover; border-radius: 10%">
-                </a>
-                <a href="/WADAK.com/App/view/jobs.php?search=<?=$row1["categoryName"]?>">
+                            </a>
+                            <a href="/WADAK.com/App/view/jobs.php?search=<?= $row1["categoryName"] ?>">
                                 <p style="text-align:center; color:green; margin: 1rem">
                                     <?= $row1["categoryName"] ?>
                                 </p>
@@ -193,6 +193,9 @@ $data = mysqli_query($con, $query);
 
                 <?php
 
+                $reviews = "SELECT * FROM star_rating where jobId = $jobid";
+                $data10 = mysqli_query($con, $reviews);
+
                 $query2 = "select * from postjob , register where postjob.status = 0 AND postType='service' and register.uid = postjob.uid ORDER BY views DESC";
 
                 $data2 = mysqli_query($con, $query2);
@@ -200,7 +203,10 @@ $data = mysqli_query($con, $query);
                 if (mysqli_num_rows($data2) > 0) {
                     for ($x = 0; $x <= 3 && $row2 = mysqli_fetch_assoc($data2); $x++) {
                 ?>
-                        <div class="sectionheading3">
+                        <div class="sectionheading3"> <?php
+                        $reviews = "SELECT * FROM star_rating where jobId = '".$row10["rate"]."'";
+                        $data10 = mysqli_query($con, $reviews);
+                        ?>
                             <div class="card1" style="margin:1rem; background-color: rgb(248, 248, 248); padding: 0.5rem 0.5rem 0.5rem 0.5rem; border-radius: 10%">
                                 <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row2["jobid"] ?>">
                                     <img src="
@@ -219,7 +225,7 @@ $data = mysqli_query($con, $query);
 
                                 <a href="/WADAK.com/App/view/userprofile.php?uid=<?= $row2["uid"] ?>">
                                     <p style="text-align:end; color:green; margin: 1rem">
-                                        <?= $row2["username"] ?>
+                                    <?= $row10["rate"] ?> <i class="fa fa-star fa-1x" aria-hidden="true" style="color:gold; font-weight:300; padding: 0 1rem 0 0 "></i><?= $row2["username"] ?>
                                     </p>
                                 </a>
 

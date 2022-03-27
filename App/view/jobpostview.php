@@ -147,16 +147,16 @@ $rank = mysqli_fetch_assoc($rank_result)["rank"]
                 if (mysqli_num_rows($data10) == 0) {
                 ?><h1 style="font-size:3rem; margin-top:-10vh; color:green; font-weight:300">No Reviews Yet</h1><?php
                                                                                                             } else { ?>
-                    <div class="grid-container" style="margin-top:-10rem; display:grid; grid-template-columns:1fr 1fr; grid-gap:1rem;     height: 100%; overflow: scroll; height:10vh; border: 1px solid green; font-weight:600">
+                    <div class="grid-container" style="margin-top:-10rem; display:grid; grid-template-columns:1fr; grid-gap:1rem;     height: 100%; overflow: scroll; height:10vh; border: 1px solid green; font-weight:600">
                         <?php
                                                                                                                 if (mysqli_num_rows($data10) > 0) {
                                                                                                                     while ($row10 = mysqli_fetch_assoc($data10)) { ?>
                                 <div style="background-color:antiquewhite">
                                     <div class="a">
-                                        <p style="padding:1rem 0; font-size:2rem; font-weight:400"><?= $row10["name"] ?><?= $row10["rate"] ?> &nbsp <i class="fa fa-star fa-1x" aria-hidden="true" style="color:gold; font-weight:300"></i></p>
+                                        <p style="padding:0.1rem 0; font-size:2rem; font-weight:400"><?= $row10["name"]?> &nbsp <?= $row10["rate"] ?> <i class="fa fa-star fa-1x" aria-hidden="true" style="color:gold; font-weight:300"></i></p>
                                     </div>
                                     <div class="d" >
-                                        <p style = "font-size:1rem"><?= $row10["comment"] ?></p>
+                                        <p style = "font-size:2rem"><?= $row10["comment"] ?></p>
                                     </div>
                                     <br>
                                 </div>
