@@ -10,30 +10,6 @@
     $data = mysqli_query($con, $result);
 ?>
 
-<?php
-require 'newsconfig.php';
-$question_id=$_GET['replyid'];
-if(isset($_POST['reply']))
-{
-#$question_id=$_POST["question_id"];
-$answer=$_POST["answer"];
-$sql = "UPDATE faq SET answer ='$answer' WHERE question_id='$question_id'";
-
-    if(mysqli_query($conn,$sql)){
-        echo "<script type='text/javascript'>
-        alert('Successfully inserted');
-        window.location='/WADAK.com/App/view/Q&A.php';
-        </script>";;
-    }
-    else{
-        echo "Error:".$sql."<br>".mysqli_error($conn);
-    }
-}
-else 
-{
-    echo "cancelled";
-}
-?>
 
 
 <!DOCTYPE html>
@@ -41,7 +17,7 @@ else
 
     <head>
         <title>
-            Q&A
+            FAQ
         </title>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/Q&A.css">
         <style>
@@ -81,13 +57,17 @@ else
             </ul>
         </nav>
    <!-- Add Question-->
-        <br><br>
+        <br>
         <form method="POST" action="/WADAK.com/App/model/add_question.php" name="questionform"
             onsubmit="return validateForm()" required>
+            <h4 style="margin-left:360px;">Question</h4>
             <input type="text" name="question" placeholder="Enter your question here.."
-                style="width:50%; margin-left:300px;">
+                style="width:50%; margin-left:300px; margin-left:360px;">
+            <h4 style="margin-left:360px;">Answer</h4>   
+            <textarea id="answer" name="answer" style="width:50%; margin-left:250px; margin-left:360px;"  rows="4" cols="50"> </textarea>    
+            <br><br>
             <input type="submit" value="Add Question" name="add"
-                style="width:150px; height:30px;cursor: pointer;font-size:15px">
+                style="width:150px; height:30px;cursor: pointer;font-size:15px; margin-left:360px;">
         </form>
 
         <div class="box">
@@ -107,13 +87,6 @@ else
                 <details>
                     <summary><?php echo $row["question"]; ?></summary>
                     <h4><?php echo $row["answer"]; ?></h4>
-                   <h4><?php #echo $row["question_id"]; ?></h4>
-                    <form method="POST" >
-                        <input type="text" placeholder="Type your reply here..." name="answer">
-                        <!--<input type="text" placeholder="Type question id here..." name="question_id">-->
-                        <!--<input type="submit" value="Reply" name="reply" href="/WADAK.com/App/model/add_answer.php?replyid=<?php #echo $row["question_id"]; ?>">-->
-                        <input type="submit" value="Reply" name="reply" href="/WADAK.com/App/view/Q&A.php?replyid=<?php echo $row["question_id"]; ?>">
-                </details>
                 </details>
                 
                 <?php
