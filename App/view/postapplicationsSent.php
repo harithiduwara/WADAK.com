@@ -26,14 +26,14 @@ if (!$con) {
     die("Connection failed" . mysqli_connect_error());
 }
 
-if (isset($_GET["approve_id"])) {
-    mysqli_query($con, "UPDATE postApplication SET status = 1 WHERE id=" . $_GET["approve_id"]);
-    header("location:/WADAK.com/App/view/postapplications.php");
+if (isset($_GET["complete_id"])) {
+    mysqli_query($con, "UPDATE postApplication SET status = 3 WHERE id=" . $_GET["complete_id"]);
+    header("location:/WADAK.com/App/view/postapplicationsSent.php");
 }
 
-if (isset($_GET["reject_id"])) {
-    mysqli_query($con, "UPDATE postApplication SET status = 2 WHERE id=" . $_GET["reject_id"]);
-    header("location:/WADAK.com/App/view/postapplications.php");
+if (isset($_GET["cancel_id"])) {
+    mysqli_query($con, "UPDATE postApplication SET status = 4 WHERE id=" . $_GET["cancel_id"]);
+    header("location:/WADAK.com/App/view/postapplicationsSent.php");
 }
 
 $query = "SELECT * FROM register WHERE uid=$uid";
@@ -46,7 +46,7 @@ $postTypeUC = ucfirst($postType);
 <html>
 
 <head>
-    <title>Post Applications</title>
+    <title>Sent Post Applications </title>
     <style>
         a {
             text-decoration: none;
@@ -99,11 +99,12 @@ $postTypeUC = ucfirst($postType);
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Update Profile</a>
         </div>
+
     <div id="main">
 
         <div class="head">
             <div class="col-div-1">
-                <p class="nav">Post Applications </p>
+                <p class="nav">Sent Post Applications </p>
             </div>
 
             <div class="col-div-1">
@@ -142,7 +143,7 @@ $postTypeUC = ucfirst($postType);
                 <p class="head-1"></p>
                 <br />
                 <?php
-                $sql = "SELECT  pj.*, pa.* , r.name as applicant_name, pa.description as po_desc FROM `postApplication` pa,register r, postjob pj where pj.jobid = pa.jobid AND r.uid = pa.applicantId AND pa.postOwnerId = $uid order by created_at desc ";
+                $sql = "SELECT  pj.*, pa.* , r.name as applicant_name, pa.description as po_desc FROM `postApplication` pa,register r, postjob pj where pj.jobid = pa.jobid AND r.uid = pa.postOwnerId AND pa.applicantId = $uid order by created_at desc ";
 
 
                 $result = $con->query($sql);
@@ -151,7 +152,7 @@ $postTypeUC = ucfirst($postType);
                     <tr>
                         <th>Post ID</th>
                         <th>Post Title</th>
-                        <th>Applicant name</th>
+                        <th>Post owner name</th>
                         <th>Budget Proposed</th>
                         <th>Description</th>
                         <th>Status</th>
@@ -166,9 +167,9 @@ $postTypeUC = ucfirst($postType);
                             <td><?= $row["po_desc"] ?></td>
                             <td><?= $status[$row["status"]] ?></td>
                             <td>
-                                <?php if ($row["status"] == 0) { ?>
-                                    <a style="color:green" href="?approve_id=<?= $row["id"] ?>">Approve</a> |
-                                    <a style="color:red" href="?reject_id=<?= $row["id"] ?>">Reject</a>
+                                <?php if ($row["status"] == 1) { ?>
+                                    <a style="color:green" href="?complete_id=<?= $row["id"] ?>">COMPLETED</a> |
+                                    <a style="color:red" href="?cancel_id=<?= $row["id"] ?>">CANCEL</a>
                                 <?php } ?>
 
                             </td>

@@ -43,18 +43,18 @@
         </style>
         <title>Messages</title>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/message.css">
-        <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/WADAK.com/App/assets/css/postjob.css">
     </head>
 
     <body>
-
         <nav>
             <a href="/WADAK.com/App/view/home.php"> <label class="logo">WADAK</label></a>
             <ul style="margin-top: 1rem">
                 <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
-                <li><a href="/WADAK.com/App/view/postjob.html">Add Post</a> </li>
                 <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
                 <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
+
+                <li><a href="/WADAK.com/App/view/messages.php">Messages</a> </li>
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
                 <li><a href="./login.php"></a></li>
                 <?php }else {?>

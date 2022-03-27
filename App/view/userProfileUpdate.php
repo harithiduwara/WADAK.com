@@ -44,7 +44,9 @@
             <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
             <a href="/WADAK.com/App/view/postapplications.php" class="icon-a"><i class="fa fa-tasks icons"></i>
-                &nbsp;&nbsp;Post Applications</a>
+                &nbsp;&nbsp;Received Applications</a>
+            <a href="/WADAK.com/App/view/postapplicationsSent.php" class="icon-a"><i class="fa fa-tasks icons"></i>
+                &nbsp;&nbsp;Sent Post Applications</a>
                 
             <a href="/WADAK.com/App/view/joborders.php?postType=job" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Job Posts</a>
@@ -75,7 +77,6 @@
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Update Profile</a>
         </div>
-
         <div id="main">
             <div class="head">
                 <div class="col-div-1">
