@@ -1,5 +1,24 @@
 <?php
- session_start();
+    session_start();
+
+    $uid = $_GET["uid"];
+
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+
+    if(!$con){
+        die("Connection failed" .mysqli_connect_error());
+        }
+
+    // $query = "select * from postjob where uid=$uid";
+
+    // $data = mysqli_query($con, $query);
+
+    $query2 ="SELECT * FROM register where uid='$uid'";
+
+    $data2 = mysqli_query($con, $query2);
+    
+    $row2 = mysqli_fetch_assoc($data2);
+
 ?>
 <!Doctype HTML>
 <html>
@@ -67,6 +86,7 @@
 
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            
     </head>
 
     <body>
@@ -97,6 +117,7 @@
             <div class="head">
                 <div class="col-div-1">
                     <p class="nav">UPDATE CO-ADMIN</p>
+                    
 
                 </div>
 
@@ -113,7 +134,7 @@
                     </div>
 
                     <div class="profile">
-                        <p>Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
+                        <p>Admin <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
                             <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/AdminProfile.php">Profile</a></p>
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/Admin-dashboard.php">Dashboard</a>
@@ -139,7 +160,7 @@
                                 <span class="details">Co-admin Id</span>
                             </div>
                             <div class="input_data">
-                                <input type="text" name="uid" placeholder="Enter Co-admin Id" required>
+                                <input type="text" name="uid" placeholder=" " value="<?php echo "$row2[uid]" ?>" required>
                             </div>
                         </div>
 
