@@ -40,23 +40,6 @@ if (isset($_POST['add'])) {
     $Co_AdminId = 1;
     $sql = "INSERT INTO advertisement(user_id,description,type,image,Co_Admin_Id) VALUES ('$id','$description','$email','$ui',$Co_AdminId)";
     mysqli_query($connection, $sql);
-    // $to = 'lasanthiwathsala473@gmail.com';
-    // $email_subject = 'Payment receipt';
-    // $email_body = 'Your payment has sucessfully received';
-    // $email_body .= '<b> ID : </b> {$id} <br>';
-    // $email_body .= '<b> Description : </b> {$description} <br>';
-    // $email_body .= '<b> Type : </b> {$type} <br>';
-    // $email_body .= '<b> File : </b> {$file} <br>';
-
-    // $header = "From:{$to}\r\ncontent-Type: text/html;";
-
-
-    // mail($type, $email_subject, $email_body, $header);
-
-    //header("Implementation\view\addac.php?messege=1");
-    //header('location:/WADAK.com/App/view/adddis.php');
-    // exit();
-
 } else {
     header('location:/WADAK.com/App/view/home.php');
 }
