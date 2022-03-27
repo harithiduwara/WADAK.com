@@ -16,7 +16,7 @@
   <a href="/WADAK.com/App/view/home.php"class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
   <a href="/WADAK.com/App/view/Co-admin dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
   <a href="/WADAK.com/App/view/ServiceProviderUI-coadmin.php"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Users</a>
-  <a href="/WADAK.com/App/view/jobs.php"class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Posts</a>
+  <!--<a href="/WADAK.com/App/view/jobs.php"class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Posts</a>-->
  
   <a href="/WADAK.com/App/view/Q&A.php"class="icon-a"><i class="fa fa-question-circle icons"></i> &nbsp;&nbsp;FAQ</a>
   <a href="/WADAK.com/App/view/messages.php"class="icon-a"><i class="fa fa-comment icons"></i> &nbsp;&nbsp;Chat</a>
@@ -32,9 +32,9 @@
     </div>
 
     <div class="col-div-1">
-      <i class="fa fa-search search-icon"></i>
+     <!-- <i class="fa fa-search search-icon"></i>
 
-      <i class="fa fa-bell noti-icon"></i>
+      <i class="fa fa-bell noti-icon"></i>-->
       <div class="notification-div">
         <p class="noti-head">Notification </p>
         <hr class="hr" />

@@ -25,8 +25,8 @@
             <a href="/WADAK.com/App/view/ServiceProviderUI-coadmin.php" class="icon-a"><i
                     class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Users</a>
-            <a href="/WADAK.com/App/view/jobs.php"class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Posts</a>    
-            <a href="/WADAK.com/App/view/acceptad.php"class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertiesments</a> 
+            <!--<a href="/WADAK.com/App/view/jobs.php"class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Posts</a>    
+            <a href="/WADAK.com/App/view/acceptad.php"class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertiesments</a> -->
 
             <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i>
                 &nbsp;&nbsp;FAQ</a>
@@ -45,9 +45,9 @@
                 </div>
 
                 <div class="col-div-6">
-                    <i class="fa fa-search search-icon"></i>
+                    <!--<i class="fa fa-search search-icon"></i>-->
 
-                    <i class="fa fa-bell noti-icon"></i>
+                    <!--<i class="fa fa-bell noti-icon"></i>-->
                     <div class="notification-div">
                         <p class="noti-head">Notification </p>
                         <hr class="hr" />
@@ -138,7 +138,8 @@
             <div class="col-div-4-1">
                 <div class="box-1">
                     <div class="content-box-1">
-                        <p class="head-1">Advertisements <span><a href="/WADAK.com/App/view/acceptad.php">Handle</a></span></p>
+                        <p class="head-1">Advertisements <span><!--<a href="/WADAK.com/App/view/acceptad.php">Handle</a>--></span></p>
+                        <i class="fa fa-clipboard box-icon" aria-hidden="true"></i>
                         <?php 
                       $ad_query="SELECT * FROM advertisement";
                       $ad_query_run=mysqli_query($connection,$ad_query);

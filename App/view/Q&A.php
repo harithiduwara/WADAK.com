@@ -30,32 +30,32 @@
 
     <body>
 
-        <nav>
+        <!--<nav>
             <label class="logo">WADAK</label>
             <ul class="navbar">
                 <?php
-                if(isset($_SESSION["user"]["userrole"])){?>
+               # if(isset($_SESSION["user"]["userrole"])){?>
                 <li class="navbargreen"><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
                 <?php
-                  }
+                 # }
                 ?>
                 <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
                 <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
 
 
-                <?php if(!isset($_SESSION["user"]["userrole"])){?>
+                <?php# if(!isset($_SESSION["user"]["userrole"])){?>
 
                 <li><a href="./login.php">Login</a></li>
-                <?php }else {?>
+                <?php #}else {?>
                 <li><i class="far fa-bell"></i></li>
                 <li><a href="/WADAK.com/App/view/messages.php">Messages</a></li>
                 <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a>
                 </li>
-                <?php } ?>
+                <?php #} ?>
 
 
             </ul>
-        </nav>
+        </nav>-->
    <!-- Add Question-->
         <br>
         <form method="POST" action="/WADAK.com/App/model/add_question.php" name="questionform"

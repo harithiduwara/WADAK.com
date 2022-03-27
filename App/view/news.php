@@ -35,8 +35,8 @@
             <a href="/WADAK.com/App/view/Co-admin dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
             <a href="/WADAK.com/App/view/ServiceProviderUI-coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
-                &nbsp;&nbsp;Service Providers</a>
-            <a href="#" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
+                &nbsp;&nbsp;Users</a>
+           <!-- <a href="#" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>-->
             <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i>
                 &nbsp;&nbsp;FAQ</a>
             <a href="/WADAK.com/App/view/messages.php" class="icon-a"><i class="fa fa-comment icons"></i>
@@ -52,13 +52,13 @@
                     <p class="nav"> News</p>
                 </div>
                 <div class="col-div-6">
-                    <i class="fa fa-search search-icon"></i>
+                   <!-- <i class="fa fa-search search-icon"></i>
                     <i class="fa fa-bell noti-icon"></i>
-                    <div class="notification-div">
-                        <p class="noti-head">Notification </p>
+                    <div class="notification-div">-->
+                        <!--<p class="noti-head">Notification </p>
                         <hr class="hr" />
                         <p>You have new report
-                            <span>alert </span>
+                            <span>alert </span>-->
                         </p>
                     </div>
 

@@ -25,11 +25,11 @@
                 &nbsp;&nbsp;Dashboard</a>
             <a href="/WADAK.com/App/view/ViewServiceProvider-coadmin.php" class="icon-a"><i
                     class="fa fa-users icons"></i> &nbsp;&nbsp;Service Provider</a>
-            <a href="#" class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Post</a>
+           <!-- <a href="#" class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Post</a>
             <a href="/WADAK.com/App/view/ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i>
-                &nbsp;&nbsp;Advertisements</a>
+                &nbsp;&nbsp;Advertisements</a>-->
             <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i>
-                &nbsp;&nbsp;Q&A Session</a>
+                &nbsp;&nbsp;FAQ</a>
             <a href="/WADAK.com/App/view/chat.php" class="icon-a"><i class="fa fa-comment icons"></i>
                 &nbsp;&nbsp;Chat</a>
             <a href="/WADAK.com/App/view/news.php" class="icon-a"> <i
