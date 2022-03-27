@@ -6,7 +6,7 @@
         die("Connection failed" . mysqli_connect_error());
     }
     
-    $result = "SELECT News_ID,date,description FROM news";
+    $result = "SELECT Ad_no,date,description,type,is_accepted FROM advertiesment";
 
     $data = mysqli_query($con, $result);
 ?>
@@ -15,7 +15,7 @@
 <html>
 
     <head>
-        <title>News</title>
+        <title>Advertiesment-coadmin</title>
         <style>
         a {
             text-decoration: none;
@@ -49,7 +49,7 @@
         <div id="main">
             <div class="head">
                 <div class="col-div-6">
-                    <p class="nav"> News</p>
+                    <p class="nav"> Advertiesment</p>
                 </div>
                 <div class="col-div-6">
                     <i class="fa fa-search search-icon"></i>
@@ -85,7 +85,7 @@
 
         <div class="container">
             <div class="wrapper">
-                <div class="title"><span>Recent site announcements</span></div>
+                <div class="title"><span>Advertiesment</span></div>
 
                 <!--news table delete and view-->
                 <?php
@@ -94,35 +94,34 @@
 
                 <table style="width:835px; margin-left:10px">
                     <tr>
-                        <td style="color:green;">News Id</td>
-                        <td style="color:green;">Date</td>
-                        <td style="color:green;">News</td>
-                        <td style="color:green;">Options</td>
+                        <td style="color:green;">Ad_no</td>
+                        <td style="color:green;">date</td>
+                        <td style="color:green;">description</td>
+                        <td style="color:green;">type</td>
+                        <td style="color:green;">is_accepted</td>
                     </tr>
                     <?php
 	             $i=0;
 	             while($row = mysqli_fetch_array($data)) {
 	          ?>
                     <tr class="<?php if(isset($classname)) echo $classname;?>">
-                        <td><?php echo $row["News_ID"]; ?></td>
+                        <td><?php echo $row["Ad_no"]; ?></td>
                         <td><?php echo $row["date"]; ?></td>
                         <td><?php echo $row["description"]; ?></td>
-                        <td><a style="background-color:rgb(250, 79, 11);padding: 3px 15px;color:white;"href="/WADAK.com/App/model/deletenews.php?id=<?php echo $row["News_ID"]; ?>"><i class="fa fa-trash box-icon"></i></a>
-                        <td><a style="background-color:rgb(33, 189, 33);padding: 3px 15px;color:white;" href="/WADAK.com/App/view/update news.php?updateid=<?php echo $row["News_ID"];?>"><i class="fa fa-edit box-icon"></i></a>
+                        <td><?php echo $row["type"]; ?></td>
+                        <td><?php echo $row["is_accepted"]; ?></td>
+
+                        
+                        <td><a style="background-color:green;padding: 3px 15px;color:white;" href="/WADAK.com/App/view/acceptad.php?updateid=<?php echo $row["Ad_no"];?>">Accept</i></a>
                         </td>
                         <!--<td><a style="background-color:rgb(33, 189, 33);padding: 3px 15px;color:white;" href="/WADAK.com/App/view/update news.php"><i class="fa fa-edit box-icon"></i></a>-->
-                        </td>
+                 
                     </tr>
                     <?php
 	           $i++;
 	           }
 	          ?>
                 </table>
-
-                <div id="buttons" style="text-align:center; margin-top:100px">
-                    <a href="add news.php"><input type="button" class="button1" value="Add news" name="add"></a>
-                    
-                </div>
             </div>
         </div>
 

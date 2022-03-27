@@ -281,8 +281,8 @@ $data = mysqli_query($con, $query);
                     <a href="/WADAK.com/Implementation/forum">
                         <li>Community Forum</li>
                     </a>
-                    <a href="/WADAK.com/App/view/Q&A.php">
-                        <li>Q&A</li>
+                    <a href="/WADAK.com/App/view/faq-user.php">
+                        <li>FAQ</li>
                     </a>
 
 

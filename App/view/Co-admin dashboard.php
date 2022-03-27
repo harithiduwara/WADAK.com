@@ -26,6 +26,7 @@
                     class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Service Providers</a>
             <a href="/WADAK.com/App/view/jobs.php"class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Posts</a>    
+            <a href="/WADAK.com/App/view/acceptad.php"class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertiesments</a> 
 
             <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i>
                 &nbsp;&nbsp;FAQ</a>
