@@ -19,6 +19,18 @@ $result = mysqli_query($con, $query);
 
 $row = mysqli_fetch_assoc($result);
 
+$reviewQuery = "SELECT count(*) as count FROM star_rating sr , postjob pj where pj.jobid = sr.jobId  AND pj.uid = $uid";
+$review_count_result =  mysqli_query($con, $reviewQuery);
+$review_count = mysqli_fetch_assoc($review_count_result)["count"];
+
+$startsQ = "SELECT avg(rate) as avg FROM star_rating sr , postjob pj where pj.jobid = sr.jobId";
+$stars_result =  mysqli_query($con, $startsQ);
+$stars = mysqli_fetch_assoc($stars_result)["avg"];
+
+$rankQ = "SELECT rank FROM (SELECT pj.uid, avg(rate) as avg ,@curRank := @curRank + 1 AS rank FROM star_rating sr , postjob pj, (SELECT @curRank := 0) r where pj.jobid = sr.jobId GROUP BY pj.uid ORDER BY avg desc) d WHERE d.uid = $uid";
+$rank_result =  mysqli_query($con, $rankQ);
+$rank = mysqli_fetch_assoc($rank_result)["rank"]
+
 // echo $row["jobid"];
 ?>
 
@@ -41,26 +53,26 @@ $row = mysqli_fetch_assoc($result);
 
 <body>
 
-<nav>
-            <a href="/WADAK.com/App/view/home.php"> <label class="logo">WADAK</label></a>
-            <ul style="margin-top: 1rem">
-                <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
-                <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
-                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
+    <nav>
+        <a href="/WADAK.com/App/view/home.php"> <label class="logo">WADAK</label></a>
+        <ul style="margin-top: 1rem">
+            <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
+            <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+            <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
 
-                <li><a href="/WADAK.com/App/view/messages.php">Messages</a> </li>
-                <?php if(!isset($_SESSION["user"]["userrole"])){?>
+            <li><a href="/WADAK.com/App/view/messages.php">Messages</a> </li>
+            <?php if (!isset($_SESSION["user"]["userrole"])) { ?>
                 <li><a href="./login.php"></a></li>
-                <?php }else {?>
+            <?php } else { ?>
                 <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a>
                 </li>
-                <?php } ?>
-                <div class="animation "></div>
-            </ul>
-        </nav>
-    <div class="postcontainer" style="height:120vmin">
+            <?php } ?>
+            <div class="animation "></div>
+        </ul>
+    </nav>
+    <div class="postcontainer" style="height:85vh">
 
-        <div class="inputcontainer" id="loginbox" style="margin-left: 15vw; margin-top: 5%; height:90vmin; display:grid; grid-template-columns: 1fr 1fr; grid-gap:1rem;">
+        <div class="inputcontainer" id="loginbox" style="margin-left: 15vw; margin-top: 5vh; height:70vmin; display:grid; grid-template-columns: 1fr 1fr; grid-gap:1rem;">
 
             <diV><img src="
                     <?php
@@ -123,53 +135,38 @@ $row = mysqli_fetch_assoc($result);
                 </div>
             </diV>
 
-            <div style="padding:1rem; margin-top: -4rem">
-                <?php
-                $reviewQuery = "SELECT count(*) as count FROM star_rating sr , postjob pj where pj.jobid = sr.jobId  AND pj.uid = $uid";
-                $review_count_result =  mysqli_query($con, $reviewQuery);
-                $review_count = mysqli_fetch_assoc($review_count_result)["count"];
+            <div style="padding:1rem; margin-top: -19rem">
 
-                $startsQ = "SELECT avg(rate) as avg FROM star_rating sr , postjob pj where pj.jobid = sr.jobId  AND pj.uid = $uid";
-                $stars_result =  mysqli_query($con, $startsQ);
-                $stars = mysqli_fetch_assoc($stars_result)["avg"];
-
-                $rankQ = "SELECT rank FROM (SELECT pj.uid, avg(rate) as avg ,@curRank := @curRank + 1 AS rank FROM star_rating sr , postjob pj, (SELECT @curRank := 0) r where pj.jobid = sr.jobId GROUP BY pj.uid ORDER BY avg desc) d WHERE d.uid = $uid";
-                $rank_result =  mysqli_query($con, $rankQ);
-                $rank = mysqli_fetch_assoc($rank_result)["rank"]
-
-                ?>
-                <h1 style="font-size:5rem; padding-bottom:2rem"><i class="fa fa-stars"></i> &nbsp<?= substr($stars, 0, 3) ?></h1>
+                <h1 style="font-size:3.5rem; padding-bottom:2rem"><i class="fa fa-star fa-1x" aria-hidden="true" style="color:gold; font-weight:300"></i> &nbsp<?= substr($stars, 0, 3) ?></h1>
             </div>
             <div>
 
-                <?php $reviews = "SELECT avg(rate) as avg FROM star_rating where jobId = $jobid";
+                <?php $reviews = "SELECT * FROM star_rating where jobId = $jobid";
                 $data10 = mysqli_query($con, $reviews);
+
                 if (mysqli_num_rows($data10) == 0) {
                 ?><h1 style="font-size:3rem; margin-top:-10vh; color:green; font-weight:300">No Reviews Yet</h1><?php
-                                        } ?>
-                <div class="grid-container" style="margin-top:-4rem; display:grid; grid-template-columns:1fr 7fr; grid-gap:1rem">
-                    <?php
+                                                                                                            } else { ?>
+                    <div class="grid-container" style="margin-top:-10rem; display:grid; grid-template-columns:1fr 1fr; grid-gap:1rem;     height: 100%; overflow: scroll; height:10vh; border: 1px solid green; font-weight:600">
+                        <?php
+                                                                                                                if (mysqli_num_rows($data10) > 0) {
+                                                                                                                    while ($row10 = mysqli_fetch_assoc($data10)) { ?>
+                                <div style="background-color:antiquewhite">
+                                    <div class="a">
+                                        <p style="padding:1rem 0; font-size:2rem; font-weight:400"><?= $row10["name"] ?><?= $row10["rate"] ?> &nbsp <i class="fa fa-star fa-1x" aria-hidden="true" style="color:gold; font-weight:300"></i></p>
+                                    </div>
+                                    <div class="d" >
+                                        <p style = "font-size:1rem"><?= $row10["comment"] ?></p>
+                                    </div>
+                                    <br>
+                                </div>
+                        <?php }
+                                                                                                                }
+                        ?>
 
-                    if (mysqli_num_rows($data10) > 0) {
+                    </div>
+                <?php  } ?>
 
-                        while ($row10 = mysqli_fetch_assoc($data10)) { ?>
-                            <div class="a">
-                                <p>hello</p>
-                            </div>
-                            <div class="b">
-                                <p>Hello</p>
-                            </div>
-                            <div class="c">
-                                <p>Stars</p>
-                            </div>
-                            <div class="d">
-                                <p>review</p>
-                            </div>
-                    <?php }
-                    }
-                    ?>
-
-                </div>
             </div>
         </div>
     </div>

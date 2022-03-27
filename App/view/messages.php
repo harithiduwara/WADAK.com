@@ -76,7 +76,7 @@ $search2 = mysqli_fetch_assoc($search1);
 
                 <?php
                 
-                $users_query = "SELECT * FROM register";
+                $users_query = "SELECT * FROM register where ";
 
                 $users = mysqli_query($con, $users_query);
 
