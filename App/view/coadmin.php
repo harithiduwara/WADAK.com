@@ -19,6 +19,15 @@
         .del-button a{
             color: white;
         } 
+        .update-button{
+                padding: 8px;
+                background-color: #30a117bd;
+                border-radius: 10px;
+        }
+
+        .update-button a{
+                color: white;
+        }
 
         </style>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/Co-admin.css" type="text/css" />
@@ -38,8 +47,7 @@
             <a href="/WADAK.com/App/view/CategoryUI.php" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Categories</a>
             <a href="/WADAK.com/App/view/coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Co-Admin</a>
-            <a href="/WADAK.com/App/view/ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service
-                Provider</a>
+            <a href="/WADAK.com/App/view/ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Users</a>
             <a href="/WADAK.com/App/view/ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
             <a href="/WADAK.com/App/view/View Report.php" class="icon-a"><i class="fa fa-envelope icons"></i> &nbsp;&nbsp;Reports</a>
             <a href="/WADAK.com/App/view/PaymentUI.php" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Payments</a>
@@ -69,7 +77,7 @@
                     </div>
 
                     <div class="profile">
-                        <p>Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
+                        <p>Admin <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
                             <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/AdminProfile.php">Profile</a></p>
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/Admin-dashboard.php">Admin-dashboard</a> </p>
@@ -128,7 +136,10 @@
                                                 <td>" . $row["uid"]. "</td>
                                                 <td>" . $row["email"]. "</td>
                                                 <td>" . $row["contactno"]. "</td>
-                                                <td><div class=\"del-button\"><a href='/WADAK.com/App/model/deleteCoadmin.php?id=".$row['uid']."' id='btn'>Remove</a></div></td>
+                                                <td><div class=\"del-button\"><a href='/WADAK.com/App/model/deleteCoadmin.php?id=".$row['uid']."' id='btn'>Remove</a></div>
+                                                <br>
+                                                <div class=\"update-button\"><a href='/WADAK.com/App/view/update coAdmin.php?id=".$row['uid']."' id='btn'>Update</a>
+                                                </div></td>
                                             </tr>";
                                     }
                                     echo "</table>";
@@ -139,6 +150,7 @@
                                 ?>
                 </div>
             </div>
+            
             <div class="col-div-2">
                 <div class="box1">
                     <a href="Add%20Coadmin.php">Add</a>
@@ -146,10 +158,11 @@
                 <div class="box2">
                     <a href="/WADAK.com/App/view/ViewCoAdmin.php">View</a>
                 </div>
-                <div class="box3">
+                <!--<div class="box3">
                     <a href="/WADAK.com/App/view/update coAdmin.php">Update</a>
-                </div>
+                </div> -->
             </div>
+
             <div class="clearfix"></div>
         </div>
 
