@@ -100,8 +100,7 @@
             <a href="/WADAK.com/App/view/coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Co-Admin</a>
             <a href="/WADAK.com/App/view/ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i>
-                &nbsp;&nbsp;Service
-                Provider</a>
+                &nbsp;&nbsp;Users</a>
             <a href="ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertisements</a>
             <a href="/WADAK.com/App/view/View Report.php" class="icon-a"><i class="fa fa-envelope icons"></i>
                 &nbsp;&nbsp;Reports</a>
@@ -187,7 +186,7 @@
                                 <span class="details">Date of Birth</span>
                             </div>
                             <div class="input_data">
-                                <input type="date" name="birth" placeholder="Date of birth">
+                                <input type="date" name="birthday" placeholder="Date of birth" value="<?=$row2["birthday"]?>" >
                             </div>
                         </div>
 
