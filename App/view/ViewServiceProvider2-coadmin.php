@@ -72,7 +72,7 @@ $db=mysqli_select_db($conn,'wadak');
 if(isset($_POST['search']))
 {
     $username= $_POST['username'];
-    $query="SELECT uid,username,name,birthday,address,email,contactno,userrole,profileDescription,telegram,twitter,instagram,profilePic FROM register WHERE username = '$username'";
+    $query="SELECT * FROM register WHERE username = '$username' AND userrole='user1'";
     $query_run=mysqli_query($conn,$query);
     while($row = mysqli_fetch_array($query_run))
     {
@@ -189,7 +189,7 @@ if(isset($_POST['search']))
   <div class="col-div-2">
     <div class="imgbox">
       <div class="img">
-        <img src= <?php echo$row['profilePic'];?> width="325" height="380">
+        <img src= <?php echo$row['profilePic'];?> width="325" height="380" border-radius="30%" object-fit="cover">
         <!--/WADAK.com/App/assets/images/sp.png   width="325" height="380"-->
       </div>
       <h3 style="color:white;margin-right:40px;margin-left:40px;background-color:black;padding : 10px 15px">User Name :  <?php echo$row['username'];?></h3>
