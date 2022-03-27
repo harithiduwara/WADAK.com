@@ -27,8 +27,7 @@
             <a href="/WADAK.com/App/view/coadmin.php" class="icon-a"><i class="fa fa-users icons"></i>
                 &nbsp;&nbsp;Co-Admin</a>
             <a href="/WADAK.com/App/view/ServiceProviderUI-admin.php" class="icon-a"><i class="fa fa-users icons"></i>
-                &nbsp;&nbsp;Service
-                Provider</a>
+                &nbsp;&nbsp;Users</a>
             <a href="/WADAK.com/App/view/ads.php" class="icon-a"><i class="fa fa-bullhorn icons"></i>
                 &nbsp;&nbsp;Advertisements</a>
             <a href="/WADAK.com/App/view/View Report.php" class="icon-a"><i class="fa fa-envelope icons"></i>
@@ -60,11 +59,11 @@
                     </div>
 
                     <div class="profile">
-                        <p>Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
+                        <p>Admin<i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
                             <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="#">Profile</a></p>
-                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Dashboard</a> </p>
-                            <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;Log Out</p>
+                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/Admin-dashboard.php">Dashboard</a> </p>
+                            <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a href="/WADAK.com/App/controller/logout.php">Log Out</a></p>
                         </div>
                     </div>
                 </div>
@@ -75,17 +74,17 @@
             <br>
 
             <div class="inputContainer">
+
                 <div class="form">
                     <form method="POST" action="/WADAK.com/App/model/addCategory.php" name="categoryform"
                         onsubmit="return validateForm()" required>
+                        <div class="imagebox">
+                            <input type="file" name="image" class="form-aontrol">
+                        </div>
+
                         <div class="inputbox">
                             <input type="text" placeholder="Category Name" name="name">
                         </div>
-                        <div class="inputbox">
-                            <input type="value" placeholder="Minimum value" name="budget">
-                        </div>
-
-
                         <input type="submit" class=" button button1" value="Save" name="save">
                         <button class="button button2">Cancel</button>
 
@@ -94,6 +93,7 @@
             </div>
 
             </br>
+            
 
         </div>
 
