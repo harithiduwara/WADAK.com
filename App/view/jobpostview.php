@@ -34,6 +34,7 @@ $row = mysqli_fetch_assoc($result);
     </style>
     <title> <?= $row["title"] ?> </title>
     <link rel="stylesheet" href="/WADAK.com/App/assets/css/postjob.css">
+    <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -127,23 +128,51 @@ $row = mysqli_fetch_assoc($result);
             </diV>
 
             <div style="padding:1rem; margin-top: -4rem">
-                <h1 style="font-size:3rem">Rank</h1>
-                <h1 style="font-size:2rem">5 Stars</h1>
+                <?php
+                $reviewQuery = "SELECT count(*) as count FROM star_rating sr , postjob pj where pj.jobid = sr.jobId  AND pj.uid = $uid";
+                $review_count_result =  mysqli_query($con, $reviewQuery);
+                $review_count = mysqli_fetch_assoc($review_count_result)["count"];
+
+                $startsQ = "SELECT avg(rate) as avg FROM star_rating sr , postjob pj where pj.jobid = sr.jobId  AND pj.uid = $uid";
+                $stars_result =  mysqli_query($con, $startsQ);
+                $stars = mysqli_fetch_assoc($stars_result)["avg"];
+
+                $rankQ = "SELECT rank FROM (SELECT pj.uid, avg(rate) as avg ,@curRank := @curRank + 1 AS rank FROM star_rating sr , postjob pj, (SELECT @curRank := 0) r where pj.jobid = sr.jobId GROUP BY pj.uid ORDER BY avg desc) d WHERE d.uid = $uid";
+                $rank_result =  mysqli_query($con, $rankQ);
+                $rank = mysqli_fetch_assoc($rank_result)["rank"]
+
+                ?>
+                <h1 style="font-size:5rem; padding-bottom:2rem"><i class="fa fa-stars"></i> &nbsp<?= substr($stars, 0, 3) ?></h1>
             </div>
             <div>
+
+                <?php $reviews = "SELECT avg(rate) as avg FROM star_rating where jobId = $jobid";
+                $data10 = mysqli_query($con, $reviews);
+                if (mysqli_num_rows($data10) == 0) {
+                ?><h1 style="font-size:3rem; margin-top:-10vh; color:green; font-weight:300">No Reviews Yet</h1><?php
+                                        } ?>
                 <div class="grid-container" style="margin-top:-4rem; display:grid; grid-template-columns:1fr 7fr; grid-gap:1rem">
-                    <div class="a">
-                        <p>hello</p>
-                    </div>
-                    <div class="b">
-                        <p>Hello</p>
-                    </div>
-                    <div class="c">
-                        <p>Stars</p>
-                    </div>
-                    <div class="d">
-                        <p>review</p>
-                    </div>
+                    <?php
+
+                    if (mysqli_num_rows($data10) > 0) {
+
+                        while ($row10 = mysqli_fetch_assoc($data10)) { ?>
+                            <div class="a">
+                                <p>hello</p>
+                            </div>
+                            <div class="b">
+                                <p>Hello</p>
+                            </div>
+                            <div class="c">
+                                <p>Stars</p>
+                            </div>
+                            <div class="d">
+                                <p>review</p>
+                            </div>
+                    <?php }
+                    }
+                    ?>
+
                 </div>
             </div>
         </div>
