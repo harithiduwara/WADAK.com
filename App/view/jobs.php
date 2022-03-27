@@ -8,7 +8,7 @@ if (!$con) {
     die("Connection failed" . mysqli_connect_error());
 }
 //postType service 
-$search = $_GET["search"] ?? "";
+$search = $_GET["search"];
 $query = "select * from postjob , register, jobCategories where jobCategories.categoryId = postjob.jobType AND postjob.status = 0 AND postType='" . $postType . "' and (register.uid = postjob.uid and (postjob.title like '%" . $_GET["search"] . "%' or postjob.description like '%" . $_GET["search"] . "%' or register.address like '%" . $_GET["search"] . "%' or jobCategories.categoryName like '%" . $_GET["search"] . "%'))";
 
 $data = mysqli_query($con, $query);

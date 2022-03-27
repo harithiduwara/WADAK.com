@@ -21,6 +21,7 @@ if (isset($_POST['email']) && !isset($_POST["otp"])) {
         $email = $_POST["email"];
         $sql = "UPDATE register set password = '$password' where email = '$email'";
         mysqli_query($con, $sql);
+        header('location:/WADAK.com/App/view/login.php');
     } else {
         echo "Invalid OTP";
     }

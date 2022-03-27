@@ -21,7 +21,6 @@
   <a href="/WADAK.com/App/view/Q&A.php"class="icon-a"><i class="fa fa-question-circle icons"></i> &nbsp;&nbsp;FAQ</a>
   <a href="/WADAK.com/App/view/messages.php"class="icon-a"><i class="fa fa-comment icons"></i> &nbsp;&nbsp;Chat</a>
   <a href="/WADAK.com/App/view/news.php"class="icon-a"><i class="fa fa-newspaper-o icons"></i> &nbsp;&nbsp;News</a>
-  <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
 </div>
 
 <div id="main">
@@ -48,7 +47,7 @@
         <div class="profile-div">
           <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/CoAdmin-profile.php">Profile</a></p>
           <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/Co-admin dashboard.php">Dashboard</a> </p>
-          <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a href="/WADAK.com/implementation/controller/logout.php">Log Out</a></p>
+          <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a href="/WADAK.com/App/controller/logout.php">Log Out</a></p>
         </div>
       </div>
     </div>
