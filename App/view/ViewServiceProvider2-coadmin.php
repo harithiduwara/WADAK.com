@@ -1,17 +1,7 @@
-<?php
-session_start();
-
-$postType = $_GET["postType"] ?? "job";
-
-$con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
-if (!$con) {
-    die("Connection failed" . mysqli_connect_error());
-}?>
-
 <!Doctype HTML>
 <html>
 <head>
-  <title>User Details</title>
+  <title>Service Provider</title>
   <style>a {text-decoration: none;}</style>
   <link rel="stylesheet" href="/WADAK.com/App/assets/css/ViewServiceProvider2-coadmin.css" type="text/css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -77,7 +67,8 @@ if (!$con) {
   </div>
 
 <?php 
-
+$conn= mysqli_connect("localhost","root","");
+$db=mysqli_select_db($conn,'wadak');
 if(isset($_POST['search']))
 {
     $username= $_POST['username'];
