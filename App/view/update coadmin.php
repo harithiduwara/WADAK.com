@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    $uid = $_GET["uid"];
+    $uid = $_GET["id"];
 
     $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
 
@@ -13,7 +13,7 @@
 
     // $data = mysqli_query($con, $query);
 
-    $query2 ="SELECT * FROM register where uid='$uid'";
+    $query2 ="SELECT * FROM register where uid=$uid";
 
     $data2 = mysqli_query($con, $query2);
     
@@ -136,10 +136,9 @@
                     <div class="profile">
                         <p>Admin <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/AdminProfile.php">Profile</a></p>
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/Admin-dashboard.php">Dashboard</a>
                             </p>
-                            <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;Log Out</p>
+                            <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a href="/WADAK.com/App/controller/logout.php">Log Out</a></p>
                         </div>
                     </div>
                 </div>
@@ -160,7 +159,7 @@
                                 <span class="details">Co-admin Id</span>
                             </div>
                             <div class="input_data">
-                                <input type="text" name="uid" placeholder=" " value="<?php echo "$row2[uid]" ?>" required>
+                                <input type="text" name="uid" placeholder=" " value="<?=$row2["uid"]?>">
                             </div>
                         </div>
 
@@ -169,7 +168,7 @@
                                 <span class="details">Name</span>
                             </div>
                             <div class="input_data">
-                                <input type="text" name="name" placeholder="Enter your name" required>
+                                <input type="text" name="name" placeholder="Enter your name" value="<?=$row2["name"]?>">
                                 <!-- <span class="error">*<?php echo $nameErr; ?></span> -->
                             </div>
                         </div>
@@ -179,7 +178,7 @@
                                 <span class="details">Username</span>
                             </div>
                             <div class="input_data">
-                                <input type="text" name="username" placeholder="Enter your username" required>
+                                <input type="text" name="username" placeholder="Enter your username" value="<?=$row2["username"]?>">
                             </div>
                         </div>
 
@@ -188,7 +187,7 @@
                                 <span class="details">Date of Birth</span>
                             </div>
                             <div class="input_data">
-                                <input type="date" name="birth" placeholder="Date of birth" required>
+                                <input type="date" name="birth" placeholder="Date of birth">
                             </div>
                         </div>
 
@@ -197,7 +196,7 @@
                                 <span class="details">Address</span>
                             </div>
                             <div class="input_data">
-                                <input type="text" name="address" placeholder="Enter your address" required>
+                                <input type="text" name="address" placeholder="Enter your address" value="<?=$row2["address"]?>">
                             </div>
                         </div>
 
@@ -206,7 +205,7 @@
                                 <span class="details">Email Address</span>
                             </div>
                             <div class="input_data">
-                                <input type="email" name="email" placeholder="Enter your email" required>
+                                <input type="email" name="email" placeholder="Enter your email" value="<?=$row2["email"]?>">
                             </div>
                         </div>
 
@@ -215,27 +214,10 @@
                                 <span class="details">Contact No</span>
                             </div>
                             <div class="input_data">
-                                <input type="tel" name="contactno" placeholder="Enter your phone number" required>
+                                <input type="tel" name="contactno" placeholder="Enter your phone number" value="<?=$row2["contactno"]?>">
                             </div>
                         </div>
 
-                        <div class="input-box">
-                            <div class="input_label">
-                                <span class="details">Password</span>
-                            </div>
-                            <div class="input_data">
-                                <input type="password" name="password" placeholder="Enter your password" required>
-                            </div>
-                        </div>
-
-                        <!--<div class="input-box">
-                            <div class="input_label">
-                                <span class="details">Repeat Password</span>
-                            </div>
-                            <div class="input_data">
-                                <input type="password" name="password1" placeholder="Re-enter your password" required>
-                            </div>
-                        </div> -->
                         <div class="button" id="btn">
                             <input type = "submit" name = "update" value = "UPDATE DATA">
                         </div>
