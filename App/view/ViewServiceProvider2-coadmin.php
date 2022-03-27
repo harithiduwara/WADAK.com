@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+$postType = $_GET["postType"] ?? "job";
+
+$con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+if (!$con) {
+    die("Connection failed" . mysqli_connect_error());
+}?>
+
 <!Doctype HTML>
 <html>
 <head>
@@ -67,8 +77,7 @@
   </div>
 
 <?php 
-$conn= mysqli_connect("localhost","root","");
-$db=mysqli_select_db($conn,'wadak');
+
 if(isset($_POST['search']))
 {
     $username= $_POST['username'];
