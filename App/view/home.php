@@ -134,35 +134,40 @@ $data = mysqli_query($con, $query);
                 overflow: hidden">
 
             <?php
-            if (mysqli_num_rows($data) > 0) {
-                for ($x = 0; $x <= 3 && $row = mysqli_fetch_assoc($data); $x++) {
+
+
+            $query1 = "select * from postjob , register where postType='service' and register.uid = postjob.uid ORDER BY views DESC";
+
+            $data1 = mysqli_query($con, $query1);
+            if (mysqli_num_rows($data1) > 0) {
+                for ($x = 0; $x <= 3 && $row1 = mysqli_fetch_assoc($data1); $x++) {
             ?>
                     <div class=" sectionheading3">
-                        <div class="card1" style="margin:1rem; background-color: rgb(248, 248, 248); padding: 0.5rem 0.5rem 0.5rem 0.5rem">
+                        <div class="card1" style="margin:1rem; background-color: rgb(248, 248, 248); padding: 0.5rem 0.5rem 0.5rem 0.5rem; border-radius: 10%">
                             <img src="
                     <?php
-                    if ($row["filename"] == null) {
+                    if ($row1["filename"] == null) {
                         echo "/WADAK.com/App/uploads/noimage.jpg";
                     } else {
-                        echo $row["filename"];
+                        echo $row1["filename"];
                     }
                     ?>
                 
                 
-                " alt="service" style="width:100% ; height:200px; object-fit: cover;">
-                            <a href="/WADAK.com/App/view/userprofile.php?uid=<?= $row["uid"] ?>">
-                                <p style="text-align:end">
-                                    <?= $row["username"] ?>
+                " alt="service" style="width:100% ; height:200px; object-fit: cover; border-radius: 10%">
+                            <a href="/WADAK.com/App/view/userprofile.php?uid=<?= $row1["uid"] ?>">
+                                <p style="text-align:end; color:green; margin: 1rem">
+                                    <?= $row1["username"] ?>
                                 </p>
                             </a>
 
-                            <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row["jobid"] ?>">
-                                <h3 style="text-align:center"><?= $row["title"] ?>
+                            <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row1["jobid"] ?>">
+                                <h3 style="text-align:center"><?= $row1["title"] ?>
                                 </h3>
                             </a>
                             <br>
-                            <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row["jobid"] ?>">
-                                <p style="text-align: center"><?= $row["description"] ?></p><br>
+                            <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row1["jobid"] ?>">
+                                <p style="text-align: center"><?= $row1["description"] ?></p><br>
                                 <p>
                             </a>
 
@@ -184,46 +189,51 @@ $data = mysqli_query($con, $query);
         <!----------------------------------section3--------------------------------------->
 
         <div class="container3" style="margin-top: 2rem">
-            <h1 class="">TOP SERVICE PROVIDERS</h1>
+            <h1 class="">TOP SERVICE POSTS</h1>
 
             <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem; height: 40vmin;
                 overflow: hidden">
 
                 <?php
-                if (mysqli_num_rows($data) > 0) {
-                    for ($x = 0; $x <= 3 && $row = mysqli_fetch_assoc($data); $x++) {
+
+                $query2 = "select * from postjob , register where postType='service' and register.uid = postjob.uid ORDER BY views DESC";
+
+                $data2 = mysqli_query($con, $query2);
+
+                if (mysqli_num_rows($data2) > 0) {
+                    for ($x = 0; $x <= 3 && $row2 = mysqli_fetch_assoc($data2); $x++) {
                 ?>
                         <div class="sectionheading3">
-                            <div class="card1" style="margin:1rem; background-color: rgb(248, 248, 248); padding: 0.5rem 0.5rem 0.5rem 0.5rem">
-                                <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row["jobid"] ?>">
+                            <div class="card1" style="margin:1rem; background-color: rgb(248, 248, 248); padding: 0.5rem 0.5rem 0.5rem 0.5rem; border-radius: 10%">
+                                <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row2["jobid"] ?>">
                                     <img src="
                                     <?php
-                                    if ($row["filename"] == null) {
+                                    if ($row2["filename"] == null) {
                                         echo "/WADAK.com/App/uploads/noimage.jpg";
                                     } else {
-                                        echo $row["filename"];
+                                        echo $row2["filename"];
                                     }
                                     ?>
                 
                 
-                " alt="service" style="width:100% ; height:200px; object-fit: cover;">
+                " alt="service" style="width:100% ; height:200px; object-fit: cover; border-radius: 10%">
 
                                 </a>
 
-                                <a href="/WADAK.com/App/view/userprofile.php?uid=<?= $row["uid"] ?>">
-                                    <p style="text-align:end">
-                                        <?= $row["username"] ?>
+                                <a href="/WADAK.com/App/view/userprofile.php?uid=<?= $row2["uid"] ?>">
+                                    <p style="text-align:end; color:green; margin: 1rem">
+                                        <?= $row2["username"] ?>
                                     </p>
                                 </a>
 
-                                <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row["jobid"] ?>">
-                                    <h3 style="text-align:center"><?= $row["title"] ?>
+                                <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row2["jobid"] ?>">
+                                    <h3 style="text-align:center"><?= $row2["title"] ?>
                                     </h3>
                                 </a>
                                 <br>
-                                <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row["jobid"] ?>">
+                                <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row2["jobid"] ?>">
 
-                                    <p style="text-align: center"><?= $row["description"] ?></p><br>
+                                    <p style="text-align: center"><?= $row2["description"] ?></p><br>
                                     <p>
                                     </p>
                                 </a>
