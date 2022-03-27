@@ -115,7 +115,7 @@ if(!$con){
         <!----------------------------------footer--------------------------------------->
 
 
-        <div style="display:grid;grid-template-columns: 1fr 1fr 1fr 1fr;grid-gap:1rem; text-align:center">
+        <div style="display:grid;grid-template-columns: 1fr 1fr 1fr 1fr;grid-gap:1rem; text-align:center; ">
             <?php
             if (mysqli_num_rows($data) > 0) {
 
@@ -123,7 +123,7 @@ if(!$con){
           
             ?>
             <div>
-                <div class="card1" style="margin:1rem; background-color:#f1f1f1"><a
+                <div class="card1" style="margin:1rem; background-color:#f1f1f1; border-radius:10%"><a
                         href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>"><img src="
                     <?php
                     if($row["filename"]==null){

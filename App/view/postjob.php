@@ -29,6 +29,7 @@ if(!$con){
         </style>
         <title>Add Post</title>
         <link rel="stylesheet" href="/WADAK.com/App/assets/css/postjob.css">
+        <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
     </head>
 
     <body>

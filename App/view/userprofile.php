@@ -84,9 +84,8 @@
                             </div>
                         </header>
 
-
-
                         <h3 class="usernameProfile"><?=$row2["username"]?></h3>
+
                         <div class="desc">
                             <p><?=$row2["profileDescription"]?>
                             </p>
@@ -112,30 +111,35 @@
 
                         <footer>
                             <?php
-                                $query3 = "SELECT * FROM userLinks where uid = $uid";
+                                $query3 = "SELECT * FROM register where uid = $uid";
                                 
                                 $data3 = mysqli_query($con, $query3);
 
                                 $row3 = mysqli_fetch_assoc($data3);
                             ?>
+
                             <?php 
                                 if($row3["telegram"]=""){?>
-                            <a href="<?=$row3["telegram"]?>" target="_blank"><i class="fa fa-telegram fa-2x"></i></a>
+                            
                             <?php
-                                }
+                                }else{?>
+                                    <a href="<?=$row3["telegram"]?>" target="_blank"><i class="fa fa-telegram fa-2x"></i></a>
+                                <?php }
                             ?>
                             <?php 
                                 if($row3["twitter"]=""){?>
-                            <a href="<?=$row3["twitter"]?>" target="_blank"><i
-                                    class="fa fa-twitter fa-2x"></i></a></i></a>
                             <?php
-                                }
+                                }else{?>
+                                    <a href="<?=$row3["twitter"]?>" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                                <?php }
                             ?>
                             <?php 
                                 if($row3["instagram"]=""){?>
-                            <a href="<?=$row3["instagram"]?>" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                            
                             <?php
-                                }
+                                } else{ ?>
+                                    <a href="<?=$row3["instagram"]?>" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                               <?php }
                             ?>
 
 

@@ -1,19 +1,19 @@
 <?php
 
-session_start();
+    session_start();
 
-$uid = $_SESSION["user"]['uid'];
+    $uid = $_SESSION["user"]['uid'];
 
-// var_dump($_SESSION["user"]['uid']);
+    // var_dump($_SESSION["user"]['uid']);
 
-$con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
-
-if (!$con) {
-    die("Connection failed" . mysqli_connect_error());
-}
-$query = "SELECT * FROM register WHERE uid=$uid";
-$data = mysqli_query($con, $query);
-$userData = mysqli_fetch_assoc($data);
+    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+    
+    if(!$con){
+        die("Connection failed" . mysqli_connect_error());
+    }
+    $query = "SELECT * FROM register WHERE uid=$uid";
+    $data = mysqli_query($con, $query);
+    $userData = mysqli_fetch_assoc($data);
 
 ?>
 
@@ -45,7 +45,9 @@ $userData = mysqli_fetch_assoc($data);
             <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Dashboard</a>
             <a href="/WADAK.com/App/view/postapplications.php" class="icon-a"><i class="fa fa-tasks icons"></i>
-                &nbsp;&nbsp;Post Applications</a>
+                &nbsp;&nbsp;Received Applications</a>
+            <a href="/WADAK.com/App/view/postapplicationsSent.php" class="icon-a"><i class="fa fa-tasks icons"></i>
+                &nbsp;&nbsp;Sent Post Applications</a>
                 
             <a href="/WADAK.com/App/view/joborders.php?postType=job" class="icon-a"><i class="fa fa-tasks icons"></i>
                 &nbsp;&nbsp;Job Posts</a>
@@ -76,7 +78,6 @@ $userData = mysqli_fetch_assoc($data);
                     class="fa fa-dashboard icons"></i>
                 &nbsp;&nbsp;Update Profile</a>
         </div>
-
         <div id="main">
             <div class="head">
                 <div class="col-div-6">
@@ -129,7 +130,6 @@ $userData = mysqli_fetch_assoc($data);
                     <h2>Rank : 5</h2>
                 </div>
             </div>
-        </div>
         <div class="clearfix"></div>
         <br />
         <div class="col-div-12">

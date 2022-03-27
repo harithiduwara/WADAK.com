@@ -14,30 +14,20 @@
 
     <body>
         <nav style="height:10vh">
-            <a href="/WADAK.com/App/view/home.php"><label class="logo">WADAK </label></a>
-            <ul class="navbar">
-                <?php
-                        if(isset($_SESSION["user"]["userrole"])){?>
-                <li><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
-                <?php
-                    }
-                    ?>
-
+            <a href="/WADAK.com/App/view/home.php"> <label class="logo">WADAK</label></a>
+            <ul style="margin-top: 1rem">
+                <li><a href="/WADAK.com/App/view/home.php" class="active">Home</a></li>
                 <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
                 <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
 
-
-
+                <li><a href="/WADAK.com/App/view/messages.php">Messages</a> </li>
                 <?php if(!isset($_SESSION["user"]["userrole"])){?>
-
-                <li><a href="./login.php">Login</a></li>
+                <li><a href="./login.php"></a></li>
                 <?php }else {?>
-                <li><i class="far fa-bell"></i></li>
-                <li><a href="/WADAK.com/App/view/messages.php">Messages</a></li>
-                <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a></li>
+                <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a>
+                </li>
                 <?php } ?>
-
-
+                <div class="animation "></div>
             </ul>
         </nav>
         </br>
