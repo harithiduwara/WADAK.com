@@ -80,14 +80,13 @@
 
                         <header>
                             <div class="avatar">
-                                <img src="<?=$row2["profilePic"]?>" alt="Jhon Doe" id="profilepic" />
+                                <img src="<?=$row2["profilePic"]?>" alt="Image" id="profilepic" />
                             </div>
                         </header>
 
-
-
                         <h3 class="usernameProfile"><?=$row2["username"]?></h3>
-                        <div class="desc">
+
+                        <div class="profileDescription">
                             <p><?=$row2["profileDescription"]?>
                             </p>
                         </div>
@@ -112,30 +111,35 @@
 
                         <footer>
                             <?php
-                                $query3 = "SELECT * FROM userLinks where uid = $uid";
+                                $query3 = "SELECT * FROM register where uid = $uid";
                                 
                                 $data3 = mysqli_query($con, $query3);
 
                                 $row3 = mysqli_fetch_assoc($data3);
                             ?>
+
                             <?php 
                                 if($row3["telegram"]=""){?>
-                            <a href="<?=$row3["telegram"]?>" target="_blank"><i class="fa fa-telegram fa-2x"></i></a>
+                            
                             <?php
-                                }
+                                }else{?>
+                                    <a href="<?=$row3["telegram"]?>" target="_blank"><i class="fa fa-telegram fa-2x"></i></a>
+                                <?php }
                             ?>
                             <?php 
                                 if($row3["twitter"]=""){?>
-                            <a href="<?=$row3["twitter"]?>" target="_blank"><i
-                                    class="fa fa-twitter fa-2x"></i></a></i></a>
                             <?php
-                                }
+                                }else{?>
+                                    <a href="<?=$row3["twitter"]?>" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                                <?php }
                             ?>
                             <?php 
                                 if($row3["instagram"]=""){?>
-                            <a href="<?=$row3["instagram"]?>" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                            
                             <?php
-                                }
+                                } else{ ?>
+                                    <a href="<?=$row3["instagram"]?>" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                               <?php }
                             ?>
 
 
@@ -158,8 +162,8 @@
                 if(mysqli_num_rows($data)>0){
                     while($row = mysqli_fetch_assoc($data)){
                         ?>
-                        <div class="sectionheading3" style="background-color:#f1f1fa">
-                            <div class="card1" style="margin:1rem"><img src="
+                        <div class="sectionheading3" style="">
+                            <div class="card1" style="margin:1rem; border-radius:10%; background-color:#f1f1fa "><img src="
                     <?php
                     if($row["filename"]==null){
                         echo "/WADAK.com/App/uploads/noimage.jpg";
@@ -170,14 +174,14 @@
                     ?>
                 
                 
-                " alt="service" style="width:100% ; height:200px; object-fit: cover;">
+                " alt="service" style="width:100% ; height:200px; object-fit: cover;border-radius:15%">
                                 <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
-                                    <h3 style="text-align:center"><?= $row["title"] ?>
+                                    <h3 style="text-align:center; color:green; font-size:1.5rem; font-weight:400"><?= $row["title"] ?>
                                     </h3>
                                 </a>
                                 <br>
                                 <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
-                                    <p style="text-align: center"><?=$row["description"]?></p><br>
+                                    <p style="text-align: center; font-size:1rem"><?=$row["description"]?></p><br>
                                     <p>
                                 </a>
 

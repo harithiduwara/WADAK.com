@@ -5,8 +5,9 @@ if(isset($_POST['add']))
 {
 
 $question=$_POST["question"];
+$qanswer=$_POST["answer"];
 
-$sql = "INSERT INTO faq(question)VALUES('$question')";
+$sql = "INSERT INTO faq(question,answer)VALUES('$question','$qanswer')";
 
     if(mysqli_query($conn,$sql)){
         echo "<script type='text/javascript'>

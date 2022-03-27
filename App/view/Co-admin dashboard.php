@@ -28,7 +28,7 @@
             <a href="/WADAK.com/App/view/jobs.php"class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Posts</a>    
 
             <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i>
-                &nbsp;&nbsp;Q & A Session</a>
+                &nbsp;&nbsp;FAQ</a>
             <a href="/WADAK.com/App/view/chat2.php" class="icon-a"><i class="fa fa-comment icons"></i>
                 &nbsp;&nbsp;Chat</a>
             <a href="/WADAK.com/App/view/News.php" class="icon-a"><i class="fa fa-newspaper-o icons"></i>

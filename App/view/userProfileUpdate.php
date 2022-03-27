@@ -125,7 +125,7 @@
                     </div>
 
                     <div class="inputbox">
-                        <input type="text" name="desc" value="<?=$userData["profileDescription"]?>"
+                        <input type="text" name="profileDescription" value="<?=$userData["profileDescription"]?>"
                             placeholder="Profile Description">
                     </div>
                     <div>
