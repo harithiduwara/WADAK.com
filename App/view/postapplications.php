@@ -6,6 +6,7 @@
  * REJECTED  - 2
  * COMPLETED - 3
  * CANCELLED - 4
+ * DELETED - 5
  */
 $status =
     [
@@ -46,7 +47,7 @@ $postTypeUC = ucfirst($postType);
 <html>
 
 <head>
-    <title>Post Applications</title>
+    <title>Received Applications</title>
     <style>
         a {
             text-decoration: none;
@@ -103,7 +104,7 @@ $postTypeUC = ucfirst($postType);
 
         <div class="head">
             <div class="col-div-1">
-                <p class="nav">Post Applications </p>
+                <p class="nav">Received Applications</p>
             </div>
 
             <div class="col-div-1">

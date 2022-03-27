@@ -5,7 +5,7 @@ $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
 
 if (!$con) {
     die("Connection failed" . mysqli_connect_error());
-}
+};
 
 $active_uid = $_GET["active_uid"];
 $uid = $_SESSION['user']['uid'];
@@ -25,6 +25,10 @@ if ($action == "send_message") {
         }
     }
 }
+
+
+
+$search2 = mysqli_fetch_assoc($search1);
 
 ?>
 
@@ -67,9 +71,15 @@ if ($action == "send_message") {
     <div class="postcontainer chat-container">
         <div class="chat">
             <div class="leftbar">
-                <input type="text" name="search" style="width: -webkit-fill-available; height:3rem; text-align:center" placeholder="Search User..">
+
+                <form>
+                    <input type="text" name="search" style="width: -webkit-fill-available; height:3rem; text-align:center" placeholder="Search User..">
+                </form>
+
                 <?php
+                
                 $users_query = "SELECT * FROM register";
+
                 $users = mysqli_query($con, $users_query);
 
                 if (mysqli_num_rows($users) > 0) {
@@ -84,7 +94,7 @@ if ($action == "send_message") {
                                 &nbsp; </div>
                             <div>
                                 <div style="font-weight:500"> <?= $row["name"] ?> </div>
-                                
+
                                 <div style="font-family:monospace">@<?= ucfirst($row["username"]) ?>
 
                                     <?PHP
@@ -120,7 +130,7 @@ if ($action == "send_message") {
                     </div>
                     <div>
                         <div style="font-weight:500;font-size:1.3em"> <?= $chatPerson2["name"] ?> </div>
-                        <div style="font-family:monospace">@<?= ucfirst($chatPerson2["username"]) ?>
+                        <div style="font-family:monospace"><?php @ ucfirst($chatPerson2["username"]) ?>
                             <?PHP
                             if ($chatPerson2["userrole"] == "admin" || $chatPerson2["userrole"] == "coadmin") {
                             ?> <i class="fa fa-star" style="color:gold"></i>

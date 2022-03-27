@@ -1,200 +1,202 @@
 <?php
-    session_start();
+session_start();
 
-    $uid = $_GET["uid"];
+$uid = $_GET["uid"];
 
-    $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+$con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
 
-    if(!$con){
-        die("Connection failed" .mysqli_connect_error());
-        }
+if (!$con) {
+    die("Connection failed" . mysqli_connect_error());
+}
 
-    $query = "select * from postjob where uid=$uid";
+$query = "select * from postjob where uid=$uid";
 
-    $data = mysqli_query($con, $query);
+$data = mysqli_query($con, $query);
 
-    $query2 ="SELECT * FROM register where uid=$uid";
+$query2 = "SELECT * FROM register where uid=$uid AND status = 0";
 
-    $data2 = mysqli_query($con, $query2);
-    
-    $row2 = mysqli_fetch_assoc($data2);
+$data2 = mysqli_query($con, $query2);
+
+$row2 = mysqli_fetch_assoc($data2);
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-    <head>
-        <meta charset="UTF-8">
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <style>
         a {
             text-decoration: none;
         }
+    </style>
+    <title><?= $row2["username"] ?></title>
+    <link rel="stylesheet" href="/WADAK.com/App/assets/css/userprofile.css">
 
-        </style>
-        <title><?=$row2["username"]?></title>
-        <link rel="stylesheet" href="/WADAK.com/App/assets/css/userprofile.css">
+    <link rel="stylesheet" href="/WADAK.com/App/view/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/WADAK.com/App/view/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/WADAK.com/App/assets/css/categorymain.css">
 
-        <link rel="stylesheet" href="/WADAK.com/App/view/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="/WADAK.com/App/view/css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="/WADAK.com/App/assets/css/categorymain.css">
-
-        <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
-    </head>
-
+    <script src="https://kit.fontawesome.com/553d46dead.js" crossorigin="anonymous"></script>
+</head>
 
 
-    <body>
 
-        <nav>
-            <a href="/WADAK.com/App/view/home.php"><label class="logo">WADAK</label></a>
-            <ul style="margin-top: 1rem">
-                <?php
-                if(isset($_SESSION["user"]["userrole"])){?>
+<body>
+
+    <nav>
+        <a href="/WADAK.com/App/view/home.php"><label class="logo">WADAK</label></a>
+        <ul style="margin-top: 1rem">
+            <?php
+            if (isset($_SESSION["user"]["userrole"])) { ?>
                 <li><a href="/WADAK.com/App/view/postjob.php">Add Post</a></li>
-                <?php
-                    }
-                    ?>
-                <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
-                <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
+            <?php
+            }
+            ?>
+            <li><a href="/WADAK.com/App/view/jobs.php?postType=job">Jobs</a></li>
+            <li><a href="/WADAK.com/App/view/jobs.php?postType=service">Services</a></li>
 
-                <?php if(!isset($_SESSION["user"]["userrole"])){?>
+            <?php if (!isset($_SESSION["user"]["userrole"])) { ?>
 
                 <li><a href="./login.php">Login</a></li>
-                <?php }else {?>
+            <?php } else { ?>
                 <li><a href="/WADAK.com/App/view/messages.php">Messages</a></li>
                 <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a></li>
-                <?php } ?>
+            <?php } ?>
 
-            </ul>
-        </nav>
-        <div class="postcontainer" style="height:120vmin; background-color:white">
-            <div class="grid-items" style=" display: grid;
+        </ul>
+    </nav>
+    <div class="postcontainer" style="height:120vmin; background-color:white">
+        <div class="grid-items" style=" display: grid;
                                             grid-template-columns: 1fr;
                                             grid-gap: 1rem; border-radius:10%">
 
-                <hr>
-                <div class=" cardcontainer">
+            <hr>
+            <div class=" cardcontainer">
 
-                    <div class="card" style="border-radius:10%">
+                <div class="card" style="border-radius:10%">
 
-                        <header>
-                            <div class="avatar">
-                                <img src="<?=$row2["profilePic"]?>" alt="Image" id="profilepic" />
-                            </div>
-                        </header>
-
-                        <h3 class="usernameProfile"><?=$row2["username"]?></h3>
-
-                        <div class="profileDescription">
-                            <p><?=$row2["profileDescription"]?>
-                            </p>
+                    <header>
+                        <div class="avatar">
+                            <img src="<?= $row2["profilePic"] ?>" alt="Image" id="profilepic" />
                         </div>
+                    </header>
 
-                        <div class="chat" style="padding:0.5rem">
-                            <?php
-                        if(isset($_SESSION["user"]["userrole"])){?>
-                            <span class="navbargreen"><a href="" target="_blank"><i
-                                        class="fa fa-envelope fa-3x"></i></a>
+                    <h3 class="usernameProfile"><?= $row2["username"] ?></h3>
 
-                            </span>
-                            <?php
-                        }
-                        else{?>
-                            <span class="navbargreen"><a href="/WADAK.com/App/view/login.php"><i
-                                        class="fa fa-envelope fa-3x"></i></a></span>
-                            <?php
-                        }
-                        ?>
-                        </div>
-
-
-                        <footer>
-                            <?php
-                                $query3 = "SELECT * FROM register where uid = $uid";
-                                
-                                $data3 = mysqli_query($con, $query3);
-
-                                $row3 = mysqli_fetch_assoc($data3);
-                            ?>
-
-                            <?php 
-                                if($row3["telegram"]=""){?>
-                            
-                            <?php
-                                }else{?>
-                                    <a href="<?=$row3["telegram"]?>" target="_blank"><i class="fa fa-telegram fa-2x"></i></a>
-                                <?php }
-                            ?>
-                            <?php 
-                                if($row3["twitter"]=""){?>
-                            <?php
-                                }else{?>
-                                    <a href="<?=$row3["twitter"]?>" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-                                <?php }
-                            ?>
-                            <?php 
-                                if($row3["instagram"]=""){?>
-                            
-                            <?php
-                                } else{ ?>
-                                    <a href="<?=$row3["instagram"]?>" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
-                               <?php }
-                            ?>
-
-
-                        </footer>
+                    <div class="profileDescription">
+                        <p><?= $row2["profileDescription"] ?>
+                        </p>
                     </div>
 
+                    <div class="chat" style="padding:0.5rem">
+                        <?php
+                        if (isset($_SESSION["user"]["userrole"])) { ?>
+                            <?PHP
+                            if ($uid = $_SESSION["user"]['uid']) { ?>
+
+                            <?php } else { ?>
+                                <span class="navbargreen"><a href="/WADAK.com/App/view/messages.php?active_uid=<?= $row2["uid"] ?>" target="_blank"><i class="fa fa-envelope fa-3x"></i></a>
+                                <?php }
+                                ?>
+
+
+                                </span>
+                            <?php
+                        } else { ?>
+                                <span class="navbargreen"><a href="/WADAK.com/App/view/login.php"><i class="fa fa-envelope fa-3x"></i></a></span>
+                            <?php
+                        }
+                            ?>
+                    </div>
+
+
+                    <footer>
+                        <?php
+                        $query3 = "SELECT * FROM register where uid = $uid";
+
+                        $data3 = mysqli_query($con, $query3);
+
+                        $row3 = mysqli_fetch_assoc($data3);
+                        ?>
+
+                        <?php
+                        if ($row3["telegram"] = "") { ?>
+
+                        <?php
+                        } else { ?>
+                            <a href="<?= $row3["telegram"] ?>" target="_blank"><i class="fa fa-telegram fa-2x"></i></a>
+                        <?php }
+                        ?>
+                        <?php
+                        if ($row3["twitter"] = "") { ?>
+                        <?php
+                        } else { ?>
+                            <a href="<?= $row3["twitter"] ?>" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                        <?php }
+                        ?>
+                        <?php
+                        if ($row3["instagram"] = "") { ?>
+
+                        <?php
+                        } else { ?>
+                            <a href="<?= $row3["instagram"] ?>" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                        <?php }
+                        ?>
+
+
+                    </footer>
                 </div>
 
             </div>
-            <br>
-            <br>
-            <hr>
-            <div class="posts">
 
-                <div>
-                    <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem;
+        </div>
+        <br>
+        <br>
+        <hr>
+        <div class="posts">
+
+            <div>
+                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem;
                 background-color:white">
 
-                        <?php
-                if(mysqli_num_rows($data)>0){
-                    while($row = mysqli_fetch_assoc($data)){
-                        ?>
-                        <div class="sectionheading3" style="">
-                            <div class="card1" style="margin:1rem; border-radius:10%; background-color:#f1f1fa "><img src="
                     <?php
-                    if($row["filename"]==null){
-                        echo "/WADAK.com/App/uploads/noimage.jpg";
-                    }
-                    else{
-                       echo $row["filename"];
-                    }
+                    if (mysqli_num_rows($data) > 0) {
+                        while ($row = mysqli_fetch_assoc($data)) {
+                    ?>
+                            <div class="sectionheading3" style="">
+                                <div class="card1" style="margin:1rem; border-radius:10%; background-color:#f1f1fa "><img src="
+                    <?php
+                            if ($row["filename"] == null) {
+                                echo "/WADAK.com/App/uploads/noimage.jpg";
+                            } else {
+                                echo $row["filename"];
+                            }
                     ?>
                 
                 
                 " alt="service" style="width:100% ; height:200px; object-fit: cover;border-radius:15%">
-                                <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
-                                    <h3 style="text-align:center; color:green; font-size:1.5rem; font-weight:400"><?= $row["title"] ?>
-                                    </h3>
-                                </a>
-                                <br>
-                                <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?=$row["jobid"]?>">
-                                    <p style="text-align: center; font-size:1rem"><?=$row["description"]?></p><br>
-                                    <p>
-                                </a>
+                                    <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row["jobid"] ?>">
+                                        <h3 style="text-align:center; color:green; font-size:1.5rem; font-weight:400"><?= $row["title"] ?>
+                                        </h3>
+                                    </a>
+                                    <br>
+                                    <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row["jobid"] ?>">
+                                        <p style="text-align: center; font-size:1rem"><?= $row["description"] ?></p><br>
+                                        <p>
+                                    </a>
 
-                                </p>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <?php
-                }
-                }
-                ?>
-                    </div>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
-    </body>
+        </div>
+</body>
 
 </html>
