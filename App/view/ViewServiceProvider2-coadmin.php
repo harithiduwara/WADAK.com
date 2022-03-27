@@ -15,11 +15,11 @@
   <p class="logo1"> <span class="menu1">&#9776;</span></p>
   <a href="/WADAK.com/App/view/home.php"class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
   <a href="/WADAK.com/App/view/Co-admin dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
-  <a href="/WADAK.com/App/view/ServiceProviderUI-coadmin.php"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Service Providers</a>
+  <a href="/WADAK.com/App/view/ServiceProviderUI-coadmin.php"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Users</a>
   <a href="/WADAK.com/App/view/jobs.php"class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Posts</a>
  
-  <a href="/WADAK.com/App/view/Q&A.php"class="icon-a"><i class="fa fa-question-circle icons"></i> &nbsp;&nbsp;Q & A Session</a>
-  <a href="/WADAK.com/App/view/chat.php"class="icon-a"><i class="fa fa-comment icons"></i> &nbsp;&nbsp;Chat</a>
+  <a href="/WADAK.com/App/view/Q&A.php"class="icon-a"><i class="fa fa-question-circle icons"></i> &nbsp;&nbsp;FAQ</a>
+  <a href="/WADAK.com/App/view/messages.php"class="icon-a"><i class="fa fa-comment icons"></i> &nbsp;&nbsp;Chat</a>
   <a href="/WADAK.com/App/view/news.php"class="icon-a"><i class="fa fa-newspaper-o icons"></i> &nbsp;&nbsp;News</a>
   <!--<a href="#"class="icon-a"><i class="fa fa-bell icons"></i> &nbsp;&nbsp;Notification</a>-->
 </div>
@@ -27,7 +27,7 @@
 <div id="main">
   <div class="head">
     <div class="col-div-1">
-      <p class="nav">Service Provider Details</p>
+      <p class="nav">User Details</p>
 
     </div>
 
@@ -61,7 +61,7 @@
 
   <div class="search-form">
   <form action="" method="POST" >
-    <input type ="text" name ="UserName" placeholder="Search by User Name" class="text">
+    <input type ="text" name ="username" placeholder="Search by User Name" class="text">
     <input type ="submit" name ="search" placeholder="Search" value="Search" class="submit">
    </form>
   </div>
@@ -71,8 +71,8 @@ $conn= mysqli_connect("localhost","root","");
 $db=mysqli_select_db($conn,'wadak');
 if(isset($_POST['search']))
 {
-    $UserName= $_POST['UserName'];
-    $query="SELECT SP_ID,UserName,Fname,Lname,Gender,Email,address,contact,DOB,description FROM service_provider WHERE UserName = '$UserName'";
+    $username= $_POST['username'];
+    $query="SELECT uid,username,name,birthday,address,email,contactno,userrole,profileDescription,telegram,twitter,instagram,profilePic FROM register WHERE username = '$username'";
     $query_run=mysqli_query($conn,$query);
     while($row = mysqli_fetch_array($query_run))
     {
@@ -85,58 +85,26 @@ if(isset($_POST['search']))
         <table>
           <tr>
             <td>
-              First Name :
+              User ID :
             </td>
             <td>
-              <?php echo $row['Fname']; ?>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Last Name :
-            </td>
-            <td>
-             <?php echo $row['Lname']; ?>
+              <?php echo $row['uid']; ?>
             </td>
           </tr>
           <tr>
             <td>
-              Service Provider ID :
+              User Name :
             </td>
             <td>
-              <?php echo $row['SP_ID']; ?>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Contact :
-            </td>
-            <td>
-               <?php echo $row['contact']; ?>
+             <?php echo $row['username']; ?>
             </td>
           </tr>
           <tr>
             <td>
-              Email :
+              Name :
             </td>
             <td>
-              <?php echo $row['Email']; ?>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Address:
-            </td>
-            <td>
-              <?php echo $row['address']; ?> 
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Gender:
-            </td>
-            <td>
-              <?php echo $row['Gender']; ?>
+              <?php echo $row['name']; ?>
             </td>
           </tr>
           <tr>
@@ -144,20 +112,76 @@ if(isset($_POST['search']))
               Date of Birth :
             </td>
             <td>
-              <?php echo $row['DOB']; ?>
+               <?php echo $row['birthday']; ?>
             </td>
           </tr>
           <tr>
             <td>
-              Description :
+              Address :
             </td>
             <td>
-              <?php echo $row['description']; ?>
+              <?php echo $row['address']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Email:
+            </td>
+            <td>
+              <?php echo $row['email']; ?> 
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Contact No:
+            </td>
+            <td>
+              <?php echo $row['contactno']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              User Role:
+            </td>
+            <td>
+              <?php echo $row['userrole']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Profile Description :
+            </td>
+            <td>
+              <?php echo $row['profileDescription']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Telegram:
+            </td>
+            <td>
+              <?php echo $row['telegram']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Twitter:
+            </td>
+            <td>
+              <?php echo $row['twitter']; ?>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Instagram:
+            </td>
+            <td>
+              <?php echo $row['instagram']; ?>
             </td>
           </tr>
         </table>
         <div class="box1">
-          <a href="/WADAK.com/App/model/deleteServiceProvider-coadmin.php?id=<?php echo $row["UserName"]; ?>">Delete</a>
+          <a href="/WADAK.com/App/model/deleteServiceProvider-coadmin.php?id=<?php echo $row["username"]; ?>">Delete</a>
         </div>
       </form>
     </div>
@@ -165,9 +189,10 @@ if(isset($_POST['search']))
   <div class="col-div-2">
     <div class="imgbox">
       <div class="img">
-        <img src="/WADAK.com/App/assets/images/sp.png" width="325" height="380">
+        <img src= <?php echo$row['profilePic'];?> width="325" height="380">
+        <!--/WADAK.com/App/assets/images/sp.png   width="325" height="380"-->
       </div>
-      <h3 style="color:white;margin-right:40px;margin-left:40px;background-color:black;padding : 10px 15px">User Name :  <?php echo$row['UserName'];?></h3>
+      <h3 style="color:white;margin-right:40px;margin-left:40px;background-color:black;padding : 10px 15px">User Name :  <?php echo$row['username'];?></h3>
     </div>
     
   </div>

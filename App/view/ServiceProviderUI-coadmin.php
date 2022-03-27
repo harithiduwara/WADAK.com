@@ -6,7 +6,7 @@
         die("Connection failed" . mysqli_connect_error());
     }
     
-    $result = "SELECT SP_ID,UserName,Email,description FROM service_provider";
+    $result = "SELECT uid,name,username,email,userrole FROM register";
 
     $data = mysqli_query($con, $result);
 ?>
@@ -14,7 +14,7 @@
 <!Doctype HTML>
 <html>
 <head>
-    <title>Service Provider</title>
+    <title>view User-</title>
     <style>a {text-decoration: none;}</style>
     <link rel="stylesheet" href="/WADAK.com/App/assets/css/ServiceProviderUI-coadmin.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -40,7 +40,7 @@
 <div id="main">
     <div class="head">
         <div class="col-div-1">
-            <p class="nav">Service Provider</p>
+            <p class="nav">User Details</p>
 
         </div>
 
@@ -77,20 +77,22 @@
             <br/>
             <table style="width:835px; margin-left:10px">
                     <tr>
-                        <td style="color:green;">Id</td>
+                        <td style="color:green;">User ID</td>
+                        <td style="color:green;">Name</td>
                         <td style="color:green;">User Name</td>
                         <td style="color:green;">Email</td>
-                        <td style="color:green;">Description</td>
+                        <td style="color:green;">User Role</td>
                     </tr>
                     <?php
 	             $i=0;
 	             while($row = mysqli_fetch_array($data)) {
 	          ?>
                     <tr class="<?php if(isset($classname)) echo $classname;?>">
-                        <td><?php echo $row["SP_ID"]; ?></td>
-                        <td><?php echo $row["UserName"]; ?></td>
-                        <td><?php echo $row["Email"]; ?></td>
-                        <td><?php echo $row["description"]; ?></td>
+                        <td><?php echo $row["uid"]; ?></td>
+                        <td><?php echo $row["name"]; ?></td>
+                        <td><?php echo $row["username"]; ?></td>
+                        <td><?php echo $row["email"]; ?></td>
+                        <td><?php echo $row["userrole"]; ?></td>
                     </tr>
                     <?php
 	           $i++;

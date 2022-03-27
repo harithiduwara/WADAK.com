@@ -24,13 +24,13 @@
                 &nbsp;&nbsp;Dashboard</a>
             <a href="/WADAK.com/App/view/ServiceProviderUI-coadmin.php" class="icon-a"><i
                     class="fa fa-users icons"></i>
-                &nbsp;&nbsp;Service Providers</a>
+                &nbsp;&nbsp;Users</a>
             <a href="/WADAK.com/App/view/jobs.php"class="icon-a"><i class="fa fa-bullseye icons"></i> &nbsp;&nbsp;Posts</a>    
             <a href="/WADAK.com/App/view/acceptad.php"class="icon-a"><i class="fa fa-bullhorn icons"></i> &nbsp;&nbsp;Advertiesments</a> 
 
             <a href="/WADAK.com/App/view/Q&A.php" class="icon-a"><i class="fa fa-question-circle icons"></i>
                 &nbsp;&nbsp;FAQ</a>
-            <a href="/WADAK.com/App/view/chat2.php" class="icon-a"><i class="fa fa-comment icons"></i>
+            <a href="/WADAK.com/App/view/messages.php" class="icon-a"><i class="fa fa-comment icons"></i>
                 &nbsp;&nbsp;Chat</a>
             <a href="/WADAK.com/App/view/News.php" class="icon-a"><i class="fa fa-newspaper-o icons"></i>
                 &nbsp;&nbsp;News</a>
@@ -58,7 +58,7 @@
 
                     <div class="profile">
 
-                        <p>Co-Admin Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
+                        <p>Co-Admin  <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
                             <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a
                                     href="/WADAK.com/App/view/CoAdmin-profile.php">Profile</a></p>
@@ -79,10 +79,10 @@
 
             <div class="col-div-4-1">
                 <div class="box">
-                    <p class="head-1">Total Service Providers</p>
+                    <p class="head-1">Total Users</p>
                     <i class="fa fa-users box-icon"></i>
                     <?php 
-                      $sp_query="SELECT * FROM service_provider";
+                      $sp_query="SELECT * FROM register";
                       $sp_query_run=mysqli_query($connection,$sp_query);
                       if($sp_total=mysqli_num_rows($sp_query_run))
                       {
@@ -95,16 +95,16 @@
                     ?>
                 </div>
             </div>
-            <div class="col-div-4-1">
+           <div class="col-div-4-1">
                 <div class="box">
-                    <p class="head-1">Total Hire Persons</p>
-                    <i class="fa fa-users box-icon"></i>
-                    <?php 
-                      $hp_query="SELECT * FROM hire_person";
-                      $hp_query_run=mysqli_query($connection,$hp_query);
-                      if($hp_total=mysqli_num_rows($hp_query_run))
+                <p class="head-1">Total Job Posts</p>
+                      <i class="fa fa-clipboard box-icon" aria-hidden="true"></i>
+                      <?php 
+                      $post_query="SELECT * FROM postjob";
+                      $post_query_run=mysqli_query($connection,$post_query);
+                      if($post_total=mysqli_num_rows($post_query_run))
                       {
-                        echo '<h2 class="nb-0" style="margin-top:50px;margin-left:30px;color:grey;"> '.$hp_total.' </h2>';
+                        echo '<h2 class="nb-0" style="margin-top:50px;margin-left:30px;color:grey;"> '.$post_total.' </h2>';
                       }
                       else
                       {
@@ -115,7 +115,7 @@
             </div>
             <div class="col-div-4-1">
                 <div class="box">
-                    <p class="head-1">Q&A Session</p>
+                    <p class="head-1">FAQ</p>
                     <i class="fa fa-question box-icon"></i>
                     <p>Total Questions :</p>
                     <?php 
@@ -138,7 +138,7 @@
             <div class="col-div-4-1">
                 <div class="box-1">
                     <div class="content-box-1">
-                        <p class="head-1">Advertisements <span><a href="#">Handle</a></span></p>
+                        <p class="head-1">Advertisements <span><a href="/WADAK.com/App/view/acceptad.php">Handle</a></span></p>
                         <?php 
                       $ad_query="SELECT * FROM advertisement";
                       $ad_query_run=mysqli_query($connection,$ad_query);
@@ -175,13 +175,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-div-4-1">
+            <!--<div class="col-div-4-1">
                 <div class="box-1">
                     <div class="content-box-1">
                         <p class="head-1">Total Job Posts</p>
                         <i class="fa fa-clipboard box-icon" aria-hidden="true"></i>
                         <?php 
-                      $post_query="SELECT * FROM postjob";
+                      /*$post_query="SELECT * FROM postjob";
                       $post_query_run=mysqli_query($connection,$post_query);
                       if($post_total=mysqli_num_rows($post_query_run))
                       {
@@ -191,10 +191,10 @@
                       {
                         echo '<h2 class="nb-0"> No Data </h2>';
                       }
-                    ?>
+                   */ ?>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <?php 
                
