@@ -13,6 +13,7 @@ $query = "select * from postjob , register where register.uid = postjob.uid and 
 
 $data = mysqli_query($con, $query);
 
+
 ?>
 
 <!DOCTYPE html>

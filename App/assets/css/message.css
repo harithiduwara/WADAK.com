@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    font-size: small;
-    font-weight: lighter;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 body {
     padding: 0%;
@@ -112,17 +104,69 @@ nav ul li a:hover {
 }
 
 .leftbar {
-    border: 1px solid green;
+    height: 100%;
+    overflow: scroll;
 }
 
 .rightbar {
     border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: scroll;
+
 }
 
 #searchbar {
     width: -webkit-fill-available;
 }
 
-.typing {
-    margin-top: 55vh;
+.typing {}
+
+.chat-container * {
+    font-family: 'Roboto', sans-serif;
+}
+
+.chat-item {
+    display: flex;
+    padding: .5rem;
+    font-size: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: black;
+    border-left: .3rem solid transparent;
+    align-items: center;
+}
+
+.chat-item.active {
+    background: #eee;
+    border-left: .3rem solid green;
+
+}
+
+.chat-item:hover {
+    background: #eee
+}
+
+[name=message] {
+    width: 80%;
+    height: 3rem;
+    text-align: center;
+    margin-bottom: 0rem
+}
+
+.btn-send {
+    padding: .8rem;
+    color: white;
+    background-color:green;
+    border:transparent;
+}
+
+.msg {
+    background: #eee;
+    border-radius: .3rem;
+    padding: 5px;
+    margin: 0.5rem;
+    display: inline;
+
 }
