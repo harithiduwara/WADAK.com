@@ -111,7 +111,7 @@
                     <!-- View Category table -->
                     <?php
                     include_once 'cataconfig.php';
-                    $result = mysqli_query($conn,"SELECT C_ID, Name FROM categories");
+                    $result = mysqli_query($conn,"SELECT categoryId, categoryName FROM jobCategories");
                     ?>
 
 
@@ -119,7 +119,7 @@
                         <tr>
                             <th>Category ID</th>
                             <th>Name</th>
-                            <th>Image</th>
+
                         </tr>
 
                         <?php
@@ -128,8 +128,8 @@
 	          ?>
                         <tr class="<?php if(isset($classname)) echo $classname;?>">
                             <!--<form action="" method="POST" role = "form">-->
-                            <td><?php echo $row["C_ID"]; ?></td>
-                            <td><?php echo $row["Name"]; ?></td>
+                            <td><?php echo $row["categoryId"]; ?></td>
+                            <td><?php echo $row["categoryName"]; ?></td>
                             <!--<td>
                    <input type = "checkbox" name = "keyToDelete" value="<?php // echo $row['C_ID'];?>" required >
                </td>-->
