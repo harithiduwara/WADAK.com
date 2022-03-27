@@ -128,7 +128,7 @@
                                                 <td>" . $row["uid"]. "</td>
                                                 <td>" . $row["email"]. "</td>
                                                 <td>" . $row["contactno"]. "</td>
-                                                <td><div class=\"del-button\"><a href='/WADAK.com/App/model/deleteCoadmin.php?id=".$row['uid']."' id='btn'>Delete</a></div></td>
+                                                <td><div class=\"del-button\"><a href='/WADAK.com/App/model/deleteCoadmin.php?id=".$row['uid']."' id='btn'>Remove</a></div></td>
                                             </tr>";
                                     }
                                     echo "</table>";
