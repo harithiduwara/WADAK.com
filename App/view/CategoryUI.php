@@ -90,8 +90,8 @@
                     <div class="profile">
                         <p>Admin<i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="#">Profile</a></p>
-                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Dashboard</a> </p>
+                          
+                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="/WADAK.com/App/view/Admin-dashboard.php">Dashboard</a> </p>
                             <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a
                                     href="/WADAK.com/App/controller/logout.php">Log Out</a></p>
                         </div>
