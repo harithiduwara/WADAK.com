@@ -73,7 +73,7 @@
 
     <div class="col-div-2">
         <div class="box">
-            <p class="head-1">Service Provider - Details</p>
+            <p class="head-1">User - Details</p>
             <br/>
             <table style="width:835px; margin-left:10px">
                     <tr>
