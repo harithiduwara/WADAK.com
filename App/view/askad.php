@@ -103,7 +103,7 @@ session_start();
 
 
 
-        <div class="inputContainer" style="margin:auto;width: 50%;">
+        <div class="inputContainer" style="margin:auto;width: 50%;height:auto;">
             <div class="form" style="position: relative;">
                 <form action="addpayHandle.php" method="POST" enctype="multipart/form-data">
                     <div class="inputbox">

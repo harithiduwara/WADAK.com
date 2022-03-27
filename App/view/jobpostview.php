@@ -49,11 +49,12 @@ $row = mysqli_fetch_assoc($result);
             <?php if (isset($_SESSION["user"]["userrole"])) { ?>
                 <li><a href="/WADAK.com/App/view/messages.php" target="_blank">Messages</a> </li>
             <?php } ?>
-            <li><a href="/WADAK.com/App/view/hirepersondashboard.php?uid=<?= $uid ?>" target="_blank">PROFILE</a>
-            </li>
+
             <?php if (!isset($_SESSION["user"]["userrole"])) { ?>
                 <li><a href="./login.php"></a></li>
             <?php } else { ?>
+                <li><a href="/WADAK.com/App/view/hirepersondashboard.php?uid=<?= $uid ?>" target="_blank">PROFILE</a>
+                </li>
                 <li><a href="/WADAK.com/App/view/hirepersondashboard.php"><i class="fas fa-user"></i></a>
                 </li>
             <?php } ?>
@@ -85,8 +86,15 @@ $row = mysqli_fetch_assoc($result);
                                 font-weight: bold;
                                 text-transform: uppercase;
                                 text-align: center;"> <?php echo $row["title"] ?></h1>
+                <p style="font-size:1.5rem;margin:0.3rem 0; color:green">
 
-                <p style="font-size:2rem;margin:1rem 0">
+                    <?php
+                    $username = mysqli_query($con, "SELECT username from register where uid = '" . $row["uid"] . "'");
+                    $username = mysqli_fetch_assoc($username);
+                    echo "By " . $username["username"] ?>
+                </p>
+
+                <p style="font-size:2rem;margin:1rem 0; ">
                     <?php echo $row["description"] ?>
                 </p>
 
@@ -98,34 +106,26 @@ $row = mysqli_fetch_assoc($result);
 
                 <div style="margin-top:1rem">
 
-                    <?php
 
-                    if ($row["uid"] != $uid) { ?>
+                    <?PHP
+                    if (!isset($_SESSION["user"]["userrole"])) { ?>
                         <a href="/WADAK.com/App/view/apply.php?jobid=<?= $row["jobid"] ?>" class="action-button"> Apply </a>
-                    <?php }
-
-
-                    if (isset($_SESSION["user"]["userrole"])) { ?>
-
-                        <a href="/WADAK.com/App/view/messages.php?active_uid=<?= $row["uid"] ?>" class="action-button">
-                            Chat
-                        </a>
-
-                    <?php } else { ?>
-
-                        <a href="/WADAK.com/App/view/login.php" class="action-button">
-                            Chat
-                        </a>
-
-                    <?php }
-
-                    if (isset($_SESSION["user"]["userrole"]) && $uid == $row["uid"]) { ?>
-                        <a href="" style="background:#aa0000" class="action-button"> Delete </a>
-
-                    <?php } ?>
-
+                        <a href="/WADAK.com/App/view/login.php" class="action-button">Chat</a>
+                        <?php } else {
+                        if ($row["uid"] != $uid) { ?>
+                            <a href="/WADAK.com/App/view/apply.php?jobid=<?= $row["jobid"] ?>" class="action-button"> Apply </a>
+                            <a href="/WADAK.com/App/view/messages.php?active_uid=<?= $row["uid"] ?>" class="action-button">
+                                Chat
+                            </a>
+                        <?php } else { ?>
+                            <a href="/WADAK.com/App/controller/deletePost.php?jobid=<?= $row["jobid"] ?>" style="background:#aa0000" class="action-button"> Delete </a>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
             </diV>
+
             <div style="padding:1rem; margin-top: -4rem">
                 <h1 style="font-size:3rem">Rank</h1>
                 <h1 style="font-size:2rem">5 Stars</h1>

@@ -17,11 +17,33 @@
 
     <div id="mySidenav" class="sidenav">
         <p class="logo">WADAK <span class="menu">&#9776;</span></p>
-        <p class="logo1"> <span class="menu1">&#9776;</span></p>
-        <a href="#" class="icon-a"><i class="fa fa-home icons"></i> &nbsp;&nbsp;Home</a>
-        <a href="Admin-dashboard.html" class="icon-a"><i class="fa fa-dashboard icons"></i>
-            &nbsp;&nbsp;Dashboard</a>
 
+        <a href="/WADAK.com/App/view/home.php" class="icon-a"><i class="fa fa-home icons"></i>
+            &nbsp;&nbsp;Home</a>
+        <a href="/WADAK.com/App/view/hirepersondashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            &nbsp;&nbsp;Dashboard</a>
+        <a href="/WADAK.com/App/view/joborders.php?postType=job" class="icon-a"><i class="fa fa-tasks icons"></i>
+            &nbsp;&nbsp;Job Posts</a>
+        <a href="/WADAK.com/App/view/previousordershireperson.php?postType=job" class="icon-a"><i class="fa fa-tasks icons"></i>
+            &nbsp;&nbsp;Previous Orders</a>
+        <a href="/WADAK.com/App/view/joborders.php?postType=service" class="icon-a"><i class="fa fa-tasks icons"></i>
+            &nbsp;&nbsp;Service Posts</a>
+        <a href="/WADAK.com/App/view/previousordershireperson.php?postType=service" class="icon-a"><i class="fa fa-tasks icons"></i>
+            &nbsp;&nbsp;Previous Services</a>
+        <a href="/WADAK.com/App/view/news2.php" Target="_blank" class="icon-a"><i class="far fa-envelope-open"></i>
+            &nbsp;&nbsp;News</a>
+        <a href="/WADAK.com/App/view/messages.php" Target="_blank" class="icon-a"><i class="fa fa-tasks icons"></i>
+            &nbsp;&nbsp;Messages</a>
+        <a href="/WADAK.com/App/view/a.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            &nbsp;&nbsp;Achievements</a>
+        <a href="/WADAK.com/App/view/complain.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            &nbsp;&nbsp;Complains</a>
+        <a href="/WADAK.com/App/view/leaderboard.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            &nbsp;&nbsp;Leaderboard</a>
+        <a href="/WADAK.com/App/view/askad.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            &nbsp;&nbsp;Advertisements</a>
+        <a href="/WADAK.com/App/view/userProfileUpdate.php" Target="_blank" class="icon-a"><i class="fa fa-dashboard icons"></i>
+            &nbsp;&nbsp;Update Profile</a>
     </div>
 
     <div id="main">
@@ -44,7 +66,7 @@
                 </div>
 
                 <div class="profile">
-                    <p>Service Provider Name <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
+                    <p>wathsala<i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                     <div class="profile-div">
                         <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="profile.php">Profile</a></p>
                         <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="#">Dashboard</a> </p>

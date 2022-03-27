@@ -102,12 +102,12 @@
             </div>
             <div class="col-div-4-1">
                 <div class="box">
-                    <p class="head-1">Total Service Providers</p>
+                    <p class="head-1">Total Users</p>
                     <i class="fa fa-users box-icon"></i>
 
                     <?php
 
-                        $sp_query = "SELECT * FROM register WHERE userrole = 'serviceprovider' ";
+                        $sp_query = "SELECT * FROM register WHERE userrole = 'user1' ";
                         $sp_query_run = mysqli_query($connection,$sp_query);
 
                         if($sp_total = mysqli_num_rows($sp_query_run))
@@ -123,7 +123,7 @@
             </div>
             <div class="col-div-4-1">
                 <div class="box">
-                    <p class="head-1">Total Hire Persons</p>
+                    <p class="head-1">Total </p>
                     <i class="fa fa-users box-icon"></i>
 
                     <?php

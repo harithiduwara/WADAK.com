@@ -9,7 +9,7 @@ if (!$con) {
     die("Connection failed" . mysqli_connect_error());
 }
 
-$query = "select * from postjob , register where register.uid = postjob.uid and (title like '%" . $_GET["search"] . "%' or description like '%" . $_GET["search"] . "%')";
+$query = "select * from postjob , register where postjob.status = 0 AND register.uid = postjob.uid and (title like '%" . $_GET["search"] . "%' or description like '%" . $_GET["search"] . "%')";
 
 $data = mysqli_query($con, $query);
 
@@ -129,7 +129,7 @@ $data = mysqli_query($con, $query);
 
 
     <div class="container3">
-        <h1 class="">TOP SERVICE CATAGORIES </h1>
+        <h1 class="">TOP SERVICE CATEGORIES </h1>
 
         <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap:1rem; height: 40vmin;
                 overflow: hidden">
@@ -137,7 +137,11 @@ $data = mysqli_query($con, $query);
             <?php
 
 
-            $query1 = "select * from postjob , register where postType='service' and register.uid = postjob.uid ORDER BY views DESC";
+            $query1 = "SELECT 
+                c.* , 
+                (SELECT count(*) From postjob where jobtype = c.categoryId) AS cnt  
+            FROM `jobCategories` c 
+            ORDER by cnt desc";
 
             $data1 = mysqli_query($con, $query1);
             if (mysqli_num_rows($data1) > 0) {
@@ -145,32 +149,24 @@ $data = mysqli_query($con, $query);
             ?>
                     <div class=" sectionheading3">
                         <div class="card1" style="margin:1rem; background-color: rgb(248, 248, 248); padding: 0.5rem 0.5rem 0.5rem 0.5rem; border-radius: 10%">
-                            <img src="
+                            <a href="/WADAK.com/App/view/jobs.php?search=<?=$row1["categoryName"]?>"><img src="
                     <?php
-                    if ($row1["filename"] == null) {
+                    if ($row1["categoryImage"] == null) {
                         echo "/WADAK.com/App/uploads/noimage.jpg";
                     } else {
-                        echo $row1["filename"];
+                        echo $row1["categoryImage"];
                     }
                     ?>
                 
                 
                 " alt="service" style="width:100% ; height:200px; object-fit: cover; border-radius: 10%">
-                            <a href="/WADAK.com/App/view/userprofile.php?uid=<?= $row1["uid"] ?>">
-                                <p style="text-align:end; color:green; margin: 1rem">
-                                    <?= $row1["username"] ?>
+                </a>
+                <a href="/WADAK.com/App/view/jobs.php?search=<?=$row1["categoryName"]?>">
+                                <p style="text-align:center; color:green; margin: 1rem">
+                                    <?= $row1["categoryName"] ?>
                                 </p>
                             </a>
-
-                            <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row1["jobid"] ?>">
-                                <h3 style="text-align:center"><?= $row1["title"] ?>
-                                </h3>
-                            </a>
                             <br>
-                            <a href="/WADAK.com/App/view/jobpostview.php?jobid=<?= $row1["jobid"] ?>">
-                                <p style="text-align: center"><?= $row1["description"] ?></p><br>
-                                <p>
-                            </a>
 
                             </p>
                         </div>
@@ -197,7 +193,7 @@ $data = mysqli_query($con, $query);
 
                 <?php
 
-                $query2 = "select * from postjob , register where postType='service' and register.uid = postjob.uid ORDER BY views DESC";
+                $query2 = "select * from postjob , register where postjob.status = 0 AND postType='service' and register.uid = postjob.uid ORDER BY views DESC";
 
                 $data2 = mysqli_query($con, $query2);
 

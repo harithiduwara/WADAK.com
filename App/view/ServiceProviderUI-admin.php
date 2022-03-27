@@ -107,7 +107,7 @@
                                     if(isset($_GET['search']))
                                     {
                                         $filtervalues = $_GET['search'];
-                                        $result = "SELECT * FROM register WHERE CONCAT(name,username,uid,email,contactno) LIKE '%$filtervalues%' AND userrole='serviceprovider'";
+                                        $result = "SELECT * FROM register WHERE CONCAT(name,username,uid,email,contactno) LIKE '%$filtervalues%' AND userrole='user1'";
                                         $query_run = mysqli_query($conn, $result);
 
                                         if(mysqli_num_rows($query_run) > 0)
@@ -121,7 +121,7 @@
                                                     <td><?= $row['uid']; ?></td>
                                                     <td><?= $row['email']; ?></td>
                                                     <td><?= $row['contactno']; ?></td>
-                                                    <td><div class="del-button"><a href="/WADAK.com/App/model/deletesp-admin.php?id=<?= $row['uid']; ?>">Delete</a></div></td>
+                                                    <td><div class="del-button"><a href="/WADAK.com/App/model/deletesp-admin.php?id=<?= $row['uid']; ?>">Remove</a></div></td>
                                                 </tr>
                                                 <?php
                                             }

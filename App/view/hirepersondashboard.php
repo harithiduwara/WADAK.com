@@ -122,12 +122,24 @@
             <div class="col-div-12">
                 <div class="box8" style="text-align:center">
                     <?php 
-                        $starQuery = "SELECT * FROM star_rating where jobid = (SELECT jobid FROM postjob)";
+                        $reviewQuery = "SELECT count(*) as count FROM star_rating sr , postjob pj where pj.jobid = sr.jobId  AND pj.uid = $uid";
+                        $review_count_result =  mysqli_query($con, $reviewQuery);
+                        $review_count = mysqli_fetch_assoc($review_count_result)["count"];
+
+                        $startsQ = "SELECT avg(rate) as avg FROM star_rating sr , postjob pj where pj.jobid = sr.jobId  AND pj.uid = $uid";
+                        $stars_result =  mysqli_query($con, $startsQ);
+                        $stars = mysqli_fetch_assoc($stars_result)["avg"];
+
+                        $rankQ = "SELECT rank FROM (SELECT pj.uid, avg(rate) as avg ,@curRank := @curRank + 1 AS rank FROM star_rating sr , postjob pj, (SELECT @curRank := 0) r where pj.jobid = sr.jobId GROUP BY pj.uid ORDER BY avg desc) d WHERE d.uid = $uid";
+                        $rank_result =  mysqli_query($con, $rankQ);
+                        $rank = mysqli_fetch_assoc($rank_result)["rank"]
+
                     ?>
+
                     <h1 style="color:green; font-size:5rem">LEADERBOARD</h1>
-                    <h2>Reviews : 1000</h2>
-                    <h2>Stars : 4.7</h2>
-                    <h2>Rank : 5</h2>
+                    <h2>Reviews : <?= $review_count?></h2>
+                    <h2>Stars : <?= substr($stars,0,3) ?></h2>
+                    <!-- <h2>Rank : <?= $rank ?> </h2> -->
                 </div>
             </div>
         <div class="clearfix"></div>
