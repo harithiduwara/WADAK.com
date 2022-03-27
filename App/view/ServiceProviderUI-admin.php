@@ -59,7 +59,7 @@
                     <div class="profile">
                         <p>Admin<i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="AdminProfile.php">Profile</a></p>
+                            
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Admin-dashboard.php">Dashboard</a>
                             </p>
                             <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a
