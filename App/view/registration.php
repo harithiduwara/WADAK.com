@@ -78,11 +78,9 @@
 
                 <br><br>
 
-                <br><input type="checkbox" required> &nbsp;&nbsp; “I accept the Terms of Service” or “I accept the
-                Privacy
-                Statement” Click here to indicate that you have
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;read and agree to the terms presented in the Terms and
-                Conditions agreement. <br>
+                <br><input type="checkbox" style="text-align:center" required> &nbsp;&nbsp; “I accept the <a href="/WADAK.com/App/view/terms&conditions.php">Terms of Service”</a>
+                Statement” 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
 
                 <div class="ifhaveaccount">
                     <span>Already have an account? <a href="./login.php" id="ifhaveaccount">Login</a></span>
