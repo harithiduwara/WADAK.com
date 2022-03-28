@@ -62,7 +62,7 @@
                     <div class="profile">
                         <p>Admin <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="AdminProfile.php">Profile</a></p>
+        
                             <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Admin-dashboard.php">Dashboard</a> </p>
                             <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a
                                     href="/WADAK.com/App/controller/logout.php">Log Out</a></p>
@@ -122,12 +122,12 @@
             </div>
             <div class="col-div-4-1">
                 <div class="box">
-                    <p class="head-1">Total </p>
+                    <p class="head-1">Total Reports</p>
                     <i class="fa fa-users box-icon"></i>
 
                     <?php
 
-                        $hp_query = "SELECT * FROM register WHERE userrole = 'hireperson' ";
+                        $hp_query = "SELECT * FROM complains ";
                         $hp_query_run = mysqli_query($connection,$hp_query);
 
                         if($hp_total = mysqli_num_rows($hp_query_run))
@@ -147,7 +147,7 @@
             <div class="col-div-4-1">
                 <div class="box-1">
                     <div class="content-box-1">
-                        <p class="head-1">Advertisements <span><a href="#">View All</a></span></p>
+                        <p class="head-1">Advertisements <span></span></p>
 
                         <?php
 

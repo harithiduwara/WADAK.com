@@ -94,7 +94,7 @@
 if(isset($_POST['search']))
 {
     $id= $_POST['uid'];
-    $query="SELECT name,uid,contactno,email,address,birthday FROM register WHERE uid = '$id'";
+    $query="SELECT name,uid,contactno,email,address,birthday FROM register WHERE uid = '$id' AND userrole='coadmin'";
     //$query= "select * from register where userrole='coadmin'";
     $query_run=mysqli_query($conn,$query);
     while($row = mysqli_fetch_array($query_run))

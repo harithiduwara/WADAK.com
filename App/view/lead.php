@@ -9,10 +9,12 @@
         }
 
         .wrapper{
-            min-height: 500px;
+            height: 100%;
+            width: 80%;
             background-color: white;
             padding: 20px;
             padding-bottom: 20px;
+            margin-top: 20px;
 }
 
         </style>
@@ -69,8 +71,8 @@
                     <div class="profile">
                         <p>Admin <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
-                            <p><i class="fa fa-user"></i> &nbsp;&nbsp; <a href="AdminProfile.html">Profile</a></p>
-                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Admin-dashboard.html">Dashboard</a>
+                          
+                            <p><i class="fa fa-dashboard"></i> &nbsp;&nbsp; <a href="Admin-dashboard.php">Dashboard</a>
                             </p>
                             <p><i class="fa fa-power-off"></i> &nbsp;&nbsp;<a
                                     href="/WADAK.com/App/controller/logout.php">Log Out</a></p>

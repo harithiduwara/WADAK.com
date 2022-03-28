@@ -33,7 +33,7 @@
         </br>
 
         <div class="box1">
-            <p class="name" style="padding: 2rem 1rem 2rem 1rem">Leaderboard</p>
+            <p class="name" style="padding: 30px 30px 30px 10px">Leaderboard</p>
 
         </div>
         </br>
