@@ -139,10 +139,10 @@ $userData = mysqli_fetch_assoc($data);
                 <div class="inputbox">
                     <table style="width:50%;">
                         <tr>
-                            <td><input type="submit" name="update" value="Update" style="width: 200px !important;">
-                            </td>
-                            <td><input type="reset" name="reset" style="width: 200px !important;" value="Revoke Links">
-                            </td>
+                            <input type="submit" name="update" value="Update" style="width: 100%; text-align:center; background-color:green">
+                            
+                            <!-- <td><input type="reset" name="reset" style="width: 200px !important;" value="Revoke Links">
+                            </td> -->
                         </tr>
                     </table>
 
