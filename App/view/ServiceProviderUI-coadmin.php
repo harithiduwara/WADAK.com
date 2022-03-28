@@ -6,7 +6,7 @@
         die("Connection failed" . mysqli_connect_error());
     }
     
-    $result = "SELECT uid,name,username,email,userrole FROM register where userrole=user1";
+    $result = "SELECT uid,name,username,email,userrole FROM register where userrole='user1'";
 
     $data = mysqli_query($con, $result);
 ?>
