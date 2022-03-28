@@ -1,9 +1,11 @@
 <?php
 session_start();
-$db_username = 'root';
-$db_password = '';
-$conn = new PDO( 'mysql:host=localhost;dbname=wadak', $db_username, $db_password );
-if(!$conn){
+
+$uid = $_SESSION["user"]['uid'];
+
+$con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
+
+if(!$con){
 die("Fatal Error: Connection Failed!");
 }
 

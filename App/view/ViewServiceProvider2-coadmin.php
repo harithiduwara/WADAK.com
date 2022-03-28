@@ -66,13 +66,16 @@
   </div>
 
 <?php 
-$conn= mysqli_connect("localhost","root","");
-$db=mysqli_select_db($conn,'wadak');
+session_start();
+
+$uid = $_SESSION["user"]['uid'];
+
+$con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
 if(isset($_POST['search']))
 {
     $username= $_POST['username'];
     $query="SELECT * FROM register WHERE username = '$username' AND userrole='user1'";
-    $query_run=mysqli_query($conn,$query);
+    $query_run=mysqli_query($con,$query);
     while($row = mysqli_fetch_array($query_run))
     {
         ?>
