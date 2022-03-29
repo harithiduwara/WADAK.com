@@ -5,6 +5,8 @@ $uid = $_SESSION["user"]['uid'];
 
 $postType = $_GET['postType'];
 
+$jobCategory = $_GET["jobType"];
+
 // var_dump($_SESSION["user"]['uid']);
 
 $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
@@ -12,6 +14,14 @@ $con = mysqli_connect('localhost', 'toor', 'toor', 'wadak');
 if (!$con) {
     die("Connection failed" . mysqli_connect_error());
 }
+
+if($jobCategory==5){
+    $query = "SELECT * FROM register WHERE uid=$uid";
+}
+else{
+    
+}
+
 $query = "SELECT * FROM register WHERE uid=$uid";
 $data = mysqli_query($con, $query);
 $userData = mysqli_fetch_assoc($data);
@@ -77,11 +87,28 @@ $postTypeUC = ucfirst($postType);
     </div>
 
     <div id="main">
+
+
+
+
+
         <div class="head">
             <div class="col-div-1">
                 <p class="nav">Active <?= $postTypeUC ?> Posts
                 </p>
 
+            </div>
+            <div>
+                <form action="/WADAK.com/App/controller/searchGraphicController.php" method="post" enctype="multipart/form-data">
+                    <div class="inputbox">
+                        <span>Category Type</span>
+                        <select id="postType1" name="postType1" required>
+                            <option value="graphic">Graphic Designing</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <input type="submit" value="Search">
+                    </div>
+                </form>
             </div>
 
             <div class="col-div-1">
@@ -121,7 +148,12 @@ $postTypeUC = ucfirst($postType);
                     <br />
 
                     <?php
-                    $sql = "select * from postjob where uid=$uid and status=0";
+                    if($jobCategory==5){
+                        $sql = "select * from postjob where uid=$uid and status=0 and budget>5000 and jobType=5";
+                    }
+                    else{
+                        $sql = "select * from postjob where uid=$uid and status=0 and budget>5000";
+                    }
 
                     $result = $con->query($sql);
 
